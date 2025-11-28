@@ -45,12 +45,18 @@ model = genai.GenerativeModel(
 )
 
 def fetch_articles(country_code):
-    print(f"Fetching articles for {country_code}...")
+    print(f"Fetching articles for {country_code} (Last 24 hours)...")
+    
+    # Calculate 24 hours ago
+    from datetime import datetime, timedelta
+    time_threshold = (datetime.utcnow() - timedelta(hours=24)).isoformat()
+
     # Fetch both EN and KO titles. Use EN for embedding (better quality), KO for fallback naming if needed.
     response = supabase.table("mvp2_articles") \
-        .select("id, title_en, title_ko") \
+        .select("id, title_en, title_ko, published_at") \
         .eq("country_code", country_code) \
         .not_.is_("title_en", "null") \
+        .gte("published_at", time_threshold) \
         .execute()
     return response.data
 

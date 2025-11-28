@@ -33,7 +33,7 @@ generation_config = {
 }
 
 model = genai.GenerativeModel(
-    model_name="gemini-2.5-flash",
+    model_name="gemini-1.5-flash",
     generation_config=generation_config,
     safety_settings={
         "HARM_CATEGORY_HARASSMENT": "BLOCK_NONE",
@@ -97,50 +97,64 @@ Output JSON:
     except Exception as e:
         return False, str(e)
 
+def process_article_with_retry(article, retries=3):
+    """Process article with exponential backoff"""
+    for i in range(retries):
+        success, msg = process_article(article)
+        if success:
+            return True, msg
+        
+        if "429" in str(msg) or "Quota" in str(msg):
+            wait_time = (2 ** i) * 2  # 2, 4, 8 seconds
+            print(f"  ⚠️ Rate limit hit. Waiting {wait_time}s...")
+            time.sleep(wait_time)
+            continue
+            
+        return False, msg
+    return False, "Max retries exceeded"
+
 def main():
-    print("Starting Parallel LLM Translation...")
+    print("Starting LLM Translation (Rate-Limited)...")
     
     try:
         # Fetch articles needing translation
-        # Optimized query: check if ANY target field is null, but avoid fully completed ones
         response = supabase.table("mvp2_articles") \
-            .select("id, title_original, summary_original, title_ko, title_en, summary_ko, summary_en") \
-            .not_.is_("summary_original", "null") \
+            .select("*") \
             .or_("title_ko.is.null,title_en.is.null") \
             .execute()
             
         articles = response.data
-        print(f"Found {len(articles)} articles needing translation.")
+        total = len(articles)
+        print(f"Found {total} articles needing translation.")
+        
+        success_count = 0
+        
+        # Parallel Processing for Paid Tier (High RPD)
+        # Use ThreadPoolExecutor but with retry logic
+        MAX_WORKERS = 10 
+        
+        with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+            future_to_article = {executor.submit(process_article_with_retry, article): article for article in articles}
+            
+            for i, future in enumerate(as_completed(future_to_article)):
+                article = future_to_article[future]
+                try:
+                    success, msg = future.result()
+                    if success:
+                        success_count += 1
+                        print(f"[{i+1}/{total}] ✅ {msg[:30]}...")
+                    else:
+                        print(f"[{i+1}/{total}] ❌ {article.get('title_original', '')[:30]}... : {msg}")
+                except Exception as exc:
+                    print(f"[{i+1}/{total}] 💥 Exception: {exc}")
+                    
+                # Small sleep to be polite even with paid tier
+                time.sleep(0.1)
+
+        print(f"\nTranslation Complete. {success_count}/{total} successful.")
         
     except Exception as e:
-        print(f"Error fetching articles: {e}")
-        return
-
-    success_count = 0
-    total = len(articles)
-    
-    # Parallel Processing
-    MAX_WORKERS = 20  # Increased to 20 for higher throughput
-    
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        future_to_article = {executor.submit(process_article, article): article for article in articles}
-        
-        for i, future in enumerate(as_completed(future_to_article)):
-            article = future_to_article[future]
-            try:
-                success, msg = future.result()
-                if success:
-                    success_count += 1
-                    print(f"[{i+1}/{total}] ✅ {msg[:30]}...")
-                else:
-                    print(f"[{i+1}/{total}] ❌ {article['title_original'][:30]}... : {msg}")
-            except Exception as exc:
-                print(f"[{i+1}/{total}] 💥 Exception: {exc}")
-                
-            # Rate limit throttling if needed (Gemini Flash has high limits, but good to be safe)
-            # With 10 workers, we might hit RPM limits. If so, reduce workers or add sleep.
-            
-    print(f"Translation Complete. Updated {success_count}/{total} articles.")
+        print(f"Error in main loop: {e}")
 
 if __name__ == "__main__":
     main()

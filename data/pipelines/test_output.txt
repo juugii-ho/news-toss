@@ -1,0 +1,211 @@
+================================================================================
+🔍 RSS Feed Validation Test - ALL 52 SOURCES
+================================================================================
+
+
+================================================================================
+🌍 US - Testing 5 sources
+================================================================================
+
+📰 New York Times (PROGRESSIVE)
+   URL: https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml
+   ✅ SUCCESS - 23 items
+   📄 Title: For Shooting Suspect, a Long Path of Conflict From Afghanistan to America
+   📝 Summary: ✅ YES (187 chars)
+
+📰 Washington Post (PROGRESSIVE)
+   URL: https://feeds.washingtonpost.com/rss/national
+   ✅ SUCCESS - 39 items
+   📄 Title: The National Guard shooting suspect was in one of the CIA’s ‘Zero Units’
+   📝 Summary: ✅ YES (159 chars)
+
+📰 Fox News (CONSERVATIVE)
+   URL: https://moxie.foxnews.com/google-publisher/latest.xml
+   ✅ SUCCESS - 25 items
+   📄 Title: American cruise ship passenger goes missing on island tour
+   📝 Summary: ✅ YES (145 chars)
+
+📰 CNN (NEUTRAL)
+   URL: http://rss.cnn.com/rss/edition.rss
+   ✅ SUCCESS - 50 items
+   📄 Title: Trump pleads not guilty to 34 felony counts
+   📝 Summary: ❌ NO
+
+📰 The Hill (NEUTRAL)
+   URL: https://thehill.com/feed/
+   ✅ SUCCESS - 100 items
+   📄 Title: How to make the most of a turning point for Middle East peace
+   📝 Summary: ✅ YES (46 chars)
+
+
+================================================================================
+🌍 GB - Testing 6 sources
+================================================================================
+
+📰 BBC (NEUTRAL)
+   URL: https://feeds.bbci.co.uk/news/rss.xml
+   ✅ SUCCESS - 33 items
+   📄 Title: France to intercept small boats after pressure from UK
+   📝 Summary: ✅ YES (100 chars)
+
+📰 The Guardian (PROGRESSIVE)
+   URL: https://www.theguardian.com/uk/rss
+   ✅ SUCCESS - 140 items
+   📄 Title: Small talk: a bluffer’s guide
+   📝 Summary: ✅ YES (947 chars)
+
+📰 Financial Times (NEUTRAL)
+   URL: https://www.ft.com/rss/home
+   ✅ SUCCESS - 9 items
+   📄 Title: CME resumes trading after outage disrupts global markets
+   📝 Summary: ✅ YES (101 chars)
+
+📰 The Independent (PROGRESSIVE)
+   URL: https://www.independent.co.uk/news/uk/rss
+   ✅ SUCCESS - 50 items
+   📄 Title: France agrees to stop migrant boats at sea after pressure from Starmer
+   📝 Summary: ✅ YES (97 chars)
+
+📰 Sky News (NEUTRAL)
+   URL: https://feeds.skynews.com/feeds/rss/home.xml
+   ✅ SUCCESS - 10 items
+   📄 Title: Robber who kicked and punched pensioner to death for a cottage pie is jailed for life
+   📝 Summary: ✅ YES (177 chars)
+
+📰 The Telegraph (CONSERVATIVE)
+   URL: https://www.telegraph.co.uk/news/rss.xml
+   ✅ SUCCESS - 120 items
+   📄 Title: Ukraine: The Latest - the world’s most trusted and award-winning podcast on the war
+   📝 Summary: ✅ YES (121 chars)
+
+
+================================================================================
+🌍 DE - Testing 4 sources
+================================================================================
+
+📰 Der Spiegel (PROGRESSIVE)
+   URL: https://www.spiegel.de/schlagzeilen/index.rss
+   ✅ SUCCESS - 30 items
+   📄 Title: Bundestag beschließt Haushalt für 2026
+   📝 Summary: ✅ YES (182 chars)
+
+📰 FAZ (CONSERVATIVE)
+   URL: https://www.faz.net/rss/aktuell/
+   ✅ SUCCESS - 67 items
+   📄 Title: Bundeshaushalt 2026: 197,3 Milliarden Euro für Soziales
+   📝 Summary: ✅ YES (87 chars)
+
+📰 Süddeutsche Zeitung (PROGRESSIVE)
+   URL: https://rss.sueddeutsche.de/rss/Topthemen
+   ✅ SUCCESS - 15 items
+   📄 Title: Mobilität: So will der Bund E-Autos und Hybride fördern
+   📝 Summary: ✅ YES (333 chars)
+
+📰 Deutsche Welle (NEUTRAL)
+   URL: https://rss.dw.com/rdf/rss-en-all
+   ✅ SUCCESS - 148 items
+   📄 Title: Germany news: Lawmakers pass 2026 budget
+   📝 Summary: ✅ YES (212 chars)
+
+
+================================================================================
+🌍 FR - Testing 4 sources
+================================================================================
+
+📰 Le Monde (PROGRESSIVE)
+   URL: http://www.lemonde.fr/rss/une.xml
+   ✅ SUCCESS - 19 items
+   📄 Title: EN DIRECT, guerre en Ukraine : Viktor Orban a rencontré Vladimir Poutine en Russie
+   📝 Summary: ✅ YES (262 chars)
+
+📰 Le Figaro (CONSERVATIVE)
+   URL: https://www.lefigaro.fr/rss/figaro_flash-actu.xml
+   ✅ SUCCESS - 20 items
+   📄 Title: À Lyon, une étude inédite sur les causes sociales et environnementales de la bronchiolite chez les b...
+   📝 Summary: ✅ YES (238 chars)
+
+📰 France 24 (NEUTRAL)
+   URL: https://www.france24.com/en/rss
+   ✅ SUCCESS - 24 items
+   📄 Title: Living among landmines: Residents' risky return to villages on Syrian-Iraqi border
+   📝 Summary: ✅ YES (374 chars)
+
+📰 Mediapart (PROGRESSIVE)
+   URL: https://www.mediapart.fr/articles/feed
+   ✅ SUCCESS - 10 items
+   📄 Title: Une famille forcée de vivre dans un logement insalubre de Paris Habitat
+   📝 Summary: ✅ YES (282 chars)
+
+
+================================================================================
+🌍 IT - Testing 2 sources
+================================================================================
+
+📰 La Repubblica (PROGRESSIVE)
+   URL: https://www.repubblica.it/rss/homepage/rss2.0.xml
+   ✅ SUCCESS - 30 items
+   📄 Title: Garlasco, la battaglia del Dna. L’amarezza di Sempio: “Non ho ucciso io Chiara”
+   📝 Summary: ✅ YES (144 chars)
+
+📰 Corriere della Sera (CONSERVATIVE)
+   URL: https://www.corriere.it/rss/homepage.xml
+   ✅ SUCCESS - 69 items
+   📄 Title: Codice della strada, ecco cosa cambia e perché non ridurrà il numero delle vittime
+   📝 Summary: ✅ YES (359 chars)
+
+
+================================================================================
+🌍 JP - Testing 4 sources
+================================================================================
+
+📰 Yomiuri Shimbun (CONSERVATIVE)
+   URL: https://japannews.yomiuri.co.jp/feed
+   ✅ SUCCESS - 20 items
+   📄 Title: Asahi Finally Opens Up about Extent of September’s Cyberattack; 1.91 Mil. People’s Data May Have Bee...
+   📝 Summary: ✅ YES (145 chars)
+
+📰 Nikkei Asia (NEUTRAL)
+   URL: https://asia.nikkei.com/rss/feed/nar
+   ✅ SUCCESS - 50 items
+   📄 Title: India's GDP accelerates to 8.2% growth despite tariff headwind
+   📝 Summary: ❌ NO
+
+📰 NHK (NEUTRAL)
+   URL: https://www3.nhk.or.jp/rss/news/cat0.xml
+   ✅ SUCCESS - 7 items
+   📄 Title: 香港 高層住宅火災 128人死亡確認 約200人連絡取れず 香港政府
+   📝 Summary: ✅ YES (106 chars)
+
+📰 Asahi Shimbun (PROGRESSIVE)
+   URL: https://www.asahi.com/rss/asahi/newsheadlines.rdf
+   ✅ SUCCESS - 40 items
+   📄 Title: 紅葉と虹の写真、AI修正しSNSに　国のダム支所、指摘受け削除
+   📝 Summary: ✅ YES (0 chars)
+
+
+================================================================================
+🌍 KR - Testing 5 sources
+================================================================================
+
+📰 Google News Korea (NEUTRAL)
+   URL: https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko
+   ✅ SUCCESS - 34 items
+   📄 Title: [속보]‘2차 계엄 의혹’ 계엄버스 탄 육군 법무실장, ‘준장’에서 ‘대령’으로 1계급 강등 - 경향신문
+   📝 Summary: ✅ YES (1873 chars)
+
+📰 SBS (NEUTRAL)
+   URL: https://news.sbs.co.kr/news/TopicRssFeed.do?plink=RSSREADER
+   ✅ SUCCESS - 10 items
+   📄 Title: 무릎 꿇었는데 발길질…항복하는 사람을 잔혹 살해했다
+   📝 Summary: ✅ YES (81 chars)
+
+📰 조선일보 (CONSERVATIVE)
+   URL: https://www.chosun.com/arc/outboundfeeds/rss/?outputType=xml
+   ✅ SUCCESS - 100 items
+   📄 Title: “아버지, 스스로 생 마감” 할리우드 배우의 비통한 고백
+   📝 Summary: ✅ YES (0 chars)
+
+📰 동아일보 (CONSERVATIVE)
+   URL: https://rss.donga.com/total.xml
+   ✅ SUCCESS - 50 items
+   📄 Title: 엔하이픈-로제 ‘아파트’, 2025 마마 어워즈 대상 수상

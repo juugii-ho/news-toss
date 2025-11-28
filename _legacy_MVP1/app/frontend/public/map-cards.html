@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 글로벌 대화 - 카드 뷰</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            background: #fafaf9;
+            color: #27272a;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e4e4e7;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #18181b;
+            margin-bottom: 8px;
+        }
+
+        .header .meta {
+            font-size: 14px;
+            color: #71717a;
+        }
+
+        .header .meta .dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #10b981;
+            border-radius: 50%;
+            margin: 0 8px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Topic Cards */
+        .topic-cards {
+            display: grid;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .topic-card {
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 12px;
+            padding: 24px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .topic-card:hover {
+            border-color: #10b981;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .topic-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .topic-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #18181b;
+            flex: 1;
+        }
+
+        .topic-badge {
+            font-size: 24px;
+            margin-left: 12px;
+        }
+
+        .topic-meta {
+            display: flex;
+            gap: 16px;
+            font-size: 13px;
+            color: #71717a;
+            margin-bottom: 12px;
+        }
+
+        .topic-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .stance-bar {
+            width: 100%;
+            height: 6px;
+            background: #f4f4f5;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .stance-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #f87171 0%, #d4d4d8 50%, #10b981 100%);
+            transition: all 0.3s ease;
+        }
+
+        /* Stance indicator */
+        .stance-indicator {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .stance-critical {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .stance-neutral {
+            background: #f4f4f5;
+            color: #52525b;
+        }
+
+        .stance-supportive {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        /* Mini Map */
+        .minimap-section {
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .minimap-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .minimap-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #18181b;
+        }
+
+        .minimap-toggle {
+            font-size: 13px;
+            color: #10b981;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .minimap-toggle:hover {
+            text-decoration: underline;
+        }
+
+        .minimap-canvas {
+            width: 100%;
+            height: 300px;
+            background: #fafaf9;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Legend */
+        .legend {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            margin-top: 16px;
+            font-size: 12px;
+            color: #71717a;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 16px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .topic-title {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>오늘의 글로벌 대화</h1>
+            <div class="meta">
+                <span>2025년 11월 27일</span>
+                <span class="dot"></span>
+                <span>14:30 업데이트</span>
+                <span class="dot"></span>
+                <span>G10 + CN/RU</span>
+            </div>
+        </div>
+
+        <!-- Topic Cards (핵심 토픽) -->
+        <div class="topic-cards" id="topicCards">
+            <!-- Cards will be inserted here by JS -->
+        </div>
+
+        <!-- Mini Map -->
+        <div class="minimap-section">
+            <div class="minimap-header">
+                <h3 class="minimap-title">전체 지형도</h3>
+                <a href="#" class="minimap-toggle" onclick="toggleFullMap(); return false;">전체 보기 →</a>
+            </div>
+            <div class="minimap-canvas" id="minimapCanvas">
+                <canvas id="mapCanvas"></canvas>
+            </div>
+            <div class="legend">
+                <div class="legend-item">
+                    <span class="legend-dot" style="background: #f87171;"></span>
+                    <span>비판적</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot" style="background: #d4d4d8;"></span>
+                    <span>중립</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot" style="background: #10b981;"></span>
+                    <span>지지</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mock data (실제로는 /api/topics에서 가져옴)
+        const mockTopics = [
+            {
+                id: 1,
+                title_kr: "Trump 행정부 이민 정책 강화",
+                emoji: "🌪️",
+                country_count: 5,
+                article_count: 23,
+                avg_stance_score: 28,
+                importance: 115
+            },
+            {
+                id: 2,
+                title_kr: "AI 규제 법안 국제 논의",
+                emoji: "⚡️",
+                country_count: 4,
+                article_count: 18,
+                avg_stance_score: 52,
+                importance: 72
+            },
+            {
+                id: 3,
+                title_kr: "유럽 에너지 위기 심화",
+                emoji: "🌀",
+                country_count: 4,
+                article_count: 15,
+                avg_stance_score: 35,
+                importance: 60
+            },
+            {
+                id: 4,
+                title_kr: "중국 경제 회복 전망",
+                emoji: "🌿",
+                country_count: 3,
+                article_count: 12,
+                avg_stance_score: 68,
+                importance: 36
+            },
+            {
+                id: 5,
+                title_kr: "기후 정상회의 합의안",
+                emoji: "🌱",
+                country_count: 3,
+                article_count: 10,
+                avg_stance_score: 58,
+                importance: 30
+            }
+        ];
+
+        // Render topic cards
+        function renderTopicCards(topics) {
+            const container = document.getElementById('topicCards');
+            container.innerHTML = topics.map(topic => {
+                const stanceClass = topic.avg_stance_score < 34 ? 'critical' :
+                                   topic.avg_stance_score < 67 ? 'neutral' : 'supportive';
+                const stanceLabel = topic.avg_stance_score < 34 ? '비판적' :
+                                   topic.avg_stance_score < 67 ? '중립' : '지지';
+                const stancePosition = topic.avg_stance_score; // 0-100
+
+                return `
+                    <div class="topic-card" onclick="showTopicDetail(${topic.id})">
+                        <div class="topic-header">
+                            <h2 class="topic-title">${topic.title_kr}</h2>
+                            <span class="topic-badge">${topic.emoji}</span>
+                        </div>
+                        <div class="topic-meta">
+                            <span>🌍 ${topic.country_count}개국</span>
+                            <span>📰 ${topic.article_count}건</span>
+                            <span class="stance-indicator stance-${stanceClass}">${stanceLabel}</span>
+                        </div>
+                        <div class="stance-bar">
+                            <div class="stance-fill" style="width: ${stancePosition}%"></div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Draw mini map
+        function drawMiniMap(topics) {
+            const canvas = document.getElementById('mapCanvas');
+            const container = document.getElementById('minimapCanvas');
+            canvas.width = container.offsetWidth;
+            canvas.height = container.offsetHeight;
+            const ctx = canvas.getContext('2d');
+
+            // Clear
+            ctx.fillStyle = '#fafaf9';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw bubbles (simplified positions)
+            topics.forEach((topic, i) => {
+                const x = (canvas.width / (topics.length + 1)) * (i + 1);
+                const y = canvas.height / 2 + (Math.sin(i) * 50);
+                const size = Math.sqrt(topic.importance) * 3;
+
+                // Color based on stance
+                const color = topic.avg_stance_score < 34 ? '#f8717180' :
+                             topic.avg_stance_score < 67 ? '#d4d4d880' : '#10b98180';
+
+                ctx.fillStyle = color;
+                ctx.beginPath();
+                ctx.arc(x, y, size, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Border
+                ctx.strokeStyle = 'white';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            });
+        }
+
+        function showTopicDetail(id) {
+            alert(`토픽 ${id} 상세 페이지로 이동 (실제로는 /topics/${id})`);
+        }
+
+        function toggleFullMap() {
+            alert('전체 버블 맵으로 확대 (별도 페이지 또는 모달)');
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderTopicCards(mockTopics);
+            drawMiniMap(mockTopics);
+        });
+
+        // Redraw on resize
+        window.addEventListener('resize', () => {
+            drawMiniMap(mockTopics);
+        });
+    </script>
+</body>
+</html>

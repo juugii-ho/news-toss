@@ -1,0 +1,293 @@
+{
+  "US": {
+    "name": "CNN",
+    "bias": "NEUTRAL",
+    "url": "http://rss.cnn.com/rss/edition.rss",
+    "success": true,
+    "source_title": "CNN.com - RSS Channel - App International Edition",
+    "total_items": 50,
+    "has_summary": false,
+    "summary_length": 0,
+    "sample_item": {
+      "title": "Trump pleads not guilty to 34 felony counts",
+      "link": "https://edition.cnn.com/webview/politics/live-news/trump-indictment-stormy-daniels-news-04-03-23/index.html",
+      "published_at": null,
+      "summary": null,
+      "summary_full_length": 0,
+      "categories": [],
+      "author": null,
+      "media": [
+        {
+          "url": "https://cdn.cnn.com/cnnnext/dam/assets/230403164607-22-trump-indictment-travel-new-york-super-169.jpg",
+          "type": "image/jpeg",
+          "medium": "image"
+        },
+        {
+          "url": "https://cdn.cnn.com/cnnnext/dam/assets/230403164607-22-trump-indictment-travel-new-york-large-11.jpg",
+          "type": "image/jpeg",
+          "medium": "image"
+        }
+      ]
+    }
+  },
+  "GB": {
+    "name": "BBC",
+    "bias": "NEUTRAL",
+    "url": "https://feeds.bbci.co.uk/news/rss.xml",
+    "success": true,
+    "source_title": "BBC News",
+    "total_items": 33,
+    "has_summary": true,
+    "summary_length": 100,
+    "sample_item": {
+      "title": "France to intercept small boats after pressure from UK",
+      "link": "https://www.bbc.com/news/articles/c1kpmm20zwwo?at_medium=RSS&at_campaign=rss",
+      "published_at": "Fri, 28 Nov 2025 11:23:32 GMT",
+      "summary": "The change in policy comes after Prime Minister Sir Keir Starmer wrote to President Emmanuel Macron.",
+      "summary_full_length": 100,
+      "categories": [],
+      "author": null,
+      "media": []
+    }
+  },
+  "DE": {
+    "name": "Deutsche Welle",
+    "bias": "NEUTRAL",
+    "url": "https://rss.dw.com/rdf/rss-en-all",
+    "success": true,
+    "source_title": "Deutsche Welle",
+    "total_items": 148,
+    "has_summary": true,
+    "summary_length": 212,
+    "sample_item": {
+      "title": "Germany news: Lawmakers pass 2026 budget",
+      "link": "https://www.dw.com/en/germany-news-lawmakers-pass-2026-budget/live-74936743?maca=en-rss-en-all-1573-rdf",
+      "published_at": "2025-11-28T14:12:00Z",
+      "summary": "German lawmakers passed the 2026 budget amid a drawn-out fight over pension reforms pushed by young conservatives. Berlin also aims to buck an EU ban on new internal combustion car engines from 2035. ...",
+      "summary_full_length": 212,
+      "categories": [
+        "News"
+      ],
+      "author": null,
+      "media": []
+    }
+  },
+  "FR": {
+    "name": "France 24",
+    "bias": "NEUTRAL",
+    "url": "https://www.france24.com/en/rss",
+    "success": true,
+    "source_title": "France 24 - International breaking news, top stories and headlines",
+    "total_items": 24,
+    "has_summary": true,
+    "summary_length": 374,
+    "sample_item": {
+      "title": "Living among landmines: Residents' risky return to villages on Syrian-Iraqi border",
+      "link": "https://www.france24.com/en/tv-shows/focus/20251128-living-among-landmines-residents-risky-return-to-villages-on-syrian-iraqi-border",
+      "published_at": "Fri, 28 Nov 2025 14:00:09 GMT",
+      "summary": "Since the fall of the Syrian regime in December 2024, the NGO Handicap International has recorded 725 accidents and nearly 1,400 victims of landmines and explosive ordnance throughout the country, com...",
+      "summary_full_length": 374,
+      "categories": [
+        "Focus"
+      ],
+      "author": "Marie-Charlotte ROUPIE",
+      "media": []
+    }
+  },
+  "IT": {
+    "name": "La Repubblica",
+    "bias": "PROGRESSIVE",
+    "url": "https://www.repubblica.it/rss/homepage/rss2.0.xml",
+    "success": true,
+    "source_title": "Repubblica.it",
+    "total_items": 30,
+    "has_summary": true,
+    "summary_length": 144,
+    "sample_item": {
+      "title": "Garlasco, la battaglia del Dna. L’amarezza di Sempio: “Non ho ucciso io Chiara”",
+      "link": "https://milano.repubblica.it/cronaca/2025/11/28/news/garlasco_dna_sempio_chiara_poggi-425009642/",
+      "published_at": "Fri, 28 Nov 2025 03:00:00 +0000",
+      "summary": "Dopo l’esito degli esami sulle tracce sotto le unghie della vittima, i legali del commesso preparano le contromisure: “Per noi non cambia nulla”",
+      "summary_full_length": 144,
+      "categories": [
+        "Cronaca"
+      ],
+      "author": "repubblicawww@repubblica.it (Redazione Repubblica.it)",
+      "media": []
+    }
+  },
+  "JP": {
+    "name": "NHK",
+    "bias": "NEUTRAL",
+    "url": "https://www3.nhk.or.jp/rss/news/cat0.xml",
+    "success": true,
+    "source_title": "NHKニュース",
+    "total_items": 7,
+    "has_summary": true,
+    "summary_length": 106,
+    "sample_item": {
+      "title": "香港 高層住宅火災 128人死亡確認 約200人連絡取れず 香港政府",
+      "link": "http://www3.nhk.or.jp/news/html/20251128/k10014988441000.html",
+      "published_at": "Fri, 28 Nov 2025 19:32:41 +0900",
+      "summary": "香港の高層住宅で起きた大規模な火災は発生から3日目となり、火はほぼ消し止められました。これまでに128人の死亡が確認されたほか、依然としておよそ200人と連絡が取れないということで当局は安否の確認を急いでいます。",
+      "summary_full_length": 106,
+      "categories": [],
+      "author": null,
+      "media": []
+    }
+  },
+  "KR": {
+    "name": "조선일보",
+    "bias": "CONSERVATIVE",
+    "url": "https://www.chosun.com/arc/outboundfeeds/rss/?outputType=xml",
+    "success": true,
+    "source_title": "조선일보",
+    "total_items": 100,
+    "has_summary": true,
+    "summary_length": 0,
+    "sample_item": {
+      "title": "“다시는 남 앞에서 춤 추지 않겠다”던 박정민, ‘별의 순간’ 맞은 비결은...",
+      "link": "https://www.chosun.com/culture-life/book/2025/11/28/GSM2RW6OX5HWLA7ZKZUO7JPDV4/",
+      "published_at": "Fri, 28 Nov 2025 06:15:39 +0000",
+      "summary": "",
+      "summary_full_length": 0,
+      "categories": [],
+      "author": "곽아람 기자",
+      "media": []
+    }
+  },
+  "CA": {
+    "name": "CBC",
+    "bias": "NEUTRAL",
+    "url": "https://www.cbc.ca/cmlink/rss-topstories",
+    "success": false,
+    "error": "Unexpected error: RemoteDisconnected: Remote end closed connection without response"
+  },
+  "AU": {
+    "name": "ABC Australia",
+    "bias": "NEUTRAL",
+    "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
+    "success": true,
+    "source_title": "Just In",
+    "total_items": 25,
+    "has_summary": true,
+    "summary_length": 111,
+    "sample_item": {
+      "title": "Ukraine's anti-corruption unit raids home of top Zelenskyy aide",
+      "link": "https://www.abc.net.au/news/2025-11-28/andrii-yermak-zelenskyy-aide-home-office-raided/106080910",
+      "published_at": "Fri, 28 Nov 2025 12:52:22 +0000",
+      "summary": "The raids come as Kyiv battles to persuade US officials to defend Ukraine's interests in peace agreement talks.",
+      "summary_full_length": 111,
+      "categories": [
+        "Corruption",
+        "World Politics",
+        "Law, Crime and Justice"
+      ],
+      "author": null,
+      "media": [
+        {
+          "url": "https://live-production.wcms.abc-cdn.net.au/51ff80866a281c492a8a27068ef5a25d?impolicy=wcms_crop_resize&cropH=2813&cropW=5000&xPos=0&yPos=260&width=862&height=485",
+          "type": "image/jpeg",
+          "medium": "image"
+        },
+        {
+          "url": "https://live-production.wcms.abc-cdn.net.au/51ff80866a281c492a8a27068ef5a25d?impolicy=wcms_crop_resize&cropH=3333&cropW=3333&xPos=834&yPos=0&width=862&height=862",
+          "type": "image/jpeg",
+          "medium": "image"
+        }
+      ]
+    }
+  },
+  "BE": {
+    "name": "RTBF",
+    "bias": "NEUTRAL",
+    "url": "https://rss.rtbf.be/article/rss/highlight_rtbf_info.xml?source=internal",
+    "success": true,
+    "source_title": "- Info",
+    "total_items": 20,
+    "has_summary": true,
+    "summary_length": 117,
+    "sample_item": {
+      "title": "Budget fédéral : la Chambre accorde sa confiance au gouvernement",
+      "link": "https://www.rtbf.be/article/budget-federal-la-chambre-accorde-sa-confiance-au-gouvernement-11639182",
+      "published_at": "Fri, 28 Nov 2025 14:16:06 +0100",
+      "summary": "Ce discours contenait les principes de l’accord budgétaire conclu au sein du gouvernement lundi à l’aube, au terme...",
+      "summary_full_length": 117,
+      "categories": [],
+      "author": "rtbf.info@rtbf.be (Africa Gordillo)",
+      "media": [
+        {
+          "url": "https://static-content.rtbf.be/article/image/770x433/0/7/2/cb1e8fefe075bf2e26eeb3da2bb775de.jpg",
+          "type": "image/jpeg",
+          "medium": "image"
+        }
+      ]
+    }
+  },
+  "NL": {
+    "name": "NOS",
+    "bias": "NEUTRAL",
+    "url": "https://feeds.nos.nl/nosnieuwsalgemeen",
+    "success": true,
+    "source_title": "NOS Nieuws",
+    "total_items": 20,
+    "has_summary": true,
+    "summary_length": 3368,
+    "sample_item": {
+      "title": "Provincie Noord-Brabant wil meer onderzoek voor besluit over Moerdijk",
+      "link": "https://nos.nl/l/2592359",
+      "published_at": "Fri, 28 Nov 2025 14:59:50 +0100",
+      "summary": "<p>De Gedeputeerde Staten van de provincie Noord-Brabant willen dat er meer onderzoek komt naar de verschillende toekomstmogelijkheden voor het dorp Moerdijk. De Moerdijkse gemeenteraad stemde <a href...",
+      "summary_full_length": 3368,
+      "categories": [],
+      "author": null,
+      "media": []
+    }
+  },
+  "RU": {
+    "name": "RT (Russia Today)",
+    "bias": "CONSERVATIVE",
+    "url": "https://www.rt.com/rss/news/",
+    "success": true,
+    "source_title": "RT World News",
+    "total_items": 100,
+    "has_summary": true,
+    "summary_length": 389,
+    "sample_item": {
+      "title": "Senior EU official accuses US of ‘blackmail’ in trade talks",
+      "link": "https://www.rt.com/news/628630-us-eu-trade-talks-blackmail/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published_at": "Fri, 28 Nov 2025 13:35:33 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69299b282030277fd4667167.jpg\" style=\"margin-right: 10px;\" /> Teresa Ribera has blasted the US over demands to water d...",
+      "summary_full_length": 389,
+      "categories": [],
+      "author": "RT",
+      "media": []
+    }
+  },
+  "CN": {
+    "name": "South China Morning Post",
+    "bias": "NEUTRAL",
+    "url": "https://www.scmp.com/rss/91/feed",
+    "success": true,
+    "source_title": "News - South China Morning Post",
+    "total_items": 50,
+    "has_summary": true,
+    "summary_length": 502,
+    "sample_item": {
+      "title": "‘Hongkongers’ solidarity’: volunteers pick up pieces for Tai Po fire victims",
+      "link": "https://www.scmp.com/news/hong-kong/society/article/3334570/hongkongers-solidarity-volunteers-pick-pieces-tai-po-fire-victims?utm_source=rss_feed",
+      "published_at": "Fri, 28 Nov 2025 13:49:26 +0000",
+      "summary": "Against the backdrop of the seven charred residential blocks, an open plaza next to Wang Fuk Court has transformed into a bustling relief centre, manned by hundreds of volunteers aiding thousands of d...",
+      "summary_full_length": 502,
+      "categories": [],
+      "author": "Natalie Wong,Ambrose Li,Mike Chan",
+      "media": [
+        {
+          "url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2025/11/28/7f1cb6a8-783f-4665-9ca4-b3f92163500f_101c999e.jpg",
+          "type": "image/jpeg",
+          "medium": "image"
+        }
+      ]
+    }
+  }
+}

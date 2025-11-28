@@ -1,0 +1,17 @@
+name: Cleanup Old Artifacts
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Runs every Sunday at midnight
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Delete files older than 30 days in outputs directory
+        run: |
+          find outputs/ -type f -mtime +30 -exec rm {} \;
+          echo "Cleaned up files older than 30 days in outputs/ directory."

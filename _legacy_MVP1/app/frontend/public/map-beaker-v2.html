@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뉴스 스펙트럼: 토픽 퇴적도</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #1a1a2e; /* 짙은 남색 배경 */
+            font-family: 'Pretendard', sans-serif;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/woff2/Pretendard-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/woff2/Pretendard-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Gowun Batang';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        .container {
+            position: relative;
+            width: 900px;
+            height: 700px;
+            border-radius: 50%; /* 비커 모양 */
+            /* border: 2px solid rgba(255, 255, 255, 0.2); */
+            /* box-shadow: 0 0 50px rgba(77, 153, 255, 0.5); */
+        }
+
+        svg {
+            background-color: transparent;
+            overflow: visible; /* 삐져나오는 요소들을 보이도록 */
+        }
+
+        .node {
+            cursor: pointer;
+            stroke: rgba(255, 255, 255, 0.3);
+            stroke-width: 1px;
+            transition: stroke-width 0.2s, stroke 0.2s;
+        }
+        .node.megatopic {
+            stroke: rgba(255, 255, 255, 0.4);
+            stroke-width: 2px;
+        }
+        .node.highlighted {
+            stroke: #fff;
+            stroke-width: 3px;
+        }
+
+        .node-label {
+            fill: #e0e0e0;
+            text-anchor: middle;
+            pointer-events: none;
+            font-size: 14px;
+            font-weight: 400;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        .node-label.megatopic {
+            font-family: 'Gowun Batang', serif;
+            font-size: 18px;
+            font-weight: 700;
+            opacity: 1;
+        }
+        .node-label.national {
+            font-size: 12px;
+            opacity: 0; /* 평소에는 숨김 */
+        }
+        .node.hovered .node-label.national {
+            opacity: 1; /* 호버 시 보임 */
+        }
+
+        .legend {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 13px;
+            color: #e0e0e0;
+            max-height: calc(100% - 40px);
+            overflow-y: auto;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg width="100%" height="100%"></svg>
+    </div>
+
+    <div class="legend">
+        <strong>토픽 섹션 (색상)</strong>
+        <div class="legend-item"><span class="legend-color" style="background-color: #64748b;"></span>정치</div>
+        <div class="legend-item"><span class="legend-color" style="background-color: #0ea5e9;"></span>경제</div>
+        <div class="legend-item"><span class="legend-color" style="background-color: #fbbf24;"></span>사회</div>
+        <div class="legend-item"><span class="legend-color" style="background-color: #14b8a6;"></span>IT/기술</div>
+        <div class="legend-item"><span class="legend-color" style="background-color: #a855f7;"></span>스포츠/문화</div>
+        <div class="legend-item"><span class="legend-color" style="background-color: #ef4444;"></span>외교/안보</div>
+        <div class="legend-item"><span class="legend-color" style="background-color: #f472b6;"></span>환경/과학</div>
+        <!-- Add more categories as needed -->
+    </div>
+
+    <script>
+        const width = 900;
+        const height = 700;
+
+        const svg = d3.select("svg")
+            .attr("viewBox", `0 0 ${width} ${height}`);
+
+        const categories = {
+            '정치': '#64748b',   // slate-500
+            '경제': '#0ea5e9',   // sky-500
+            '사회': '#fbbf24',   // amber-500
+            'IT/기술': '#14b8a6', // teal-500
+            '스포츠/문화': '#a855f7', // purple-500
+            '외교/안보': '#ef4444', // red-500
+            '환경/과학': '#f472b6', // pink-400
+            '기타': '#737373'     // neutral-500
+        };
+
+        // Mock Data: Global Megatopics (Stones), National Topics (Gravel)
+        const mockData = [
+            // Global Megatopics (Stones)
+            { id: 'gm-semicon', name: '글로벌 반도체 전쟁', type: 'megatopic', category: 'IT/기술', articleCount: 800 },
+            { id: 'gm-us-election', name: '미 대선 향방', type: 'megatopic', category: '정치', articleCount: 600 },
+            { id: 'gm-inflation', name: '세계 인플레이션 압박', type: 'megatopic', category: '경제', articleCount: 700 },
+            { id: 'gm-climate', name: '기후 변화 협약', type: 'megatopic', category: '환경/과학', articleCount: 500 },
+
+            // National Topics (Gravel) - linked to megatopics
+            { id: 'nt-kr-semi', name: '韓 반도체 수출 동향', type: 'national', category: 'IT/기술', articleCount: 120, parentId: 'gm-semicon' },
+            { id: 'nt-us-semi', name: '美 반도체 규제 강화', type: 'national', category: 'IT/기술', articleCount: 150, parentId: 'gm-semicon' },
+            { id: 'nt-jp-semi', name: '日 반도체 소재 공급', type: 'national', category: 'IT/기술', articleCount: 80, parentId: 'gm-semicon' },
+
+            { id: 'nt-kr-pol', name: '韓 총선 정국', type: 'national', category: '정치', articleCount: 200, parentId: 'gm-us-election' }, // Example: local politics, but related to global
+            { id: 'nt-us-election-prim', name: '美 대선 경선 열기', type: 'national', category: '정치', articleCount: 180, parentId: 'gm-us-election' },
+
+            { id: 'nt-kr-inflation', name: '韓 물가 상승 압력', type: 'national', category: '경제', articleCount: 100, parentId: 'gm-inflation' },
+            { id: 'nt-de-inflation', name: '獨 에너지 가격 급등', type: 'national', category: '경제', articleCount: 90, parentId: 'gm-inflation' },
+
+            // Unrelated National Topics (local only)
+            { id: 'nt-kr-soc', name: '韓 사회 양극화 심화', type: 'national', category: '사회', articleCount: 180 },
+            { id: 'nt-us-health', name: '美 오피오이드 위기', type: 'national', category: '사회', articleCount: 110 },
+            { id: 'nt-jp-culture', name: '日 K-POP 인기 지속', type: 'national', category: '스포츠/문화', articleCount: 70 },
+            { id: 'nt-fr-pol', name: '佛 연금 개혁 반발', type: 'national', category: '정치', articleCount: 130 },
+            { id: 'nt-uk-environment', name: '英 탄소배출 정책', type: 'national', category: '환경/과학', articleCount: 85, parentId: 'gm-climate' },
+            { id: 'nt-ch-env', name: '中 미세먼지 문제', type: 'national', category: '환경/과학', articleCount: 110, parentId: 'gm-climate' },
+        ];
+
+        // Scale radius based on articleCount
+        const radiusScale = d3.scaleSqrt()
+            .domain([0, d3.max(mockData, d => d.articleCount)])
+            .range([5, 60]); // Smallest circle 5px, largest 60px
+
+        const nodes = mockData.map(d => ({
+            id: d.id,
+            name: d.name,
+            type: d.type,
+            category: d.category,
+            r: radiusScale(d.articleCount),
+            originalR: radiusScale(d.articleCount), // Store original radius
+            color: categories[d.category] || categories['기타'],
+            parentId: d.parentId // For global connections
+        }));
+
+        // Group nodes by parentId for global connections
+        const globalTopicGroups = d3.group(nodes.filter(n => n.type === 'national' && n.parentId), d => d.parentId);
+
+        const simulation = d3.forceSimulation(nodes)
+            .force("charge", d3.forceManyBody().strength(d => d.type === 'megatopic' ? -400 : -100)) // Megatopics repel more
+            .force("collide", d3.forceCollide().radius(d => d.r + 3).iterations(4)) // Prevent overlap
+            .force("center", d3.forceCenter(width / 2, height / 2).strength(0.1)) // Pull towards center
+            .force("gravity", d3.forceY(height * 0.8).strength(0.05)) // Subtle gravity towards bottom
+            .force("x", d3.forceX(width / 2).strength(0.01))
+            .force("y", d3.forceY(height / 2).strength(0.01));
+
+        // Connect national topics to their megatopic parents
+        const megatopicForce = (alpha) => {
+            nodes.forEach(node => {
+                if (node.type === 'national' && node.parentId) {
+                    const parent = nodes.find(n => n.id === node.parentId && n.type === 'megatopic');
+                    if (parent) {
+                        const strength = 0.05; // How strongly national topics are pulled to megatopics
+                        node.vx += (parent.x - node.x) * strength * alpha;
+                        node.vy += (parent.y - node.y) * strength * alpha;
+                    }
+                }
+            });
+        };
+        simulation.force("megatopicForce", megatopicForce);
+
+        const linkGroup = svg.append("g").attr("class", "links");
+        const nodeGroup = svg.append("g").attr("class", "nodes");
+
+        let currentHoveredNode = null;
+
+        function updateSimulation() {
+            const nodeElements = nodeGroup.selectAll(".node")
+                .data(nodes)
+                .join("circle")
+                .attr("class", d => `node ${d.type} ${d.type === 'megatopic' ? 'megatopic' : ''}`)
+                .attr("r", d => d.r)
+                .attr("fill", d => {
+                    if (d.type === 'megatopic') return d3.color(d.color).copy({opacity: 0.5}); // Megatopic as semi-transparent area
+                    return d.color;
+                })
+                .attr("cx", d => d.x)
+                .attr("cy", d => d.y)
+                .on("mouseover", (event, d) => {
+                    if (currentHoveredNode && currentHoveredNode.id === d.id) return; // Prevent re-triggering on same node
+                    currentHoveredNode = d;
+                    highlightNodeAndConnections(d);
+                })
+                .on("mouseout", (event, d) => {
+                    if (currentHoveredNode && currentHoveredNode.id === d.id) {
+                        currentHoveredNode = null;
+                        resetHighlights();
+                    }
+                });
+                // .call(d3.drag() // Dragging might interfere with fixed positioning/sedimentation
+                //     .on("start", dragstarted)
+                //     .on("drag", dragged)
+                //     .on("end", dragended));
+
+            const labelElements = nodeGroup.selectAll(".node-label")
+                .data(nodes)
+                .join("text")
+                .attr("class", d => `node-label ${d.type}`)
+                .text(d => d.name)
+                .attr("x", d => d.x)
+                .attr("y", d => d.y + 5); // Adjust label position
+
+
+            nodeElements.order(); // Ensure larger nodes are drawn first
+            labelElements.order(); // Ensure labels are on top
+
+            function ticked() {
+                nodeElements
+                    .attr("cx", d => Math.max(d.r, Math.min(width - d.r, d.x)))
+                    .attr("cy", d => Math.max(d.r, Math.min(height - d.r, d.y)));
+
+                labelElements
+                    .attr("x", d => d.x)
+                    .attr("y", d => d.y + 5); // Reposition label based on node
+            }
+            simulation.on("tick", ticked);
+        }
+
+        updateSimulation(); // Initial call to render nodes
+
+        function highlightNodeAndConnections(selectedNode) {
+            // Dim all nodes first
+            nodeGroup.selectAll(".node")
+                .transition().duration(200)
+                .style("opacity", 0.2)
+                .attr("stroke", "rgba(255, 255, 255, 0.1)")
+                .attr("stroke-width", "1px");
+            nodeGroup.selectAll(".node-label")
+                .transition().duration(200)
+                .style("opacity", 0.2);
+
+            // Highlight selected node
+            nodeGroup.selectAll(".node").filter(d => d.id === selectedNode.id)
+                .transition().duration(200)
+                .style("opacity", 1)
+                .attr("stroke", "#fff")
+                .attr("stroke-width", "3px");
+            nodeGroup.selectAll(".node-label").filter(d => d.id === selectedNode.id)
+                .transition().duration(200)
+                .style("opacity", 1);
+
+            // If selected node is national and has a parent megatopic
+            if (selectedNode.type === 'national' && selectedNode.parentId) {
+                const megatopicParent = nodes.find(n => n.id === selectedNode.parentId);
+                if (megatopicParent) {
+                    nodeGroup.selectAll(".node").filter(d => d.id === megatopicParent.id)
+                        .transition().duration(200)
+                        .style("opacity", 1)
+                        .attr("stroke", "#fff")
+                        .attr("stroke-width", "3px");
+                    nodeGroup.selectAll(".node-label").filter(d => d.id === megatopicParent.id)
+                        .transition().duration(200)
+                        .style("opacity", 1);
+                }
+
+                // Find all national topics belonging to the same global megatopic
+                const globalSiblings = globalTopicGroups.get(selectedNode.parentId) || [];
+                globalSiblings.forEach(sibling => {
+                    nodeGroup.selectAll(".node").filter(d => d.id === sibling.id)
+                        .transition().duration(200)
+                        .style("opacity", 1)
+                        .attr("stroke", "#fff")
+                        .attr("stroke-width", "3px");
+                    nodeGroup.selectAll(".node-label").filter(d => d.id === sibling.id)
+                        .transition().duration(200)
+                        .style("opacity", 1);
+                });
+
+                // Draw glowing links between siblings
+                linkGroup.selectAll(".global-link").remove(); // Clear previous links
+
+                if (globalSiblings.length > 1) {
+                    for (let i = 0; i < globalSiblings.length; i++) {
+                        for (let j = i + 1; j < globalSiblings.length; j++) {
+                            const nodeA = globalSiblings[i];
+                            const nodeB = globalSiblings[j];
+
+                            linkGroup.append("line")
+                                .attr("class", "global-link")
+                                .attr("x1", nodeA.x)
+                                .attr("y1", nodeA.y)
+                                .attr("x2", nodeB.x)
+                                .attr("y2", nodeB.y)
+                                .attr("stroke", "#fff")
+                                .attr("stroke-width", 2)
+                                .attr("stroke-opacity", 0)
+                                .transition().duration(300)
+                                .attr("stroke-opacity", 0.7);
+                        }
+                    }
+                }
+            } else if (selectedNode.type === 'megatopic') { // If megatopic is hovered
+                const nationalChildren = nodes.filter(n => n.parentId === selectedNode.id && n.type === 'national');
+                nationalChildren.forEach(child => {
+                    nodeGroup.selectAll(".node").filter(d => d.id === child.id)
+                        .transition().duration(200)
+                        .style("opacity", 1)
+                        .attr("stroke", "#fff")
+                        .attr("stroke-width", "3px");
+                    nodeGroup.selectAll(".node-label").filter(d => d.id === child.id)
+                        .transition().duration(200)
+                        .style("opacity", 1);
+                });
+
+                // Draw links from megatopic to its children
+                linkGroup.selectAll(".global-link").remove();
+                nationalChildren.forEach(child => {
+                    linkGroup.append("line")
+                        .attr("class", "global-link")
+                        .attr("x1", selectedNode.x)
+                        .attr("y1", selectedNode.y)
+                        .attr("x2", child.x)
+                        .attr("y2", child.y)
+                        .attr("stroke", "#fff")
+                        .attr("stroke-width", 2)
+                        .attr("stroke-opacity", 0)
+                        .transition().duration(300)
+                        .attr("stroke-opacity", 0.7);
+                });
+            }
+        }
+
+        function resetHighlights() {
+            nodeGroup.selectAll(".node")
+                .transition().duration(200)
+                .style("opacity", 1)
+                .attr("stroke", d => d.type === 'megatopic' ? "rgba(255, 255, 255, 0.4)" : "rgba(255, 255, 255, 0.3)")
+                .attr("stroke-width", d => d.type === 'megatopic' ? "2px" : "1px");
+            nodeGroup.selectAll(".node-label.national")
+                .transition().duration(200)
+                .style("opacity", 0); // Hide national labels again
+            nodeGroup.selectAll(".node-label.megatopic")
+                .transition().duration(200)
+                .style("opacity", 1); // Keep megatopic labels visible
+
+            linkGroup.selectAll(".global-link")
+                .transition().duration(300)
+                .attr("stroke-opacity", 0)
+                .remove(); // Fade out and remove links
+        }
+
+        // function dragstarted(event, d) {
+        //     if (!event.active) simulation.alphaTarget(0.3).restart();
+        //     d.fx = d.x;
+        //     d.fy = d.y;
+        // }
+
+        // function dragged(event, d) {
+        //     d.fx = event.x;
+        //     d.fy = event.y;
+        // }
+
+        // function dragended(event, d) {
+        //     if (!event.active) simulation.alphaTarget(0);
+        //     d.fx = null;
+        //     d.fy = null;
+        // }
+
+    </script>
+</body>
+</html>

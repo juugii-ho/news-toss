@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뉴스 스펙트럼: 토픽 수박 게임</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #FDF8E1; /* 따뜻한 크림색 배경 */
+            font-family: 'Pretendard', sans-serif;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/woff2/Pretendard-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/woff2/Pretendard-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
+        }
+
+        .container {
+            position: relative;
+            width: 900px;
+            height: 700px;
+            border: 3px solid #D2B48C; /* 나무 상자 같은 테두리 */
+            background-color: #FAF3D3;
+            border-radius: 30px;
+        }
+
+        svg {
+            background-color: transparent;
+        }
+        
+        .node {
+            cursor: pointer;
+            stroke: rgba(0, 0, 0, 0.2);
+            stroke-width: 2px;
+            transition: transform 0.2s ease-out;
+        }
+        .node:hover {
+            transform: scale(1.05);
+        }
+
+        .node-label {
+            fill: #000;
+            text-anchor: middle;
+            pointer-events: none;
+            font-size: 13px;
+            font-weight: 700;
+            opacity: 0; /* 평소에는 숨김 */
+            transition: opacity 0.2s;
+        }
+        .node.megatopic .node-label,
+        .node.hovered .node-label {
+            opacity: 1; /* 메가토픽과 호버 시에만 보임 */
+        }
+
+        .legend {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 13px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-right: 8px;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        .loading-text {
+            position: absolute;
+            font-size: 24px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg width="100%" height="100%"></svg>
+        <div class="loading-text">데이터를 불러오는 중...</div>
+    </div>
+
+    <div class="legend"></div>
+
+    <script>
+        const width = 900;
+        const height = 700;
+
+        const svg = d3.select("svg");
+        const loadingText = d3.select(".loading-text");
+
+        const categories = {
+            '정치': '#C792DF',      // 포도
+            '경제': '#FF6B6B',      // 사과
+            '사회': '#FFD166',      // 오렌지
+            'IT/기술': '#78C0A8',    // 멜론
+            '스포츠/문화': '#F7CAC9', // 복숭아
+            '외교/안보': '#4A90E2',    // 블루베리
+            '환경/과학': '#A2D4AB', // 배
+            '기타': '#BDBDBD'       // 자갈
+        };
+        
+        // 범례(Legend) 생성
+        const legendContainer = d3.select(".legend");
+        legendContainer.append("strong").text("토픽 섹션 (색상)");
+        for (const category in categories) {
+            const item = legendContainer.append("div").attr("class", "legend-item");
+            item.append("span").attr("class", "legend-color").style("background-color", categories[category]);
+            item.append("span").text(category);
+        }
+
+
+        // Client-side category assignment (temporary)
+        function assignCategory(title) {
+            if (!title) return '기타';
+            const lowerTitle = title.toLowerCase();
+            if (lowerTitle.includes('선거') || lowerTitle.includes('정치') || lowerTitle.includes('국회') || lowerTitle.includes('대통령')) return '정치';
+            if (lowerTitle.includes('금리') || lowerTitle.includes('경제') || lowerTitle.includes('시장') || lowerTitle.includes('기업') || lowerTitle.includes('실적')) return '경제';
+            if (lowerTitle.includes('사건') || lowerTitle.includes('사회') || lowerTitle.includes('법원') || lowerTitle.includes('경찰')) return '사회';
+            if (lowerTitle.includes('반도체') || lowerTitle.includes('ai') || lowerTitle.includes('기술') || lowerTitle.includes('IT')) return 'IT/기술';
+            if (lowerTitle.includes('스포츠') || lowerTitle.includes('문화') || lowerTitle.includes('영화') || lowerTitle.includes('음악')) return '스포츠/문화';
+            if (lowerTitle.includes('외교') || lowerTitle.includes('안보') || lowerTitle.includes('국방') || lowerTitle.includes('정상회담')) return '외교/안보';
+            if (lowerTitle.includes('환경') || lowerTitle.includes('과학') || lowerTitle.includes('우주')) return '환경/과학';
+            return '기타';
+        }
+
+        async function drawChart() {
+            try {
+                const response = await fetch('/api/topics');
+                const apiResponse = await response.json();
+                const realData = apiResponse.data;
+
+                loadingText.style("display", "none");
+
+                // Scale radius based on articleCount
+                const maxArticleCount = d3.max(realData, d => d.article_count);
+                const radiusScale = d3.scaleSqrt()
+                    .domain([0, maxArticleCount])
+                    .range([8, 80]);
+
+                const nodes = realData.map(d => {
+                    const category = assignCategory(d.title_kr || d.name);
+                    let type = 'national';
+                    if (d.country_count > 1) type = 'megatopic';
+                    
+                    // Give megatopics a slight size boost
+                    const radius = radiusScale(d.article_count) * (type === 'megatopic' ? 1.2 : 1);
+
+                    return {
+                        id: d.id,
+                        name: d.title_kr || d.name,
+                        type: type,
+                        category: category,
+                        r: radius,
+                        color: categories[category] || categories['기타'],
+                    };
+                });
+
+                const simulation = d3.forceSimulation(nodes)
+                    .force("charge", d3.forceManyBody().strength(5))
+                    .force("collide", d3.forceCollide().radius(d => d.r + 2).iterations(2))
+                    .force("center", d3.forceCenter(width / 2, height / 2).strength(0.1))
+                    .force("gravity", d3.forceY(height/2).strength(0.03)) // Center gravity
+                    .force("x", d3.forceX(width/2).strength(0.03));
+                
+                const nodeGroup = svg.append("g");
+
+                const nodeElements = nodeGroup.selectAll("g.node-group")
+                    .data(nodes)
+                    .join("g")
+                    .attr("class", "node-group")
+                    .attr("transform", d => `translate(${d.x}, ${d.y})`)
+                    .on("mouseover", function(event, d) {
+                        d3.select(this).classed("hovered", true);
+                        // Bring to front
+                        d3.select(this).raise();
+                    })
+                    .on("mouseout", function(event, d) {
+                        d3.select(this).classed("hovered", false);
+                    });
+
+                nodeElements.append("circle")
+                    .attr("class", d => `node ${d.type}`)
+                    .attr("r", d => d.r)
+                    .attr("fill", d => d.color);
+
+                nodeElements.append("text")
+                    .attr("class", d => `node-label ${d.type}`)
+                    .attr("dy", "0.3em")
+                    .text(d => d.name);
+
+                simulation.on("tick", () => {
+                    nodeElements.attr("transform", d => `translate(${d.x}, ${d.y})`);
+                });
+
+            } catch (error) {
+                console.error("Error fetching or processing data:", error);
+                loadingText.text("데이터 로딩 실패!");
+            }
+        }
+
+        drawChart();
+    </script>
+</body>
+</html>

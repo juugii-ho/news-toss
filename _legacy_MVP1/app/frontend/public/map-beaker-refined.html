@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beaker View – KR Topics (Refined)</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif;
+      background: radial-gradient(circle at 20% 20%, #f5f3ff 0%, #f8fafc 35%, #eef2ff 65%, #e2e8f0 100%);
+      color: #0f172a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+      min-height: 100vh;
+    }
+    .header { text-align: center; margin-bottom: 16px; }
+    .title { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+    .subtitle { margin-top: 6px; font-size: 14px; color: #475569; }
+    .chrome {
+      width: 660px;
+      max-width: 100%;
+      background: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(248,250,252,0.92));
+      border: 1px solid rgba(15,23,42,0.08);
+      border-radius: 18px;
+      box-shadow:
+        0 18px 50px rgba(15, 23, 42, 0.14),
+        inset 0 0 0 1px rgba(255,255,255,0.6);
+      padding: 18px;
+      position: relative;
+    }
+    .legend {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: rgba(15,23,42,0.04);
+      border: 1px solid rgba(15,23,42,0.08);
+      border-radius: 12px;
+      padding: 8px 10px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      max-width: 320px;
+      backdrop-filter: blur(6px);
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #0f172a;
+      background: rgba(255,255,255,0.7);
+      border-radius: 8px;
+      padding: 4px 6px;
+      box-shadow: inset 0 0 0 1px rgba(15,23,42,0.04);
+    }
+    .legend-color { width: 12px; height: 12px; border-radius: 50%; }
+    .container {
+      width: 100%;
+      height: 760px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.75), rgba(255,255,255,0.55));
+      border: 2px solid rgba(15,23,42,0.12);
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: inset 0 -80px 120px rgba(15,23,42,0.06);
+    }
+    canvas { display: block; width: 100%; height: 100%; cursor: pointer; }
+    .tooltip {
+      position: fixed;
+      background: rgba(15,23,42,0.9);
+      color: white;
+      padding: 12px 14px;
+      border-radius: 12px;
+      font-size: 12px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+      z-index: 1000;
+      max-width: 260px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+    .tooltip.show { opacity: 1; }
+    .tooltip-title { font-weight: 700; margin-bottom: 6px; }
+    .tooltip-meta { font-size: 11px; color: #cbd5e1; margin-bottom: 4px; }
+    .tooltip-section {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.12);
+    }
+    .badge {
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      background: rgba(94,234,212,0.15);
+      color: #0f172a;
+      font-weight: 600;
+      font-size: 12px;
+      border: 1px solid rgba(16,185,129,0.2);
+      backdrop-filter: blur(4px);
+    }
+    .stats {
+      margin-top: 14px;
+      font-size: 13px;
+      color: #475569;
+      text-align: center;
+    }
+    .loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #0f172a;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">🇰🇷 한국 토픽 비커 (정태 뷰)</div>
+    <div class="subtitle">크기 = 기사 수 × 출처 다양성, 색 = 섹션, 테두리 = 스탠스</div>
+  </div>
+
+  <div class="chrome">
+    <div class="badge">정책·시장·사회 이슈만 강조</div>
+    <div class="legend" id="legend"></div>
+    <div class="container">
+      <canvas id="canvas"></canvas>
+      <div class="loading" id="loading">데이터 로딩 중...</div>
+    </div>
+  </div>
+
+  <div class="stats" id="stats">-</div>
+
+  <div class="tooltip" id="tooltip">
+    <div class="tooltip-title"></div>
+    <div class="tooltip-meta"></div>
+    <div class="tooltip-section"></div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const tooltip = document.getElementById('tooltip');
+    const loading = document.getElementById('loading');
+    const statsEl = document.getElementById('stats');
+    const legendEl = document.getElementById('legend');
+
+    const width = 640;
+    const height = 760;
+    canvas.width = width;
+    canvas.height = height;
+
+    let topics = [];
+    let hoveredTopic = null;
+
+    const SECTION_COLORS = {
+      politics: '#4f46e5',       // 정치/외교
+      economy: '#10b981',        // 경제/시장
+      society: '#f59e0b',        // 사회/사건
+      international: '#0ea5e9',  // 국제
+      science: '#8b5cf6',        // 과학/기술
+      sports: '#9ca3af',         // 스포츠/포토 (de-emphasized)
+      entertainment: '#9ca3af',  // 엔터 (de-emphasized)
+      general: '#94a3b8'
+    };
+
+    const SECTION_LABELS = {
+      politics: '정치/외교',
+      economy: '경제/시장',
+      society: '사회/사건',
+      international: '국제',
+      science: '과학/기술',
+      sports: '스포츠',
+      entertainment: '엔터',
+      general: '일반'
+    };
+
+    function renderLegend() {
+      const entries = [
+        ['politics', '정치/외교'],
+        ['economy', '경제/시장'],
+        ['society', '사회/사건'],
+        ['international', '국제'],
+        ['science', '과학/기술'],
+        ['sports', '스포츠'],
+        ['entertainment', '엔터']
+      ];
+      legendEl.innerHTML = entries.map(([key, label]) => `
+        <div class="legend-item">
+          <span class="legend-color" style="background:${SECTION_COLORS[key]};"></span>
+          <span>${label}</span>
+        </div>
+      `).join('');
+    }
+
+    function detectSection(title) {
+      const t = (title || '').toLowerCase();
+      if (t.match(/대통령|국회|정부|여당|야당|의원|법안|선거|외교|nato|un|유엔|북한|러시아|중국|미국/)) return 'politics';
+      if (t.match(/주식|시장|기업|경제|금리|투자|은행|코스피|증시|부동산|환율|수출|인플레이션/)) return 'economy';
+      if (t.match(/기술|ai|과학|우주|반도체|테크|it/)) return 'science';
+      if (t.match(/축구|야구|농구|선수|경기|리그|월드컵|올림픽|스포츠/)) return 'sports';
+      if (t.match(/가수|배우|드라마|영화|아이돌|연예|엔터|예능/)) return 'entertainment';
+      if (t.match(/미국|중국|일본|전쟁|외교|nato|un|유엔|북한|러시아/)) return 'international';
+      if (t.match(/사건|사고|범죄|재판|경찰|검찰|법원|피해|구속/)) return 'society';
+      return 'general';
+    }
+
+    function stanceColor(stanceScore) {
+      if (stanceScore === undefined || stanceScore === null) return 'rgba(15,23,42,0.15)';
+      if (stanceScore < 40) return '#ef4444';   // critical-ish
+      if (stanceScore > 60) return '#10b981';   // supportive-ish
+      return '#94a3b8';                          // factual-ish
+    }
+
+    // Collision-free placement: place largest first, spiral search to avoid overlap
+    function packCircles(items) {
+      const sorted = [...items].sort((a, b) => b.size - a.size);
+      const placed = [];
+
+      sorted.forEach(item => {
+        let angle = Math.random() * Math.PI * 2;
+        let radius = Math.min(width, height) * 0.05;
+        const step = 6;
+        let bestX = width / 2;
+        let bestY = height * 0.7;
+        let placedFlag = false;
+
+        for (let iter = 0; iter < 1200; iter++) {
+          const x = width / 2 + Math.cos(angle) * radius;
+          const y = height * 0.72 + Math.sin(angle) * radius * 0.6; // mild vertical bias
+
+          if (x - item.size < 6 || x + item.size > width - 6 || y - item.size < 6 || y + item.size > height - 6) {
+            angle += 0.35; radius += step * 0.4; continue;
+          }
+
+          let collision = false;
+          for (const other of placed) {
+            const dx = x - other.x;
+            const dy = y - other.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < item.size + other.size + 4) { collision = true; break; }
+          }
+
+          if (!collision) {
+            bestX = x;
+            bestY = y;
+            placedFlag = true;
+            break;
+          }
+
+          angle += 0.28;
+          radius += step;
+        }
+
+        placed.push({ ...item, x: bestX, y: bestY });
+      });
+
+      return placed;
+    }
+
+    async function loadData() {
+      renderLegend();
+      try {
+        const res = await fetch('/api/topics?limit=400');
+        const data = await res.json();
+        const allTopics = data.data || data;
+
+        const krTopics = allTopics.filter(t => (t.countries_involved || []).includes('KR'));
+
+        const circles = krTopics.map(topic => {
+          const krStats = (topic.stats || []).find(s => s.country_code === 'KR');
+          const krArticleCount = krStats
+            ? (krStats.supportive_count || 0) + (krStats.factual_count || 0) + (krStats.critical_count || 0)
+            : 0;
+
+          // 출처 다양성, 스탠스 분산을 가중치로 사용 (없으면 1)
+          const sourceDiversity = (topic.source_count || 1);
+          const stanceSpread = krStats
+            ? Math.max(krStats.supportive_count || 0, krStats.factual_count || 0, krStats.critical_count || 0) -
+              Math.min(krStats.supportive_count || 0, krStats.factual_count || 0, krStats.critical_count || 0)
+            : 1;
+
+          const section = detectSection(topic.title_kr || topic.title);
+          const stanceScore = topic.avg_score ?? topic.avg_stance_score ?? null;
+
+          const importance = (krArticleCount || 1) * Math.max(1, sourceDiversity) * (1 + stanceSpread * 0.02);
+          const radius = Math.sqrt(importance) * 2.2 + 24; // scaled for visual separation
+
+          return {
+            id: topic.id,
+            title: topic.title_kr || topic.title,
+            articleCount: krArticleCount,
+            section,
+            stanceScore,
+            size: Math.min(radius, 110),
+            color: SECTION_COLORS[section] || SECTION_COLORS.general
+          };
+        }).filter(c => c.articleCount > 0);
+
+        topics = packCircles(circles);
+        loading.style.display = 'none';
+
+        const sectionCounts = {};
+        topics.forEach(t => { sectionCounts[t.section] = (sectionCounts[t.section] || 0) + 1; });
+        const sectionText = Object.entries(sectionCounts)
+          .map(([k,v]) => `${SECTION_LABELS[k] || k}: ${v}`)
+          .join(' | ');
+        statsEl.textContent = `총 ${topics.length}개 토픽 · ${topics.reduce((s,t)=>s+t.articleCount,0)}개 기사 · ${sectionText}`;
+
+        requestAnimationFrame(draw);
+      } catch (e) {
+        console.error(e);
+        loading.textContent = '데이터 로드 실패';
+      }
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+
+      topics.forEach(topic => {
+        const isHovered = hoveredTopic && hoveredTopic.id === topic.id;
+
+        // base shadow
+        ctx.shadowColor = 'rgba(15,23,42,0.25)';
+        ctx.shadowBlur = isHovered ? 16 : 10;
+        ctx.shadowOffsetX = 0;
+        ctx.shadowOffsetY = 6;
+
+        // fill
+        ctx.fillStyle = topic.color;
+        ctx.beginPath();
+        ctx.arc(topic.x, topic.y, topic.size, 0, Math.PI * 2);
+        ctx.fill();
+
+        // outline with stance hint
+        ctx.shadowBlur = 0;
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = 'rgba(255,255,255,0.75)';
+        ctx.beginPath();
+        ctx.arc(topic.x, topic.y, topic.size - 1.2, 0, Math.PI * 2);
+        ctx.stroke();
+
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = stanceColor(topic.stanceScore);
+        ctx.beginPath();
+        ctx.arc(topic.x, topic.y, topic.size - 5, 0, Math.PI * 2);
+        ctx.stroke();
+
+        // label
+        ctx.fillStyle = '#0f172a';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.font = '600 13px Pretendard, sans-serif';
+        const name = topic.title.length > 12 ? topic.title.slice(0, 12) + '…' : topic.title;
+        ctx.fillText(name, topic.x, topic.y - 8);
+        ctx.font = '700 15px Pretendard, sans-serif';
+        ctx.fillText(`${topic.articleCount}`, topic.x, topic.y + 12);
+      });
+
+      requestAnimationFrame(draw);
+    }
+
+    canvas.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      let found = null;
+      for (const t of topics) {
+        const dx = x - t.x;
+        const dy = y - t.y;
+        if (Math.sqrt(dx*dx + dy*dy) < t.size) { found = t; break; }
+      }
+
+      if (found) {
+        hoveredTopic = found;
+        tooltip.querySelector('.tooltip-title').textContent = found.title;
+        tooltip.querySelector('.tooltip-meta').textContent = `${SECTION_LABELS[found.section] || '기타'} · ${found.articleCount}개 기사`;
+        tooltip.querySelector('.tooltip-section').textContent = `스탠스: ${found.stanceScore ?? 'N/A'}`;
+        tooltip.style.left = `${e.clientX + 16}px`;
+        tooltip.style.top = `${e.clientY + 16}px`;
+        tooltip.classList.add('show');
+      } else {
+        hoveredTopic = null;
+        tooltip.classList.remove('show');
+      }
+    });
+
+    canvas.addEventListener('mouseleave', () => {
+      hoveredTopic = null;
+      tooltip.classList.remove('show');
+    });
+
+    canvas.addEventListener('click', () => {
+      if (hoveredTopic) window.location.href = `/topics/${hoveredTopic.id}`;
+    });
+
+    loadData();
+  </script>
+</body>
+</html>

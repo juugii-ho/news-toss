@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글로벌 뉴스 지형도 - 3-레이어</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif;
+            background: #fafaf9;
+            color: #27272a;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            padding: 20px 40px;
+            background: white;
+            border-bottom: 1px solid #e4e4e7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #18181b;
+        }
+
+        .meta {
+            font-size: 13px;
+            color: #71717a;
+        }
+
+        /* Canvas */
+        .canvas-wrapper {
+            flex: 1;
+            position: relative;
+            background: #fafaf9;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: absolute;
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 8px;
+            padding: 12px 16px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            z-index: 100;
+            max-width: 280px;
+        }
+
+        .tooltip.show {
+            opacity: 1;
+        }
+
+        .tooltip-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 6px;
+        }
+
+        .tooltip-meta {
+            font-size: 12px;
+            color: #71717a;
+        }
+
+        .tooltip-badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            margin-top: 6px;
+        }
+
+        /* Layer Controls */
+        .layer-controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 8px;
+            padding: 16px;
+            z-index: 10;
+            min-width: 200px;
+        }
+
+        .layer-title {
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+
+        .layer-toggle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .layer-toggle:hover {
+            background: #f4f4f5;
+        }
+
+        .layer-checkbox {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .layer-label {
+            font-size: 13px;
+            color: #52525b;
+            flex: 1;
+            cursor: pointer;
+        }
+
+        .layer-count {
+            font-size: 11px;
+            color: #a1a1aa;
+        }
+
+        .layer-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 4px;
+        }
+
+        /* Legend */
+        .legend {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 8px;
+            padding: 16px;
+            font-size: 12px;
+            max-width: 200px;
+        }
+
+        .legend-title {
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 10px;
+        }
+
+        .legend-section {
+            margin-bottom: 12px;
+        }
+
+        .legend-section-title {
+            font-size: 11px;
+            color: #71717a;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+            color: #52525b;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Controls */
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 20px;
+            padding: 6px;
+            display: flex;
+            gap: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .control-btn {
+            background: none;
+            border: none;
+            padding: 6px 14px;
+            font-size: 12px;
+            color: #52525b;
+            cursor: pointer;
+            border-radius: 14px;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        .control-btn:hover {
+            background: #f4f4f5;
+            color: #18181b;
+        }
+
+        .control-btn.active {
+            background: #18181b;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">글로벌 뉴스 지형도 - 3-레이어</div>
+            <div class="meta">2025년 11월 27일 · 기사 150건 · 국내 12개 · 글로벌 5개</div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="canvas"></canvas>
+
+            <div class="tooltip" id="tooltip">
+                <div class="tooltip-title"></div>
+                <div class="tooltip-meta"></div>
+                <div class="tooltip-badge"></div>
+            </div>
+
+            <!-- Layer Controls -->
+            <div class="layer-controls">
+                <div class="layer-title">레이어</div>
+
+                <label class="layer-toggle">
+                    <input type="checkbox" class="layer-checkbox" id="layerArticles" checked>
+                    <span class="layer-indicator" style="background: #a1a1aa;"></span>
+                    <span class="layer-label">개별 기사</span>
+                    <span class="layer-count" id="countArticles">150</span>
+                </label>
+
+                <label class="layer-toggle">
+                    <input type="checkbox" class="layer-checkbox" id="layerNational" checked>
+                    <span class="layer-indicator" style="background: #60a5fa;"></span>
+                    <span class="layer-label">국내 토픽</span>
+                    <span class="layer-count" id="countNational">12</span>
+                </label>
+
+                <label class="layer-toggle">
+                    <input type="checkbox" class="layer-checkbox" id="layerMega" checked>
+                    <span class="layer-indicator" style="background: #10b981;"></span>
+                    <span class="layer-label">글로벌 메가</span>
+                    <span class="layer-count" id="countMega">5</span>
+                </label>
+            </div>
+
+            <!-- Legend -->
+            <div class="legend">
+                <div class="legend-title">범례</div>
+
+                <div class="legend-section">
+                    <div class="legend-section-title">국가 (기사)</div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #ef4444;"></span>
+                        <span>미국</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #3b82f6;"></span>
+                        <span>영국</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #8b5cf6;"></span>
+                        <span>한국</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #f59e0b;"></span>
+                        <span>기타</span>
+                    </div>
+                </div>
+
+                <div class="legend-section">
+                    <div class="legend-section-title">성향 (토픽)</div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #f87171;"></span>
+                        <span>비판적</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #d4d4d8;"></span>
+                        <span>중립</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #10b981;"></span>
+                        <span>지지</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="control-btn" onclick="triggerPulse()">펄스 트리거</button>
+                <button class="control-btn" onclick="resetView()">리셋</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const tooltip = document.getElementById('tooltip');
+
+        let width, height;
+        let articles = [];
+        let nationalTopics = [];
+        let megaTopics = [];
+        let hoveredItem = null;
+        let activePulses = []; // { topicId, startTime }
+
+        // Layer visibility
+        let layerStates = {
+            articles: true,
+            national: true,
+            mega: true
+        };
+
+        // Colors
+        const COUNTRY_COLORS = {
+            'US': '#ef4444',
+            'UK': '#3b82f6',
+            'KR': '#8b5cf6',
+            'DE': '#f59e0b',
+            'FR': '#ec4899',
+            'JP': '#06b6d4',
+            'CN': '#f97316',
+            'RU': '#84cc16'
+        };
+
+        const STANCE_COLORS = {
+            critical: '#f87171',
+            neutral: '#d4d4d8',
+            supportive: '#10b981'
+        };
+
+        function getCountryColor(code) {
+            return COUNTRY_COLORS[code] || '#a1a1aa';
+        }
+
+        function getStanceColor(score) {
+            if (score < 34) return STANCE_COLORS.critical;
+            if (score < 67) return STANCE_COLORS.neutral;
+            return STANCE_COLORS.supportive;
+        }
+
+        function getStanceLabel(score) {
+            if (score < 34) return { text: '비판적', bg: '#fee2e2', color: '#991b1b' };
+            if (score < 67) return { text: '중립', bg: '#f4f4f5', color: '#52525b' };
+            return { text: '지지', bg: '#d1fae5', color: '#065f46' };
+        }
+
+        // Generate mock data
+        function generateMockData() {
+            // Mega topics (global, 3+ countries)
+            const megaData = [
+                { id: 1, title: "Trump 행정부 이민 정책", countries: ['US', 'UK', 'DE', 'FR', 'KR'], article_count: 23, stance: 28, x: 0.25, y: 0.3 },
+                { id: 2, title: "AI 규제 국제 협약", countries: ['US', 'UK', 'DE', 'JP'], article_count: 18, stance: 52, x: 0.55, y: 0.35 },
+                { id: 3, title: "유럽 에너지 위기", countries: ['UK', 'DE', 'FR', 'RU'], article_count: 15, stance: 35, x: 0.7, y: 0.55 },
+                { id: 4, title: "중국 경제 전망", countries: ['CN', 'US', 'JP'], article_count: 12, stance: 68, x: 0.35, y: 0.65 },
+                { id: 5, title: "기후 정상회의", countries: ['US', 'UK', 'DE'], article_count: 10, stance: 58, x: 0.65, y: 0.75 },
+            ];
+
+            megaTopics = megaData.map(m => ({
+                ...m,
+                type: 'mega',
+                absX: m.x * width,
+                absY: m.y * height,
+                targetX: m.x * width,
+                targetY: m.y * height,
+                size: Math.sqrt(m.article_count * m.countries.length) * 4 + 30,
+                color: getStanceColor(m.stance),
+                scale: 0,
+                targetScale: 1,
+                pulsePhase: Math.random() * Math.PI * 2
+            }));
+
+            // National topics (1 country only)
+            const nationalData = [
+                { id: 101, title: "미국 중간선거 전망", country: 'US', article_count: 8, stance: 45, x: 0.15, y: 0.2 },
+                { id: 102, title: "영국 왕실 행사", country: 'UK', article_count: 6, stance: 62, x: 0.45, y: 0.25 },
+                { id: 103, title: "한국 반도체 투자", country: 'KR', article_count: 7, stance: 71, x: 0.8, y: 0.45 },
+                { id: 104, title: "독일 재생에너지", country: 'DE', article_count: 5, stance: 68, x: 0.6, y: 0.65 },
+                { id: 105, title: "일본 엔화 정책", country: 'JP', article_count: 6, stance: 52, x: 0.85, y: 0.7 },
+                { id: 106, title: "프랑스 연금 개혁", country: 'FR', article_count: 9, stance: 31, x: 0.3, y: 0.5 },
+                { id: 107, title: "미국 테크 규제", country: 'US', article_count: 7, stance: 38, x: 0.2, y: 0.75 },
+                { id: 108, title: "중국 부동산 시장", country: 'CN', article_count: 8, stance: 42, x: 0.5, y: 0.8 },
+            ];
+
+            nationalTopics = nationalData.map(n => ({
+                ...n,
+                type: 'national',
+                absX: n.x * width,
+                absY: n.y * height,
+                targetX: n.x * width,
+                targetY: n.y * height,
+                size: Math.sqrt(n.article_count) * 6 + 15,
+                color: getStanceColor(n.stance),
+                scale: 0,
+                targetScale: 1,
+                pulsePhase: Math.random() * Math.PI * 2
+            }));
+
+            // Individual articles (scattered around topics)
+            articles = [];
+            let articleId = 1000;
+
+            // Articles for mega topics
+            megaTopics.forEach(mega => {
+                const articlesPerCountry = Math.floor(mega.article_count / mega.countries.length);
+                mega.countries.forEach(country => {
+                    for (let i = 0; i < articlesPerCountry; i++) {
+                        const angle = Math.random() * Math.PI * 2;
+                        const distance = Math.random() * (mega.size + 40);
+                        articles.push({
+                            id: articleId++,
+                            type: 'article',
+                            title: `${country} 기사 ${i + 1}`,
+                            country: country,
+                            parentTopic: mega.id,
+                            absX: mega.absX + Math.cos(angle) * distance,
+                            absY: mega.absY + Math.sin(angle) * distance,
+                            size: 3,
+                            color: getCountryColor(country),
+                            scale: 0,
+                            targetScale: 1
+                        });
+                    }
+                });
+            });
+
+            // Articles for national topics
+            nationalTopics.forEach(national => {
+                for (let i = 0; i < national.article_count; i++) {
+                    const angle = Math.random() * Math.PI * 2;
+                    const distance = Math.random() * (national.size + 30);
+                    articles.push({
+                        id: articleId++,
+                        type: 'article',
+                        title: `${national.country} 기사 ${i + 1}`,
+                        country: national.country,
+                        parentTopic: national.id,
+                        absX: national.absX + Math.cos(angle) * distance,
+                        absY: national.absY + Math.sin(angle) * distance,
+                        size: 3,
+                        color: getCountryColor(national.country),
+                        scale: 0,
+                        targetScale: 1
+                    });
+                }
+            });
+
+            // Update counts
+            document.getElementById('countArticles').textContent = articles.length;
+            document.getElementById('countNational').textContent = nationalTopics.length;
+            document.getElementById('countMega').textContent = megaTopics.length;
+        }
+
+        function resize() {
+            width = canvas.offsetWidth;
+            height = canvas.offsetHeight;
+            canvas.width = width;
+            canvas.height = height;
+            generateMockData();
+        }
+
+        function drawGrid() {
+            ctx.strokeStyle = '#f5f5f4';
+            ctx.lineWidth = 1;
+            const step = 60;
+
+            for (let x = 0; x < width; x += step) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, height);
+                ctx.stroke();
+            }
+            for (let y = 0; y < height; y += step) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(width, y);
+                ctx.stroke();
+            }
+        }
+
+        function draw() {
+            ctx.fillStyle = '#fafaf9';
+            ctx.fillRect(0, 0, width, height);
+            drawGrid();
+
+            const spring = 0.15;
+            const allItems = [];
+
+            // Layer 1: Articles (bottom)
+            if (layerStates.articles) {
+                articles.forEach(article => {
+                    article.scale += (article.targetScale - article.scale) * spring;
+
+                    const isHovered = hoveredItem === article;
+                    const size = article.size * article.scale;
+
+                    if (size < 0.5) return;
+
+                    ctx.fillStyle = article.color + (isHovered ? 'FF' : 'CC');
+                    ctx.strokeStyle = isHovered ? 'white' : 'transparent';
+                    ctx.lineWidth = 1.5;
+
+                    ctx.beginPath();
+                    ctx.arc(article.absX, article.absY, size, 0, Math.PI * 2);
+                    ctx.fill();
+                    if (isHovered) ctx.stroke();
+                });
+                allItems.push(...articles);
+            }
+
+            // Layer 2: National Topics (middle)
+            if (layerStates.national) {
+                nationalTopics.forEach(topic => {
+                    topic.scale += (topic.targetScale - topic.scale) * spring;
+
+                    const breathe = Math.sin(Date.now() / 2000 + topic.pulsePhase) * 1.5;
+                    const currentSize = topic.size * topic.scale + breathe;
+
+                    if (currentSize < 1) return;
+
+                    const isHovered = hoveredItem === topic;
+
+                    ctx.shadowColor = 'rgba(0,0,0,0.1)';
+                    ctx.shadowBlur = 8;
+                    ctx.shadowOffsetY = 3;
+
+                    ctx.fillStyle = topic.color + (isHovered ? 'DD' : 'AA');
+                    ctx.strokeStyle = 'white';
+                    ctx.lineWidth = 2;
+
+                    ctx.beginPath();
+                    ctx.arc(topic.absX, topic.absY, currentSize, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.stroke();
+
+                    ctx.shadowColor = 'transparent';
+
+                    if (isHovered) {
+                        ctx.strokeStyle = topic.color;
+                        ctx.lineWidth = 1.5;
+                        ctx.setLineDash([3, 3]);
+                        ctx.beginPath();
+                        ctx.arc(topic.absX, topic.absY, currentSize + 6, 0, Math.PI * 2);
+                        ctx.stroke();
+                        ctx.setLineDash([]);
+                    }
+                });
+                allItems.push(...nationalTopics);
+            }
+
+            // Layer 3: Mega Topics (top)
+            if (layerStates.mega) {
+                megaTopics.forEach(topic => {
+                    topic.scale += (topic.targetScale - topic.scale) * spring;
+
+                    const breathe = Math.sin(Date.now() / 2000 + topic.pulsePhase) * 2;
+                    const currentSize = topic.size * topic.scale + breathe;
+
+                    if (currentSize < 1) return;
+
+                    const isHovered = hoveredItem === topic;
+
+                    // Random Pulse (메가토픽만)
+                    const activePulse = activePulses.find(p => p.topicId === topic.id);
+                    if (activePulse) {
+                        const elapsed = Date.now() - activePulse.startTime;
+                        const pulseRadius = elapsed * 0.15;
+                        const pulseDuration = 2000;
+
+                        if (elapsed < pulseDuration) {
+                            const opacity = Math.max(0, 1 - elapsed / pulseDuration);
+
+                            // 이중 펄스 (더 눈에 띄게)
+                            [pulseRadius, pulseRadius * 0.6].forEach(radius => {
+                                if (radius > 0) {
+                                    ctx.strokeStyle = topic.color + Math.floor(opacity * 100).toString(16).padStart(2, '0');
+                                    ctx.lineWidth = 3;
+                                    ctx.beginPath();
+                                    ctx.arc(topic.absX, topic.absY, radius, 0, Math.PI * 2);
+                                    ctx.stroke();
+                                }
+                            });
+                        } else {
+                            // 펄스 종료
+                            activePulses = activePulses.filter(p => p.topicId !== topic.id);
+                        }
+                    }
+
+                    ctx.shadowColor = 'rgba(0,0,0,0.12)';
+                    ctx.shadowBlur = 12;
+                    ctx.shadowOffsetY = 4;
+
+                    ctx.fillStyle = topic.color + (isHovered ? 'EE' : 'BB');
+                    ctx.strokeStyle = 'white';
+                    ctx.lineWidth = isHovered ? 3 : 2;
+
+                    ctx.beginPath();
+                    ctx.arc(topic.absX, topic.absY, currentSize, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.stroke();
+
+                    ctx.shadowColor = 'transparent';
+
+                    if (isHovered) {
+                        ctx.strokeStyle = topic.color;
+                        ctx.lineWidth = 1.5;
+                        ctx.setLineDash([3, 3]);
+                        ctx.beginPath();
+                        ctx.arc(topic.absX, topic.absY, currentSize + 8, 0, Math.PI * 2);
+                        ctx.stroke();
+                        ctx.setLineDash([]);
+                    }
+                });
+                allItems.push(...megaTopics);
+            }
+
+            requestAnimationFrame(draw);
+        }
+
+        // Mouse interaction
+        canvas.addEventListener('mousemove', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+
+            let found = null;
+
+            // Check in reverse order (top layer first)
+            const checkLayers = [];
+            if (layerStates.mega) checkLayers.push(...megaTopics);
+            if (layerStates.national) checkLayers.push(...nationalTopics);
+            if (layerStates.articles) checkLayers.push(...articles);
+
+            for (let item of checkLayers) {
+                const dist = Math.sqrt(
+                    Math.pow(mouseX - item.absX, 2) +
+                    Math.pow(mouseY - item.absY, 2)
+                );
+                const checkSize = item.type === 'article' ? item.size : item.size * item.scale;
+                if (dist < checkSize) {
+                    found = item;
+                    break;
+                }
+            }
+
+            if (found !== hoveredItem) {
+                hoveredItem = found;
+
+                if (found) {
+                    if (found.type === 'article') {
+                        tooltip.querySelector('.tooltip-title').textContent = found.title;
+                        tooltip.querySelector('.tooltip-meta').innerHTML = `<span>${found.country}</span>`;
+                        tooltip.querySelector('.tooltip-badge').textContent = '개별 기사';
+                        tooltip.querySelector('.tooltip-badge').style.background = '#f4f4f5';
+                        tooltip.querySelector('.tooltip-badge').style.color = '#52525b';
+                    } else if (found.type === 'national') {
+                        const stance = getStanceLabel(found.stance);
+                        tooltip.querySelector('.tooltip-title').textContent = found.title;
+                        tooltip.querySelector('.tooltip-meta').innerHTML = `<span>${found.country} · ${found.article_count}건</span>`;
+                        const badge = tooltip.querySelector('.tooltip-badge');
+                        badge.textContent = stance.text;
+                        badge.style.background = stance.bg;
+                        badge.style.color = stance.color;
+                    } else {
+                        const stance = getStanceLabel(found.stance);
+                        tooltip.querySelector('.tooltip-title').textContent = found.title;
+                        tooltip.querySelector('.tooltip-meta').innerHTML = `<span>${found.countries.length}개국 · ${found.article_count}건</span>`;
+                        const badge = tooltip.querySelector('.tooltip-badge');
+                        badge.textContent = stance.text;
+                        badge.style.background = stance.bg;
+                        badge.style.color = stance.color;
+                    }
+
+                    tooltip.style.left = e.clientX + 20 + 'px';
+                    tooltip.style.top = e.clientY - 40 + 'px';
+                    tooltip.classList.add('show');
+
+                    if (found.type !== 'article') {
+                        found.targetScale = 1.15;
+                    }
+                } else {
+                    tooltip.classList.remove('show');
+                }
+            }
+
+            [...megaTopics, ...nationalTopics].forEach(t => {
+                if (t !== hoveredItem && t.targetScale > 1) {
+                    t.targetScale = 1;
+                }
+            });
+
+            if (found) {
+                tooltip.style.left = e.clientX + 20 + 'px';
+                tooltip.style.top = e.clientY - 40 + 'px';
+            }
+        });
+
+        canvas.addEventListener('mouseleave', () => {
+            hoveredItem = null;
+            tooltip.classList.remove('show');
+            [...megaTopics, ...nationalTopics].forEach(t => t.targetScale = 1);
+        });
+
+        // Layer toggles
+        document.getElementById('layerArticles').addEventListener('change', (e) => {
+            layerStates.articles = e.target.checked;
+            articles.forEach(a => a.targetScale = e.target.checked ? 1 : 0);
+        });
+
+        document.getElementById('layerNational').addEventListener('change', (e) => {
+            layerStates.national = e.target.checked;
+            nationalTopics.forEach(t => t.targetScale = e.target.checked ? 1 : 0);
+        });
+
+        document.getElementById('layerMega').addEventListener('change', (e) => {
+            layerStates.mega = e.target.checked;
+            megaTopics.forEach(t => t.targetScale = e.target.checked ? 1 : 0);
+        });
+
+        function triggerPulse() {
+            // 랜덤하게 1-2개 메가토픽 선택
+            if (megaTopics.length === 0) return;
+
+            const numPulses = Math.random() > 0.5 ? 2 : 1;
+            const shuffled = [...megaTopics].sort(() => Math.random() - 0.5);
+
+            for (let i = 0; i < Math.min(numPulses, shuffled.length); i++) {
+                const topic = shuffled[i];
+                // 이미 펄스 중이 아니면 추가
+                if (!activePulses.find(p => p.topicId === topic.id)) {
+                    activePulses.push({
+                        topicId: topic.id,
+                        startTime: Date.now() + (i * 500) // 약간 시차
+                    });
+                }
+            }
+        }
+
+        // 자동 랜덤 펄스 (3-7초마다)
+        function startRandomPulses() {
+            function scheduleNext() {
+                const delay = 3000 + Math.random() * 4000; // 3-7초
+                setTimeout(() => {
+                    if (layerStates.mega && megaTopics.length > 0) {
+                        triggerPulse();
+                    }
+                    scheduleNext();
+                }, delay);
+            }
+            scheduleNext();
+        }
+
+        function resetView() {
+            resize();
+            [...articles, ...nationalTopics, ...megaTopics].forEach((item, i) => {
+                item.scale = 0;
+                setTimeout(() => {
+                    item.targetScale = 1;
+                }, i * 5);
+            });
+            setTimeout(triggerPulse, 500);
+        }
+
+        // Init
+        resize();
+        window.addEventListener('resize', resize);
+
+        // Sequential appearance
+        [...articles, ...nationalTopics, ...megaTopics].forEach((item, i) => {
+            setTimeout(() => {
+                item.targetScale = 1;
+            }, i * 5 + 300);
+        });
+
+        draw();
+
+        // 자동 랜덤 펄스 시작
+        setTimeout(() => {
+            triggerPulse(); // 첫 펄스
+            startRandomPulses(); // 이후 자동 반복
+        }, 2000);
+    </script>
+</body>
+</html>

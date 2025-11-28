@@ -1,0 +1,1258 @@
+[
+  {
+    "title": "'I don't know what the future holds': Burnham refuses to rule out Starmer challenge",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "Andy Burnham has refused to rule out a future challenge to Keir Starmer's leadership. He stated his uncertainty about \"what the future holds,\" indicating he remains open to such a possibility.",
+    "article_count": 15,
+    "countries_involved": [
+      "GB",
+      "US",
+      "RU"
+    ],
+    "stats": {
+      "RU": {
+        "supportive": 3,
+        "factual": 2,
+        "critical": 4,
+        "avg_score": 47,
+        "summary": "The provided context relates exclusively to a Trump Ukraine peace plan and offers no information on RU media's perspective regarding Andy Burnham potentially challenging Keir Starmer."
+      },
+      "US": {
+        "supportive": 1,
+        "factual": 2,
+        "critical": 2,
+        "avg_score": 44,
+        "summary": "The provided context, which details US efforts regarding a peace plan for Russia's war in Ukraine, does not offer any information or perspective related to Andy Burnham's potential challenge to Keir Starmer in UK politics."
+      },
+      "GB": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "GB media are largely interpreting Burnham's refusal to definitively rule out a future challenge to Starmer as fueling significant speculation about his leadership aspirations."
+      }
+    },
+    "articles": [
+      {
+        "title": "What we know about leaked US draft plan to end Russia's Ukraine war",
+        "link": "https://www.bbc.com/news/articles/cde6yld78d6o?at_medium=RSS&at_campaign=rss",
+        "published": "Mon, 24 Nov 2025 11:48:36 GMT",
+        "summary": "There are 28 key points and while several on the face of it could be acceptable to Ukraine, others cross Kyiv's red lines.",
+        "source": "BBC News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "As Ukraine Sets \u2018Red Lines,\u2019 a U.S. Peace Plan Is Slimmed Down",
+        "link": "https://www.nytimes.com/2025/11/24/world/europe/ukraine-zelensky-rubio-russia-peace-plan.html",
+        "published": "Tue, 25 Nov 2025 00:34:34 +0000",
+        "summary": "Washington and Kyiv said that \u201chighly productive\u201d discussions over a proposal to end the war between Russia and Ukraine would continue.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "supportive",
+        "stance_score": 72
+      },
+      {
+        "title": "How the Peace Plan Looks to Ukraine and Russia",
+        "link": "https://www.nytimes.com/2025/11/25/world/peace-plan-ukraine-russia-nato-comey.html",
+        "published": "Tue, 25 Nov 2025 05:30:02 +0000",
+        "summary": "Our correspondents discuss the prospects for President Trump\u2019s plan to end the war.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "Ukraine, U.S. Meet About Trump\u2019s Peace Plan to End War With Russia",
+        "link": "https://www.nytimes.com/2025/11/23/world/europe/ukraine-switzerland-russia-peace-talks.html",
+        "published": "Mon, 24 Nov 2025 07:31:06 +0000",
+        "summary": "President Trump lashed out at Ukraine even as the talks on his peace proposal were still taking place, accusing the country\u2019s leadership of being ungrateful for American support.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "critical",
+        "stance_score": 28
+      },
+      {
+        "title": "G20 Leaders Push Back on Trump\u2019s Ukraine Peace Plan",
+        "link": "https://www.nytimes.com/2025/11/22/world/africa/g20-south-africa-ukraine-russia-united-states.html",
+        "published": "Sun, 23 Nov 2025 04:14:25 +0000",
+        "summary": "In a joint statement, the leaders reaffirmed their commitment to Ukraine, which faces the prospect of losing American support if it rejects the latest proposal.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "critical",
+        "stance_score": 20
+      },
+      {
+        "title": "'I don't know what the future holds': Burnham refuses to rule out Starmer challenge",
+        "link": "https://www.bbc.com/news/videos/cj414qprxkvo?at_medium=RSS&at_campaign=rss",
+        "published": "Thu, 20 Nov 2025 10:59:07 GMT",
+        "summary": "Speaking to BBC Breakfast, the mayor of Greater Manchester did not reply when pressed about a possible challenge to Keir Starmer for the Labour leadership.",
+        "source": "BBC News",
+        "country_code": "GB",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "Rubio touts \u2018tremendous progress\u2019 on Ukraine peace plan",
+        "link": "https://www.rt.com/news/628279-rubio-tremendous-progress-ukraine-peace/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Mon, 24 Nov 2025 07:43:06 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/692416f32030272357660c3e.jpg\" /> Washington and Kiev have made substantial progress on a peace deal, and the results will now be discussed with Russia, Marco Rubio has said <br/><a href=\"https://www.rt.com/news/628279-rubio-tremendous-progress-ukraine-peace/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "supportive",
+        "stance_score": 80
+      },
+      {
+        "title": "US and Russia to discuss Trump\u2019s Ukraine peace plan \u2013 NYT",
+        "link": "https://www.rt.com/news/628248-us-russia-peace-plan-talks-nyt/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Sun, 23 Nov 2025 16:39:16 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6924156a85f54030fc5e8431.png\" /> Plans for US-Russian talks on President Donald Trump\u2019s peace proposal for the Ukraine conflict are reportedly \u201cunderway\u201d <br/><a href=\"https://www.rt.com/news/628248-us-russia-peace-plan-talks-nyt/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "\u2018We are almost there\u2019 on settlement of Ukraine conflict \u2013 Trump envoy",
+        "link": "https://www.rt.com/news/628245-kellogg-ukraine-conflict-settlement-close/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Sun, 23 Nov 2025 14:35:56 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69231b5185f5403c3c4937f1.jpg\" /> Washington\u2019s proposed peace plan provides the framework for reaching an end to the Ukraine conflict, Trump\u2019s envoy Keith Kellogg has said <br/><a href=\"https://www.rt.com/news/628245-kellogg-ukraine-conflict-settlement-close/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "supportive",
+        "stance_score": 80
+      },
+      {
+        "title": "EU seeking to rewrite Trump\u2019s Ukraine peace plan \u2013 Bloomberg",
+        "link": "https://www.rt.com/news/628186-eu-trump-plan-rewrite/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Sat, 22 Nov 2025 15:31:50 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6921d7572030277cf202960e.jpg\" /> Ukraine\u2019s backers in the EU are seeking to rewrite the US peace plan, concealing major changes as \u201cconstructive updates,\u201d Bloomberg reports <br/><a href=\"https://www.rt.com/news/628186-eu-trump-plan-rewrite/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "critical",
+        "stance_score": 20
+      },
+      {
+        "title": "Trump peace plan for Ukraine: What we know so far",
+        "link": "https://www.rt.com/news/628093-trump-ukraine-peace-plan/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Fri, 21 Nov 2025 11:35:23 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69204bfe85f5401b894b9fb0.jpg\" /> The US has proposed a plan to end the Ukraine conflict to Vladimir Zelensky\u2019s corruption-embroiled government <br/><a href=\"https://www.rt.com/news/628093-trump-ukraine-peace-plan/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "critical",
+        "stance_score": 28
+      },
+      {
+        "title": "EU rejects US-proposed Ukraine peace plan",
+        "link": "https://www.rt.com/news/628078-eu-rejects-ukraine-peace-plan/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Thu, 20 Nov 2025 20:12:12 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691f72b92030274ddb4476fd.jpg\" /> EU ministers have pushed back against the US-proposed Ukraine peace plan unless they are part of the talks <br/><a href=\"https://www.rt.com/news/628078-eu-rejects-ukraine-peace-plan/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "EU \u2018kept in the dark\u2019 about Trump\u2019s Ukraine peace plan \u2013 Telegraph",
+        "link": "https://www.rt.com/news/628047-eu-kept-dark-trump-ukraine-peace-plan/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Thu, 20 Nov 2025 04:53:41 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691e9eb185f5404ad003d762.jpg\" /> European officials have not been briefed on the specifics of the new peace plan presented by the US to Ukraine, The Telegraph says <br/><a href=\"https://www.rt.com/news/628047-eu-kept-dark-trump-ukraine-peace-plan/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "critical",
+        "stance_score": 25
+      },
+      {
+        "title": "US peace plan proposes Ukraine \u2018give up sovereignty\u2019 \u2013 media",
+        "link": "https://www.rt.com/news/628028-ukraine-conflict-peace-plan/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Wed, 19 Nov 2025 21:00:47 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691f17c8203027434a0ccea3.jpg\" /> The terms of a US-proposed Ukraine peace plan developed with Moscow would amount to Kiev giving up its sovereignty, sources have told FT <br/><a href=\"https://www.rt.com/news/628028-ukraine-conflict-peace-plan/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "critical",
+        "stance_score": 20
+      },
+      {
+        "title": "US secretly drafting new Ukraine peace plan with Russian input \u2013 Axios",
+        "link": "https://www.rt.com/news/627979-us-peace-plan-axios/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Wed, 19 Nov 2025 08:13:44 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691d936c203027238f783bae.jpg\" /> The US has prepared a new 28-point peace proposal to end the Ukraine conflict on terms that Russia reportedly finds reasonable <br/><a href=\"https://www.rt.com/news/627979-us-peace-plan-axios/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "supportive",
+        "stance_score": 75
+      }
+    ],
+    "divergence_score": 0.06,
+    "title_kr": "\"\ubbf8\ub798\ub294 \ubaa8\ub978\ub2e4\": \ubc88\ud584, \uc2a4\ud0c0\uba38\uc5d0 \ub300\ud55c \ub3c4\uc804 \ubc30\uc81c \uc548 \ud574"
+  },
+  {
+    "title": "Watch: Pope Leo to US students: Don't let AI do your homework",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "Pope Leo, speaking via video from the Vatican, advised US students at a Catholic conference against letting artificial intelligence complete their homework. He cautioned them against blindly trusting AI for academic tasks, emphasizing the importance of independent effort.",
+    "article_count": 3,
+    "countries_involved": [
+      "GB",
+      "US",
+      "RU"
+    ],
+    "stats": {
+      "GB": {
+        "supportive": 1,
+        "factual": 0,
+        "critical": 0,
+        "avg_score": 85,
+        "summary": "The provided information does not contain the GB media's perspective on Pope Leo's advice against using AI for homework, as the context describes a separate event involving a GAA jersey."
+      },
+      "RU": {
+        "supportive": 0,
+        "factual": 0,
+        "critical": 1,
+        "avg_score": 25,
+        "summary": "RU media frames Pope Leo's warning to US students against using AI for homework as part of a broader caution against blindly trusting artificial intelligence, notably reinforcing this perspective with a similar advisory from a Google executive."
+      },
+      "US": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "US media highlighted Pope Leo's admonition to US students against using AI for homework as a significant moral voice addressing contemporary academic integrity and the ethical challenges of technology in education."
+      }
+    },
+    "articles": [
+      {
+        "title": "Watch: Pope Leo to US students: Don't let AI do your homework",
+        "link": "https://www.bbc.com/news/videos/c99704g0x4ro?at_medium=RSS&at_campaign=rss",
+        "published": "Fri, 21 Nov 2025 20:17:11 GMT",
+        "summary": "Appearing from the Vatican via video, the pontiff spoke to youth attending a Catholic conference in the US state of Indiana.\n",
+        "source": "BBC News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "Pope Leo impresses crowd with 'great catch'",
+        "link": "https://www.bbc.com/news/videos/c4g9zx2jnn5o?at_medium=RSS&at_campaign=rss",
+        "published": "Fri, 21 Nov 2025 13:45:22 GMT",
+        "summary": "Pope Leo XIV held up the Tyrone GAA jersey to great cheers from the crowd. ",
+        "source": "BBC News",
+        "country_code": "GB",
+        "stance": "supportive",
+        "stance_score": 85
+      },
+      {
+        "title": "Don\u2019t \u2018blindly\u2019 trust AI \u2013 Google boss",
+        "link": "https://www.rt.com/news/627939-google-artificial-intelligence-warning/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Tue, 18 Nov 2025 17:11:31 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691ca89b85f5400b545caf27.jpg\" /> Google CEO Sundar Pichai has warned users against \u201cblindly\u201d trusting everything that AI tools tell them <br/><a href=\"https://www.rt.com/news/627939-google-artificial-intelligence-warning/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "critical",
+        "stance_score": 25
+      }
+    ],
+    "divergence_score": 0.6,
+    "title_kr": "[\uc601\uc0c1] \ub808\uc624 \uad50\ud669, \ubbf8\uad6d \ud559\uc0dd\ub4e4\uc5d0\uac8c \"AI\uc5d0 \uc219\uc81c \ub9e1\uae30\uc9c0 \ub9c8\ub77c\""
+  },
+  {
+    "title": "Russia to emerge \u2018absolute winner\u2019 in Ukraine conflict \u2013 EU country\u2019s PM",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "An EU country's Prime Minister controversially stated that Russia is poised to emerge as the \"absolute winner\" in the ongoing conflict in Ukraine. This assessment comes amidst reports of individuals with U.S. ties fighting for Russia and a growing trend of Middle Eastern nations turning to Moscow for stability.",
+    "article_count": 3,
+    "countries_involved": [
+      "US",
+      "RU"
+    ],
+    "stats": {
+      "US": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "The provided context, focusing on an individual with U.S. ties fighting for Russia, does not offer information on the US media's perspective regarding an EU country's PM stating Russia will emerge an \"absolute winner\" in the Ukraine conflict."
+      },
+      "RU": {
+        "supportive": 2,
+        "factual": 0,
+        "critical": 0,
+        "avg_score": 90,
+        "summary": "RU media highlights an EU country's PM declaring Russia the \"absolute winner\" in the Ukraine conflict as compelling external validation of Russia's inevitable success and increasing international power."
+      }
+    },
+    "articles": [
+      {
+        "title": "Why a Man With U.S. Ties Fought for Russia in Ukraine",
+        "link": "https://www.nytimes.com/2025/11/24/us/politics/russian-soldier-war.html",
+        "published": "Mon, 24 Nov 2025 10:01:36 +0000",
+        "summary": "Col. Andrei Demurenko\u2019s war story began at Fort Leavenworth, Kan., at a moment of hope and peace. It ended with a mortar blast in Ukraine.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "Russia to emerge \u2018absolute winner\u2019 in Ukraine conflict \u2013 EU country\u2019s PM",
+        "link": "https://www.rt.com/news/628202-russia-absolute-winner-fico/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Sat, 22 Nov 2025 17:50:33 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6921f72785f54045543a64e0.jpg\" /> Bad foreign policy and war hawks running amok in the EU are to blame for Kiev\u2019s situation, Slovakia\u2019s Robert Fico has said <br/><a href=\"https://www.rt.com/news/628202-russia-absolute-winner-fico/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "supportive",
+        "stance_score": 90
+      },
+      {
+        "title": "Why Middle East nations turn to Russia for stability",
+        "link": "https://www.rt.com/news/628076-russia-middle-east-stability/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Thu, 20 Nov 2025 21:00:41 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691f31e185f5404347297005.jpg\" /> Sergey Shoigu recently went on a visit to Oman and Egypt \u2013 two nations looking for reliable partners in an increasingly turbulent region <br/><a href=\"https://www.rt.com/news/628076-russia-middle-east-stability/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "supportive",
+        "stance_score": 90
+      }
+    ],
+    "divergence_score": 0.4,
+    "title_kr": "\"\ub7ec\uc2dc\uc544, \uc6b0\ud06c\ub77c \ubd84\uc7c1\uc11c '\uc808\ub300\uc801 \uc2b9\uc790' \ub420 \uac83\" - EU\uad6d \ucd1d\ub9ac"
+  },
+  {
+    "title": "Trump \u2018remains hopeful\u2019 for Ukraine talks after US and EU draft dueling peace plans: LIVE UPDATES",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "Donald Trump reportedly \"remains hopeful\" for Ukraine peace talks. This sentiment follows the drafting of separate, \"dueling\" peace plans by both the United States and the European Union.",
+    "article_count": 4,
+    "countries_involved": [
+      "US",
+      "RU"
+    ],
+    "stats": {
+      "US": {
+        "supportive": 0,
+        "factual": 2,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "US media often scrutinizes Trump's optimism for Ukraine talks, contrasting it with his track record of transactional and disruptive negotiations that have previously stalled agreements and now coincide with \"dueling\" peace proposals."
+      },
+      "RU": {
+        "supportive": 0,
+        "factual": 2,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "RU media portrays Trump's continued hope for Ukraine talks as a potentially pragmatic path that highlights Western disunity, evidenced by the \"dueling\" US and EU peace plan proposals."
+      }
+    },
+    "articles": [
+      {
+        "title": "Carney says trade talks with Trump to resume 'when it matters'",
+        "link": "https://www.bbc.com/news/articles/cx2ek2d9y61o?at_medium=RSS&at_campaign=rss",
+        "published": "Mon, 24 Nov 2025 17:23:49 GMT",
+        "summary": "Trade talks between the two neighbours were derailed when Trump took offence at an anti-tariff advertisement featuring Ronald Reagan aired in Ontario.",
+        "source": "BBC News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "Are Fighter Jets Canada\u2019s \u2018Bargaining Chip\u2019 in Trade Talks?",
+        "link": "https://www.nytimes.com/2025/11/22/world/canada/trump-tariffs-fighter-jets-hoekstra.html",
+        "published": "Sat, 22 Nov 2025 11:00:07 +0000",
+        "summary": "Canada began a review of its fighter jet deal with the United States after President Trump imposed tariffs. Now, Sweden is back with a sales pitch for its own jets.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "Trump \u2018remains hopeful\u2019 for Ukraine talks after US and EU draft dueling peace plans: LIVE UPDATES",
+        "link": "https://www.rt.com/news/628109-us-backed-ukraine-peace-plan/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Fri, 21 Nov 2025 13:54:06 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6924c0dc2030270b2003dad4.jpg\" /> US diplomats have held talks in Geneva as the clock ticks down until the US president\u2019s Thursday deadline for Kiev to accept his proposal <br/><a href=\"https://www.rt.com/news/628109-us-backed-ukraine-peace-plan/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "Trump privately backs steep tariffs on Russia\u2019s trade partners \u2013 US senator",
+        "link": "https://www.rt.com/news/628049-trump-backs-tariffs-russian-partners/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Thu, 20 Nov 2025 13:19:14 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691ed0352030271cc73377c7.jpg\" /> US President Donald Trump has privately urged lawmakers to approve a bill that would slap 500% tariffs on Russia\u2019s trade partners <br/><a href=\"https://www.rt.com/news/628049-trump-backs-tariffs-russian-partners/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "factual",
+        "stance_score": 50
+      }
+    ],
+    "divergence_score": 0.0,
+    "title_kr": "\ubbf8\uad6d\u00b7EU, \uc0c1\ubc18\ub41c \uc6b0\ud06c\ub77c \ud3c9\ud654\uc548 \ub9c8\ub828...\ud2b8\ub7fc\ud504 \"\ud611\uc0c1 \uc5ec\uc804\ud788 \ud76c\ub9dd\uc801\": \uc18d\ubcf4"
+  },
+  {
+    "title": "Watch: Moment Bridget Jones statue is unveiled in London",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "A new statue of Bridget Jones has been unveiled in London. Actress Ren\u00e9e Zellweger, who portrays the iconic character, called it \"adorable\" and remarked that it's \"much cuter than me.\"",
+    "article_count": 3,
+    "countries_involved": [
+      "GB",
+      "US"
+    ],
+    "stats": {
+      "US": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "US media frames the Bridget Jones statue unveiling as a visually engaging, shareable \"moment\" for video consumption, akin to other isolated, watchable events."
+      },
+      "GB": {
+        "supportive": 1,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 70,
+        "summary": "GB media's coverage of the Bridget Jones statue unveiling frames it as a charming event, highlighting Ren\u00e9e Zellweger's positive reaction and calling the statue \"adorable.\""
+      }
+    },
+    "articles": [
+      {
+        "title": "Watch: Moment truck collides with sign on Ohio highway",
+        "link": "https://www.bbc.com/news/videos/cx2en491dz9o?at_medium=RSS&at_campaign=rss",
+        "published": "Tue, 25 Nov 2025 05:39:08 GMT",
+        "summary": "The vehicle was travelling along Ohio\u2019s I-70, with the dramatic collision occurring in Columbus last Thursday.",
+        "source": "BBC News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "Watch the moment Nathan Gill is sentenced",
+        "link": "https://www.bbc.com/news/videos/c246p7ep180o?at_medium=RSS&at_campaign=rss",
+        "published": "Fri, 21 Nov 2025 13:29:54 GMT",
+        "summary": "Gill was sentenced to a total of ten-and-a-half years in prison.",
+        "source": "BBC News",
+        "country_code": "GB",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "Watch: Moment Bridget Jones statue is unveiled in London",
+        "link": "https://www.bbc.com/news/videos/c77zp26n5m1o?at_medium=RSS&at_campaign=rss",
+        "published": "Mon, 17 Nov 2025 15:45:34 GMT",
+        "summary": "Ren\u00e9e Zellweger has called a new statue \"adorable,\" adding: \"I think she's much cuter than me.\"",
+        "source": "BBC News",
+        "country_code": "GB",
+        "stance": "supportive",
+        "stance_score": 90
+      }
+    ],
+    "divergence_score": 0.2,
+    "title_kr": "[\uc601\uc0c1] \ub7f0\ub358\uc5d0 \ube0c\ub9ac\uc9d3 \uc874\uc2a4 \ub3d9\uc0c1 \uc81c\ub9c9 \uc21c\uac04"
+  },
+  {
+    "title": "Army Chief Says France Must \u2018Accept Losing Our Children,\u2019 Igniting Uproar",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "France's Army Chief ignited widespread controversy by stating that the nation must \"accept losing our children\" in a potential war. This provocative remark comes amidst President Macron's plans for a new voluntary military service, highlighting the envisioned human cost of future conflicts.",
+    "article_count": 3,
+    "countries_involved": [
+      "US",
+      "RU"
+    ],
+    "stats": {
+      "US": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 45,
+        "summary": "US media highlighted the intense public uproar in France following the Army Chief's provocative statement about accepting the loss of children, linking it to President Macron's proposed voluntary military service."
+      },
+      "RU": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 1,
+        "avg_score": 30,
+        "summary": "RU media portrays the French army chief's statement as a callous demand for ordinary citizens (\"plebs\") to sacrifice their children for Ukraine, escalating towards a direct and disastrous war with Russia."
+      }
+    },
+    "articles": [
+      {
+        "title": "Army Chief Says France Must \u2018Accept Losing Our Children,\u2019 Igniting Uproar",
+        "link": "https://www.nytimes.com/2025/11/24/world/europe/france-voluntary-military-service.html",
+        "published": "Mon, 24 Nov 2025 21:10:41 +0000",
+        "summary": "The furor erupted as President Emmanuel Macron is expected to present a plan for paid, voluntary military service to bolster the armed forces against the threat from Russia.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 45
+      },
+      {
+        "title": "Sacrifice your children for Ukraine, France\u2019s army chief tells the plebs",
+        "link": "https://www.rt.com/news/628130-france-sacrifice-children-ukraine/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Fri, 21 Nov 2025 16:32:31 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69208a6585f540433a233a4d.jpg\" /> Even as their country is falling apart around them, Paris authorities are building their dystopian ideology on imagined threats <br/><a href=\"https://www.rt.com/news/628130-france-sacrifice-children-ukraine/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "critical",
+        "stance_score": 10
+      },
+      {
+        "title": "French would \u2018lose children\u2019 in potential war with Russia \u2013 army chief",
+        "link": "https://www.rt.com/news/628065-france-warmongering-russia-threat/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Thu, 20 Nov 2025 16:31:43 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691f355f20302727586a774f.jpg\" /> Top French General Fabien Mandon is facing backlash after warning citizens to prepare to \u201close children\u201d in a potential war with Russia <br/><a href=\"https://www.rt.com/news/628065-france-warmongering-russia-threat/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "factual",
+        "stance_score": 50
+      }
+    ],
+    "divergence_score": 0.15,
+    "title_kr": "\uc721\uad70 \ucc38\ubaa8\ucd1d\uc7a5 \"\ud504\ub791\uc2a4, '\uc790\ub140 \uc783\ub294 \uac83 \uac10\uc218\ud574\uc57c'\": \uac70\uc13c \ube44\ub09c \ucd09\ubc1c"
+  },
+  {
+    "title": "20 Killed in Israeli Strikes as Israel and Hamas Trade Blame Over Truce",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "Israeli strikes have killed 20 people amidst a renewed surge of violence in the region. Both Israel and Hamas are trading blame over the collapse of a recently established truce, with Hamas accusing Israel of fabricating claims about its end.",
+    "article_count": 3,
+    "countries_involved": [
+      "US",
+      "RU"
+    ],
+    "stats": {
+      "RU": {
+        "supportive": 0,
+        "factual": 0,
+        "critical": 1,
+        "avg_score": 35,
+        "summary": "RU media highlights Hamas's accusation that Israel fabricated the end of the ceasefire, thereby justifying its strikes that killed 20 people."
+      },
+      "US": {
+        "supportive": 0,
+        "factual": 2,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "US media primarily frames the 20 deaths from Israeli strikes as occurring amidst Israel and Hamas trading blame for the failure of a truce."
+      }
+    },
+    "articles": [
+      {
+        "title": "Israel Military Commanders Punished Over Hamas Attack Mistakes",
+        "link": "https://www.nytimes.com/2025/11/23/world/middleeast/israel-punishes-commanders-hamas-attack.html",
+        "published": "Mon, 24 Nov 2025 00:45:05 +0000",
+        "summary": "About a dozen people were told they face dismissal or discipline for mistakes tied to the deadly Hamas-led attack that set off the war in Gaza.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "20 Killed in Israeli Strikes as Israel and Hamas Trade Blame Over Truce",
+        "link": "https://www.nytimes.com/2025/11/22/world/middleeast/israeli-strikes-gaza.html",
+        "published": "Sat, 22 Nov 2025 18:26:08 +0000",
+        "summary": "Violence has repeatedly flared up in the weeks since a cease-fire was reached, killing hundreds of Palestinians and at least three Israeli soldiers.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "Hamas accuses Israel of \u2018fabricating\u2019 ceasefire end claims",
+        "link": "https://www.rt.com/news/628230-hamas-ending-ceasefire-israel-fabricating/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Sun, 23 Nov 2025 12:09:53 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6922d65185f54041535e6eb8.jpg\" /> Media earlier claimed the Palestinian militant group had told the US the truce with Israel was over\u00a0 <br/><a href=\"https://www.rt.com/news/628230-hamas-ending-ceasefire-israel-fabricating/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "critical",
+        "stance_score": 35
+      }
+    ],
+    "divergence_score": 0.15,
+    "title_kr": "\uc774\uc2a4\ub77c\uc5d8 \uacf5\uc2b5\uc73c\ub85c 20\uba85 \uc0ac\ub9dd...\uc774\uc2a4\ub77c\uc5d8-\ud558\ub9c8\uc2a4, \ud734\uc804 \ub193\uace0 \ube44\ub09c\uc804"
+  },
+  {
+    "title": "\u2018He can fight his little heart out\u2019: Trump on potential Zelensky refusal",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "After discussing Ukraine with Chinese President Xi Jinping and agreeing to an April meeting in China, Donald Trump commented on President Zelensky. Trump stated that if Zelensky refuses negotiations, he \"can fight his little heart out,\" suggesting a firm stance on ending the conflict.",
+    "article_count": 3,
+    "countries_involved": [
+      "US",
+      "RU"
+    ],
+    "stats": {
+      "US": {
+        "supportive": 0,
+        "factual": 2,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "US media interprets Trump's dismissive comment about Zelensky's resolve, especially in the context of his engagement with China on Ukraine, as signaling a potential abandonment of Kyiv and a dramatic shift in US foreign policy."
+      },
+      "RU": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "RU media frames Trump's dismissive comment as highlighting Zelensky's ultimate powerlessness and the futility of Ukrainian resistance without vital Western backing."
+      }
+    },
+    "articles": [
+      {
+        "title": "Trump says he will visit China in April after call with Xi",
+        "link": "https://www.bbc.com/news/articles/ckgdr1vlz7ko?at_medium=RSS&at_campaign=rss",
+        "published": "Mon, 24 Nov 2025 23:03:34 GMT",
+        "summary": "The two leaders discussed trade, Ukraine and Taiwan in their first phone call since meeting in South Korea last month.",
+        "source": "BBC News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "Xi Presses Trump on Taiwan as They Agree to Meet in China in April",
+        "link": "https://www.nytimes.com/2025/11/24/business/economy/trump-xi-meeting-china.html",
+        "published": "Tue, 25 Nov 2025 05:32:33 +0000",
+        "summary": "In an unusual move, Xi Jinping, the leader of China, called President Trump. The two spoke about trade, Taiwan and Ukraine, according to separate official statements.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "\u2018He can fight his little heart out\u2019: Trump on potential Zelensky refusal",
+        "link": "https://www.rt.com/news/628215-trump-zelensky-little-heart/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Sat, 22 Nov 2025 18:34:13 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6922055085f5404e882170b5.jpg\" /> US President Donald Trump has cautioned Ukraine\u2019s Vladimir Zelensky on the implications of refusing his proposed peace plan <br/><a href=\"https://www.rt.com/news/628215-trump-zelensky-little-heart/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "factual",
+        "stance_score": 50
+      }
+    ],
+    "divergence_score": 0.0,
+    "title_kr": "\ud2b8\ub7fc\ud504, \uc824\ub80c\uc2a4\ud0a4\uc758 \uac70\ubd80 \uac00\ub2a5\uc131\uc5d0 \"\uadf8\ub294 \uc2e4\ucef7 \uc2f8\uc6b8 \uc218 \uc788\ub2e4\""
+  },
+  {
+    "title": "Watch: 'I'll be cheering for him' - Trump praises Mamdani after first meeting",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "President Trump praised New York mayor-elect Mamdani after their first meeting, stating he'd be \"cheering for him\" despite earlier expectations of a contentious showdown. Trump further remarked that Mamdani \"could do a very good job,\" signaling a surprising positive shift from their previously hostile relationship.",
+    "article_count": 3,
+    "countries_involved": [
+      "US",
+      "RU"
+    ],
+    "stats": {
+      "RU": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 60,
+        "summary": "Russian media highlighted Trump's warm commendation of Mamdani, presenting it as a notable and positive endorsement after their first meeting."
+      },
+      "US": {
+        "supportive": 1,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 60,
+        "summary": "US media focused on the surprising cordiality and Trump's praise for Mamdani, which defied widespread expectations of a contentious first meeting."
+      }
+    },
+    "articles": [
+      {
+        "title": "Watch: 'I'll be cheering for him' - Trump praises Mamdani after first meeting",
+        "link": "https://www.bbc.com/news/videos/c2dzgj86nnzo?at_medium=RSS&at_campaign=rss",
+        "published": "Fri, 21 Nov 2025 22:29:39 GMT",
+        "summary": "The meeting between the US president and New York mayor-elect had been expected to be a showdown after months of heated rhetoric.",
+        "source": "BBC News",
+        "country_code": "US",
+        "stance": "supportive",
+        "stance_score": 70
+      },
+      {
+        "title": "Watch: What Trump and Mamdani have said about each other",
+        "link": "https://www.bbc.com/news/videos/cvgj35ngj04o?at_medium=RSS&at_campaign=rss",
+        "published": "Fri, 21 Nov 2025 14:47:41 GMT",
+        "summary": "The two men are set to meet at the White House Friday for their first face-to-face after months of heated rhetoric.\n",
+        "source": "BBC News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "Mamdani \u2018could do a very good job\u2019 \u2013 Trump",
+        "link": "https://www.rt.com/news/628155-nyc-mayor-mamdani-could-do-very-good-trump/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Fri, 21 Nov 2025 21:38:21 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6920dba085f54044d4536ebc.jpg\" /> The US president has praised Mamdani\u2019s electoral victory in the first in-person meeting for the political opposites <br/><a href=\"https://www.rt.com/news/628155-nyc-mayor-mamdani-could-do-very-good-trump/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "factual",
+        "stance_score": 60
+      }
+    ],
+    "divergence_score": 0.0,
+    "title_kr": "[\uc601\uc0c1] \ud2b8\ub7fc\ud504, \ub9d8\ub2e4\ub2c8 \uccab \ub9cc\ub0a8 \ud6c4 \"\uadf8\ub97c \uc751\uc6d0\ud560 \uac83\" \uadf9\ucc2c"
+  },
+  {
+    "title": "Zelensky \u2018will have to like\u2019 American peace plan \u2013 Trump",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "Donald Trump stated that Ukrainian President Zelensky \"will have to like\" an American peace plan. This declaration adds to the significant pressure Zelensky already faces from Trump and domestically over his wartime leadership.",
+    "article_count": 2,
+    "countries_involved": [
+      "US",
+      "RU"
+    ],
+    "stats": {
+      "RU": {
+        "supportive": 0,
+        "factual": 0,
+        "critical": 1,
+        "avg_score": 25,
+        "summary": "Russian media frames Trump's statement as underscoring Zelensky's lack of agency and Ukraine's eventual compulsion to accept a US-dictated peace plan."
+      },
+      "US": {
+        "supportive": 1,
+        "factual": 0,
+        "critical": 0,
+        "avg_score": 75,
+        "summary": "US media portray Trump's declaration as a top-down assertion of American will, underscoring the significant pressure Zelensky would face to accept a dictated peace plan."
+      }
+    },
+    "articles": [
+      {
+        "title": "Zelensky Is Under Pressure from Trump and Domestically",
+        "link": "https://www.nytimes.com/2025/11/23/world/europe/ukraine-zelensky-war-russia.html",
+        "published": "Sun, 23 Nov 2025 15:26:43 +0000",
+        "summary": "Over nearly four years of wartime leadership, analysts say the Ukrainian leader has repeatedly played weak hands wisely. A U.S. peace plan may be his biggest test.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "supportive",
+        "stance_score": 75
+      },
+      {
+        "title": "Zelensky \u2018will have to like\u2019 American peace plan \u2013 Trump",
+        "link": "https://www.rt.com/news/628180-trump-peace-plan-zelensky/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Sat, 22 Nov 2025 11:45:31 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6921913c85f5401ed1668af8.jpg\" /> The US president has reiterated his earlier claim that Ukraine does \u201cnot have the cards\u201d in the conflict with Russia <br/><a href=\"https://www.rt.com/news/628180-trump-peace-plan-zelensky/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "critical",
+        "stance_score": 25
+      }
+    ],
+    "divergence_score": 0.5,
+    "title_kr": "\"\uc824\ub80c\uc2a4\ud0a4, \ubbf8\uad6d \ud3c9\ud654\uc548 '\ub9c8\uc74c\uc5d0 \ub4e4\uc5b4 \ud558\uac8c \ub420 \uac83'\" - \ud2b8\ub7fc\ud504"
+  },
+  {
+    "title": "BBC may not be in 'safe hands' under its chair, says committee head",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "The head of the culture select committee has stated the BBC may not be in \"safe hands\" under its chair, Samir Shah, following his parliamentary testimony. This concern stems from Shah's \"wishy-washy\" evidence regarding a political \"firestorm\" surrounding a Trump edit.",
+    "article_count": 2,
+    "countries_involved": [
+      "GB",
+      "US"
+    ],
+    "stats": {
+      "US": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "US media generally frames the situation as BBC Chair Samir Shah defending the broadcaster and his leadership against UK parliamentary scrutiny, sparked by a \"political firestorm\" over a Trump edit."
+      },
+      "GB": {
+        "supportive": 0,
+        "factual": 0,
+        "critical": 1,
+        "avg_score": 15,
+        "summary": "GB media is reporting a senior parliamentary committee head's concern that BBC chair Samir Shah's \"wishy-washy\" evidence to MPs indicates the corporation may not be in \"safe hands\" under his leadership."
+      }
+    },
+    "articles": [
+      {
+        "title": "BBC Chair Tries to Calm Political \u2018Firestorm\u2019 Over Trump Edit",
+        "link": "https://www.nytimes.com/2025/11/24/world/europe/uk-bbc-trump.html",
+        "published": "Tue, 25 Nov 2025 07:57:51 +0000",
+        "summary": "Samir Shah defended Britain\u2019s public broadcaster at a parliamentary committee hearing on Monday, while apologizing (again) for the misleading edit of a Jan. 6 speech by President Trump.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "BBC may not be in 'safe hands' under its chair, says committee head",
+        "link": "https://www.bbc.com/news/articles/cd74ne84lqdo?at_medium=RSS&at_campaign=rss",
+        "published": "Tue, 25 Nov 2025 06:57:52 GMT",
+        "summary": "The most senior MP on the culture select committee says Samir Shah's evidence to MPs was \"wishy-washy\".",
+        "source": "BBC News",
+        "country_code": "GB",
+        "stance": "critical",
+        "stance_score": 15
+      }
+    ],
+    "divergence_score": 0.35,
+    "title_kr": "\uc704\uc6d0\ud68c \uc704\uc6d0\uc7a5 \"BBC, \ud604 \uc758\uc7a5 \uccb4\uc81c\uc11c '\uc548\uc804\ud558\uc9c0 \uc54a\uc744 \uc218\ub3c4'\""
+  },
+  {
+    "title": "Western leaders \u2018only care about corrupt Nazis\u2019 in Ukraine \u2013 Roger Waters",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "Musician Roger Waters controversially asserted that Western leaders are exclusively concerned with \"corrupt Nazis\" in Ukraine. This provocative statement criticizes Western support for the country and echoes Russian propaganda narratives.",
+    "article_count": 2,
+    "countries_involved": [
+      "US",
+      "RU"
+    ],
+    "stats": {
+      "RU": {
+        "supportive": 0,
+        "factual": 0,
+        "critical": 1,
+        "avg_score": 15,
+        "summary": "RU media leverages Roger Waters' statement that Western leaders only care about \"corrupt Nazis\" in Ukraine to reinforce its narrative of nefarious Western motives and alleged support for extremist elements in the country."
+      },
+      "US": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "US media generally dismisses Roger Waters' claim that Western leaders only care about \"corrupt Nazis\" in Ukraine, often portraying it as a controversial assertion that echoes Russian disinformation."
+      }
+    },
+    "articles": [
+      {
+        "title": "The Aftermath of a Deadly Strike in Western Ukraine",
+        "link": "https://www.nytimes.com/video/world/europe/100000010538311/the-aftermath-of-a-deadly-strike-in-western-ukraine.html",
+        "published": "Sat, 22 Nov 2025 10:18:31 +0000",
+        "summary": "At the site of an apartment building in western Ukraine where a Russian strike killed dozens of people, the New York Times reporter Kim Barker heard reactions to a 28-point U.S. proposal to end the war.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "Western leaders \u2018only care about corrupt Nazis\u2019 in Ukraine \u2013 Roger Waters",
+        "link": "https://www.rt.com/news/627944-waters-elites-ukraine-conflict/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Tue, 18 Nov 2025 15:37:36 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691c76c02030276aed05b245.jpg\" /> Roger Waters has accused Western elites of profiting from the Ukraine conflict <br/><a href=\"https://www.rt.com/news/627944-waters-elites-ukraine-conflict/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "critical",
+        "stance_score": 15
+      }
+    ],
+    "divergence_score": 0.35,
+    "title_kr": "\"\uc11c\ubc29 \uc9c0\ub3c4\uc790\ub4e4, \uc6b0\ud06c\ub77c\uc758 '\ubd80\ud328\ud55c \ub098\uce58\ub9cc \uc2e0\uacbd \uc368'\" - \ub85c\uc800 \uc6cc\ud130\uc2a4"
+  },
+  {
+    "title": "What is Cartel de los Soles, which the US is labelling as a terrorist organisation?",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "Cartel de los Soles is a supposed Venezuelan cartel that the US has labeled a terrorist organization. The US claims it is headed by Venezuela's president and other senior politicians, a designation which some analysts view with skepticism.",
+    "article_count": 2,
+    "countries_involved": [
+      "US",
+      "RU"
+    ],
+    "stats": {
+      "RU": {
+        "supportive": 0,
+        "factual": 0,
+        "critical": 1,
+        "avg_score": 25,
+        "summary": "RU media frames the US designation of the \"Cartel de los Soles\" as a terrorist organization as a *supposed* claim originating from the US, implicitly questioning its validity."
+      },
+      "US": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "US media frames Cartel de los Soles as a terrorist organization that the US government alleges is headed by Venezuela's president and other senior politicians."
+      }
+    },
+    "articles": [
+      {
+        "title": "What is Cartel de los Soles, which the US is labelling as a terrorist organisation?",
+        "link": "https://www.bbc.com/news/articles/cy8j4ye5x0mo?at_medium=RSS&at_campaign=rss",
+        "published": "Mon, 24 Nov 2025 16:24:23 GMT",
+        "summary": "The US says it is headed by Venezuela's president and other senior politicians, but some analysts say it does not even exist.",
+        "source": "BBC News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "US designates supposed Venezuelan cartel as terrorist organization",
+        "link": "https://www.rt.com/news/628358-cartel-suns-terrorist-organization/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Tue, 25 Nov 2025 08:28:57 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69257d1c20302747b8027815.jpg\" /> The US has designated the \u2018Cartel of the Suns\u2019 as a terrorist organization despite doubts that it even exists <br/><a href=\"https://www.rt.com/news/628358-cartel-suns-terrorist-organization/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "critical",
+        "stance_score": 25
+      }
+    ],
+    "divergence_score": 0.25,
+    "title_kr": "\ubbf8\uad6d\uc774 \ud14c\ub7ec \uc870\uc9c1\uc73c\ub85c \uc9c0\uc815\ud55c '\uce74\ub974\ud154 \ub370 \ub85c\uc2a4 \uc194\ub808\uc2a4'\ub294?"
+  },
+  {
+    "title": "Putin\u2019s Win-Win: Take a Russia-Friendly Peace Deal, or Fight On",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "Putin has secured a \"win-win\" position, offering Ukraine and Europe the choice of accepting a Russia-friendly peace deal or continuing the conflict. As he observes from a distance, European nations, including the EU defying a Trump-backed deal, are scrambling to negotiate alternative solutions.",
+    "article_count": 2,
+    "countries_involved": [
+      "US",
+      "RU"
+    ],
+    "stats": {
+      "US": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 55,
+        "summary": "US media frames Putin as strategically positioned for a \"win-win,\" where Russia benefits from either a favorable peace deal or prolonged conflict, while Ukraine and Europe are left scrambling."
+      },
+      "RU": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "Russian media asserts that Putin maintains a \"win-win\" position, guaranteeing Russia will achieve its objectives either through a favorable peace deal or by continuing military action to secure them."
+      }
+    },
+    "articles": [
+      {
+        "title": "Putin\u2019s Win-Win: Take a Russia-Friendly Peace Deal, or Fight On",
+        "link": "https://www.nytimes.com/2025/11/24/world/europe/trump-ukraine-peace-talks-russia.html",
+        "published": "Mon, 24 Nov 2025 16:37:28 +0000",
+        "summary": "The Kremlin\u2019s leader is standing back as Ukraine and Europe scramble to negotiate changes to a U.S. proposal to end the war.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 55
+      },
+      {
+        "title": "EU defies Trump\u2019s Ukraine peace deal",
+        "link": "https://www.rt.com/news/628244-eu-defy-trump-ukraine-peace/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Sun, 23 Nov 2025 14:23:51 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/692318462030276edc12ee17.jpg\" /> European Commission President Ursula von der Leyen has put forward demands that go against the reported proposal drafted by Washington <br/><a href=\"https://www.rt.com/news/628244-eu-defy-trump-ukraine-peace/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "factual",
+        "stance_score": 50
+      }
+    ],
+    "divergence_score": 0.05,
+    "title_kr": "\ud478\ud2f4\uc758 \uc708\uc708 \uc804\ub7b5: '\uce5c\ub7ec \ud3c9\ud654\ud611\uc815 \uc218\uc6a9' \uc544\ub2c8\uba74 '\uacc4\uc18d \uc804\uc7c1'"
+  },
+  {
+    "title": "Can the World Move On Without the U.S.? G20 Leaders Gave It a Shot.",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "Despite a U.S. boycott of the G20 summit, other world leaders actively sought to prove that global progress could continue without American participation. They pursued new deals and cooperation, with some nations explicitly stating the world can move on independently.",
+    "article_count": 2,
+    "countries_involved": [
+      "US",
+      "RU"
+    ],
+    "stats": {
+      "RU": {
+        "supportive": 0,
+        "factual": 0,
+        "critical": 1,
+        "avg_score": 20,
+        "summary": "RU media highlights the Canadian PM's G20 remark as evidence that the world is actively exploring and demonstrating its capacity to function independently of U.S. leadership."
+      },
+      "US": {
+        "supportive": 0,
+        "factual": 0,
+        "critical": 1,
+        "avg_score": 25,
+        "summary": "US media framed the G20 summit as an experimental attempt by other nations to move global agendas forward, questioning the world's ability to effectively do so without U.S. participation."
+      }
+    },
+    "articles": [
+      {
+        "title": "Can the World Move On Without the U.S.? G20 Leaders Gave It a Shot.",
+        "link": "https://www.nytimes.com/2025/11/23/world/africa/g20-united-states.html",
+        "published": "Sun, 23 Nov 2025 21:17:19 +0000",
+        "summary": "With the United States boycotting the summit, other nations sought to strike new deals, and some took a tougher tone with President Trump.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "critical",
+        "stance_score": 25
+      },
+      {
+        "title": "The world can go on without the US \u2013 Canadian PM",
+        "link": "https://www.rt.com/news/628258-world-can-go-without-us/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Sun, 23 Nov 2025 19:40:41 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6923623920302721941eecf2.jpg\" /> The US should not overestimate its role in the world, as the economic \u201ccenter of gravity\u201d is shifting, Canada\u2019s prime minister has said <br/><a href=\"https://www.rt.com/news/628258-world-can-go-without-us/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "critical",
+        "stance_score": 20
+      }
+    ],
+    "divergence_score": 0.05,
+    "title_kr": "\"\ubbf8\uad6d \uc5c6\uc774 \uc138\uacc4\ub294 \ub098\uc544\uac08 \uc218 \uc788\uc744\uae4c?\" G20 \uc815\uc0c1\ub4e4, \uc2dc\ub3c4\ud588\ub2e4."
+  },
+  {
+    "title": "Judge dismisses cases against ex-FBI director Comey and NY attorney general James",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "A judge has dismissed cases against former FBI director James Comey and New York Attorney General Letitia James. The dismissals come despite former President Donald Trump repeatedly calling for their prosecution.",
+    "article_count": 2,
+    "countries_involved": [
+      "US",
+      "RU"
+    ],
+    "stats": {
+      "RU": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "RU media frame the dismissal of cases against Comey and James as the US justice system protecting establishment figures linked to the politically motivated and discredited \"Russiagate\" narrative."
+      },
+      "US": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "US media largely frames the judge's dismissal of cases against Comey and James as a judicial rejection of President Trump's repeated, politically charged demands for their prosecution."
+      }
+    },
+    "articles": [
+      {
+        "title": "Judge dismisses cases against ex-FBI director Comey and NY attorney general James",
+        "link": "https://www.bbc.com/news/articles/c9qelv51y23o?at_medium=RSS&at_campaign=rss",
+        "published": "Mon, 24 Nov 2025 21:11:16 GMT",
+        "summary": "President Donald Trump has repeatedly called for the prosecution of Comey and James, declaring them \"guilty as hell\".",
+        "source": "BBC News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "Judge throws out case against \u2018Russiagate\u2019 ex-FBI chief",
+        "link": "https://www.rt.com/news/628349-james-comey-fbi-case/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Tue, 25 Nov 2025 02:05:26 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69250e7f2030270fc4557ddd.jpg\" /> A US judge has dismissed the case against ex-FBI chief James Comey and New York Attorney General Letitia James <br/><a href=\"https://www.rt.com/news/628349-james-comey-fbi-case/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "factual",
+        "stance_score": 50
+      }
+    ],
+    "divergence_score": 0.0,
+    "title_kr": "\ubc95\uc6d0, \uc804 FBI \uad6d\uc7a5 \ucf54\ubbf8\uc640 \ub274\uc695 \ubc95\ubb34\uc7a5\uad00 \uc81c\uc784\uc2a4\uc5d0 \ub300\ud55c \uc18c\uc1a1 \uae30\uac01"
+  },
+  {
+    "title": "Russia and US in talks over potential new prisoner swap \u2013 Axios",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "The United States and Russia are reportedly engaged in talks regarding a potential new prisoner swap, according to Axios. These discussions come amidst ongoing tensions and recent Russian bombardments in Ukraine.",
+    "article_count": 2,
+    "countries_involved": [
+      "US",
+      "RU"
+    ],
+    "stats": {
+      "US": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "US media frames the potential new prisoner swap talks as a narrow, humanitarian diplomatic effort occurring *despite* Russia's ongoing brutal aggression in Ukraine and the failure of broader peace negotiations."
+      },
+      "RU": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "Russian media would likely frame the potential prisoner swap talks as a pragmatic diplomatic engagement by Moscow, often portraying it as the US initiative driven by its own urgent need to secure the release of its citizens."
+      }
+    },
+    "articles": [
+      {
+        "title": "Russia Bombards Kyiv After Peace Talks End in Geneva",
+        "link": "https://www.nytimes.com/2025/11/25/world/europe/ukraine-russia-strike-peace-plan.html",
+        "published": "Tue, 25 Nov 2025 08:53:27 +0000",
+        "summary": "A missile-and-drone barrage killed at least six people in Ukraine\u2019s capital, officials said, hours after officials said they had made some headway on a peace proposal.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "Russia and US in talks over potential new prisoner swap \u2013 Axios",
+        "link": "https://www.rt.com/news/627938-us-russia-prisoner-exchange/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Tue, 18 Nov 2025 13:57:12 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691c759a85f54053e27fb4df.jpg\" /> The US and Russia are in discussions over a potential new prisoner exchange, Axios reported citing officials from both nations <br/><a href=\"https://www.rt.com/news/627938-us-russia-prisoner-exchange/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "factual",
+        "stance_score": 50
+      }
+    ],
+    "divergence_score": 0.0,
+    "title_kr": "\uc545\uc2dc\uc624\uc2a4 \"\ub7ec\uc2dc\uc544-\ubbf8\uad6d, \uc7a0\uc7ac\uc801 \ud3ec\ub85c \uad50\ud658 \ub17c\uc758 \uc911\""
+  },
+  {
+    "title": "Israel Says It Assassinated Top Hezbollah Commander in Lebanon",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "Israel has announced it assassinated a top Hezbollah commander in Lebanon, escalating its ongoing attacks against the Iran-backed militant group. This targeted killing marks a significant development in the broader conflict in the region.",
+    "article_count": 2,
+    "countries_involved": [
+      "US",
+      "RU"
+    ],
+    "stats": {
+      "US": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "US media primarily reports Israel's claim of assassinating a top Hezbollah commander in Lebanon, framing it as a significant escalation against the Iran-backed group."
+      },
+      "RU": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "RU media portrays Israel's claimed assassination of a top Hezbollah commander as a dangerous act of aggression that violates Lebanese sovereignty and risks escalating regional tensions."
+      }
+    },
+    "articles": [
+      {
+        "title": "Israel Says It Assassinated Top Hezbollah Commander in Lebanon",
+        "link": "https://www.nytimes.com/2025/11/23/world/middleeast/israel-hezbollah-dahiya-airstrike.html",
+        "published": "Sun, 23 Nov 2025 20:02:26 +0000",
+        "summary": "Escalating its attacks on the Iran-backed militant group in Lebanon, Israel killed Hezbollah\u2019s military chief of staff in an airstrike on an apartment building.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "Israel kills senior Hezbollah commander in Beirut",
+        "link": "https://www.rt.com/news/628278-idf-kills-hezbollah-commander/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Mon, 24 Nov 2025 07:46:47 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69240ca1203027250a049dcb.jpg\" /> An Israeli airstrike in Beirut has killed veteran Hezbollah military commander Haytham Ali Tabatabai <br/><a href=\"https://www.rt.com/news/628278-idf-kills-hezbollah-commander/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "factual",
+        "stance_score": 50
+      }
+    ],
+    "divergence_score": 0.0,
+    "title_kr": "\uc774\uc2a4\ub77c\uc5d8 \"\ub808\ubc14\ub17c\uc11c \ud5e4\uc988\ubcfc\ub77c \ucd5c\uace0 \uc0ac\ub839\uad00 \uc554\uc0b4\""
+  },
+  {
+    "title": "In Russian-Occupied Mariupol, Everything Ukrainian Must Go",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "In Russian-occupied Mariupol, Russia is systematically removing all Ukrainian elements and cultural markers. This effort aims to \"remake\" the city, which was devastated by a brutal 2022 siege, effectively erasing its Ukrainian identity.",
+    "article_count": 2,
+    "countries_involved": [
+      "US",
+      "RU"
+    ],
+    "stats": {
+      "RU": {
+        "supportive": 0,
+        "factual": 0,
+        "critical": 1,
+        "avg_score": 15,
+        "summary": "Russian media frames the removal of Ukrainian identity in Mariupol as a necessary cleansing from the influence of a \"corrupt Ukrainian war mafia.\""
+      },
+      "US": {
+        "supportive": 0,
+        "factual": 0,
+        "critical": 1,
+        "avg_score": 15,
+        "summary": "US media portrays Russia as systematically erasing Ukrainian identity and culture in occupied Mariupol, imposing Russification following its devastating siege."
+      }
+    },
+    "articles": [
+      {
+        "title": "In Russian-Occupied Mariupol, Everything Ukrainian Must Go",
+        "link": "https://www.nytimes.com/2025/11/23/world/europe/russia-ukraine-mariupol.html",
+        "published": "Mon, 24 Nov 2025 18:13:51 +0000",
+        "summary": "Russia is remaking Mariupol, which was devastated by a brutal siege in 2022. Ukrainians seeking to move back are finding it hard to recognize the city, or to reclaim their property.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "critical",
+        "stance_score": 15
+      },
+      {
+        "title": "EU must stop funding \u2018corrupt Ukrainian war mafia\u2019 \u2013 Orban",
+        "link": "https://www.rt.com/news/628066-eu-funding-ukraine-mafia/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Thu, 20 Nov 2025 15:21:27 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691f31d320302723657907c3.jpg\" /> The EU should stop bankrolling a \u201cwar that cannot be won\u201d and focus on ending the Ukraine conflict instead, Hungarian PM Viktor Orban says <br/><a href=\"https://www.rt.com/news/628066-eu-funding-ukraine-mafia/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "critical",
+        "stance_score": 15
+      }
+    ],
+    "divergence_score": 0.0,
+    "title_kr": "\ub7ec\uc2dc\uc544 \uc810\ub839 \ub9c8\ub9ac\uc6b0\ud3f4, \"\uc6b0\ud06c\ub77c\uc774\ub098\uc801\uc778 \ubaa8\ub4e0 \uac83 \uc0ac\ub77c\uc838\uc57c\""
+  },
+  {
+    "title": "Texas Men Plotted Coup of Haitian Island to Enslave Women and Children, U.S. Says",
+    "title_kr_candidate": null,
+    "date": "2025-11-25",
+    "summary": "U.S. authorities have charged several Texas men for allegedly plotting a coup of a Haitian island. Their scheme reportedly included plans to recruit homeless individuals for an invasion and enslave women and children.",
+    "article_count": 2,
+    "countries_involved": [
+      "US",
+      "RU"
+    ],
+    "stats": {
+      "RU": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "RU media leverages the US's own acknowledgment of its citizens' plot to enslave Haitians, portraying it as definitive proof of American moral decay, hypocrisy, and a disregard for human rights."
+      },
+      "US": {
+        "supportive": 0,
+        "factual": 1,
+        "critical": 0,
+        "avg_score": 50,
+        "summary": "US media largely frames the story as a disturbing and officially-uncovered plot by Texas men to stage a coup on a Haitian island with the heinous intent of enslaving women and children."
+      }
+    },
+    "articles": [
+      {
+        "title": "Texas Men Plotted Coup of Haitian Island to Enslave Women and Children, U.S. Says",
+        "link": "https://www.nytimes.com/2025/11/22/us/texas-men-haiti-island-takeover-plot.html",
+        "published": "Sun, 23 Nov 2025 09:49:38 +0000",
+        "summary": "The men, who planned to recruit homeless people for the invasion, took Haitian Creole classes and one enrolled in the U.S. Air Force to prepare for an attack by sailboat, prosecutors said.",
+        "source": "NYT > World News",
+        "country_code": "US",
+        "stance": "factual",
+        "stance_score": 50
+      },
+      {
+        "title": "US men charged with plotting to seize Caribbean island",
+        "link": "https://www.rt.com/news/628225-us-men-charged-with-plotting/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+        "published": "Sun, 23 Nov 2025 06:23:34 +0000",
+        "summary": "\n            <img alt=\"Preview\" align=\"left\" style=\"margin-right: 10px;\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/692297ff85f540460818e492.png\" /> Two American men have been indicted in the US for allegedly preparing an armed coup on the Haitian island of Gonave <br/><a href=\"https://www.rt.com/news/628225-us-men-charged-with-plotting/?utm_source=rss&utm_medium=rss&utm_campaign=RSS\">Read Full Article at RT.com</a>\n        ",
+        "source": "RT World News",
+        "country_code": "RU",
+        "stance": "factual",
+        "stance_score": 50
+      }
+    ],
+    "divergence_score": 0.0,
+    "title_kr": "\ubbf8 \"\ud14d\uc0ac\uc2a4 \ub0a8\uc131\ub4e4, \uc544\uc774\ud2f0 \uc12c \ucfe0\ub370\ud0c0 \ubaa8\uc758\ud574 \uc5ec\uc131\u00b7\uc544\ub3d9 \ub178\uc608\ud654\ud558\ub824 \ud588\ub2e4\""
+  }
+]

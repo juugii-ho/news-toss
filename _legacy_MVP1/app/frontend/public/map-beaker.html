@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뉴스 스펙트럼: 한국 토픽 비커</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+            color: #1d1d1f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/woff2/Pretendard-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/woff2/Pretendard-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
+        }
+
+        .container {
+            position: relative;
+            width: 900px;
+            height: 700px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(40px) saturate(180%);
+            -webkit-backdrop-filter: blur(40px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        }
+
+        svg {
+            background-color: transparent;
+        }
+
+        .node {
+            cursor: pointer;
+            stroke: rgba(255, 255, 255, 0.8);
+            stroke-width: 3px;
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .node.megatopic {
+            stroke: #007AFF;
+            stroke-width: 4px;
+            filter: drop-shadow(0 4px 12px rgba(0, 122, 255, 0.3));
+        }
+        .node:hover {
+            filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.15));
+        }
+
+        .node-label {
+            fill: #000;
+            text-anchor: middle;
+            pointer-events: none;
+            font-size: 13px;
+            font-weight: 700;
+            opacity: 1;
+        }
+        .node-group.hovered .node-label {
+            font-weight: 900;
+            font-size: 15px;
+        }
+
+        .country-tabs {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 8px;
+            border-radius: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            max-width: 400px;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+        .country-tab {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            user-select: none;
+        }
+        .country-tab:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-1px);
+        }
+        .country-tab.active {
+            background: #007AFF;
+            color: white;
+            box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);
+        }
+
+        .header {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 16px 24px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            color: #1d1d1f;
+            letter-spacing: -0.5px;
+        }
+        .header .subtitle {
+            margin: 6px 0 0 0;
+            font-size: 13px;
+            color: #6e6e73;
+            font-weight: 400;
+        }
+
+        .loading-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            font-weight: 500;
+            color: #6e6e73;
+            letter-spacing: -0.3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg width="100%" height="100%"></svg>
+        <div class="loading-text">데이터를 불러오는 중...</div>
+    </div>
+
+    <div class="header">
+        <h1 id="pageTitle">🇰🇷 한국 토픽 비커</h1>
+        <div class="subtitle">크기 = 기사 수 | 금색 테두리 = 메가토픽 | 클릭 → 상세보기</div>
+    </div>
+
+    <div class="country-tabs" id="countryTabs"></div>
+
+    <script>
+        const width = 900;
+        const height = 700;
+
+        const svg = d3.select("svg");
+        const loadingText = d3.select(".loading-text");
+
+        // URL 파라미터에서 국가 코드 읽기
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedCountry = urlParams.get('country') || 'KR';
+
+        // iOS 시스템 컬러 팔레트
+        const colorPalette = [
+            '#007AFF', // Blue
+            '#34C759', // Green
+            '#FF9500', // Orange
+            '#FF375F', // Pink
+            '#AF52DE', // Purple
+            '#5AC8FA', // Teal
+            '#FFCC00', // Yellow
+            '#FF2D55', // Red
+            '#5856D6', // Indigo
+            '#32ADE6', // Light Blue
+            '#30D158', // Mint
+            '#FFD60A', // Amber
+            '#BF5AF2', // Violet
+            '#64D2FF', // Cyan
+            '#FF453A', // Crimson
+            '#0A84FF', // Azure
+            '#30B0C7', // Aqua
+            '#FFB340', // Tangerine
+            '#FF6482', // Rose
+            '#AC8E68', // Brown
+            '#98989D', // Gray
+            '#8E8E93'  // Cool Gray
+        ];
+
+        // 국가 플래그 매핑
+        const countryFlags = {
+            'US': '🇺🇸', 'GB': '🇬🇧', 'KR': '🇰🇷', 'DE': '🇩🇪',
+            'FR': '🇫🇷', 'JP': '🇯🇵', 'CN': '🇨🇳', 'IT': '🇮🇹',
+            'CA': '🇨🇦', 'RU': '🇷🇺', 'IN': '🇮🇳', 'BR': '🇧🇷'
+        };
+
+        // ID 기반 색상 할당 (일관성 유지)
+        function getColorById(id) {
+            return colorPalette[id % colorPalette.length];
+        }
+
+        async function drawChart() {
+            try {
+                const response = await fetch('/api/topics?limit=500');
+                const apiResponse = await response.json();
+                const allTopics = apiResponse.data || [];
+
+                console.log(`Total API topics: ${allTopics.length}`);
+                console.log('Sample topics:', allTopics.slice(0, 5).map(t => ({
+                    id: t.id,
+                    title_kr: t.title_kr?.substring(0, 30),
+                    countries: t.countries_involved,
+                    article_count: t.article_count
+                })));
+
+                // countries_involved 분포 확인
+                const topicsWithCountries = allTopics.filter(t => t.countries_involved && t.countries_involved.length > 0);
+                const topicsWithoutCountries = allTopics.filter(t => !t.countries_involved || t.countries_involved.length === 0);
+                console.log(`Topics with countries_involved: ${topicsWithCountries.length}`);
+                console.log(`Topics WITHOUT countries_involved: ${topicsWithoutCountries.length}`);
+
+                if (topicsWithoutCountries.length > 0) {
+                    console.log('Sample topics without countries:', topicsWithoutCountries.slice(0, 3).map(t => ({
+                        id: t.id,
+                        title_kr: t.title_kr,
+                        countries_involved: t.countries_involved
+                    })));
+                }
+
+                // 전체 토픽에서 실제로 존재하는 국가 추출 (탭용)
+                const allCountriesInData = [...new Set(
+                    allTopics.flatMap(t => t.countries_involved || [])
+                )].sort();
+                console.log('Countries with data:', allCountriesInData);
+
+                // KR 포함 토픽 전체 확인
+                const allKRTopics = allTopics.filter(t => {
+                    const countries = t.countries_involved || [];
+                    return countries.includes(selectedCountry);
+                });
+                console.log(`Total KR-related topics in ALL data: ${allKRTopics.length}`);
+
+                // 선택된 국가 관련 토픽만 필터링 (메가토픽 + 단독 토픽)
+                const countryTopics = allTopics.filter(t => {
+                    const countries = t.countries_involved || [];
+                    return countries.includes(selectedCountry);
+                });
+
+                // 국가별 분류
+                const nationalOnly = countryTopics.filter(t => t.countries_involved?.length === 1);
+                const megatopics = countryTopics.filter(t => t.countries_involved?.length > 1);
+
+                console.log(`${selectedCountry} 단독 토픽: ${nationalOnly.length}개`);
+                console.log(`${selectedCountry} 포함 메가토픽: ${megatopics.length}개`);
+                console.log(`총 ${countryTopics.length}개 토픽`);
+
+                // 페이지 타이틀 업데이트
+                const countryName = {
+                    'KR': '한국', 'US': '미국', 'CN': '중국', 'JP': '일본',
+                    'GB': '영국', 'DE': '독일', 'FR': '프랑스', 'IT': '이탈리아',
+                    'CA': '캐나다', 'RU': '러시아', 'IN': '인도', 'BR': '브라질'
+                }[selectedCountry] || selectedCountry;
+                const countryFlag = countryFlags[selectedCountry] || '';
+                d3.select("#pageTitle").text(`${countryFlag} ${countryName} 토픽 비커`);
+
+                loadingText.style("display", "none");
+
+                // 선택된 국가 내 기사 수 계산
+                const nodesData = countryTopics.map(topic => {
+                    // API가 stats를 반환하지 않으므로 전체 article_count 사용
+                    const countryArticleCount = topic.article_count || 0;
+
+                    const isMegatopic = (topic.countries_involved || []).length > 1;
+                    const countries = topic.countries_involved || [];
+
+                    // 국가 플래그 생성
+                    const countryLabel = countries
+                        .map(code => countryFlags[code] || code)
+                        .join(' ');
+
+                    return {
+                        id: topic.id,
+                        name: topic.title_kr || topic.title,
+                        articleCount: countryArticleCount,
+                        type: isMegatopic ? 'megatopic' : 'national',
+                        countries: countries,
+                        countryLabel: countryLabel,
+                        color: getColorById(topic.id)
+                    };
+                }); // 임시: 필터 제거 (기사 수 0인 것도 표시)
+                // .filter(d => d.articleCount > 0);
+
+                console.log(`Total nodes before filter: ${countryTopics.length}`);
+                console.log(`Nodes with articles: ${nodesData.length}`);
+                console.log('First 5 nodes with article counts:', nodesData.slice(0, 5).map(d => ({
+                    id: d.id,
+                    name: d.name.substring(0, 20),
+                    articleCount: d.articleCount,
+                    countries: d.countries
+                })));
+
+                // 기사 수 분포 확인
+                const articleCounts = nodesData.map(d => d.articleCount).sort((a, b) => b - a);
+                console.log('Article count distribution:', {
+                    max: articleCounts[0],
+                    min: articleCounts[articleCounts.length - 1],
+                    median: articleCounts[Math.floor(articleCounts.length / 2)],
+                    sample: articleCounts.slice(0, 10)
+                });
+
+                if (nodesData.length === 0 && countryTopics.length > 0) {
+                    const sample = countryTopics[0];
+                    console.log('Sample topic (no articles):', {
+                        id: sample.id,
+                        title: sample.title_kr || sample.title,
+                        stats: sample.stats,
+                        countries_involved: sample.countries_involved
+                    });
+                }
+
+                // 크기 스케일
+                const maxArticleCount = d3.max(nodesData, d => d.articleCount);
+                const minArticleCount = d3.min(nodesData, d => d.articleCount);
+                const radiusScale = d3.scaleSqrt()
+                    .domain([0, maxArticleCount])
+                    .range([10, 80]);
+
+                console.log('Article count distribution:', {
+                    min: minArticleCount,
+                    max: maxArticleCount,
+                    all: nodesData.map(d => d.articleCount).sort((a, b) => b - a)
+                });
+
+                const nodes = nodesData.map(d => {
+                    const baseR = radiusScale(d.articleCount) * (d.type === 'megatopic' ? 1.2 : 1);
+                    return {
+                        ...d,
+                        r: baseR,
+                        targetR: baseR // 호버 시 변경될 목표 반지름
+                    };
+                });
+
+                console.log('Radius calculations:', {
+                    scale: {
+                        domain: radiusScale.domain(),
+                        range: radiusScale.range()
+                    },
+                    samples: nodes.slice(0, 5).map(d => ({
+                        name: d.name.substring(0, 20),
+                        articleCount: d.articleCount,
+                        radius: d.r,
+                        type: d.type
+                    })),
+                    allRadii: nodes.map(d => d.r).sort((a, b) => b - a)
+                });
+
+                console.log(`Rendering ${nodes.length} topics with articles`);
+
+                // D3 Force Simulation
+                const simulation = d3.forceSimulation(nodes)
+                    .force("charge", d3.forceManyBody().strength(5))
+                    .force("collide", d3.forceCollide().radius(d => d.targetR + 2).iterations(2))
+                    .force("center", d3.forceCenter(width / 2, height / 2).strength(0.1))
+                    .force("gravity", d3.forceY(height * 0.6).strength(0.15)) // 바닥 쪽으로 중력
+                    .force("x", d3.forceX(width / 2).strength(0.03));
+
+                const nodeGroup = svg.append("g");
+
+                const nodeElements = nodeGroup.selectAll("g.node-group")
+                    .data(nodes)
+                    .join("g")
+                    .attr("class", "node-group")
+                    .attr("transform", d => `translate(${d.x || width/2}, ${d.y || height/2})`)
+                    .on("mouseover", function(event, d) {
+                        d3.select(this).classed("hovered", true);
+                        d3.select(this).raise();
+
+                        // 원 크기를 1.4배로 증가 -> 주변 원들이 밀려남
+                        d.targetR = d.r * 1.4;
+
+                        // 시뮬레이션 재시작 (부드러운 애니메이션)
+                        simulation.alpha(0.3).restart();
+                    })
+                    .on("mouseout", function(event, d) {
+                        d3.select(this).classed("hovered", false);
+
+                        // 원래 크기로 복귀
+                        d.targetR = d.r;
+
+                        // 시뮬레이션 재시작
+                        simulation.alpha(0.3).restart();
+                    })
+                    .on("click", function(event, d) {
+                        window.location.href = `/topics/${d.id}`;
+                    });
+
+                nodeElements.append("circle")
+                    .attr("class", d => `node ${d.type}`)
+                    .attr("r", d => d.r)
+                    .attr("fill", d => d.color);
+
+                nodeElements.append("text")
+                    .attr("class", d => `node-label ${d.type}`)
+                    .attr("dy", "0.3em")
+                    .style("font-size", "13px")
+                    .text(d => {
+                        // 제목 첫 어절
+                        const words = d.name.split(' ');
+                        return words[0] || d.name;
+                    });
+
+                // 툴팁 (전체 제목 + 기사 수 + 국가)
+                nodeElements.append("title")
+                    .text(d => `${d.name}\n${d.articleCount}개 기사\n${d.countryLabel}`);
+
+                simulation.on("tick", () => {
+                    // 원 크기를 targetR로 부드럽게 변경
+                    nodeElements.select("circle")
+                        .attr("r", d => d.targetR);
+
+                    nodeElements.attr("transform", d => `translate(${d.x}, ${d.y})`);
+                });
+
+                // 국가 탭 생성 (실제 데이터가 있는 국가만)
+                const countryTabsContainer = d3.select("#countryTabs");
+
+                // 각 국가별 탭
+                allCountriesInData.forEach(countryCode => {
+                    const flag = countryFlags[countryCode] || countryCode;
+                    const isActive = countryCode === selectedCountry;
+
+                    countryTabsContainer.append("div")
+                        .attr("class", isActive ? "country-tab active" : "country-tab")
+                        .text(flag)
+                        .on("click", function() {
+                            // 해당 국가 비커로 이동
+                            window.location.href = `/map-beaker.html?country=${countryCode}`;
+                        });
+                });
+
+            } catch (error) {
+                console.error("Error fetching or processing data:", error);
+                loadingText.text("데이터 로딩 실패!");
+            }
+        }
+
+        drawChart();
+    </script>
+</body>
+</html>

@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>글로벌 뉴스 지형도</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif;
+            background: #fafaf9;
+            color: #27272a;
+            overflow: hidden;
+            touch-action: none;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Loading */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #fafaf9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 16px;
+            z-index: 1000;
+        }
+
+        .loading.hidden {
+            display: none;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #e4e4e7;
+            border-top-color: #10b981;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 14px;
+            color: #71717a;
+        }
+
+        /* Header */
+        .header {
+            padding: 16px 20px;
+            background: white;
+            border-bottom: 1px solid #e4e4e7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #18181b;
+        }
+
+        .header-controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-input {
+            padding: 6px 12px 6px 32px;
+            border: 1px solid #e4e4e7;
+            border-radius: 6px;
+            font-size: 13px;
+            width: 200px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-input:focus {
+            border-color: #10b981;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #a1a1aa;
+            pointer-events: none;
+        }
+
+        .filter-btn {
+            padding: 6px 12px;
+            border: 1px solid #e4e4e7;
+            background: white;
+            border-radius: 6px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .filter-btn:hover {
+            background: #f4f4f5;
+        }
+
+        .filter-btn.active {
+            border-color: #10b981;
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        /* Date Slider */
+        .date-slider {
+            padding: 12px 20px;
+            background: white;
+            border-bottom: 1px solid #e4e4e7;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .date-label {
+            font-size: 13px;
+            color: #52525b;
+            min-width: 80px;
+        }
+
+        .slider {
+            flex: 1;
+            height: 6px;
+            border-radius: 3px;
+            background: #e4e4e7;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .slider-thumb {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: #10b981;
+            border-radius: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            cursor: grab;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .slider-thumb:active {
+            cursor: grabbing;
+        }
+
+        .date-input {
+            padding: 4px 8px;
+            border: 1px solid #e4e4e7;
+            border-radius: 4px;
+            font-size: 12px;
+            min-width: 110px;
+        }
+
+        /* Canvas */
+        .canvas-wrapper {
+            flex: 1;
+            position: relative;
+            background: #fafaf9;
+            overflow: hidden;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            cursor: grab;
+            touch-action: none;
+        }
+
+        canvas:active {
+            cursor: grabbing;
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: absolute;
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 8px;
+            padding: 12px 16px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            z-index: 100;
+            max-width: 280px;
+        }
+
+        .tooltip.show {
+            opacity: 1;
+        }
+
+        .tooltip-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 6px;
+        }
+
+        .tooltip-meta {
+            font-size: 12px;
+            color: #71717a;
+        }
+
+        .tooltip-badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            margin-top: 6px;
+        }
+
+        /* Layer Controls */
+        .layer-controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 8px;
+            padding: 16px;
+            z-index: 10;
+            min-width: 180px;
+        }
+
+        .layer-title {
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+
+        .layer-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .layer-toggle:hover {
+            background: #f4f4f5;
+        }
+
+        .layer-checkbox {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .layer-label {
+            font-size: 12px;
+            color: #52525b;
+            flex: 1;
+            cursor: pointer;
+        }
+
+        .layer-count {
+            font-size: 11px;
+            color: #a1a1aa;
+        }
+
+        /* Filter Panel */
+        .filter-panel {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 8px;
+            padding: 16px;
+            z-index: 10;
+            min-width: 200px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .filter-panel.hidden {
+            display: none;
+        }
+
+        .filter-section {
+            margin-bottom: 16px;
+        }
+
+        .filter-section-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 8px;
+        }
+
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+        .filter-option:hover {
+            background: #f4f4f5;
+        }
+
+        .filter-checkbox {
+            width: 14px;
+            height: 14px;
+            cursor: pointer;
+        }
+
+        .country-flag {
+            font-size: 14px;
+        }
+
+        /* Controls */
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 20px;
+            padding: 6px;
+            display: flex;
+            gap: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .control-btn {
+            background: none;
+            border: none;
+            padding: 6px 12px;
+            font-size: 12px;
+            color: #52525b;
+            cursor: pointer;
+            border-radius: 14px;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        .control-btn:hover {
+            background: #f4f4f5;
+            color: #18181b;
+        }
+
+        .control-btn.active {
+            background: #18181b;
+            color: white;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 12px 16px;
+            }
+
+            .title {
+                font-size: 14px;
+            }
+
+            .search-input {
+                width: 150px;
+                font-size: 12px;
+            }
+
+            .layer-controls {
+                top: 10px;
+                left: 10px;
+                padding: 12px;
+                min-width: 150px;
+            }
+
+            .filter-panel {
+                top: 10px;
+                right: 10px;
+                max-width: 180px;
+            }
+
+            .controls {
+                bottom: 10px;
+                padding: 4px;
+            }
+
+            .control-btn {
+                padding: 4px 8px;
+                font-size: 11px;
+            }
+
+            .date-slider {
+                padding: 8px 16px;
+            }
+        }
+
+        /* Zoom controls */
+        .zoom-controls {
+            position: absolute;
+            bottom: 80px;
+            right: 20px;
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .zoom-btn {
+            background: white;
+            border: none;
+            padding: 8px 12px;
+            font-size: 16px;
+            cursor: pointer;
+            color: #52525b;
+            transition: background 0.2s;
+        }
+
+        .zoom-btn:hover {
+            background: #f4f4f5;
+        }
+
+        .zoom-btn:not(:last-child) {
+            border-bottom: 1px solid #e4e4e7;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <div class="loading-text">데이터 로딩 중...</div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="title">🌍 글로벌 뉴스 지형도</div>
+            <div class="header-controls">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="search-input" id="searchInput" placeholder="토픽 검색...">
+                </div>
+                <button class="filter-btn" id="filterToggle" onclick="toggleFilters()">
+                    필터
+                </button>
+                <button class="filter-btn" id="todayBtn" onclick="goToToday()">
+                    오늘
+                </button>
+            </div>
+        </div>
+
+        <!-- Date Slider -->
+        <div class="date-slider">
+            <div class="date-label">날짜:</div>
+            <div class="slider" id="dateSlider">
+                <div class="slider-thumb" id="sliderThumb"></div>
+            </div>
+            <input type="date" class="date-input" id="dateInput">
+        </div>
+
+        <!-- Canvas -->
+        <div class="canvas-wrapper">
+            <canvas id="canvas"></canvas>
+
+            <div class="tooltip" id="tooltip">
+                <div class="tooltip-title"></div>
+                <div class="tooltip-meta"></div>
+                <div class="tooltip-badge"></div>
+            </div>
+
+            <!-- Layer Controls -->
+            <div class="layer-controls">
+                <div class="layer-title">레이어</div>
+                <label class="layer-toggle">
+                    <input type="checkbox" class="layer-checkbox" id="layerMega" checked>
+                    <span class="layer-label">메가토픽</span>
+                    <span class="layer-count" id="countMega">-</span>
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" class="layer-checkbox" id="layerGlobal">
+                    <span class="layer-label">2개국</span>
+                    <span class="layer-count" id="countGlobal">-</span>
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" class="layer-checkbox" id="layerNational">
+                    <span class="layer-label">국내</span>
+                    <span class="layer-count" id="countNational">-</span>
+                </label>
+                <label class="layer-toggle">
+                    <input type="checkbox" class="layer-checkbox" id="layerArticles">
+                    <span class="layer-label">기사</span>
+                    <span class="layer-count" id="countArticles">-</span>
+                </label>
+            </div>
+
+            <!-- Filter Panel -->
+            <div class="filter-panel hidden" id="filterPanel">
+                <div class="filter-section">
+                    <div class="filter-section-title">국가</div>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-checkbox" value="US" checked>
+                        <span style="color: #ef4444;">●</span>
+                        <span>미국</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-checkbox" value="GB" checked>
+                        <span style="color: #3b82f6;">●</span>
+                        <span>영국</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-checkbox" value="KR" checked>
+                        <span style="color: #8b5cf6;">●</span>
+                        <span>한국</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-checkbox" value="DE" checked>
+                        <span style="color: #f59e0b;">●</span>
+                        <span>독일</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-checkbox" value="FR" checked>
+                        <span style="color: #ec4899;">●</span>
+                        <span>프랑스</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-checkbox" value="JP" checked>
+                        <span style="color: #06b6d4;">●</span>
+                        <span>일본</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-checkbox" value="CN" checked>
+                        <span style="color: #f97316;">●</span>
+                        <span>중국</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-checkbox" value="RU" checked>
+                        <span style="color: #84cc16;">●</span>
+                        <span>러시아</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-checkbox" value="AU" checked>
+                        <span style="color: #14b8a6;">●</span>
+                        <span>호주</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-checkbox" value="IT" checked>
+                        <span style="color: #a855f7;">●</span>
+                        <span>이탈리아</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-checkbox" value="NL" checked>
+                        <span style="color: #0ea5e9;">●</span>
+                        <span>네덜란드</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-checkbox" value="BE" checked>
+                        <span style="color: #6366f1;">●</span>
+                        <span>벨기에</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Zoom Controls -->
+            <div class="zoom-controls">
+                <button class="zoom-btn" onclick="zoomIn()">+</button>
+                <button class="zoom-btn" onclick="zoomOut()">−</button>
+                <button class="zoom-btn" onclick="resetZoom()">⊙</button>
+            </div>
+
+            <!-- Bottom Controls -->
+            <div class="controls">
+                <button class="control-btn" onclick="triggerPulse()">펄스</button>
+                <button class="control-btn" onclick="resetView()">리셋</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const tooltip = document.getElementById('tooltip');
+        const loading = document.getElementById('loading');
+
+        let width, height;
+        let articles = [], nationalTopics = [], globalTopics = [], megaTopics = [];
+        let allTopics = []; // 원본 토픽 데이터
+        let allArticles = []; // 원본 기사 데이터
+        let hoveredItem = null;
+        let activePulses = [];
+
+        // State
+        let layerStates = { articles: false, national: false, global: false, mega: true };
+        let currentDate = new Date();
+        let selectedCountries = new Set(['US', 'GB', 'KR', 'DE', 'FR', 'JP', 'CN', 'RU', 'AU', 'IT', 'NL', 'BE']);
+        let searchQuery = '';
+
+        // Pan & Zoom
+        let offsetX = 0, offsetY = 0;
+        let scale = 1;
+        let isDragging = false;
+        let lastX = 0, lastY = 0;
+
+        // Touch
+        let lastTouchDistance = 0;
+
+        const COUNTRY_COLORS = {
+            'US': '#ef4444',  // 미국 - 빨강
+            'GB': '#3b82f6',  // 영국 - 파랑
+            'KR': '#8b5cf6',  // 한국 - 보라
+            'DE': '#f59e0b',  // 독일 - 주황
+            'FR': '#ec4899',  // 프랑스 - 분홍
+            'JP': '#06b6d4',  // 일본 - 청록
+            'CN': '#f97316',  // 중국 - 진한 주황
+            'RU': '#84cc16',  // 러시아 - 라임
+            'AU': '#14b8a6',  // 호주 - 청록
+            'IT': '#a855f7',  // 이탈리아 - 자주
+            'NL': '#0ea5e9',  // 네덜란드 - 하늘색
+            'BE': '#6366f1'   // 벨기에 - 남색
+        };
+
+        const TIER_COLORS = {
+            mega: '#f59e0b',      // 메가토픽 (3+ 국가) - 주황/금색
+            global: '#8b5cf6',    // 글로벌 (2 국가) - 보라색
+            national: null        // 국내 토픽 (1 국가) - 국가 색상 사용
+        };
+
+        function getCountryColor(code) {
+            return COUNTRY_COLORS[code] || '#a1a1aa';
+        }
+
+        function getTierColor(countryCount, primaryCountry) {
+            if (countryCount >= 3) return TIER_COLORS.mega;
+            if (countryCount === 2) return TIER_COLORS.global;
+            return getCountryColor(primaryCountry); // 단일 국가는 해당 국가 색상
+        }
+
+        function getStanceCategory(score) {
+            if (score < 34) return 'critical';
+            if (score < 67) return 'neutral';
+            return 'supportive';
+        }
+
+        function getStanceLabel(score) {
+            if (score < 34) return { text: '비판적', bg: '#fee2e2', color: '#991b1b' };
+            if (score < 67) return { text: '중립', bg: '#f4f4f5', color: '#52525b' };
+            return { text: '지지', bg: '#d1fae5', color: '#065f46' };
+        }
+
+        // Date handling
+        function formatDate(date) {
+            return date.toISOString().split('T')[0];
+        }
+
+        function initDateControls() {
+            const dateInput = document.getElementById('dateInput');
+            dateInput.value = formatDate(currentDate);
+            dateInput.max = formatDate(new Date());
+
+            const minDate = new Date();
+            minDate.setDate(minDate.getDate() - 30);
+            dateInput.min = formatDate(minDate);
+
+            dateInput.addEventListener('change', (e) => {
+                currentDate = new Date(e.target.value + 'T00:00:00');
+                loadData();
+            });
+        }
+
+        function goToToday() {
+            currentDate = new Date();
+            document.getElementById('dateInput').value = formatDate(currentDate);
+            loadData();
+        }
+
+        // Filters
+        function toggleFilters() {
+            const panel = document.getElementById('filterPanel');
+            const btn = document.getElementById('filterToggle');
+            panel.classList.toggle('hidden');
+            btn.classList.toggle('active');
+        }
+
+        function initFilters() {
+            // Country filters
+            document.querySelectorAll('.filter-checkbox').forEach(cb => {
+                cb.addEventListener('change', (e) => {
+                    if (e.target.checked) {
+                        selectedCountries.add(e.target.value);
+                    } else {
+                        selectedCountries.delete(e.target.value);
+                    }
+                    applyFilters();
+                });
+            });
+
+            // Search
+            document.getElementById('searchInput').addEventListener('input', (e) => {
+                searchQuery = e.target.value.toLowerCase();
+                applyFilters();
+            });
+        }
+
+        function applyFilters() {
+            megaTopics = allTopics.filter(t => {
+                if (t.type !== 'mega') return false;
+
+                // Country filter
+                const hasCountry = t.countries.some(c => selectedCountries.has(c));
+                if (!hasCountry) return false;
+
+                // Search
+                if (searchQuery && !t.title.toLowerCase().includes(searchQuery)) {
+                    return false;
+                }
+
+                return true;
+            });
+
+            globalTopics = allTopics.filter(t => {
+                if (t.type !== 'global') return false;
+
+                // Country filter
+                const hasCountry = t.countries.some(c => selectedCountries.has(c));
+                if (!hasCountry) return false;
+
+                // Search
+                if (searchQuery && !t.title.toLowerCase().includes(searchQuery)) {
+                    return false;
+                }
+
+                return true;
+            });
+
+            nationalTopics = allTopics.filter(t => {
+                if (t.type !== 'national') return false;
+
+                if (!selectedCountries.has(t.country)) return false;
+
+                // Search
+                if (searchQuery && !t.title.toLowerCase().includes(searchQuery)) {
+                    return false;
+                }
+
+                return true;
+            });
+
+            // Filter articles from original array (not destructive)
+            const validTopicIds = new Set([...megaTopics, ...globalTopics, ...nationalTopics].map(t => t.id));
+            articles = allArticles.filter(a => validTopicIds.has(a.parentTopic));
+
+            console.log(`Filtered: ${megaTopics.length} mega, ${globalTopics.length} global, ${nationalTopics.length} national, ${articles.length} articles`);
+
+            updateCounts();
+        }
+
+        function updateCounts() {
+            document.getElementById('countArticles').textContent = articles.length;
+            document.getElementById('countNational').textContent = nationalTopics.length;
+            document.getElementById('countGlobal').textContent = globalTopics.length;
+            document.getElementById('countMega').textContent = megaTopics.length;
+        }
+
+        // PCA dimension reduction (simplified)
+        function reduceDimensions(embeddings) {
+            if (embeddings.length === 0) return [];
+
+            const dim = embeddings[0].length;
+            const n = embeddings.length;
+
+            const means = new Array(dim).fill(0);
+            embeddings.forEach(emb => {
+                emb.forEach((val, i) => means[i] += val);
+            });
+            means.forEach((_, i) => means[i] /= n);
+
+            const centered = embeddings.map(emb =>
+                emb.map((val, i) => val - means[i])
+            );
+
+            const projected = centered.map(emb => {
+                const half = Math.floor(dim / 2);
+                const x = emb.slice(0, half).reduce((a, b) => a + b, 0) / half;
+                const y = emb.slice(half).reduce((a, b) => a + b, 0) / (dim - half);
+                return [x, y];
+            });
+
+            const xs = projected.map(p => p[0]);
+            const ys = projected.map(p => p[1]);
+            const minX = Math.min(...xs), maxX = Math.max(...xs);
+            const minY = Math.min(...ys), maxY = Math.max(...ys);
+            const rangeX = maxX - minX || 1;
+            const rangeY = maxY - minY || 1;
+
+            return projected.map(([x, y]) => ({
+                x: 0.15 + ((x - minX) / rangeX) * 0.7,
+                y: 0.15 + ((y - minY) / rangeY) * 0.7
+            }));
+        }
+
+        // Fallback positioning for topics without embeddings
+        function generateFallbackPositions(count) {
+            const positions = [];
+            const cols = Math.ceil(Math.sqrt(count));
+            const rows = Math.ceil(count / cols);
+
+            for (let i = 0; i < count; i++) {
+                const col = i % cols;
+                const row = Math.floor(i / cols);
+
+                // Add some randomness to avoid perfect grid
+                const jitterX = (Math.random() - 0.5) * 0.05;
+                const jitterY = (Math.random() - 0.5) * 0.05;
+
+                positions.push({
+                    x: 0.2 + (col / (cols - 1 || 1)) * 0.6 + jitterX,
+                    y: 0.2 + (row / (rows - 1 || 1)) * 0.6 + jitterY
+                });
+            }
+
+            return positions;
+        }
+
+        async function loadData() {
+            try {
+                loading.classList.remove('hidden');
+
+                console.log('Fetching topics with articles...');
+
+                // Fetch topics with articles and embeddings (all topics)
+                const topicsRes = await fetch('/api/topics?include_articles=true&limit=500');
+                if (!topicsRes.ok) {
+                    const errorText = await topicsRes.text();
+                    throw new Error(`API error: ${topicsRes.status} - ${errorText}`);
+                }
+
+                const response = await topicsRes.json();
+                console.log('API Response:', response);
+
+                const topicsData = response.data || response;
+                console.log(`Received ${topicsData.length} topics`);
+
+                // Extract all articles with embeddings
+                const allArticlesList = [];
+                const allEmbeddings = [];
+
+                topicsData.forEach((topic, topicIndex) => {
+                    if (topic.articles && topic.articles.length > 0) {
+                        console.log(`Topic ${topicIndex} (ID: ${topic.id}): ${topic.articles.length} articles`);
+                        topic.articles.forEach((article, articleIndex) => {
+                            if (article.embedding) {
+                                allArticlesList.push({
+                                    ...article,
+                                    topic_id: topic.id
+                                });
+                                // Handle both string and array embeddings
+                                try {
+                                    const emb = typeof article.embedding === 'string'
+                                        ? JSON.parse(article.embedding)
+                                        : article.embedding;
+                                    allEmbeddings.push(emb);
+                                } catch (parseError) {
+                                    console.error(`Failed to parse embedding for article ${article.id}:`, parseError);
+                                }
+                            }
+                        });
+                    }
+                });
+
+                console.log(`Total articles with embeddings: ${allEmbeddings.length}`);
+
+                if (allEmbeddings.length === 0) {
+                    throw new Error('No articles with embeddings found. Check if articles array is populated.');
+                }
+
+                console.log(`Processing ${allEmbeddings.length} articles with embeddings...`);
+
+                // Calculate 2D positions for all articles using PCA
+                const articlePositions = reduceDimensions(allEmbeddings);
+
+                // Create article objects with positions
+                allArticles = allArticlesList.map((article, i) => ({
+                    id: article.id,
+                    title: article.title,
+                    country: article.country_code || 'US',
+                    stance: article.stance_score || 50,
+                    absX: articlePositions[i].x * width,
+                    absY: articlePositions[i].y * height,
+                    size: 3,
+                    color: getCountryColor(article.country_code || 'US'),
+                    parentTopic: article.topic_id,
+                    scale: 0,
+                    targetScale: 1
+                }));
+
+                console.log(`Created ${allArticles.length} article objects`);
+
+                // Calculate topic positions as centroids of their articles
+                allTopics = [];
+
+                topicsData.forEach(topic => {
+                    // Get articles for this topic
+                    const topicArticles = allArticles.filter(a => a.parentTopic === topic.id);
+
+                    if (topicArticles.length === 0) {
+                        return; // Skip topics with no positioned articles
+                    }
+
+                    // Calculate centroid position
+                    const centerX = topicArticles.reduce((sum, a) => sum + a.absX, 0) / topicArticles.length;
+                    const centerY = topicArticles.reduce((sum, a) => sum + a.absY, 0) / topicArticles.length;
+
+                    const importance = topic.article_count * (topic.countries_involved?.length || 1);
+                    const countryCount = topic.countries_involved?.length || 1;
+                    const primaryCountry = topic.countries_involved?.[0] || 'US';
+
+                    const baseTopic = {
+                        id: topic.id,
+                        title: topic.title_kr || topic.title,
+                        article_count: topic.article_count,
+                        country_count: countryCount,
+                        stance: topic.avg_stance_score || 50,
+                        absX: centerX,
+                        absY: centerY,
+                        targetX: centerX,
+                        targetY: centerY,
+                        color: getTierColor(countryCount, primaryCountry),
+                        scale: 0,
+                        targetScale: 1,
+                        pulsePhase: Math.random() * Math.PI * 2
+                    };
+
+                    if (countryCount >= 3) {
+                        const megaTopic = {
+                            ...baseTopic,
+                            type: 'mega',
+                            size: Math.sqrt(importance) * 4 + 30,
+                            countries: topic.countries_involved || [],
+                            merged_from: topic.merged_from_topics || [],
+                            expanded: false  // For click interaction
+                        };
+                        allTopics.push(megaTopic);
+
+                        // Restore national topics from merged_from_topics
+                        if (topic.merged_from_topics && topic.merged_from_topics.length > 0) {
+                            topic.merged_from_topics.forEach(mergedId => {
+                                // Parse "KR-topic-4" → country: "KR"
+                                const parts = mergedId.split('-');
+                                if (parts.length >= 2) {
+                                    const country = parts[0];
+
+                                    // Find articles for this country in this mega topic
+                                    const countryArticles = topicArticles.filter(a => a.country === country);
+
+                                    if (countryArticles.length > 0) {
+                                        // Calculate centroid for this country's articles
+                                        const countryX = countryArticles.reduce((sum, a) => sum + a.absX, 0) / countryArticles.length;
+                                        const countryY = countryArticles.reduce((sum, a) => sum + a.absY, 0) / countryArticles.length;
+
+                                        allTopics.push({
+                                            id: mergedId,
+                                            title: `${country} - ${topic.title_kr || topic.title}`,
+                                            type: 'national',
+                                            country: country,
+                                            parentMega: topic.id,
+                                            article_count: countryArticles.length,
+                                            absX: countryX,
+                                            absY: countryY,
+                                            targetX: countryX,
+                                            targetY: countryY,
+                                            size: Math.sqrt(countryArticles.length) * 3 + 15,
+                                            color: getCountryColor(country),
+                                            scale: 0,
+                                            targetScale: 1,
+                                            visible: false,  // Hidden by default, show on mega click
+                                            pulsePhase: Math.random() * Math.PI * 2
+                                        });
+                                    }
+                                }
+                            });
+                        }
+                    } else if (countryCount === 2) {
+                        allTopics.push({
+                            ...baseTopic,
+                            type: 'global',
+                            size: Math.sqrt(importance) * 3 + 20,
+                            countries: topic.countries_involved || []
+                        });
+                    } else if (countryCount >= 1) {
+                        allTopics.push({
+                            ...baseTopic,
+                            type: 'national',
+                            size: Math.sqrt(importance) * 3 + 15,
+                            country: primaryCountry
+                        });
+                    }
+                });
+
+                // Progressive loading: show in order of importance
+                // This reduces perceived load time for 2-3k articles
+
+                // Step 1: Show mega topics immediately (most important)
+                applyFilters();  // First filter pass
+                megaTopics.forEach((topic, i) => {
+                    setTimeout(() => {
+                        topic.targetScale = 1;
+                    }, i * 50);
+                });
+                loading.querySelector('.loading-text').textContent = '메가토픽 로드 완료...';
+
+                // Step 2: Show global/national topics after 100ms
+                setTimeout(() => {
+                    globalTopics.forEach((topic, i) => {
+                        setTimeout(() => {
+                            topic.targetScale = 1;
+                        }, i * 30);
+                    });
+                    loading.querySelector('.loading-text').textContent = '토픽 로드 완료...';
+                }, 100);
+
+                // Step 3: Show articles after 200ms (most data-heavy)
+                setTimeout(() => {
+                    allArticles.forEach((article, i) => {
+                        setTimeout(() => {
+                            article.targetScale = 1;
+                        }, i * 0.5);  // Faster animation for many articles
+                    });
+                    loading.classList.add('hidden');
+                }, 200);
+
+                // Start pulses after everything is loaded
+                setTimeout(() => {
+                    triggerPulse();
+                    startRandomPulses();
+                }, 1500);
+
+            } catch (error) {
+                console.error('Error loading data:', error);
+                loading.innerHTML = `
+                    <div style="text-align: center; padding: 40px;">
+                        <div style="font-size: 18px; font-weight: 600; color: #991b1b; margin-bottom: 12px;">
+                            데이터 로드 실패
+                        </div>
+                        <div style="font-size: 14px; color: #71717a;">
+                            ${error.message}
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        function resize() {
+            width = canvas.offsetWidth;
+            height = canvas.offsetHeight;
+            canvas.width = width;
+            canvas.height = height;
+
+            // Update positions for all items on resize
+            [...allArticles, ...allTopics].forEach(item => {
+                if (item.x !== undefined) {
+                    item.absX = item.x * width;
+                    item.absY = item.y * height;
+                    item.targetX = item.absX;
+                    item.targetY = item.absY;
+                }
+            });
+        }
+
+        function drawGrid() {
+            ctx.strokeStyle = '#f5f5f4';
+            ctx.lineWidth = 1;
+            const step = 60;
+
+            for (let x = 0; x < width; x += step) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, height);
+                ctx.stroke();
+            }
+            for (let y = 0; y < height; y += step) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(width, y);
+                ctx.stroke();
+            }
+        }
+
+        function draw() {
+            ctx.save();
+            ctx.fillStyle = '#fafaf9';
+            ctx.fillRect(0, 0, width, height);
+
+            ctx.translate(offsetX, offsetY);
+            ctx.scale(scale, scale);
+
+            drawGrid();
+
+            const spring = 0.15;
+
+            // Draw layers in order: largest to smallest (so smallest is on top for interaction)
+            // But draw hovered item last (on top of everything)
+
+            // 1. Draw articles (smallest, always bottom)
+            if (layerStates.articles) {
+                articles.forEach(article => {
+                    if (hoveredItem === article) return; // Skip, draw later
+
+                    article.scale += (article.targetScale - article.scale) * spring;
+                    const size = article.size * article.scale;
+
+                    if (size < 0.5) return;
+
+                    ctx.fillStyle = article.color + 'CC'; // Country color
+                    ctx.beginPath();
+                    ctx.arc(article.absX, article.absY, size, 0, Math.PI * 2);
+                    ctx.fill();
+                });
+            }
+
+            // 2. Draw mega topics (largest first = bottom layer)
+            if (layerStates.mega) {
+                // Sort by size: largest first (will be drawn first = bottom)
+                const sortedMega = [...megaTopics].sort((a, b) => b.size - a.size);
+
+                sortedMega.forEach(topic => {
+                    if (hoveredItem === topic) return; // Skip, draw later
+
+                    topic.scale += (topic.targetScale - topic.scale) * spring;
+                    const breathe = Math.sin(Date.now() / 2000 + topic.pulsePhase) * 2;
+                    const currentSize = topic.size * topic.scale + breathe;
+
+                    if (currentSize < 1) return;
+
+                    // Pulse
+                    const activePulse = activePulses.find(p => p.topicId === topic.id);
+                    if (activePulse) {
+                        const elapsed = Date.now() - activePulse.startTime;
+                        const pulseRadius = elapsed * 0.15;
+                        if (elapsed < 2000) {
+                            const opacity = Math.max(0, 1 - elapsed / 2000);
+                            [pulseRadius, pulseRadius * 0.6].forEach(radius => {
+                                if (radius > 0) {
+                                    ctx.strokeStyle = topic.color + Math.floor(opacity * 100).toString(16).padStart(2, '0');
+                                    ctx.lineWidth = 3;
+                                    ctx.beginPath();
+                                    ctx.arc(topic.absX, topic.absY, radius, 0, Math.PI * 2);
+                                    ctx.stroke();
+                                }
+                            });
+                        } else {
+                            activePulses = activePulses.filter(p => p.topicId !== topic.id);
+                        }
+                    }
+
+                    // Outline only (no fill) - shows articles inside
+                    ctx.strokeStyle = topic.color;
+                    ctx.lineWidth = 4;
+                    ctx.setLineDash([]);
+                    ctx.beginPath();
+                    ctx.arc(topic.absX, topic.absY, currentSize, 0, Math.PI * 2);
+                    ctx.stroke();
+                });
+            }
+
+            // 3. Draw global topics (2 countries)
+            if (layerStates.global) {
+                globalTopics.forEach(topic => {
+                    if (hoveredItem === topic) return; // Skip, draw later
+
+                    topic.scale += (topic.targetScale - topic.scale) * spring;
+                    const breathe = Math.sin(Date.now() / 2000 + topic.pulsePhase) * 1.5;
+                    const currentSize = topic.size * topic.scale + breathe;
+
+                    if (currentSize < 1) return;
+
+                    ctx.fillStyle = topic.color + 'BB';
+                    ctx.strokeStyle = 'white';
+                    ctx.lineWidth = 1.5;
+                    ctx.beginPath();
+                    ctx.arc(topic.absX, topic.absY, currentSize, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.stroke();
+                });
+            }
+
+            // 4. Draw national topics (on top of global)
+            // Draw visible national topics from expanded mega topics (ignores layer state)
+            allTopics.forEach(topic => {
+                if (topic.type !== 'national') return;
+                if (!topic.visible) return;  // Only draw if parent mega is expanded
+                if (hoveredItem === topic) return; // Skip, draw later
+
+                topic.scale += (topic.targetScale - topic.scale) * spring;
+                const breathe = Math.sin(Date.now() / 2000 + topic.pulsePhase) * 1.5;
+                const currentSize = topic.size * topic.scale + breathe;
+
+                if (currentSize < 1) return;
+
+                // Outline only (no fill) - shows articles inside
+                ctx.strokeStyle = topic.color;
+                ctx.lineWidth = 3;
+                ctx.setLineDash([]);
+                ctx.beginPath();
+                ctx.arc(topic.absX, topic.absY, currentSize, 0, Math.PI * 2);
+                ctx.stroke();
+            });
+
+            // 4. Draw hovered item last (on top of everything)
+            if (hoveredItem) {
+                hoveredItem.scale += (hoveredItem.targetScale - hoveredItem.scale) * spring;
+
+                if (hoveredItem.type === 'article') {
+                    const size = hoveredItem.size * hoveredItem.scale;
+                    ctx.fillStyle = hoveredItem.color + 'FF'; // Fully opaque
+                    ctx.strokeStyle = 'white';
+                    ctx.lineWidth = 1;
+                    ctx.beginPath();
+                    ctx.arc(hoveredItem.absX, hoveredItem.absY, size * 1.5, 0, Math.PI * 2);
+                    ctx.stroke();
+                    ctx.fill();
+                } else {
+                    const breathe = Math.sin(Date.now() / 2000 + hoveredItem.pulsePhase) * 2;
+                    const currentSize = hoveredItem.size * hoveredItem.scale + breathe;
+
+                    // Outline only with green highlight (no fill)
+                    ctx.strokeStyle = '#10b981'; // Green highlight
+                    ctx.lineWidth = 5;
+                    ctx.setLineDash([]);
+                    ctx.beginPath();
+                    ctx.arc(hoveredItem.absX, hoveredItem.absY, currentSize, 0, Math.PI * 2);
+                    ctx.stroke();
+
+                    // Add dotted outer ring
+                    ctx.strokeStyle = hoveredItem.color;
+                    ctx.lineWidth = 3;
+                    ctx.setLineDash([8, 4]);
+                    ctx.beginPath();
+                    ctx.arc(hoveredItem.absX, hoveredItem.absY, currentSize + 8, 0, Math.PI * 2);
+                    ctx.stroke();
+                    ctx.setLineDash([]);
+                }
+            }
+
+            ctx.restore();
+            requestAnimationFrame(draw);
+        }
+
+        // Mouse/Touch interactions
+        function getMousePos(e) {
+            const rect = canvas.getBoundingClientRect();
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            return {
+                x: (clientX - rect.left - offsetX) / scale,
+                y: (clientY - rect.top - offsetY) / scale
+            };
+        }
+
+        canvas.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            lastX = e.clientX;
+            lastY = e.clientY;
+        });
+
+        canvas.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                const dx = e.clientX - lastX;
+                const dy = e.clientY - lastY;
+                offsetX += dx;
+                offsetY += dy;
+                lastX = e.clientX;
+                lastY = e.clientY;
+                return;
+            }
+
+            const pos = getMousePos(e);
+            let found = null;
+
+            const checkLayers = [];
+            if (layerStates.mega) checkLayers.push(...megaTopics);
+            if (layerStates.global) checkLayers.push(...globalTopics);
+            // Always check visible national topics (from expanded megas)
+            checkLayers.push(...allTopics.filter(t => t.type === 'national' && t.visible));
+
+            for (let item of checkLayers) {
+                const dist = Math.sqrt(
+                    Math.pow(pos.x - item.absX, 2) +
+                    Math.pow(pos.y - item.absY, 2)
+                );
+                if (dist < item.size * item.scale) {
+                    found = item;
+                    break;
+                }
+            }
+
+            if (found !== hoveredItem) {
+                hoveredItem = found;
+                if (found) {
+                    const stance = getStanceLabel(found.stance);
+                    tooltip.querySelector('.tooltip-title').textContent = found.title;
+                    tooltip.querySelector('.tooltip-meta').innerHTML =
+                        `<span>${found.country_count}개국 · ${found.article_count}건</span>`;
+                    const badge = tooltip.querySelector('.tooltip-badge');
+                    badge.textContent = stance.text;
+                    badge.style.background = stance.bg;
+                    badge.style.color = stance.color;
+
+                    tooltip.style.left = e.clientX + 20 + 'px';
+                    tooltip.style.top = e.clientY - 40 + 'px';
+                    tooltip.classList.add('show');
+
+                    found.targetScale = 1.15;
+                } else {
+                    tooltip.classList.remove('show');
+                }
+            }
+
+            if (found) {
+                tooltip.style.left = e.clientX + 20 + 'px';
+                tooltip.style.top = e.clientY - 40 + 'px';
+            }
+        });
+
+        canvas.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        canvas.addEventListener('mouseleave', () => {
+            isDragging = false;
+            hoveredItem = null;
+            tooltip.classList.remove('show');
+        });
+
+        canvas.addEventListener('click', (e) => {
+            if (isDragging) return;
+
+            if (hoveredItem) {
+                if (hoveredItem.type === 'mega') {
+                    // Toggle expansion: show/hide national topics
+                    hoveredItem.expanded = !hoveredItem.expanded;
+
+                    // Find and toggle national topics belonging to this mega topic
+                    allTopics.forEach(topic => {
+                        if (topic.type === 'national' && topic.parentMega === hoveredItem.id) {
+                            topic.visible = hoveredItem.expanded;
+                        }
+                    });
+                    // Note: No need to call applyFilters() - visible topics draw directly from allTopics
+
+                } else if (hoveredItem.type === 'national' || hoveredItem.type === 'global') {
+                    // Click on national/global topic: go to detail page
+                    const topicId = hoveredItem.parentMega || hoveredItem.id;
+                    window.location.href = `/topics/${topicId}`;
+                }
+                // Article clicks: do nothing (or could show article detail)
+            }
+        });
+
+        // Touch events
+        canvas.addEventListener('touchstart', (e) => {
+            if (e.touches.length === 2) {
+                const dx = e.touches[0].clientX - e.touches[1].clientX;
+                const dy = e.touches[0].clientY - e.touches[1].clientY;
+                lastTouchDistance = Math.sqrt(dx * dx + dy * dy);
+            } else if (e.touches.length === 1) {
+                lastX = e.touches[0].clientX;
+                lastY = e.touches[0].clientY;
+                isDragging = true;
+            }
+        });
+
+        canvas.addEventListener('touchmove', (e) => {
+            e.preventDefault();
+
+            if (e.touches.length === 2) {
+                const dx = e.touches[0].clientX - e.touches[1].clientX;
+                const dy = e.touches[0].clientY - e.touches[1].clientY;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (lastTouchDistance > 0) {
+                    const delta = distance - lastTouchDistance;
+                    scale *= (1 + delta * 0.01);
+                    scale = Math.max(0.5, Math.min(3, scale));
+                }
+
+                lastTouchDistance = distance;
+            } else if (e.touches.length === 1 && isDragging) {
+                const dx = e.touches[0].clientX - lastX;
+                const dy = e.touches[0].clientY - lastY;
+                offsetX += dx;
+                offsetY += dy;
+                lastX = e.touches[0].clientX;
+                lastY = e.touches[0].clientY;
+            }
+        });
+
+        canvas.addEventListener('touchend', () => {
+            isDragging = false;
+            lastTouchDistance = 0;
+        });
+
+        // Zoom
+        function zoomIn() {
+            scale = Math.min(3, scale * 1.2);
+        }
+
+        function zoomOut() {
+            scale = Math.max(0.5, scale / 1.2);
+        }
+
+        function resetZoom() {
+            scale = 1;
+            offsetX = 0;
+            offsetY = 0;
+        }
+
+        // Layer toggles
+        document.getElementById('layerArticles').addEventListener('change', (e) => {
+            layerStates.articles = e.target.checked;
+        });
+
+        document.getElementById('layerNational').addEventListener('change', (e) => {
+            layerStates.national = e.target.checked;
+        });
+
+        document.getElementById('layerGlobal').addEventListener('change', (e) => {
+            layerStates.global = e.target.checked;
+        });
+
+        document.getElementById('layerMega').addEventListener('change', (e) => {
+            layerStates.mega = e.target.checked;
+        });
+
+        function triggerPulse() {
+            if (megaTopics.length === 0) return;
+
+            const numPulses = Math.random() > 0.5 ? 2 : 1;
+            const shuffled = [...megaTopics].sort(() => Math.random() - 0.5);
+
+            for (let i = 0; i < Math.min(numPulses, shuffled.length); i++) {
+                const topic = shuffled[i];
+                if (!activePulses.find(p => p.topicId === topic.id)) {
+                    activePulses.push({
+                        topicId: topic.id,
+                        startTime: Date.now() + (i * 500)
+                    });
+                }
+            }
+        }
+
+        function startRandomPulses() {
+            function scheduleNext() {
+                const delay = 3000 + Math.random() * 4000;
+                setTimeout(() => {
+                    if (layerStates.mega && megaTopics.length > 0) {
+                        triggerPulse();
+                    }
+                    scheduleNext();
+                }, delay);
+            }
+            scheduleNext();
+        }
+
+        function resetView() {
+            resetZoom();
+            loadData();
+        }
+
+        // Init
+        resize();
+        window.addEventListener('resize', resize);
+        initDateControls();
+        initFilters();
+        draw();
+        loadData();
+    </script>
+</body>
+</html>

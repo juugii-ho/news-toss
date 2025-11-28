@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글로벌 뉴스 지형도 - 하이브리드</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            background: #fafaf9;
+            color: #27272a;
+            overflow-x: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            padding: 24px 40px;
+            background: white;
+            border-bottom: 1px solid #e4e4e7;
+            z-index: 10;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #18181b;
+        }
+
+        .meta {
+            font-size: 13px;
+            color: #71717a;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.95); }
+        }
+
+        /* Canvas Container */
+        .canvas-container {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #bubbleCanvas {
+            width: 100%;
+            height: 100%;
+            cursor: grab;
+        }
+
+        #bubbleCanvas:active {
+            cursor: grabbing;
+        }
+
+        /* Topic Cards (floating overlays) */
+        .topic-overlay {
+            position: absolute;
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 12px;
+            padding: 16px 20px;
+            min-width: 240px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            pointer-events: all;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            z-index: 5;
+        }
+
+        .topic-overlay:hover {
+            border-color: #10b981;
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15);
+            transform: translateY(-2px) scale(1.02);
+            z-index: 6;
+        }
+
+        .overlay-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .overlay-emoji {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .overlay-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #18181b;
+            line-height: 1.4;
+        }
+
+        .overlay-meta {
+            font-size: 12px;
+            color: #71717a;
+            display: flex;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .overlay-stance {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .stance-critical { background: #fee2e2; color: #991b1b; }
+        .stance-neutral { background: #f4f4f5; color: #52525b; }
+        .stance-supportive { background: #d1fae5; color: #065f46; }
+
+        /* Legend Panel */
+        .legend-panel {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 12px;
+            padding: 16px;
+            z-index: 10;
+            min-width: 200px;
+        }
+
+        .legend-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 12px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 12px;
+            color: #52525b;
+        }
+
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        /* Controls */
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 24px;
+            padding: 8px 16px;
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .control-btn {
+            background: none;
+            border: none;
+            padding: 8px 12px;
+            font-size: 12px;
+            color: #52525b;
+            cursor: pointer;
+            border-radius: 16px;
+            transition: all 0.2s;
+        }
+
+        .control-btn:hover {
+            background: #f4f4f5;
+            color: #18181b;
+        }
+
+        .control-btn.active {
+            background: #10b981;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <h1 class="title">글로벌 뉴스 지형도</h1>
+                <div class="meta">
+                    <span class="status-dot"></span>
+                    <span>2025년 11월 27일 14:30</span>
+                    <span>·</span>
+                    <span>15개 핵심 토픽</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Canvas + Overlays -->
+        <div class="canvas-container" id="canvasContainer">
+            <canvas id="bubbleCanvas"></canvas>
+
+            <!-- Topic overlays will be inserted here -->
+        </div>
+
+        <!-- Legend Panel -->
+        <div class="legend-panel">
+            <div class="legend-title">범례</div>
+            <div class="legend-item">
+                <span class="legend-dot" style="background: #f59e9e;"></span>
+                <span>강한 비판</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-dot" style="background: #fbbebe;"></span>
+                <span>약한 비판</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-dot" style="background: #c7d2dd;"></span>
+                <span>중립</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-dot" style="background: #a8d5ba;"></span>
+                <span>약한 지지</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-dot" style="background: #7dc99c;"></span>
+                <span>강한 지지</span>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button class="control-btn active" onclick="showTopTopics()">핵심</button>
+            <button class="control-btn" onclick="showAllTopics()">전체</button>
+            <button class="control-btn" onclick="toggleAnimation()">애니메이션</button>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('bubbleCanvas');
+        const ctx = canvas.getContext('2d');
+        const container = document.getElementById('canvasContainer');
+
+        let width, height;
+        let topics = [];
+        let animationEnabled = false;
+        let animationFrame;
+
+        // Mock data
+        const mockTopics = [
+            { id: 1, title_kr: "Trump 행정부 이민 정책", emoji: "🌪️", country_count: 5, article_count: 23, avg_stance: 28, x: 0.3, y: 0.3, size: 80 },
+            { id: 2, title_kr: "AI 규제 국제 협약", emoji: "⚡️", country_count: 4, article_count: 18, avg_stance: 52, x: 0.6, y: 0.4, size: 65 },
+            { id: 3, title_kr: "유럽 에너지 위기", emoji: "🌀", country_count: 4, article_count: 15, avg_stance: 35, x: 0.7, y: 0.6, size: 60 },
+            { id: 4, title_kr: "중국 경제 전망", emoji: "🌿", country_count: 3, article_count: 12, avg_stance: 68, x: 0.4, y: 0.7, size: 50 },
+            { id: 5, title_kr: "기후 정상회의", emoji: "🌱", country_count: 3, article_count: 10, avg_stance: 58, x: 0.2, y: 0.6, size: 45 },
+        ];
+
+        function getColor(stance) {
+            const deviation = Math.abs(stance - 50);
+            if (stance < 34) return deviation > 25 ? '#f59e9e' : '#fbbebe';
+            if (stance < 67) return '#c7d2dd';
+            return deviation > 25 ? '#7dc99c' : '#a8d5ba';
+        }
+
+        function getStanceLabel(stance) {
+            if (stance < 34) return { label: '비판적', class: 'critical' };
+            if (stance < 67) return { label: '중립', class: 'neutral' };
+            return { label: '지지', class: 'supportive' };
+        }
+
+        function resizeCanvas() {
+            width = container.offsetWidth;
+            height = container.offsetHeight;
+            canvas.width = width;
+            canvas.height = height;
+
+            // Update topic absolute positions
+            topics = mockTopics.map(t => ({
+                ...t,
+                absX: t.x * width,
+                absY: t.y * height
+            }));
+
+            draw();
+            updateOverlays();
+        }
+
+        function draw() {
+            // Clear
+            ctx.fillStyle = '#fafaf9';
+            ctx.fillRect(0, 0, width, height);
+
+            // Draw subtle grid
+            ctx.strokeStyle = '#f5f5f4';
+            ctx.lineWidth = 1;
+            const gridSize = 50;
+            for (let x = 0; x < width; x += gridSize) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, height);
+                ctx.stroke();
+            }
+            for (let y = 0; y < height; y += gridSize) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(width, y);
+                ctx.stroke();
+            }
+
+            // Draw bubbles
+            topics.forEach(topic => {
+                const color = getColor(topic.avg_stance);
+
+                // Breathing effect
+                const breathe = animationEnabled ? Math.sin(Date.now() / 1000) * 2 : 0;
+                const size = topic.size + breathe;
+
+                // Bubble
+                ctx.fillStyle = color + '60'; // 60 = opacity
+                ctx.strokeStyle = color;
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.arc(topic.absX, topic.absY, size, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.stroke();
+
+                // Emoji in center
+                ctx.font = `${size * 0.5}px Arial`;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillStyle = '#27272a';
+                ctx.fillText(topic.emoji, topic.absX, topic.absY);
+            });
+        }
+
+        function updateOverlays() {
+            // Remove existing overlays
+            document.querySelectorAll('.topic-overlay').forEach(el => el.remove());
+
+            // Create new overlays for top topics
+            topics.slice(0, 5).forEach(topic => {
+                const stance = getStanceLabel(topic.avg_stance);
+
+                const overlay = document.createElement('div');
+                overlay.className = 'topic-overlay';
+                overlay.style.left = `${topic.absX + topic.size + 10}px`;
+                overlay.style.top = `${topic.absY - 40}px`;
+                overlay.innerHTML = `
+                    <div class="overlay-header">
+                        <span class="overlay-emoji">${topic.emoji}</span>
+                        <div>
+                            <div class="overlay-title">${topic.title_kr}</div>
+                        </div>
+                    </div>
+                    <div class="overlay-meta">
+                        <span>🌍 ${topic.country_count}개국</span>
+                        <span>📰 ${topic.article_count}건</span>
+                        <span class="overlay-stance stance-${stance.class}">${stance.label}</span>
+                    </div>
+                `;
+                overlay.onclick = () => alert(`토픽 ${topic.id} 상세 페이지`);
+                container.appendChild(overlay);
+            });
+        }
+
+        function animate() {
+            draw();
+            if (animationEnabled) {
+                animationFrame = requestAnimationFrame(animate);
+            }
+        }
+
+        function showTopTopics() {
+            document.querySelectorAll('.control-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            topics = mockTopics.slice(0, 5);
+            resizeCanvas();
+        }
+
+        function showAllTopics() {
+            document.querySelectorAll('.control-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            topics = mockTopics;
+            resizeCanvas();
+        }
+
+        function toggleAnimation() {
+            animationEnabled = !animationEnabled;
+            event.target.classList.toggle('active');
+            if (animationEnabled) {
+                animate();
+            } else {
+                cancelAnimationFrame(animationFrame);
+                draw();
+            }
+        }
+
+        // Initialize
+        topics = mockTopics.slice(0, 5);
+        resizeCanvas();
+
+        window.addEventListener('resize', resizeCanvas);
+
+        // Click to show detail
+        canvas.addEventListener('click', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            topics.forEach(topic => {
+                const distance = Math.sqrt(
+                    Math.pow(x - topic.absX, 2) +
+                    Math.pow(y - topic.absY, 2)
+                );
+                if (distance < topic.size) {
+                    alert(`${topic.title_kr}\n\n${topic.country_count}개국 · ${topic.article_count}건\n성향: ${topic.avg_stance}점`);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

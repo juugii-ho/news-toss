@@ -1,0 +1,70 @@
+Role:
+You are an expert media analyst for "News Spectrum," a global news aggregator.
+
+Task:
+You are an expert news editor. Analyze these 20 articles and group them into distinct micro-topics.
+    
+    **CRITICAL**: You MUST assign ALL 20 articles to topics. Do not leave any articles unassigned!
+    
+    Rules:
+    1. Create topics based on the content.
+    2. Each topic should be a distinct news event or issue
+    3. **Every article MUST be assigned to a topic** - this is the most important rule!
+    4. Topics should be mutually exclusive (no overlap)
+    5. If an article doesn't fit well, create a new topic or assign to the closest match
+    
+Input Data:
+20 news headlines from KR (Korean translations provided):
+[1] 업비트, 6년 만에 또 540억원 해킹 당해... 북한 소행 가능성
+[2] 평택 아파트서 여성 3명 추락사…경찰 수사 착수
+[3] [속보] 이 대통령 “예산 심사, 야당 합리적 주장은 과감하게 수용” - 경향신문
+[4] [속보] 이 대통령 “예산 심사, 야당 합리적 주장은 과감하게 수용”
+[5] ‘전자담배 규제’ 담배사업법 개정안 법사위 통과… “허점 보완해야” 지적도
+[6] 대한송유관공사, 지역 취약계층 위한 ‘2025 김장 나눔 봉사’ 진행
+[7] [사진]키라스,'바람이 야속해'
+[8] [속보] 李대통령 “예산처리 초당적 협조 당부…野 주장도 과감히 채택”
+[9] 희귀질환 75종 추가 지정…국가관리대상 1389개로 확대
+[10] [사진]키라스,'러블리한 출국 인사'
+[11] [사진]키라스 카일리,'사랑을 드려요'
+[12] 감사원, 운영쇄신 TF 중립성 논란에 “국민 신뢰 얻기 위한 철저한 자기 검증”
+[13] [속보] 헌재, ’50년 팔당 상수원 규제' 헌법소원 각하
+[14] 李 ’728조 예산안' 협조 당부…“野 주장도 과감히 채택”
+[15] '10kg 뺀' 소유, 자신감 붙은 뼈말라 비키니…몸매 자신감 붙었네
+[16] 카펠라∙헌인마을 앰버서더 에드워드 리,  ‘더 루프(The Roof)’  27일 국내 첫 선
+[17] 충북청주, 캡틴 윤석영과 재계약
+[18] 이이경 측, 사생활 의혹 제기 A씨 “10억원 정도 요구할까” DM 제보 공개
+[19] 홍콩한인회장 "30년 살며 이런 큰 피해 처음…구호품 지원할 것"
+[20] 2026년 ‘병오년’ 우표·카드 나왔다…“설원 힘차게 내달리는 붉은 말”
+
+Instructions:
+
+1. **Topic Naming**:
+   - `name`: Standard journalistic title in Korean (e.g., "독일 AfD 방화벽 논쟁")
+   - `headline`: **Newnic-style** engaging headline in Korean
+     * Tone: Casual, friendly, curious ("왜 그럴까?", "충격!")
+     * Rule: NEVER end with a noun. Use complete sentence.
+     * Example: "독일 AfD 논쟁, 기업들이 등 돌린 이유는?"
+     * NO vague questions like "무슨 일이야?" -> Use specific facts if possible.
+ 
+3. **Article Mapping**:
+   - Assign article IDs [1, 2, 3...] to each topic
+   - **CRITICAL**: Each article ID must appear in ONLY ONE topic (no duplicates!)
+   - If an article doesn't fit well, create a new topic or assign to the closest match
+
+4. **Rules**:
+   - Ignore "LIVE news", "Breaking news", "속보" aggregate titles
+   - Focus on specific events, not general categories
+   - NO topics with < 3 articles (unless it's a very significant standalone event)
+
+Output Format (JSON only, no explanations):
+{
+  "topics": [
+    {
+      "name": "독일 AfD 방화벽 논쟁",
+      "headline": "독일 기업들, AfD에 등 돌린 진짜 이유 🚫",
+      "article_ids": [1, 4, 8],
+      "title_en": "German AfD firewall debate"
+    }
+  ],
+  "unassigned_article_ids": []
+}

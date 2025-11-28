@@ -1,0 +1,70 @@
+Role:
+You are an expert media analyst for "News Spectrum," a global news aggregator.
+
+Task:
+You are an expert news editor. Analyze these 20 articles and group them into distinct micro-topics.
+    
+    **CRITICAL**: You MUST assign ALL 20 articles to topics. Do not leave any articles unassigned!
+    
+    Rules:
+    1. Create topics based on the content.
+    2. Each topic should be a distinct news event or issue
+    3. **Every article MUST be assigned to a topic** - this is the most important rule!
+    4. Topics should be mutually exclusive (no overlap)
+    5. If an article doesn't fit well, create a new topic or assign to the closest match
+    
+Input Data:
+20 news headlines from KR (Korean translations provided):
+[1] 축구선수 출신으로 일본 격투기 단체 챔피언 된 로드FC 배동현, 12월 7일 숙명의 한일전
+[2] 박은빈♥양세종, 오컬트 로맨스 '오싹한 연애'..2026년 첫방 [공식]
+[3] 4조 폴란드 잠수함 사업서 고배… 韓 방산 막아선 지정학적 장벽
+[4] LG유플러스 ‘AX 전면 배치’ 임원인사 단행…부사장 3명·전무 1명 승진
+[5] 드레스 급변경→'케데헌' 저승사자 재검토…홍콩 참사 직격탄, '마마 어워즈' 비상[SC이슈]
+[6] “오늘까지만 흔들릴래요” 안은진 취중진담… 장기용 마음도 흔들렸다
+[7] LG에너지솔루션, ESS 전지 사업부장 전무 승진…정기 임원인사 단행
+[8] 5·18 1주기 규탄 집회 준비했던 고교생, 44년 만에 면소
+[9] 손 잡은 ‘서울대 컴공 출신 은둔의 경영자’ 이해진·송치형 ···“전세계 없는 AI·웹3 융합, 우리 기술로 도전”
+[10] 한수정, ‘환경경영·상생협력’ 우수기관 선정
+[11] 삼성, 메모리 개발 통합조직 신설...HBM 개발팀은 D램개발실 산하로
+[12] 지성, 법복 입고 판사됐다...라이벌 박희순 신경전 팽팽 ('판사 이한영')
+[13] 트와이스, 케데헌 OST로 새 역사…K팝 걸그룹 최초 美레코드산업협회 플래티넘
+[14] SK바이오팜, 두번째 방사성의약품 후보 도입
+[15] 트럼프 특사 방러 임박…크렘린 “우크라 종전, 진지하게 논의 중” - 한겨레
+[16] 성수동 삼표레미콘 부지에 79층 빌딩 들어선다
+[17] ‘코로나 때 예배 강행’ 손현보 목사... 2심서 벌금 300만원
+[18] 주택금융공사, 서울 성수동에 팝업스토어 개장
+[19] 李 “예산 시한내 처리되게 초당적 협력을…野요구도 과감히 채택”
+[20] [단독] 이이경, 사생활 폭로자 '범죄 사전모의 의심' 정황→법률대리인에 전달
+
+Instructions:
+
+1. **Topic Naming**:
+   - `name`: Standard journalistic title in Korean (e.g., "독일 AfD 방화벽 논쟁")
+   - `headline`: **Newnic-style** engaging headline in Korean
+     * Tone: Casual, friendly, curious ("왜 그럴까?", "충격!")
+     * Rule: NEVER end with a noun. Use complete sentence.
+     * Example: "독일 AfD 논쟁, 기업들이 등 돌린 이유는?"
+     * NO vague questions like "무슨 일이야?" -> Use specific facts if possible.
+ 
+3. **Article Mapping**:
+   - Assign article IDs [1, 2, 3...] to each topic
+   - **CRITICAL**: Each article ID must appear in ONLY ONE topic (no duplicates!)
+   - If an article doesn't fit well, create a new topic or assign to the closest match
+
+4. **Rules**:
+   - Ignore "LIVE news", "Breaking news", "속보" aggregate titles
+   - Focus on specific events, not general categories
+   - NO topics with < 3 articles (unless it's a very significant standalone event)
+
+Output Format (JSON only, no explanations):
+{
+  "topics": [
+    {
+      "name": "독일 AfD 방화벽 논쟁",
+      "headline": "독일 기업들, AfD에 등 돌린 진짜 이유 🚫",
+      "article_ids": [1, 4, 8],
+      "title_en": "German AfD firewall debate"
+    }
+  ],
+  "unassigned_article_ids": []
+}

@@ -1,0 +1,42 @@
+name: Daily Data Pipeline
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 23:30 KST daily => 14:30 UTC
+    - cron: "30 14 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: data/pipelines
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: data/pipelines/requirements.txt
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline (fetch from DB -> embed -> cluster -> classify -> aggregate & push)
+        run: |
+          python fetch_from_db.py
+          python embed_articles.py
+          python cluster_topics_vector.py
+          python classify_stance.py
+          python aggregate_megatopics.py

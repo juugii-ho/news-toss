@@ -1,0 +1,865 @@
+{
+  "US": [
+    {
+      "name": "New York Times",
+      "bias": "PROGRESSIVE",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+      "success": true,
+      "source_title": "NYT > Top Stories",
+      "total_items": 23,
+      "has_summary": true,
+      "summary_length": 187,
+      "sample_item": {
+        "title": "For Shooting Suspect, a Long Path of Conflict From Afghanistan to America",
+        "link": "https://www.nytimes.com/2025/11/27/us/guard-shooting-suspect-profile.html",
+        "published_at": "Fri, 28 Nov 2025 03:22:28 +0000",
+        "summary_preview": "Rahmanullah Lakanwal was among the Afghans who came to the United States after the Taliban takeover ...",
+        "summary_full_length": 187
+      }
+    },
+    {
+      "name": "Washington Post",
+      "bias": "PROGRESSIVE",
+      "url": "https://feeds.washingtonpost.com/rss/national",
+      "success": true,
+      "source_title": "National",
+      "total_items": 39,
+      "has_summary": true,
+      "summary_length": 159,
+      "sample_item": {
+        "title": "The National Guard shooting suspect was in one of the CIA’s ‘Zero Units’",
+        "link": "https://www.washingtonpost.com/nation/2025/11/28/national-guard-rahmanullah-lakanwal-shooting-suspec...",
+        "published_at": "Fri, 28 Nov 2025 13:25:53 +0000",
+        "summary_preview": "The man charged with shooting two National Guard members in D.C. is an Afghan national who came to t...",
+        "summary_full_length": 159
+      }
+    },
+    {
+      "name": "Fox News",
+      "bias": "CONSERVATIVE",
+      "url": "https://moxie.foxnews.com/google-publisher/latest.xml",
+      "success": true,
+      "source_title": "Latest & Breaking News on Fox News",
+      "total_items": 25,
+      "has_summary": true,
+      "summary_length": 145,
+      "sample_item": {
+        "title": "American cruise ship passenger goes missing on island tour",
+        "link": "https://www.foxnews.com/us/american-cruise-ship-passenger-goes-missing-island-tour",
+        "published_at": "Fri, 28 Nov 2025 08:49:04 -0500",
+        "summary_preview": "Police in Saint Martin are searching for Ann Evans, 55, an American woman who disappeared after leav...",
+        "summary_full_length": 145
+      }
+    },
+    {
+      "name": "CNN",
+      "bias": "NEUTRAL",
+      "url": "http://rss.cnn.com/rss/edition.rss",
+      "success": true,
+      "source_title": "CNN.com - RSS Channel - App International Edition",
+      "total_items": 50,
+      "has_summary": false,
+      "summary_length": 0,
+      "sample_item": {
+        "title": "Trump pleads not guilty to 34 felony counts",
+        "link": "https://edition.cnn.com/webview/politics/live-news/trump-indictment-stormy-daniels-news-04-03-23/ind...",
+        "published_at": null,
+        "summary_preview": null,
+        "summary_full_length": 0
+      }
+    },
+    {
+      "name": "The Hill",
+      "bias": "NEUTRAL",
+      "url": "https://thehill.com/feed/",
+      "success": true,
+      "source_title": "The Hill News",
+      "total_items": 100,
+      "has_summary": true,
+      "summary_length": 46,
+      "sample_item": {
+        "title": "How to make the most of a turning point for Middle East peace",
+        "link": "https://thehill.com/opinion/international/5622082-middle-east-peace-opportunities/",
+        "published_at": "Fri, 28 Nov 2025 14:00:00 +0000",
+        "summary_preview": "The stakes are high, and the window is narrow.",
+        "summary_full_length": 46
+      }
+    }
+  ],
+  "GB": [
+    {
+      "name": "BBC",
+      "bias": "NEUTRAL",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml",
+      "success": true,
+      "source_title": "BBC News",
+      "total_items": 33,
+      "has_summary": true,
+      "summary_length": 100,
+      "sample_item": {
+        "title": "France to intercept small boats after pressure from UK",
+        "link": "https://www.bbc.com/news/articles/c1kpmm20zwwo?at_medium=RSS&at_campaign=rss",
+        "published_at": "Fri, 28 Nov 2025 11:23:32 GMT",
+        "summary_preview": "The change in policy comes after Prime Minister Sir Keir Starmer wrote to President Emmanuel Macron.",
+        "summary_full_length": 100
+      }
+    },
+    {
+      "name": "The Guardian",
+      "bias": "PROGRESSIVE",
+      "url": "https://www.theguardian.com/uk/rss",
+      "success": true,
+      "source_title": "The Guardian",
+      "total_items": 140,
+      "has_summary": true,
+      "summary_length": 947,
+      "sample_item": {
+        "title": "Small talk: a bluffer’s guide",
+        "link": "https://www.theguardian.com/lifeandstyle/2025/nov/28/small-talk-a-bluffers-guide-tim-jonze",
+        "published_at": "Fri, 28 Nov 2025 10:00:03 GMT",
+        "summary_preview": "<p>Dread the thought of party chat? This selection of cultural keypoints will put some fizz in your ...",
+        "summary_full_length": 947
+      }
+    },
+    {
+      "name": "Financial Times",
+      "bias": "NEUTRAL",
+      "url": "https://www.ft.com/rss/home",
+      "success": true,
+      "source_title": "International homepage",
+      "total_items": 9,
+      "has_summary": true,
+      "summary_length": 101,
+      "sample_item": {
+        "title": "CME resumes trading after outage disrupts global markets",
+        "link": "https://www.ft.com/content/3332da74-d961-4b7f-a503-11d55d93b7c8",
+        "published_at": "Fri, 28 Nov 2025 14:31:37 GMT",
+        "summary_preview": "Fault at data centre halted futures trading in equities, bonds and commodities for more than 10 hour...",
+        "summary_full_length": 101
+      }
+    },
+    {
+      "name": "The Independent",
+      "bias": "PROGRESSIVE",
+      "url": "https://www.independent.co.uk/news/uk/rss",
+      "success": true,
+      "source_title": "The Independent UK",
+      "total_items": 50,
+      "has_summary": true,
+      "summary_length": 97,
+      "sample_item": {
+        "title": "France agrees to stop migrant boats at sea after pressure from Starmer",
+        "link": "https://www.independent.co.uk/news/uk/home-news/migrants-france-starmer-macron-small-boats-channel-b...",
+        "published_at": "Fri, 28 Nov 2025 14:13:55 GMT",
+        "summary_preview": "<p>French police agree to intercept migrant ‘taxi boats’ at sea, according to leaked document</p>",
+        "summary_full_length": 97
+      }
+    },
+    {
+      "name": "Sky News",
+      "bias": "NEUTRAL",
+      "url": "https://feeds.skynews.com/feeds/rss/home.xml",
+      "success": true,
+      "source_title": "The Latest News from the UK and Around the World | Sky News",
+      "total_items": 10,
+      "has_summary": true,
+      "summary_length": 177,
+      "sample_item": {
+        "title": "Robber who kicked and punched pensioner to death for a cottage pie is jailed for life",
+        "link": "https://news.sky.com/story/robber-who-kicked-and-punched-pensioner-for-cottage-pie-jailed-for-his-mu...",
+        "published_at": "Fri, 28 Nov 2025 11:19:00 +0000",
+        "summary_preview": "A robber who kicked and punched a pensioner before taking off with a box of cornflakes and a cottage...",
+        "summary_full_length": 177
+      }
+    },
+    {
+      "name": "The Telegraph",
+      "bias": "CONSERVATIVE",
+      "url": "https://www.telegraph.co.uk/news/rss.xml",
+      "success": true,
+      "source_title": "News",
+      "total_items": 120,
+      "has_summary": true,
+      "summary_length": 121,
+      "sample_item": {
+        "title": "Ukraine: The Latest - the world’s most trusted and award-winning podcast on the war",
+        "link": "https://www.telegraph.co.uk/news/2022/03/02/russia-ukraine-war-listen-daily-podcast/",
+        "published_at": "Tue, 25 Nov 2025 16:03:00 GMT",
+        "summary_preview": "Every weekday our top journalists analyse the invasion from all angles and tell you what you need to...",
+        "summary_full_length": 121
+      }
+    }
+  ],
+  "DE": [
+    {
+      "name": "Der Spiegel",
+      "bias": "PROGRESSIVE",
+      "url": "https://www.spiegel.de/schlagzeilen/index.rss",
+      "success": true,
+      "source_title": "DER SPIEGEL - Schlagzeilen",
+      "total_items": 30,
+      "has_summary": true,
+      "summary_length": 182,
+      "sample_item": {
+        "title": "Bundestag beschließt Haushalt für 2026",
+        "link": "https://www.spiegel.de/politik/deutschland/bundestag-beschliesst-haushalt-fuer-2026-a-f3a27909-f6b7-...",
+        "published_at": "Fri, 28 Nov 2025 15:16:00 +0100",
+        "summary_preview": "Das Parlament hat den Bundeshaushalt für das kommende Jahr beschlossen. Die Ausgaben sollen 525 Mill...",
+        "summary_full_length": 182
+      }
+    },
+    {
+      "name": "FAZ",
+      "bias": "CONSERVATIVE",
+      "url": "https://www.faz.net/rss/aktuell/",
+      "success": true,
+      "source_title": "Aktuell - FAZ.NET",
+      "total_items": 67,
+      "has_summary": true,
+      "summary_length": 87,
+      "sample_item": {
+        "title": "Bundeshaushalt 2026: 197,3 Milliarden Euro für Soziales",
+        "link": "https://www.faz.net/aktuell/wirtschaft/baerbel-bas-und-der-haushalt-197-3-milliarden-euro-fuer-sozia...",
+        "published_at": "Fri, 28 Nov 2025 13:52:43 GMT",
+        "summary_preview": "Die Koalition setzt ihre Ausgabenpläne durch. Ein Versprechen krönt die Haushaltswoche.",
+        "summary_full_length": 87
+      }
+    },
+    {
+      "name": "Süddeutsche Zeitung",
+      "bias": "PROGRESSIVE",
+      "url": "https://rss.sueddeutsche.de/rss/Topthemen",
+      "success": true,
+      "source_title": "Topthemen - SZ.de",
+      "total_items": 15,
+      "has_summary": true,
+      "summary_length": 333,
+      "sample_item": {
+        "title": "Mobilität: So will der Bund E-Autos und Hybride fördern",
+        "link": "https://www.sueddeutsche.de/wirtschaft/e-auto-praemie-2026-hybride-kunden-anspruch-foerderung-li.334...",
+        "published_at": "Fri, 28 Nov 2025 13:21:27 GMT",
+        "summary_preview": "<img src=\"https://www.sueddeutsche.de/2025/11/23/8ba04cc2-2a2d-4914-b2ad-c562b7192907.jpg?rect=501%2...",
+        "summary_full_length": 333
+      }
+    },
+    {
+      "name": "Deutsche Welle",
+      "bias": "NEUTRAL",
+      "url": "https://rss.dw.com/rdf/rss-en-all",
+      "success": true,
+      "source_title": "Deutsche Welle",
+      "total_items": 148,
+      "has_summary": true,
+      "summary_length": 212,
+      "sample_item": {
+        "title": "Germany news: Lawmakers pass 2026 budget",
+        "link": "https://www.dw.com/en/germany-news-lawmakers-pass-2026-budget/live-74936743?maca=en-rss-en-all-1573-...",
+        "published_at": "2025-11-28T14:12:00Z",
+        "summary_preview": "German lawmakers passed the 2026 budget amid a drawn-out fight over pension reforms pushed by young ...",
+        "summary_full_length": 212
+      }
+    }
+  ],
+  "FR": [
+    {
+      "name": "Le Monde",
+      "bias": "PROGRESSIVE",
+      "url": "http://www.lemonde.fr/rss/une.xml",
+      "success": true,
+      "source_title": "Le Monde.fr - Actualités et Infos en France et dans le monde",
+      "total_items": 19,
+      "has_summary": true,
+      "summary_length": 262,
+      "sample_item": {
+        "title": "EN DIRECT, guerre en Ukraine : Viktor Orban a rencontré Vladimir Poutine en Russie",
+        "link": "https://www.lemonde.fr/international/live/2025/11/28/en-direct-guerre-en-ukraine-viktor-orban-a-renc...",
+        "published_at": "Fri, 28 Nov 2025 12:22:23 +0100",
+        "summary_preview": "La Hongrie continuera d’acheter des hydrocarbures à la Russie, a affirmé le premier ministre hongroi...",
+        "summary_full_length": 262
+      }
+    },
+    {
+      "name": "Le Figaro",
+      "bias": "CONSERVATIVE",
+      "url": "https://www.lefigaro.fr/rss/figaro_flash-actu.xml",
+      "success": true,
+      "source_title": "Le Figaro - Le Flash Actu",
+      "total_items": 20,
+      "has_summary": true,
+      "summary_length": 238,
+      "sample_item": {
+        "title": "À Lyon, une étude inédite sur les causes sociales et environnementales de la bronchiolite chez les b...",
+        "link": "https://www.lefigaro.fr/lyon/a-lyon-une-etude-inedite-sur-les-causes-sociales-et-environnementales-d...",
+        "published_at": "Fri, 28 Nov 2025 15:24:50 +0100",
+        "summary_preview": "Une étude des Hospices civiles de Lyon en partenariat avec l’université de Princeton a confirmé les ...",
+        "summary_full_length": 238
+      }
+    },
+    {
+      "name": "France 24",
+      "bias": "NEUTRAL",
+      "url": "https://www.france24.com/en/rss",
+      "success": false,
+      "error": "Parsing error: <unknown>:50:22: mismatched tag"
+    },
+    {
+      "name": "Mediapart",
+      "bias": "PROGRESSIVE",
+      "url": "https://www.mediapart.fr/articles/feed",
+      "success": true,
+      "source_title": "Mediapart",
+      "total_items": 10,
+      "has_summary": true,
+      "summary_length": 282,
+      "sample_item": {
+        "title": "Une famille forcée de vivre dans un logement insalubre de Paris Habitat",
+        "link": "https://www.mediapart.fr/journal/economie-et-social/281125/une-famille-forcee-de-vivre-dans-un-logem...",
+        "published_at": "Fri, 28 Nov 2025 12:55:55 +0100",
+        "summary_preview": "À la suite d’un dégât des eaux, la famille de Soraya, locataire de Paris Habitat, a vu sa vie bascul...",
+        "summary_full_length": 282
+      }
+    }
+  ],
+  "IT": [
+    {
+      "name": "La Repubblica",
+      "bias": "PROGRESSIVE",
+      "url": "https://www.repubblica.it/rss/homepage/rss2.0.xml",
+      "success": true,
+      "source_title": "Repubblica.it",
+      "total_items": 30,
+      "has_summary": true,
+      "summary_length": 144,
+      "sample_item": {
+        "title": "Garlasco, la battaglia del Dna. L’amarezza di Sempio: “Non ho ucciso io Chiara”",
+        "link": "https://milano.repubblica.it/cronaca/2025/11/28/news/garlasco_dna_sempio_chiara_poggi-425009642/",
+        "published_at": "Fri, 28 Nov 2025 03:00:00 +0000",
+        "summary_preview": "Dopo l’esito degli esami sulle tracce sotto le unghie della vittima, i legali del commesso preparano...",
+        "summary_full_length": 144
+      }
+    },
+    {
+      "name": "Corriere della Sera",
+      "bias": "CONSERVATIVE",
+      "url": "https://www.corriere.it/rss/homepage.xml",
+      "success": true,
+      "source_title": "Corriere.it - Homepage",
+      "total_items": 69,
+      "has_summary": true,
+      "summary_length": 359,
+      "sample_item": {
+        "title": "Codice della strada, ecco cosa cambia e perché non ridurrà il numero delle vittime",
+        "link": "https://www.corriere.it/dataroom-milena-gabanelli/codice-strada-ecco-cosa-cambia-perche-non-ridurra-...",
+        "published_at": "Mon, 13 May 2024 06:05:06 +0200",
+        "summary_preview": "<p><img alt=\"Codice della strada, ecco cosa cambia e perché non ridurrà il numero delle vittime\" src...",
+        "summary_full_length": 359
+      }
+    }
+  ],
+  "JP": [
+    {
+      "name": "Yomiuri Shimbun",
+      "bias": "CONSERVATIVE",
+      "url": "https://japannews.yomiuri.co.jp/feed",
+      "success": true,
+      "source_title": "The Japan News",
+      "total_items": 20,
+      "has_summary": true,
+      "summary_length": 145,
+      "sample_item": {
+        "title": "Asahi Finally Opens Up about Extent of September’s Cyberattack; 1.91 Mil. People’s Data May Have Bee...",
+        "link": "https://japannews.yomiuri.co.jp/business/companies/20251128-295310/",
+        "published_at": "Fri, 28 Nov 2025 12:00:07 +0000",
+        "summary_preview": "<p>The extent and severity of the damage caused by the cyberattack on Asahi Group Holdings, Ltd. in ...",
+        "summary_full_length": 145
+      }
+    },
+    {
+      "name": "Nikkei Asia",
+      "bias": "NEUTRAL",
+      "url": "https://asia.nikkei.com/rss/feed/nar",
+      "success": true,
+      "source_title": "Nikkei Asia",
+      "total_items": 50,
+      "has_summary": false,
+      "summary_length": 0,
+      "sample_item": {
+        "title": "India's GDP accelerates to 8.2% growth despite tariff headwind",
+        "link": "https://asia.nikkei.com/economy/trade-war/trump-tariffs/india-s-gdp-accelerates-to-8.2-growth-despit...",
+        "published_at": null,
+        "summary_preview": null,
+        "summary_full_length": 0
+      }
+    },
+    {
+      "name": "NHK",
+      "bias": "NEUTRAL",
+      "url": "https://www3.nhk.or.jp/rss/news/cat0.xml",
+      "success": true,
+      "source_title": "NHKニュース",
+      "total_items": 7,
+      "has_summary": true,
+      "summary_length": 106,
+      "sample_item": {
+        "title": "香港 高層住宅火災 128人死亡確認 約200人連絡取れず 香港政府",
+        "link": "http://www3.nhk.or.jp/news/html/20251128/k10014988441000.html",
+        "published_at": "Fri, 28 Nov 2025 19:32:41 +0900",
+        "summary_preview": "香港の高層住宅で起きた大規模な火災は発生から3日目となり、火はほぼ消し止められました。これまでに128人の死亡が確認されたほか、依然としておよそ200人と連絡が取れないということで当局は安否の確認を急...",
+        "summary_full_length": 106
+      }
+    },
+    {
+      "name": "Asahi Shimbun",
+      "bias": "PROGRESSIVE",
+      "url": "https://www.asahi.com/rss/asahi/newsheadlines.rdf",
+      "success": true,
+      "source_title": "朝日新聞",
+      "total_items": 40,
+      "has_summary": true,
+      "summary_length": 0,
+      "sample_item": {
+        "title": "紅葉と虹の写真、AI修正しSNSに　国のダム支所、指摘受け削除",
+        "link": "http://www.asahi.com/articles/ASTCX3SM9TCXUTIL035M.html?ref=rss",
+        "published_at": "2025-11-28T21:30:00+09:00",
+        "summary_preview": "",
+        "summary_full_length": 0
+      }
+    }
+  ],
+  "KR": [
+    {
+      "name": "Google News Korea",
+      "bias": "NEUTRAL",
+      "url": "https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko",
+      "success": true,
+      "source_title": "주요 뉴스 - Google 뉴스",
+      "total_items": 34,
+      "has_summary": true,
+      "summary_length": 1873,
+      "sample_item": {
+        "title": "[속보]‘2차 계엄 의혹’ 계엄버스 탄 육군 법무실장, ‘준장’에서 ‘대령’으로 1계급 강등 - 경향신문",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBxd0NvV1NFSDhhRmtia2F3emppVE1FRFBFeUx4OFh6SUFXd2w...",
+        "published_at": "Fri, 28 Nov 2025 09:21:00 GMT",
+        "summary_preview": "<ol><li><a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTFBxd0NvV1NFSDhhRmtia2F3emppVE1FRF...",
+        "summary_full_length": 1873
+      }
+    },
+    {
+      "name": "SBS",
+      "bias": "NEUTRAL",
+      "url": "https://news.sbs.co.kr/news/TopicRssFeed.do?plink=RSSREADER",
+      "success": true,
+      "source_title": "주요뉴스 - SBS 뉴스",
+      "total_items": 10,
+      "has_summary": true,
+      "summary_length": 81,
+      "sample_item": {
+        "title": "무릎 꿇었는데 발길질…항복하는 사람을 잔혹 살해했다",
+        "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008349458&plink=RSSLINK&cooper=RSSREADER",
+        "published_at": "Fri, 28 Nov 2025 20:48:00 +0900",
+        "summary_preview": "무장한 이스라엘군이 팔레스타인 민간인 2명을 사살하는 장면이 공개됐습니다. 민간인들이 두 손을 들며 순순히 항복하겠다는 뜻을 보였는데도 무차별적…",
+        "summary_full_length": 81
+      }
+    },
+    {
+      "name": "조선일보",
+      "bias": "CONSERVATIVE",
+      "url": "https://www.chosun.com/arc/outboundfeeds/rss/?outputType=xml",
+      "success": true,
+      "source_title": "조선일보",
+      "total_items": 100,
+      "has_summary": true,
+      "summary_length": 0,
+      "sample_item": {
+        "title": "“아버지, 스스로 생 마감” 할리우드 배우의 비통한 고백",
+        "link": "https://www.chosun.com/international/international_general/2025/11/28/VUZL2OXTZFHV3AKRK6MIXMOSZU/",
+        "published_at": "Fri, 28 Nov 2025 14:20:34 +0000",
+        "summary_preview": "",
+        "summary_full_length": 0
+      }
+    },
+    {
+      "name": "동아일보",
+      "bias": "CONSERVATIVE",
+      "url": "https://rss.donga.com/total.xml",
+      "success": true,
+      "source_title": "동아일보 | 전체 뉴스",
+      "total_items": 50,
+      "has_summary": true,
+      "summary_length": 612,
+      "sample_item": {
+        "title": "[사설]美-中에 크게 뒤진 ‘생성형 AI’… 우린 ‘피지컬 AI’로 승부 걸어야",
+        "link": "https://www.donga.com/news/Opinion/article/all/20251128/132866900/2",
+        "published_at": "Fri, 28 Nov 2025 23:30:00 +0900",
+        "summary_preview": "<img align=\"left\" hspace=\"10\" src=\"https://dimg.donga.com/wps/NEWS/IMAGE/2025/11/28/132867216.1.jpg\"...",
+        "summary_full_length": 612
+      }
+    },
+    {
+      "name": "경향신문",
+      "bias": "PROGRESSIVE",
+      "url": "https://www.khan.co.kr/rss/rssdata/total_news.xml",
+      "success": true,
+      "source_title": "경향신문:전체기사",
+      "total_items": 50,
+      "has_summary": true,
+      "summary_length": 203,
+      "sample_item": {
+        "title": "‘잇단 사망사고’ 쿠팡 물류센터, 노동장관이 불시에 찾아갔다···“야간노동 실태 점검”",
+        "link": "https://www.khan.co.kr/article/202511282316001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=tota...",
+        "published_at": "2025-11-28T23:16:00+09:00",
+        "summary_preview": "50대 단기 계약직 노동자가 새벽에 카트에서 상품을 담아 옮기는 집품 업무를 하던 중 쓰러져 숨진 지난 26일 경기 광주시의 한 쿠팡 물류센터에서 직원들이 쌓여 있는 물품 앞을 지...",
+        "summary_full_length": 203
+      }
+    }
+  ],
+  "CA": [
+    {
+      "name": "National Post",
+      "bias": "CONSERVATIVE",
+      "url": "https://nationalpost.com/feed",
+      "success": true,
+      "source_title": "National Post",
+      "total_items": 10,
+      "has_summary": true,
+      "summary_length": 103,
+      "sample_item": {
+        "title": "Six IDF soldiers wounded in clash with terrorists in Syria",
+        "link": "https://nationalpost.com/news/world/israel-middle-east/idf-soldiers-wounded-terrorists-syria",
+        "published_at": "Fri, 28 Nov 2025 14:17:45 +0000",
+        "summary_preview": "The raid in the Beit Jinn area targeted terrorists planning attacks against Israelis, the military s...",
+        "summary_full_length": 103
+      }
+    },
+    {
+      "name": "CBC",
+      "bias": "NEUTRAL",
+      "url": "https://www.cbc.ca/cmlink/rss-topstories",
+      "success": false,
+      "error": "Feed parsing timeout after 30 seconds"
+    },
+    {
+      "name": "Globe and Mail - Business",
+      "bias": "NEUTRAL",
+      "url": "https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/business/",
+      "success": true,
+      "source_title": "The Globe and Mail",
+      "total_items": 100,
+      "has_summary": true,
+      "summary_length": 108,
+      "sample_item": {
+        "title": "Should companies disclose to investors how they contribute to Canada?",
+        "link": "https://www.theglobeandmail.com/business/commentary/article-should-companies-disclose-to-investors-h...",
+        "published_at": "Fri, 28 Nov 2025 10:00:00 +0000",
+        "summary_preview": "Canadians might want to know not just how a company performs, but how it supports the country they c...",
+        "summary_full_length": 108
+      }
+    },
+    {
+      "name": "Globe and Mail - Canada",
+      "bias": "NEUTRAL",
+      "url": "https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/canada/",
+      "success": true,
+      "source_title": "The Globe and Mail",
+      "total_items": 100,
+      "has_summary": true,
+      "summary_length": 79,
+      "sample_item": {
+        "title": "Editor’s note: A look behind Russian lines",
+        "link": "https://www.theglobeandmail.com/canada/article-editors-note-a-look-behind-russian-lines/",
+        "published_at": "Fri, 28 Nov 2025 11:43:02 +0000",
+        "summary_preview": "Why The Globe and Mail photographed soldiers and civilians behind Russian lines",
+        "summary_full_length": 79
+      }
+    },
+    {
+      "name": "Globe and Mail - Politics",
+      "bias": "NEUTRAL",
+      "url": "https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/politics/",
+      "success": true,
+      "source_title": "The Globe and Mail",
+      "total_items": 100,
+      "has_summary": true,
+      "summary_length": 124,
+      "sample_item": {
+        "title": "Ottawa, Alberta sign energy deal signalling major shift in relationship",
+        "link": "https://www.theglobeandmail.com/politics/article-alberta-ottawa-energy-deal/",
+        "published_at": "Thu, 27 Nov 2025 17:05:51 +0000",
+        "summary_preview": "Federal government won’t implement its oil and gas emissions cap, and both sides will consult with B...",
+        "summary_full_length": 124
+      }
+    }
+  ],
+  "AU": [
+    {
+      "name": "ABC Australia",
+      "bias": "NEUTRAL",
+      "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
+      "success": true,
+      "source_title": "Just In",
+      "total_items": 25,
+      "has_summary": true,
+      "summary_length": 111,
+      "sample_item": {
+        "title": "Ukraine's anti-corruption unit raids home of top Zelenskyy aide",
+        "link": "https://www.abc.net.au/news/2025-11-28/andrii-yermak-zelenskyy-aide-home-office-raided/106080910",
+        "published_at": "Fri, 28 Nov 2025 12:52:22 +0000",
+        "summary_preview": "The raids come as Kyiv battles to persuade US officials to defend Ukraine's interests in peace agree...",
+        "summary_full_length": 111
+      }
+    },
+    {
+      "name": "Sydney Morning Herald",
+      "bias": "PROGRESSIVE",
+      "url": "https://www.smh.com.au/rss/feed.xml",
+      "success": true,
+      "source_title": "Sydney Morning Herald - Latest News",
+      "total_items": 20,
+      "has_summary": true,
+      "summary_length": 160,
+      "sample_item": {
+        "title": "Matildas run riot in second half to beat New Zealand 5-0 in Gosford",
+        "link": "https://www.smh.com.au/sport/soccer/matildas-v-new-zealand-live-updates-sam-kerr-absent-from-startin...",
+        "published_at": "Sat, 29 Nov 2025 00:31:47 +1100",
+        "summary_preview": "Joe Montemurro’s Matildas are trying to find some form in Gosford tonight, where they take on New Ze...",
+        "summary_full_length": 160
+      }
+    },
+    {
+      "name": "The Age",
+      "bias": "PROGRESSIVE",
+      "url": "https://www.theage.com.au/rss/feed.xml",
+      "success": true,
+      "source_title": "The Age - Latest News",
+      "total_items": 20,
+      "has_summary": true,
+      "summary_length": 160,
+      "sample_item": {
+        "title": "Matildas run riot in second half to beat New Zealand 5-0 in Gosford",
+        "link": "https://www.theage.com.au/sport/soccer/matildas-v-new-zealand-live-updates-sam-kerr-absent-from-star...",
+        "published_at": "Sat, 29 Nov 2025 00:31:47 +1100",
+        "summary_preview": "Joe Montemurro’s Matildas are trying to find some form in Gosford tonight, where they take on New Ze...",
+        "summary_full_length": 160
+      }
+    }
+  ],
+  "BE": [
+    {
+      "name": "La Libre",
+      "bias": "NEUTRAL",
+      "url": "https://www.lalibre.be/rss.xml",
+      "success": true,
+      "source_title": "Lalibre.be - Les derniers articles",
+      "total_items": 100,
+      "has_summary": true,
+      "summary_length": 123,
+      "sample_item": {
+        "title": "Bruxelles risque de perdre ses lignes de crédit de 500 millions € dès 2026:“Je ne veux pas pratiquer...",
+        "link": "https://www.lalibre.be/economie/conjoncture/2025/11/28/bruxelles-risque-de-perdre-ses-lignes-de-cred...",
+        "published_at": "Fri, 28 Nov 2025 15:26:26 +0100",
+        "summary_preview": "Face à l’expiration des contrats de crédit, le gouvernement bruxellois tente de rassurer banques et ...",
+        "summary_full_length": 123
+      }
+    },
+    {
+      "name": "RTBF",
+      "bias": "NEUTRAL",
+      "url": "https://rss.rtbf.be/article/rss/highlight_rtbf_info.xml?source=internal",
+      "success": true,
+      "source_title": "- Info",
+      "total_items": 20,
+      "has_summary": true,
+      "summary_length": 117,
+      "sample_item": {
+        "title": "Budget fédéral : la Chambre accorde sa confiance au gouvernement",
+        "link": "https://www.rtbf.be/article/budget-federal-la-chambre-accorde-sa-confiance-au-gouvernement-11639182",
+        "published_at": "Fri, 28 Nov 2025 14:16:06 +0100",
+        "summary_preview": "Ce discours contenait les principes de l’accord budgétaire conclu au sein du gouvernement lundi à l’...",
+        "summary_full_length": 117
+      }
+    },
+    {
+      "name": "Le Soir",
+      "bias": "PROGRESSIVE",
+      "url": "https://www.lesoir.be/rss2/2/cible_principale",
+      "success": false,
+      "error": "Parsing error: <unknown>:10:2: mismatched tag"
+    }
+  ],
+  "NL": [
+    {
+      "name": "NRC",
+      "bias": "PROGRESSIVE",
+      "url": "https://www.nrc.nl/rss/",
+      "success": true,
+      "source_title": "Nieuws, achtergronden en onderzoeksjournalistiek - NRC",
+      "total_items": 150,
+      "has_summary": true,
+      "summary_length": 155,
+      "sample_item": {
+        "title": "Nee, de Mazda 6e is geen Mazda meer",
+        "link": "https://www.nrc.nl/nieuws/2025/11/28/nee-de-mazda-6e-is-geen-mazda-meer-a4913456",
+        "published_at": "Fri, 28 Nov 2025 15:23:42 +0100",
+        "summary_preview": "<p>Voorbeeldig zuinig, dat wel. Maar majeure ergernissen maken voor <em>Bas van Putten</em> elke rit...",
+        "summary_full_length": 155
+      }
+    },
+    {
+      "name": "De Telegraaf",
+      "bias": "CONSERVATIVE",
+      "url": "https://www.telegraaf.nl/rss",
+      "success": true,
+      "source_title": "De Telegraaf",
+      "total_items": 50,
+      "has_summary": true,
+      "summary_length": 337,
+      "sample_item": {
+        "title": "‘Dat spookt misschien toch door het hoofd van Max Verstappen’",
+        "link": "https://www.telegraaf.nl/video/dat-spookt-misschien-toch-door-het-hoofd-van-max-verstappen/108633055...",
+        "published_at": "Fri, 28 Nov 2025 14:10:17 GMT",
+        "summary_preview": "Na de veelbesproken Grand Prix in Las Vegas is de spanning nog meer terug in de Formule 1. Dit weeke...",
+        "summary_full_length": 337
+      }
+    },
+    {
+      "name": "NOS",
+      "bias": "NEUTRAL",
+      "url": "https://feeds.nos.nl/nosnieuwsalgemeen",
+      "success": true,
+      "source_title": "NOS Nieuws",
+      "total_items": 20,
+      "has_summary": true,
+      "summary_length": 2259,
+      "sample_item": {
+        "title": "UMCG hervat in januari operaties aan aangeboren hartafwijkingen",
+        "link": "https://nos.nl/l/2592363",
+        "published_at": "Fri, 28 Nov 2025 15:29:38 +0100",
+        "summary_preview": "<p>Het Universitair Medisch Centrum in Groningen (UMCG) voert vanaf januari weer operaties uit bij m...",
+        "summary_full_length": 2259
+      }
+    },
+    {
+      "name": "De Volkskrant",
+      "bias": "PROGRESSIVE",
+      "url": "https://www.volkskrant.nl/voorpagina/rss.xml",
+      "success": true,
+      "source_title": "VK: Voorpagina",
+      "total_items": 8,
+      "has_summary": true,
+      "summary_length": 0,
+      "sample_item": {
+        "title": "Geen gaswinning onder de Waddenzee, kabinet koopt NAM af voor 40 miljoen",
+        "link": "https://www.volkskrant.nl/binnenland/geen-gaswinning-onder-de-waddenzee-kabinet-koopt-nam-af-voor-40...",
+        "published_at": "Fri, 28 Nov 2025 13:00:00 GMT",
+        "summary_preview": "",
+        "summary_full_length": 0
+      }
+    }
+  ],
+  "RU": [
+    {
+      "name": "RT (Russia Today)",
+      "bias": "CONSERVATIVE",
+      "url": "https://www.rt.com/rss/news/",
+      "success": true,
+      "source_title": "RT World News",
+      "total_items": 100,
+      "has_summary": true,
+      "summary_length": 389,
+      "sample_item": {
+        "title": "Senior EU official accuses US of ‘blackmail’ in trade talks",
+        "link": "https://www.rt.com/news/628630-us-eu-trade-talks-blackmail/?utm_source=rss&utm_medium=rss&utm_campai...",
+        "published_at": "Fri, 28 Nov 2025 13:35:33 +0000",
+        "summary_preview": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69299b282030277fd...",
+        "summary_full_length": 389
+      }
+    },
+    {
+      "name": "TASS",
+      "bias": "CONSERVATIVE",
+      "url": "https://tass.com/rss/v2.xml",
+      "success": true,
+      "source_title": "TASS",
+      "total_items": 100,
+      "has_summary": true,
+      "summary_length": 189,
+      "sample_item": {
+        "title": "Russia, Cuba discuss cooperation in automotive, aircraft, pharmaceutical industries",
+        "link": "https://tass.com/economy/2050777",
+        "published_at": "Fri, 28 Nov 2025 17:25:44 +0300",
+        "summary_preview": "According to Russian Industry and Trade Ministry, State Secretary and Deputy Industry and Trade Mini...",
+        "summary_full_length": 189
+      }
+    },
+    {
+      "name": "Kommersant",
+      "bias": "NEUTRAL",
+      "url": "https://www.kommersant.ru/RSS/news.xml",
+      "success": true,
+      "source_title": "Коммерсантъ. Лента новостей",
+      "total_items": 589,
+      "has_summary": true,
+      "summary_length": 214,
+      "sample_item": {
+        "title": "Генпрокуратура просит признать экстремистской панк-группу Pussy Riot",
+        "link": "https://www.kommersant.ru/doc/8247267",
+        "published_at": "Fri, 28 Nov 2025 17:28:27 +0300",
+        "summary_preview": "Генпрокуратура подала иск о признании экстремистской и запрете в России панк-группы Pussy Riot, сооб...",
+        "summary_full_length": 214
+      }
+    },
+    {
+      "name": "Novaya Gazeta",
+      "bias": "PROGRESSIVE",
+      "url": "https://novayagazeta.eu/feed/rss/en",
+      "success": true,
+      "source_title": "Новая Газета. Европа",
+      "total_items": 100,
+      "has_summary": true,
+      "summary_length": 2360,
+      "sample_item": {
+        "title": "Agentstvo: Former deputy head of Presidential Administration wrote letter to Putin criticising war",
+        "link": "https://novayagazeta.eu/articles/2025/11/28/agentstvo-former-deputy-head-of-presidential-administrat...",
+        "published_at": "Fri, 28 Nov 2025 12:58:00 +0000",
+        "summary_preview": "<img src=\"https://novayagazeta.eu/static/records/6e670ef104f645b283de7bccd817d13b.jpeg\" /><figcaptio...",
+        "summary_full_length": 2360
+      }
+    }
+  ],
+  "CN": [
+    {
+      "name": "Xinhua",
+      "bias": "CONSERVATIVE",
+      "url": "http://www.xinhuanet.com/english/rss/chinarss.xml",
+      "success": true,
+      "source_title": "XINHUANEWS",
+      "total_items": 20,
+      "has_summary": true,
+      "summary_length": 135,
+      "sample_item": {
+        "title": "China Focus: Beijing firms bring tech to Belt and Road countries",
+        "link": "http://www.xinhuanet.com/english/2017-05/07/c_136263471.htm",
+        "published_at": "2017-05-07",
+        "summary_preview": "\"Borrow a boat to sail in the sea -- we will find more ways to use the opportunities brought by the ...",
+        "summary_full_length": 135
+      }
+    },
+    {
+      "name": "South China Morning Post",
+      "bias": "NEUTRAL",
+      "url": "https://www.scmp.com/rss/91/feed",
+      "success": true,
+      "source_title": "News - South China Morning Post",
+      "total_items": 50,
+      "has_summary": true,
+      "summary_length": 496,
+      "sample_item": {
+        "title": "Tensions flare as Wingtech slams chipmaker Nexperia’s head office over deception",
+        "link": "https://www.scmp.com/tech/big-tech/article/3334574/tensions-flare-wingtech-slams-chipmaker-nexperias...",
+        "published_at": "Fri, 28 Nov 2025 14:24:20 +0000",
+        "summary_preview": "A fierce war of words has erupted between Dutch chipmaker Nexperia and its Chinese owner, Wingtech T...",
+        "summary_full_length": 496
+      }
+    }
+  ]
+}

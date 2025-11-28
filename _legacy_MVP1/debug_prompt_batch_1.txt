@@ -1,0 +1,70 @@
+Role:
+You are an expert media analyst for "News Spectrum," a global news aggregator.
+
+Task:
+You are an expert news editor. Analyze these 20 articles and group them into distinct micro-topics.
+    
+    **CRITICAL**: You MUST assign ALL 20 articles to topics. Do not leave any articles unassigned!
+    
+    Rules:
+    1. Create topics based on the content.
+    2. Each topic should be a distinct news event or issue
+    3. **Every article MUST be assigned to a topic** - this is the most important rule!
+    4. Topics should be mutually exclusive (no overlap)
+    5. If an article doesn't fit well, create a new topic or assign to the closest match
+    
+Input Data:
+20 news headlines from KR (Korean translations provided):
+[1] 이모티브 ‘스타러커스’,  디지털의료기기 제조인증 획득 …“ADHD 증상 개선 게임형 치료기”
+[2] “류승룡 감정부터 시청자 마음까지” 정재형, ‘김 부장 이야기’ 숨은 1등 공신
+[3] 지난해 고독사 3900여명으로 7% 증가... 인구 대비 비율로 역대 최고
+[4] 임대아파트에 좋은 입지 다 내주고, 분양가는 6.5억 &#39;역대 최고&#39; | 엘리프 세종 스마트시티
+[5] 뛰는 아이 제지하자 "무릎 꿇어라"…부모 갑질에 분노
+[6] ‘中 출신’ 아이들 우기, 홍콩 화재 참사에 “모두 무사하길” 기도
+[7] 셀트리온, 두드러기 치료제 ‘옴리클로’ 브라질 출시
+[8] 대구농수산물도매시장 이전 사업 ‘예타’ 통과···“경제성 충분” 쾌거
+[9] 2년 가까이 이어진 ‘초코파이 절도사건’···법원은 무죄를 선고했다
+[10] [속보] 김건희 특검 “양평 공무원 조사팀, 강압적 언행 외 규정 위반 없어… 3명 파견 해제”
+[11] 블룸버그 “미 국방부, ‘중국군지원기업’ 명단에 알리바바·바이두 추가 검토”
+[12] 미 헌정 초유 ‘대선 불복’에도 면죄부 받은 트럼프, “진실 말했다고 공격한 책임 묻겠다” 적반하장
+[13] 오늘의 부고-경향신문 심우진 경영지원국장 장인상
+[14] 이영하, 52억 잭팟 터졌다! ‘좌완 FA 최대어’ 72홀드 베테랑은 얼마를 줘야 할까
+[15] [속보]김건희 특검 ‘양평 공무원 사망’ 관련 경찰관 3명 파견 해제
+[16] 기아 PV5, 운전자 없이 1000㎞ 주행… 원격 운전 실증 성공
+[17] 소아암 의료비 지원 문턱 낮아진다…“4인 가구 월 779만원까지”
+[18] 술 취해 경찰관 폭행... 대구교육청 간부 현행범 체포
+[19] 사업체 종사자 수, 두 달 연속 증가…실질임금은 5만1000원 줄었다
+[20] 두산건설, 천안서 ‘제니스 갤러리’ 개관 …하이엔드 품격 담은 첫 번째 전시 선보여
+
+Instructions:
+
+1. **Topic Naming**:
+   - `name`: Standard journalistic title in Korean (e.g., "독일 AfD 방화벽 논쟁")
+   - `headline`: **Newnic-style** engaging headline in Korean
+     * Tone: Casual, friendly, curious ("왜 그럴까?", "충격!")
+     * Rule: NEVER end with a noun. Use complete sentence.
+     * Example: "독일 AfD 논쟁, 기업들이 등 돌린 이유는?"
+     * NO vague questions like "무슨 일이야?" -> Use specific facts if possible.
+ 
+3. **Article Mapping**:
+   - Assign article IDs [1, 2, 3...] to each topic
+   - **CRITICAL**: Each article ID must appear in ONLY ONE topic (no duplicates!)
+   - If an article doesn't fit well, create a new topic or assign to the closest match
+
+4. **Rules**:
+   - Ignore "LIVE news", "Breaking news", "속보" aggregate titles
+   - Focus on specific events, not general categories
+   - NO topics with < 3 articles (unless it's a very significant standalone event)
+
+Output Format (JSON only, no explanations):
+{
+  "topics": [
+    {
+      "name": "독일 AfD 방화벽 논쟁",
+      "headline": "독일 기업들, AfD에 등 돌린 진짜 이유 🚫",
+      "article_ids": [1, 4, 8],
+      "title_en": "German AfD firewall debate"
+    }
+  ],
+  "unassigned_article_ids": []
+}

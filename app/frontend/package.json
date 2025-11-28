@@ -1,0 +1,27 @@
+{
+  "name": "news-toss-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "5.55.4",
+    "framer-motion": "11.0.3",
+    "next": "14.2.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "@supabase/supabase-js": "2.45.4"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.17",
+    "@types/react": "18.2.25",
+    "@types/react-dom": "18.2.11",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.3",
+    "typescript": "5.4.5"
+  }
+}

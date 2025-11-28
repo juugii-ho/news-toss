@@ -1,0 +1,66 @@
+name: Global News Pipeline
+
+on:
+  schedule:
+    - cron: '0 */3 * * *' # Run every 3 hours
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r data/pipelines/requirements.txt
+
+    - name: Run RSS Collector
+      env:
+        NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+      run: python data/pipelines/rss_collector.py
+
+    - name: Run Translator
+      env:
+        NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+        GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      run: python data/pipelines/llm_translator.py
+
+    - name: Run Clustering (HDBSCAN)
+      env:
+        NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+        GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      run: python data/pipelines/run_all_clustering.py
+
+    - name: Run Enrichment (Source Dedup)
+      env:
+        NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+        GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      run: python data/pipelines/run_all_enrichment_parallel.py
+
+    - name: Run Global Megatopic Analysis
+      env:
+        GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      run: python data/pipelines/llm_megatopic_analysis.py
+
+    - name: Commit and Push Results
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        git add data/pipelines/megatopics.json data/pipelines/enriched_topics_*.json data/pipelines/clusters_*_hdbscan.json
+        git commit -m "Update Global News Data (Automated)" || echo "No changes to commit"
+        git push

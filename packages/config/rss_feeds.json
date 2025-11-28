@@ -1,0 +1,334 @@
+{
+  "US": [
+    {
+      "name": "New York Times",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+      "bias": "PROGRESSIVE",
+      "is_active": true
+    },
+    {
+      "name": "Washington Post",
+      "url": "https://feeds.washingtonpost.com/rss/national",
+      "bias": "PROGRESSIVE",
+      "is_active": true
+    },
+    {
+      "name": "Fox News",
+      "url": "https://moxie.foxnews.com/google-publisher/latest.xml",
+      "bias": "CONSERVATIVE",
+      "is_active": true
+    },
+    {
+      "name": "CNN",
+      "url": "http://rss.cnn.com/rss/edition.rss",
+      "bias": "NEUTRAL",
+      "is_active": true
+    },
+    {
+      "name": "The Hill",
+      "url": "https://thehill.com/feed/",
+      "bias": "NEUTRAL",
+      "is_active": true
+    }
+  ],
+  "GB": [
+    {
+      "name": "BBC",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml",
+      "bias": "NEUTRAL",
+      "is_active": true
+    },
+    {
+      "name": "The Guardian",
+      "url": "https://www.theguardian.com/uk/rss",
+      "bias": "PROGRESSIVE",
+      "is_active": true
+    },
+    {
+      "name": "Financial Times",
+      "url": "https://www.ft.com/rss/home",
+      "bias": "NEUTRAL",
+      "is_active": true
+    },
+    {
+      "name": "The Independent",
+      "url": "https://www.independent.co.uk/news/uk/rss",
+      "bias": "PROGRESSIVE",
+      "is_active": true
+    },
+    {
+      "name": "Sky News",
+      "url": "https://feeds.skynews.com/feeds/rss/home.xml",
+      "bias": "NEUTRAL",
+      "is_active": true
+    },
+    {
+      "name": "The Telegraph",
+      "url": "https://www.telegraph.co.uk/news/rss.xml",
+      "bias": "CONSERVATIVE",
+      "is_active": true
+    }
+  ],
+  "DE": [
+    {
+      "name": "Der Spiegel",
+      "url": "https://www.spiegel.de/schlagzeilen/index.rss",
+      "bias": "PROGRESSIVE",
+      "is_active": true
+    },
+    {
+      "name": "FAZ",
+      "url": "https://www.faz.net/rss/aktuell/",
+      "bias": "CONSERVATIVE",
+      "is_active": true
+    },
+    {
+      "name": "Süddeutsche Zeitung",
+      "url": "https://rss.sueddeutsche.de/rss/Topthemen",
+      "bias": "PROGRESSIVE",
+      "is_active": true
+    },
+    {
+      "name": "Deutsche Welle",
+      "url": "https://rss.dw.com/rdf/rss-en-all",
+      "bias": "NEUTRAL",
+      "is_active": true
+    }
+  ],
+  "FR": [
+    {
+      "name": "Le Monde",
+      "url": "http://www.lemonde.fr/rss/une.xml",
+      "bias": "PROGRESSIVE",
+      "is_active": true
+    },
+    {
+      "name": "Le Figaro",
+      "url": "https://www.lefigaro.fr/rss/figaro_flash-actu.xml",
+      "bias": "CONSERVATIVE",
+      "is_active": true
+    },
+    {
+      "name": "France 24",
+      "url": "https://www.france24.com/en/rss",
+      "bias": "NEUTRAL",
+      "is_active": true
+    },
+    {
+      "name": "Mediapart",
+      "url": "https://www.mediapart.fr/articles/feed",
+      "bias": "PROGRESSIVE",
+      "is_active": true
+    }
+  ],
+  "IT": [
+    {
+      "name": "La Repubblica",
+      "url": "https://www.repubblica.it/rss/homepage/rss2.0.xml",
+      "bias": "PROGRESSIVE",
+      "is_active": true
+    },
+    {
+      "name": "Corriere della Sera",
+      "url": "https://www.corriere.it/rss/homepage.xml",
+      "bias": "CONSERVATIVE",
+      "is_active": true
+    }
+  ],
+  "JP": [
+    {
+      "name": "Yomiuri Shimbun",
+      "url": "https://japannews.yomiuri.co.jp/feed",
+      "bias": "CONSERVATIVE",
+      "is_active": true
+    },
+    {
+      "name": "Nikkei Asia",
+      "url": "https://asia.nikkei.com/rss/feed/nar",
+      "bias": "NEUTRAL",
+      "is_active": true
+    },
+    {
+      "name": "NHK",
+      "url": "https://www3.nhk.or.jp/rss/news/cat0.xml",
+      "bias": "NEUTRAL",
+      "is_active": true
+    },
+    {
+      "name": "Asahi Shimbun",
+      "url": "https://www.asahi.com/rss/asahi/newsheadlines.rdf",
+      "bias": "PROGRESSIVE",
+      "is_active": true
+    }
+  ],
+  "KR": [
+    {
+      "name": "Google News Korea",
+      "url": "https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko",
+      "bias": "NEUTRAL",
+      "is_active": true
+    },
+    {
+      "name": "SBS",
+      "url": "https://news.sbs.co.kr/news/TopicRssFeed.do?plink=RSSREADER",
+      "bias": "NEUTRAL",
+      "is_active": true
+    },
+    {
+      "name": "조선일보",
+      "url": "https://www.chosun.com/arc/outboundfeeds/rss/?outputType=xml",
+      "bias": "CONSERVATIVE",
+      "is_active": true
+    },
+    {
+      "name": "동아일보",
+      "url": "https://rss.donga.com/total.xml",
+      "bias": "CONSERVATIVE",
+      "is_active": true
+    },
+    {
+      "name": "경향신문",
+      "url": "https://www.khan.co.kr/rss/rssdata/total_news.xml",
+      "bias": "PROGRESSIVE",
+      "is_active": true
+    }
+  ],
+  "CA": [
+    {
+      "name": "National Post",
+      "url": "https://nationalpost.com/feed",
+      "bias": "CONSERVATIVE",
+      "is_active": true
+    },
+    {
+      "name": "CBC",
+      "url": "https://www.cbc.ca/cmlink/rss-topstories",
+      "bias": "NEUTRAL",
+      "is_active": true
+    },
+    {
+      "name": "Globe and Mail - Business",
+      "url": "https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/business/",
+      "bias": "NEUTRAL",
+      "is_active": true
+    },
+    {
+      "name": "Globe and Mail - Canada",
+      "url": "https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/canada/",
+      "bias": "NEUTRAL",
+      "is_active": true
+    },
+    {
+      "name": "Globe and Mail - Politics",
+      "url": "https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/politics/",
+      "bias": "NEUTRAL",
+      "is_active": true
+    }
+  ],
+  "AU": [
+    {
+      "name": "ABC Australia",
+      "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
+      "bias": "NEUTRAL",
+      "is_active": true
+    },
+    {
+      "name": "Sydney Morning Herald",
+      "url": "https://www.smh.com.au/rss/feed.xml",
+      "bias": "PROGRESSIVE",
+      "is_active": true
+    },
+    {
+      "name": "The Age",
+      "url": "https://www.theage.com.au/rss/feed.xml",
+      "bias": "PROGRESSIVE",
+      "is_active": true
+    }
+  ],
+  "BE": [
+    {
+      "name": "La Libre",
+      "url": "https://www.lalibre.be/rss.xml",
+      "bias": "NEUTRAL",
+      "is_active": true
+    },
+    {
+      "name": "RTBF",
+      "url": "https://rss.rtbf.be/article/rss/highlight_rtbf_info.xml?source=internal",
+      "bias": "NEUTRAL",
+      "is_active": true
+    },
+    {
+      "name": "Le Soir",
+      "url": "https://www.lesoir.be/rss2/2/cible_principale",
+      "bias": "PROGRESSIVE",
+      "is_active": true
+    }
+  ],
+  "NL": [
+    {
+      "name": "NRC",
+      "url": "https://www.nrc.nl/rss/",
+      "bias": "PROGRESSIVE",
+      "is_active": true
+    },
+    {
+      "name": "De Telegraaf",
+      "url": "https://www.telegraaf.nl/rss",
+      "bias": "CONSERVATIVE",
+      "is_active": true
+    },
+    {
+      "name": "NOS",
+      "url": "https://feeds.nos.nl/nosnieuwsalgemeen",
+      "bias": "NEUTRAL",
+      "is_active": true
+    },
+    {
+      "name": "De Volkskrant",
+      "url": "https://www.volkskrant.nl/voorpagina/rss.xml",
+      "bias": "PROGRESSIVE",
+      "is_active": true
+    }
+  ],
+  "RU": [
+    {
+      "name": "RT (Russia Today)",
+      "url": "https://www.rt.com/rss/news/",
+      "bias": "CONSERVATIVE",
+      "is_active": true
+    },
+    {
+      "name": "TASS",
+      "url": "https://tass.com/rss/v2.xml",
+      "bias": "CONSERVATIVE",
+      "is_active": true
+    },
+    {
+      "name": "Kommersant",
+      "url": "https://www.kommersant.ru/RSS/news.xml",
+      "bias": "NEUTRAL",
+      "is_active": true
+    },
+    {
+      "name": "Novaya Gazeta",
+      "url": "https://novayagazeta.eu/feed/rss/en",
+      "bias": "PROGRESSIVE",
+      "is_active": true
+    }
+  ],
+  "CN": [
+    {
+      "name": "Xinhua",
+      "url": "http://www.xinhuanet.com/english/rss/chinarss.xml",
+      "bias": "CONSERVATIVE",
+      "is_active": true
+    },
+    {
+      "name": "South China Morning Post",
+      "url": "https://www.scmp.com/rss/91/feed",
+      "bias": "NEUTRAL",
+      "is_active": true
+    }
+  ]
+}

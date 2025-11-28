@@ -1,0 +1,43 @@
+```json
+{
+  "topics": [
+    {
+      "name": "경제 및 산업 동향",
+      "headline": "기술 혁신부터 임금 감소까지, 한국 경제는 어디로 가고 있을까?",
+      "article_ids": [1, 7, 11, 16, 19],
+      "title_en": "Economy and Industry Trends"
+    },
+    {
+      "name": "사회 및 복지 이슈",
+      "headline": "고독사 증가 속, 소아암 지원 확대! 우리 사회의 빛과 그림자는?",
+      "article_ids": [3, 5, 17],
+      "title_en": "Social and Welfare Issues"
+    },
+    {
+      "name": "부동산 및 지역 개발",
+      "headline": "역대급 분양가와 대규모 시장 이전, 지역 개발의 미래는 어떻게 될까?",
+      "article_ids": [4, 8, 20],
+      "title_en": "Real Estate and Regional Development"
+    },
+    {
+      "name": "정치 및 사법 주요 사건",
+      "headline": "김건희 특검 수사부터 트럼프 면죄부까지, 국내외 정치 사법계는 지금?",
+      "article_ids": [10, 12, 15],
+      "title_en": "Major Political and Judicial Events"
+    },
+    {
+      "name": "문화, 스포츠 및 인물",
+      "headline": "류승룡 드라마부터 이영하 FA까지, 문화계와 스포츠계의 뜨거운 소식은?",
+      "article_ids": [2, 6, 14],
+      "title_en": "Culture, Sports and People"
+    },
+    {
+      "name": "사건 사고 및 인물 동정",
+      "headline": "초코파이 절도 무죄부터 교육청 간부 폭행까지, 오늘 우리 주변에선 무슨 일이?",
+      "article_ids": [9, 13, 18],
+      "title_en": "Incidents and People's News"
+    }
+  ],
+  "unassigned_article_ids": []
+}
+```

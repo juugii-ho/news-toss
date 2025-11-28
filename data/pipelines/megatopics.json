@@ -1,0 +1,4403 @@
+[
+  {
+    "megatopic_name": "자포리자 지역 2만 5천 명, 우크라이나군 공격으로 정전",
+    "countries": [
+      "CA",
+      "US",
+      "BE",
+      "RU",
+      "KR"
+    ],
+    "total_articles": 18,
+    "local_topics": [
+      {
+        "name": "자포리자 지역 2만 5천 명, 우크라이나군 공격으로 정전",
+        "country": "RU",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "자포리자 지역 2만 5천 명, 우크라이나군 공격으로 정전",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "5154347d-bb1e-41d9-8f3d-b4722612ea20",
+              "d592684e-1f81-4b20-81e2-3eb015879def",
+              "1285bd95-c7f9-4740-b7de-9551264ce37d",
+              "d0df058a-664f-4b27-99c3-a58e38b98539"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "이스라엘군, 서안 지구에서 항복 의사 밝힌 팔레스타인인 2명 사살…영상 공개",
+        "country": "US",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "이스라엘군, 서안 지구에서 항복 의사 밝힌 팔레스타인인 2명 사살…영상 공개",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "437d81e2-af65-4b04-be60-7e2b56cde189",
+              "c90b2bae-ea6d-45ea-9f6b-7cb0ace9ed89",
+              "a28c394e-655b-4711-8a6e-5b30c3628230",
+              "7d84d819-a873-4c49-9461-218937e8f6c8"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "‘2차 계엄 의혹’ 계엄버스 탄 육군 법무실장, ‘준장’에서 ‘대령’으로 1계급 강등 - 경향신문",
+        "country": "KR",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "‘2차 계엄 의혹’ 계엄버스 탄 육군 법무실장, ‘준장’에서 ‘대령’으로 1계급 강등 - 경향신문",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "2f9dcb6e-7b4f-4710-84dd-553a624db932",
+              "12256a59-1d70-4e50-905f-626e3bb38d4b",
+              "0712a317-f303-419f-b2d2-89ab50fe7e3a",
+              "b2d28e73-dc28-44e5-80a6-e735667c095a"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "브램턴 주택 화재로 2명 추가 사망 확인 후 이웃 반응",
+        "country": "CA",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "브램턴 주택 화재로 2명 추가 사망 확인 후 이웃 반응",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "80e08591-d5ab-4fa5-bd4c-80994b5f3975",
+              "7752e919-2a9b-4ab7-9421-aaed3aa00790"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "유즈노사할린스크 격납고 붕괴 현장에서 사망자 2명 추가 발견",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "유즈노사할린스크 격납고 붕괴 현장에서 사망자 2명 추가 발견",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "d42b358c-2212-4e6f-8cbe-67e48472cebb",
+              "9460b695-1b87-4826-8e00-84cb02c97264"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "터키: 요한 바오로 2세 테러범, 레오 교황과 격리",
+        "country": "BE",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "터키: 요한 바오로 2세 테러범, 레오 교황과 격리",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "a48fb375-0bbf-42cb-a532-749ce7ea19e3",
+              "372c2536-213a-4447-9177-8c138769fe17"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "홍콩 화재 사망자 수 증가",
+    "countries": [
+      "DE",
+      "CA",
+      "NL",
+      "RU",
+      "AU"
+    ],
+    "total_articles": 14,
+    "local_topics": [
+      {
+        "name": "홍콩 화재 사망자 수 증가",
+        "country": "AU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "홍콩 화재 사망자 수 증가",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "bee777cb-5109-477d-a1b2-4e9bbc8d7489",
+              "44bb4069-7ca0-4785-80b4-ff15eba36a92",
+              "d41eda8b-34e8-40ba-a0dd-164a7d2375cf"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "카니의 놀라운 기대치 조율 캠페인",
+        "country": "CA",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "카니의 놀라운 기대치 조율 캠페인",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "0c6ad830-ac56-4f4c-8d03-5d8de9995799",
+              "2930a038-64fa-4f0e-9534-27d40604dae5",
+              "f07cce0d-43bd-4785-be38-b1f6f237cdf5"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "군부가 기니비사우 수도를 장악했다",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "군부가 기니비사우 수도를 장악했다",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "738a7358-6eda-4930-bbb3-bbcc192ea47f",
+              "74a0810f-6103-40c5-b2a7-b56adc4b6ac4"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "중고차 시장에 사기성 거래 등장",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "중고차 시장에 사기성 거래 등장",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "4cdd087b-5e28-48ef-9647-d1584b1d4baa",
+              "907c8ff1-4910-40d0-a0d9-d20e50afa406"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "북한 여자 축구팀이 강한 이유",
+        "country": "DE",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "북한 여자 축구팀이 강한 이유",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "b65d74f7-9d37-4e79-8d50-7092730cc097",
+              "a3c9563e-3442-4324-9893-e15680e90593"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "이번 주 가장 인상적인 사진들",
+        "country": "NL",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "이번 주 가장 인상적인 사진들",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "1e4f5288-0bc4-47ee-ab9a-2337ca6eeb52",
+              "5a783b19-fdad-42e7-ba15-567e5b9a915a"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "폴란드, 철도 사보타주 사건 이후 마지막 운영 러시아 영사관 폐쇄 예정",
+    "countries": [
+      "RU",
+      "CN",
+      "FR",
+      "CA"
+    ],
+    "total_articles": 24,
+    "local_topics": [
+      {
+        "name": "폴란드, 철도 사보타주 사건 이후 마지막 운영 러시아 영사관 폐쇄 예정",
+        "country": "RU",
+        "size": 6,
+        "original_data": {
+          "topic_name_ko": "폴란드, 철도 사보타주 사건 이후 마지막 운영 러시아 영사관 폐쇄 예정",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "23801be5-aa69-49d9-9e94-da2c31cbffc5",
+              "05fef86a-4a2b-418f-bedb-0b483e8f1ffd",
+              "d34d41a0-23bc-4831-add1-c8b557c2e0a7",
+              "f26e153c-b600-4dcb-9a06-9236fc6b94cf",
+              "40a86fab-1b18-4c3e-9749-94ff3f8b6535",
+              "1a061ad4-a116-4c8f-962f-baf529c40e99"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "시진핑, 트럼프 상호 이익 협력 확대 및 이견 관리 약속",
+        "country": "CN",
+        "size": 5,
+        "original_data": {
+          "topic_name_ko": "시진핑, 트럼프 상호 이익 협력 확대 및 이견 관리 약속",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "cd937476-48b3-49ff-93cc-69d4eda04574",
+              "54d24ad1-0d14-46df-9126-77d73e3eb8be",
+              "565f846a-9370-4fb0-bf55-b7d2770302d0",
+              "fa3dadc5-cfc3-4821-a417-d674d95c1977",
+              "ffc042d4-c53d-493c-9c88-6cee123157ed"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "칼라스, 러시아 자산 몰수 계획에 대한 벨기에의 우려 정당하다고 밝혀",
+        "country": "RU",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "칼라스, 러시아 자산 몰수 계획에 대한 벨기에의 우려 정당하다고 밝혀",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "5de635a1-46b2-4ece-9bd4-68975ba044bd",
+              "2003396a-f649-48ef-a2d1-b017d8d99ce7",
+              "dd8b0b7a-5cb8-4745-b86a-f676ed192279",
+              "750a0077-de48-4ed4-b0da-dd8fa2c81b70"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "루크오일, 미국 제재 임박에 해외 자산 매각 추가 시간 요청",
+        "country": "RU",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "루크오일, 미국 제재 임박에 해외 자산 매각 추가 시간 요청",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "efef02ff-4884-4ccb-b54f-9536d7f5273f",
+              "29fff5de-6504-4c29-98e6-b7ee39a21270",
+              "deb0cf1e-e7b6-4b31-af32-ac7b123b9377",
+              "c6b3fb84-cf86-4c81-a05e-b65cba19a920"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "덴마크, 트럼프가 잠든 사이 그린란드 점령 못하게 야간 경계 설치",
+        "country": "FR",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "덴마크, 트럼프가 잠든 사이 그린란드 점령 못하게 야간 경계 설치",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "05b69c53-6fa4-43bf-aa93-f2e146b99fc6",
+              "9547df95-1c9c-408f-bb81-2878b80cd9d5",
+              "c31c207e-2720-4ba2-9e92-c243652ddb86"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "오타와, 앵글로의 텍 리소스 인수 제안을 국가 안보상 이유로 승인",
+        "country": "CA",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "오타와, 앵글로의 텍 리소스 인수 제안을 국가 안보상 이유로 승인",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "12bf099f-0757-42b7-8711-e795acb3eab1",
+              "9b23c9e4-a63c-4ae4-922f-842176d6f15b"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "프랑스 공항들, 항공세로 인해 130만 명의 승객을 잃을까 우려",
+    "countries": [
+      "RU",
+      "GB",
+      "FR",
+      "JP"
+    ],
+    "total_articles": 22,
+    "local_topics": [
+      {
+        "name": "프랑스 공항들, 항공세로 인해 130만 명의 승객을 잃을까 우려",
+        "country": "FR",
+        "size": 12,
+        "original_data": {
+          "topic_name_ko": "프랑스 공항들, 항공세로 인해 130만 명의 승객을 잃을까 우려",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "3da499f0-8c5a-4fb9-8d49-276e1d57ab93",
+              "bfe95519-d863-4510-8449-184cbcc83558",
+              "514a85aa-dbea-45c9-a556-73efe446b2ec",
+              "e325be1e-b3e7-46d5-8abd-0874f251c261",
+              "cc2366d8-dad9-49ed-a63e-9d6bb454465b",
+              "4be09e50-209d-4fac-a8c3-aa058ca0df9e",
+              "3f33af19-4b71-48dc-994e-d41431dfc39e",
+              "e07fae67-8f0d-4c69-9ca7-231b5ff6cfdc",
+              "ec10566f-7ae8-4e01-a83f-eac394d05003",
+              "e1a71713-dd9d-4a44-9ffd-03aabfd830ec",
+              "42b7c343-fbc8-46e6-8027-9610bc854d0e",
+              "452bf368-dcf6-4646-a9d6-5692a4b21004"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "홍콩 고층 아파트 화재, 128명 사망 확인, 약 200명 연락 두절, 홍콩 정부",
+        "country": "JP",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "홍콩 고층 아파트 화재, 128명 사망 확인, 약 200명 연락 두절, 홍콩 정부",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "d7ab344a-3ad8-40dc-b11a-319d5eac251d",
+              "9ddc8042-3b02-4bd2-bc06-eb9fedf4b858",
+              "195bbf01-ea1b-4ec1-b8c3-0a4c071b4dab",
+              "01012771-e483-49c4-8706-cab8d24185ce"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "러시아 방공군, 밤새 드론 118대 격추",
+        "country": "RU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "러시아 방공군, 밤새 드론 118대 격추",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "b7f559f4-80bc-49ac-a687-9b9eb9c23f78",
+              "041c3509-6a7b-44f6-be41-5408b520e80c",
+              "84a2fbbd-5308-4f53-bf7f-dc5c5057c5d9"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "홍콩 고층 빌딩 화재 구조 작업 종료, 사망자 128명으로 늘어",
+        "country": "GB",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "홍콩 고층 빌딩 화재 구조 작업 종료, 사망자 128명으로 늘어",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "d6ce4f27-a210-4a4f-a699-082ea0193dfc",
+              "ac08c566-c40e-46a2-a0ef-73774f5221d8",
+              "459cc4c7-ae7e-4020-90a8-10bec75f27d3"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "튀르키예에서 교황, 오랜 기독교 분열 완화 모색",
+    "countries": [
+      "IT",
+      "RU",
+      "CA",
+      "US"
+    ],
+    "total_articles": 15,
+    "local_topics": [
+      {
+        "name": "튀르키예에서 교황, 오랜 기독교 분열 완화 모색",
+        "country": "US",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "튀르키예에서 교황, 오랜 기독교 분열 완화 모색",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "56673fb5-9046-4ee3-98d7-e5e1ae1629e0",
+              "63ca98cd-8ced-4ee8-a304-7c150cd52b72",
+              "b373934c-3a17-4813-ac15-4c974ba4bf78"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "카니 정부, 연방 예산 신임 투표 통과",
+        "country": "CA",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "카니 정부, 연방 예산 신임 투표 통과",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "91183da9-2db7-4a9a-9165-972ac978d9e4",
+              "4b615c8e-c691-452d-a086-8b2d407b3e0c"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "몬트리올 학생들, 기도실 금지 제안에 반대 목소리",
+        "country": "CA",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "몬트리올 학생들, 기도실 금지 제안에 반대 목소리",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "0e23e745-6102-44d9-9387-65a7b4323975",
+              "f406a6bc-23d2-4a45-a165-fffb1bdb6bc6"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "쇼핑 센터, 수요 감소로 창고 공급 확대",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "쇼핑 센터, 수요 감소로 창고 공급 확대",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "cccbac2e-c074-4b19-a0ba-299199792798",
+              "16d3bd44-b49d-4131-8629-3967b34270cc"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "러시아 외무부, 홍콩 화재 관련 애도 표명",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "러시아 외무부, 홍콩 화재 관련 애도 표명",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "0cf9d72b-fb0a-47b9-9125-f2a37dbfd534",
+              "a7bd88ca-0f66-4f2c-8d77-4ef9223e3c5d"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "모스크바 법원, 국방부 자산 횡령 사건 판결",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "모스크바 법원, 국방부 자산 횡령 사건 판결",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "aa70d67c-e0a3-4113-a1a6-d4127cb6e696",
+              "f5c16aec-af10-4137-8432-0d4497579d66"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "안젤리나 망고, 유로비전 결승전에서 뛰어난 공연 선보여",
+        "country": "IT",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "안젤리나 망고, 유로비전 결승전에서 뛰어난 공연 선보여",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "6238edff-ccca-42f5-ac02-f25a20300fdf",
+              "a5cfe393-d75c-409a-8ad0-5dd9dac2a0a3"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "푸틴, 러시아 외무부와 메딘스키에게 우크라이나 협상 지속 지시",
+    "countries": [
+      "US",
+      "RU",
+      "DE",
+      "CA"
+    ],
+    "total_articles": 13,
+    "local_topics": [
+      {
+        "name": "푸틴, 러시아 외무부와 메딘스키에게 우크라이나 협상 지속 지시",
+        "country": "RU",
+        "size": 5,
+        "original_data": {
+          "topic_name_ko": "푸틴, 러시아 외무부와 메딘스키에게 우크라이나 협상 지속 지시",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "8a462f70-7b23-41ba-9033-f073ed11db64",
+              "34793f00-b313-45b0-9d9d-e765567718f2",
+              "7556ac59-025b-4855-addc-2e9f51d3f3ef",
+              "d7156441-b826-4c4c-a664-bd8eeee70afb",
+              "742cc370-d653-4bfa-8fdf-609c466b2016"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "카니, 목요일 공개될 앨버타 에너지 협상 내각에 보고",
+        "country": "CA",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "카니, 목요일 공개될 앨버타 에너지 협상 내각에 보고",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "7b6b5be6-f324-4546-956c-5a6146acb531",
+              "9028870b-48a3-4c10-9bcc-7cbf2d73cf70",
+              "4d571520-33ae-427c-a85c-5573b6841d81",
+              "5461b340-a2a0-41c0-b4af-f5da982ac28b"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "중국, 미국 제치고 독일 최대 교역국 지위 탈환",
+        "country": "DE",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "중국, 미국 제치고 독일 최대 교역국 지위 탈환",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "0c93f686-9552-4e37-a4e7-666123049a42",
+              "eec57a71-038f-4d92-9939-ffedc6b1983d"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "판사, 엡스타인 파일 공개로 노출된 피해자 보호 모색",
+        "country": "US",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "판사, 엡스타인 파일 공개로 노출된 피해자 보호 모색",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "89b8e5df-25b2-42c2-86fa-bd837acfb689",
+              "cf181fc1-1d0b-4eed-8323-2b7587adfd5d"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "마두로, 트럼프 위협 속 베네수엘라 공군에 '준비 태세 갖추라' 지시",
+    "countries": [
+      "RU",
+      "FR",
+      "US"
+    ],
+    "total_articles": 24,
+    "local_topics": [
+      {
+        "name": "마두로, 트럼프 위협 속 베네수엘라 공군에 '준비 태세 갖추라' 지시",
+        "country": "RU",
+        "size": 10,
+        "original_data": {
+          "topic_name_ko": "마두로, 트럼프 위협 속 베네수엘라 공군에 '준비 태세 갖추라' 지시",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "5ba46e3f-0dfd-4044-b294-46c4dacfcb17",
+              "99989df8-ce9c-4fde-adb5-b04f7de16ae5",
+              "56e6bf59-5f78-4a10-a5c4-ea91092da421",
+              "7c7bba9f-835f-4d77-ab89-f6bd9462a798",
+              "95455483-7290-4109-b4fd-6b31b99c56f6",
+              "e40d81ca-9706-4b8c-9ada-a78bace71930",
+              "65aed9cc-8500-4e77-89ed-d22ad3724a24",
+              "a9853906-920e-4891-90db-1eefa10ce7ce",
+              "34688936-2125-4396-a2a4-1433a5cde83a",
+              "3972ceb8-c287-471e-902d-86d23c179b3e"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "유엔, 서안 지구 팔레스타인인 '명백한 즉결 처형' 이스라엘 규탄",
+        "country": "FR",
+        "size": 8,
+        "original_data": {
+          "topic_name_ko": "유엔, 서안 지구 팔레스타인인 '명백한 즉결 처형' 이스라엘 규탄",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "15bbf442-e624-4e9a-9a9b-bc2a2c8de8c0",
+              "16ad055a-c240-4303-9a78-392584fb5f92",
+              "698e6c2b-d4ea-420c-a901-8f0c5dbc3af2",
+              "0833e1a2-c6d1-4b37-99e7-ff5ac92532b4",
+              "f381d898-ac18-45d0-937d-782bd54a390f",
+              "20e84ef2-7448-4c2d-ab79-f9399c0a6036",
+              "b81b8459-f74e-4fd5-a7cd-13cc0eee4b69",
+              "d18d9665-e44f-47b6-8719-4a04b7626ec1"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "공화당 상원의원, 주 방위군 총격 사건 관련 '이슬람' 이민자 금지 및 추방 요구",
+        "country": "US",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "공화당 상원의원, 주 방위군 총격 사건 관련 '이슬람' 이민자 금지 및 추방 요구",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "03f20c92-1cc5-428e-8a61-9fed301059b7",
+              "4338eba6-0002-48aa-9c6f-ad9f19a0e4a3",
+              "1e99d6cf-048f-4f5c-be69-9710f2f2a4a2"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "트럼프, 주방위군 살인 용의자 관련 긴장된 설전 중 기자에게 '멍청한 사람' 발언",
+        "country": "US",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "트럼프, 주방위군 살인 용의자 관련 긴장된 설전 중 기자에게 '멍청한 사람' 발언",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "62114104-7d47-49a7-baf6-36767b6c6492",
+              "bd43093e-3ae6-4690-924e-a79f3b624387",
+              "24953795-b402-4a41-8175-f5603feae3c8"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "백악관 인근 총격 사건으로 미 주방위군 병사 부상",
+    "countries": [
+      "RU",
+      "GB",
+      "AU"
+    ],
+    "total_articles": 19,
+    "local_topics": [
+      {
+        "name": "백악관 인근 총격 사건으로 미 주방위군 병사 부상",
+        "country": "RU",
+        "size": 7,
+        "original_data": {
+          "topic_name_ko": "백악관 인근 총격 사건으로 미 주방위군 병사 부상",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "4ff99710-2ce0-4a19-957d-3fcb3932ec77",
+              "6d9117ae-58f8-48f8-b50d-bf695d86e5ac",
+              "85ee2297-f91a-44a6-b29e-11254f5e26d6",
+              "84281e4a-9132-4123-902f-412cf3acd5a1",
+              "6b68222e-4283-4056-811d-43ed21cb25b5",
+              "fc9a4dda-2c47-4e4a-8188-f594c8ac9368",
+              "54aa0d78-0c07-4c63-8b11-989c2510c3f5"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "테네리페 해안에서 유람선 추락 후 영국인 승객 실종",
+        "country": "GB",
+        "size": 5,
+        "original_data": {
+          "topic_name_ko": "테네리페 해안에서 유람선 추락 후 영국인 승객 실종",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "4b0366c2-5b4d-4c15-b771-792e5573b781",
+              "256a5610-1f40-4e0d-a959-4adc0daa138b",
+              "61dc2d1b-31aa-4419-8ae7-cd443bc40955",
+              "ed740783-d572-4344-9809-202b3445f245",
+              "9d7294cc-9ca3-48d9-8f31-78f7614ecc74"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "자이르 보우소나루 전 브라질 대통령에 대한 판결이 발효됐다",
+        "country": "RU",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "자이르 보우소나루 전 브라질 대통령에 대한 판결이 발효됐다",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "ae3fddee-6816-4c18-b481-c0bb5da28cb2",
+              "41fcdfbd-5c2b-4ed1-bf88-191c987ce25c",
+              "894f9b6a-dbca-4e5c-b676-6067fc495aa2",
+              "a29a6a56-1512-4e3b-bf2c-88e24f591996"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "폭풍 복구 작업 계속되는 가운데 브리즈번 폭염에 시달려",
+        "country": "AU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "폭풍 복구 작업 계속되는 가운데 브리즈번 폭염에 시달려",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "398261a1-7914-4428-8d9c-f99ec852dbe1",
+              "12f03f8e-5b81-412b-8f6c-2eb67ffb7364",
+              "fda609cd-1b6d-4593-8d99-f5c7be9091ce"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "미국이 추수감사절을 기념하는 동안, 세계 기아가 주목받다",
+    "countries": [
+      "CN",
+      "US",
+      "NL"
+    ],
+    "total_articles": 18,
+    "local_topics": [
+      {
+        "name": "미국이 추수감사절을 기념하는 동안, 세계 기아가 주목받다",
+        "country": "US",
+        "size": 9,
+        "original_data": {
+          "topic_name_ko": "미국이 추수감사절을 기념하는 동안, 세계 기아가 주목받다",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "f2eee760-5dd0-44c6-b10c-7aca6e368b4c",
+              "10d80ff5-09d2-4c2b-887d-ed257e2a57fe",
+              "1827f7b9-7226-4e97-adcb-e7e06ef8dd2a",
+              "0819627b-fd31-4d68-9a68-204d2c3f8edb",
+              "61a462b3-e140-4393-9f48-080103cd2823",
+              "bf8726f7-a60d-4d9e-b66e-0eb42f988059",
+              "68071f6c-e069-4982-a585-4cd73882b31a",
+              "4cc6964e-1b5f-43d7-a8f8-7f31902d31e8",
+              "c845998f-b1c1-4446-9014-59a2692566c8"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "젤렌스키 대통령의 논란의 비서실장, 부패 혐의로 사임",
+        "country": "NL",
+        "size": 7,
+        "original_data": {
+          "topic_name_ko": "젤렌스키 대통령의 논란의 비서실장, 부패 혐의로 사임",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "fcff9286-5820-4b0a-97ac-d81962e80954",
+              "13a64caa-2f04-43df-8ea6-1f1c962fa18b",
+              "7aa0bd25-ec0a-44dc-b92b-8a9c5086561f",
+              "be84d76e-25cb-479e-8425-e8093539f698",
+              "40bf9a84-4882-4070-8d0f-ee066b6002e5",
+              "f7d905c5-c682-4d67-8c85-538489505460",
+              "cc619a0a-94ef-4751-9c78-f08cb9821cc4"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "안와르 총리의 전 보좌관, 말레이시아 반부패청에 체포",
+        "country": "CN",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "안와르 총리의 전 보좌관, 말레이시아 반부패청에 체포",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "1e70cef4-5921-497a-88f2-946aedd063f8",
+              "dc978b45-26c3-41ab-96b4-08434042656b"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "트럼프 “제3세계 이민 영원히 중단…非시민권자 모든 혜택 종료”",
+    "countries": [
+      "RU",
+      "BE",
+      "KR"
+    ],
+    "total_articles": 17,
+    "local_topics": [
+      {
+        "name": "트럼프 “제3세계 이민 영원히 중단…非시민권자 모든 혜택 종료”",
+        "country": "KR",
+        "size": 5,
+        "original_data": {
+          "topic_name_ko": "트럼프 “제3세계 이민 영원히 중단…非시민권자 모든 혜택 종료”",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "99622f37-739a-4130-ae84-a1a687982322",
+              "4e739329-da44-472b-a7e2-b085b18eb45c",
+              "bb4fa3a3-0e33-4bf2-a8d9-6a1525c5d78c",
+              "f65d7054-74f1-47f6-a284-528d046ce97d",
+              "7232aef1-ef5d-4867-bc39-0e838bee2fb9"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "야쿠츠크 기자, 테러 정당화 혐의로 3년 징역형 선고",
+        "country": "RU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "야쿠츠크 기자, 테러 정당화 혐의로 3년 징역형 선고",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "8fb5c77e-2a69-4714-acef-4bd146eda448",
+              "114054a5-e04c-4706-ad94-50b8a16a02ad",
+              "1ea6e767-7419-44fa-bd1d-ec83eea99183"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "“베이징? 문제가 생겼습니다…”: 중국, 우주정거장에 고립된 우주비행사 3명 구출 위해 우주선 발사 가속화",
+        "country": "BE",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "“베이징? 문제가 생겼습니다…”: 중국, 우주정거장에 고립된 우주비행사 3명 구출 위해 우주선 발사 가속화",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "54247156-eee9-4f08-b93e-5af9b31e8c19",
+              "3440be2c-807a-42fe-9d0e-7ddaea5142ed",
+              "8903115f-5b35-4146-a25a-c66298b19589"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "연방평의회, 향후 3년간 예산법 승인",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "연방평의회, 향후 3년간 예산법 승인",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "6c220dac-45d8-49ea-a68c-54393fea77a9",
+              "f204d5ff-71c0-4122-9511-cc89d2b028c4"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "러시아 공항 3곳 운영 중단",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "러시아 공항 3곳 운영 중단",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "4e359cce-4025-4bb8-96e4-b5703337c572",
+              "8a2ae9a6-fd6b-42ed-89ad-5c457ff59780"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "아글라야 타라소바, 마약 밀수 혐의로 징역 3년 집행유예 선고",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "아글라야 타라소바, 마약 밀수 혐의로 징역 3년 집행유예 선고",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "464411fb-3b24-4e85-b4f7-39f3e3616026",
+              "70bfedac-eebb-4878-b5c5-595ebb999216"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "캄보디아 韓대학생 살해 주범 잡았다…중국인 등 9명 체포",
+    "countries": [
+      "RU",
+      "CA",
+      "KR"
+    ],
+    "total_articles": 13,
+    "local_topics": [
+      {
+        "name": "캄보디아 韓대학생 살해 주범 잡았다…중국인 등 9명 체포",
+        "country": "KR",
+        "size": 5,
+        "original_data": {
+          "topic_name_ko": "캄보디아 韓대학생 살해 주범 잡았다…중국인 등 9명 체포",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "08373fd6-fce5-4fb3-8d0f-fc9b4fdb1736",
+              "a0a0ea6a-4322-48ae-a804-6988b9e6f92b",
+              "9cc11c17-f184-4486-967d-93ae57fe4eea",
+              "ce1aed91-2505-4943-8210-53fc6b12b4e0",
+              "189a62da-9b44-4d06-b00f-cb5077bf959f"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "“집착 끝판왕” 서범준, '자취 9년차' 싱글 라이프 최초공개 (‘나 혼자 산다’)",
+        "country": "KR",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "“집착 끝판왕” 서범준, '자취 9년차' 싱글 라이프 최초공개 (‘나 혼자 산다’)",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "ca9ff4fd-2219-4af2-b2eb-256c75acd230",
+              "b5787c0f-0851-4bef-863a-df4a339b7448",
+              "ca2047b8-0b88-4185-9df9-76f1c1c6fe01",
+              "ef7e26ad-d445-4f39-bf97-f382ced17fdc"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "지연된 보고서에 따르면 9월 미국 소매 판매 소폭 증가",
+        "country": "CA",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "지연된 보고서에 따르면 9월 미국 소매 판매 소폭 증가",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "f6f12dae-53aa-40bb-8c78-59b98950d791",
+              "1243c1cf-3f06-4220-9e85-897808324085"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "세바스토폴 전 부지사, 뇌물 수수 혐의로 징역 9.5년 선고",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "세바스토폴 전 부지사, 뇌물 수수 혐의로 징역 9.5년 선고",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "30af2fdf-8dee-4aec-bdbe-5aec08a5c2ba",
+              "c8919863-f7a7-4f2c-bafd-9a926d7297c6"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "마이크론 테크놀로지: 기술 갈등 고조 속 중국, 미국 칩 제조업체 사이버 보안 위험 조사",
+    "countries": [
+      "RU",
+      "CA",
+      "US"
+    ],
+    "total_articles": 12,
+    "local_topics": [
+      {
+        "name": "마이크론 테크놀로지: 기술 갈등 고조 속 중국, 미국 칩 제조업체 사이버 보안 위험 조사",
+        "country": "US",
+        "size": 8,
+        "original_data": {
+          "topic_name_ko": "마이크론 테크놀로지: 기술 갈등 고조 속 중국, 미국 칩 제조업체 사이버 보안 위험 조사",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "eb7e7b22-4118-491c-b4e7-efbe04c6a398",
+              "b3341319-2aec-42f2-8704-36dbab6fa08a",
+              "e2101b96-2759-4863-b12d-3003720ef5f2",
+              "ff225b13-126a-48a0-b6ad-d1459180fe77",
+              "13ae43f0-ebc9-447b-a48d-3c8883fb605e",
+              "e883d7f2-b104-4560-b823-d26a024a7c8e",
+              "a378737b-6971-410c-a6a1-4a4796fe61de",
+              "648f4b0d-e4a1-47eb-980c-5337245248a5"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "정치 소식통: 무역 협상 교착 속 카니, 워싱턴 월드컵 조 추첨 참석 고려",
+        "country": "CA",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "정치 소식통: 무역 협상 교착 속 카니, 워싱턴 월드컵 조 추첨 참석 고려",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "e45cd781-4916-4dba-a293-2ebd8c20feb8",
+              "fa33d502-fff4-4dfa-8259-0107ac2cdae7"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "페스코프: 우크라이나 부패 스캔들, 키이우와 미국 간 협상 복잡하게 만들 수 있어",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "페스코프: 우크라이나 부패 스캔들, 키이우와 미국 간 협상 복잡하게 만들 수 있어",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "3de08dbe-8567-464b-9a5f-d1ef0b1dea2e",
+              "4bcfacdf-ca8c-4c47-8134-8cc4d1b21e56"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "유로클리어, 러시아 자산 계획에 대해 EU에 강력 경고 – FT",
+    "countries": [
+      "RU",
+      "GB",
+      "DE"
+    ],
+    "total_articles": 11,
+    "local_topics": [
+      {
+        "name": "유로클리어, 러시아 자산 계획에 대해 EU에 강력 경고 – FT",
+        "country": "RU",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "유로클리어, 러시아 자산 계획에 대해 EU에 강력 경고 – FT",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "0026536a-7a75-4b69-9359-a7e39e60d72b",
+              "4d2d85aa-4511-48c1-9e6d-644f8fa40b99",
+              "9e9f779c-8817-423f-b278-c615a107cfab",
+              "c34edae8-00a1-4ca0-a252-df35eaf37815"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "폴리티코: EU, 미국에 우크라이나 평화 계획 최종안 공개 안 해",
+        "country": "RU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "폴리티코: EU, 미국에 우크라이나 평화 계획 최종안 공개 안 해",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "fa36576a-c468-4920-9f41-f13513aadb30",
+              "9b9214d4-1546-410c-b8c7-e4c1771c45af",
+              "15b78f04-3648-48a2-ad40-c7364626b12e"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "EU는 아프리카에서 중국에 어떻게 맞서려 하는가",
+        "country": "DE",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "EU는 아프리카에서 중국에 어떻게 맞서려 하는가",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "b3ceb161-6e3d-49aa-85d3-59596d25d901",
+              "5f0e89e2-7333-4811-8bbd-41a12beaddbb"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "독일, EU에 2035년 신형 휘발유·경유차 판매 금지 완화 촉구 예정",
+        "country": "GB",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "독일, EU에 2035년 신형 휘발유·경유차 판매 금지 완화 촉구 예정",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "9f0ff85d-3d38-4f70-b602-10f001c5ce05",
+              "fd2d1543-74a4-4e5d-8898-df84ae482407"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "2025년 예산: 귀하의 재정에 대한 질문에 답변해 드립니다",
+    "countries": [
+      "RU",
+      "GB",
+      "KR"
+    ],
+    "total_articles": 11,
+    "local_topics": [
+      {
+        "name": "2025년 예산: 귀하의 재정에 대한 질문에 답변해 드립니다",
+        "country": "GB",
+        "size": 6,
+        "original_data": {
+          "topic_name_ko": "2025년 예산: 귀하의 재정에 대한 질문에 답변해 드립니다",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "fb6a4084-0c47-4432-b693-fb3a334a21e3",
+              "08cb61ad-d45f-4dc7-9cac-a4c48e16d519",
+              "85213a1c-0904-40e4-aa00-068b0efb7e43",
+              "4edc6d6d-1ae2-4b25-86c4-0f8a39b9fe98",
+              "b58ffef1-40cf-4d5f-844f-8e0c91a10ec1",
+              "b9b959bc-ff60-4c66-a88b-5db734fdf038"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "엄숙한 홍콩 ‘2025 마마 어워즈’…첫날 엔하이픈·로제 대상",
+        "country": "KR",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "엄숙한 홍콩 ‘2025 마마 어워즈’…첫날 엔하이픈·로제 대상",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "d36135c6-08d6-426f-9563-97badaa29361",
+              "1c0102d2-0347-4286-80cf-d1f979bdaf3c",
+              "12834078-d764-49ff-8aa4-e66dc1b3cd64"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "재무부, 2025년 모기지 대출 발행 전망을 4조 루블로 상향 조정",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "재무부, 2025년 모기지 대출 발행 전망을 4조 루블로 상향 조정",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "1f9d1055-ae65-40c1-9038-03301619e824",
+              "f6921711-787f-4c8a-9137-ed70e14805dd"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "살해된 라이언의 자매들: '우리는 아버지에 대한 두려움 속에 살고 있다'",
+    "countries": [
+      "GB",
+      "DE",
+      "NL"
+    ],
+    "total_articles": 11,
+    "local_topics": [
+      {
+        "name": "살해된 라이언의 자매들: '우리는 아버지에 대한 두려움 속에 살고 있다'",
+        "country": "NL",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "살해된 라이언의 자매들: '우리는 아버지에 대한 두려움 속에 살고 있다'",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "f4b782c1-9c3b-4c6a-addd-19dbf9305fbd",
+              "83b0613c-0ef6-48e6-b5fc-9ec81fb3c4c1",
+              "2e1e567f-7729-461a-8a71-21ffc58fa06c",
+              "33d6d8b0-4118-4a67-bab3-b6eb5a2d278e"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "욕망은 어떻게 생겨나는가: '부부들은 일주일에 한 번 섹스가 정상이라고 생각한다'",
+        "country": "DE",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "욕망은 어떻게 생겨나는가: '부부들은 일주일에 한 번 섹스가 정상이라고 생각한다'",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "f3bd0f81-867f-4e61-b54c-ca102b7d1e6c",
+              "eaf88c5c-a9d0-4698-8156-2394ad4330a5",
+              "5c8f3457-dc3e-4ae6-91ef-68c175db0408"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "건강한 식단: '올바른 식단으로 수년간의 수명을 늘릴 수 있다'",
+        "country": "DE",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "건강한 식단: '올바른 식단으로 수년간의 수명을 늘릴 수 있다'",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "4fbf9f0c-74d9-4f1c-a6c5-09c6e7c98887",
+              "038cd0d1-e0e0-4399-abd6-67684701eb0e"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "포데모스의 흥망성쇠를 들여다보다: '우리는 미래에 대한 지분을 가지고 있다고 믿었다'",
+        "country": "GB",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "포데모스의 흥망성쇠를 들여다보다: '우리는 미래에 대한 지분을 가지고 있다고 믿었다'",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "efa5a355-9c45-4622-87ee-df34ca3e2451",
+              "2461850f-5fec-48af-9926-cc077a916f49"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "현재 빅토리아에서 판매 중인 최고의 주택 7곳",
+    "countries": [
+      "RU",
+      "GB",
+      "AU"
+    ],
+    "total_articles": 10,
+    "local_topics": [
+      {
+        "name": "현재 빅토리아에서 판매 중인 최고의 주택 7곳",
+        "country": "AU",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "현재 빅토리아에서 판매 중인 최고의 주택 7곳",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "c662f7c7-3958-4608-a47b-6d1167acde6b",
+              "e7c20fe8-d696-49de-9273-7dc77d75146b",
+              "60a6804e-e4e4-4fbd-ad5a-a47fd2a7d09d",
+              "fba90e98-3bf2-4657-8021-e83333e0db4f"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "러시아 드론 및 미사일의 밤샘 키이우 공격으로 최소 7명 사망",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "러시아 드론 및 미사일의 밤샘 키이우 공격으로 최소 7명 사망",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "c6e6293b-4ef8-4b4e-b300-8c1f8635b8b7",
+              "abbca76f-da39-4ec0-98a0-5d0abf6c73b4"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "반전 게시물에서 군대에 대한 '허위 정보 유포' 혐의로 러시아 여성에게 징역 7년 선고",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "반전 게시물에서 군대에 대한 '허위 정보 유포' 혐의로 러시아 여성에게 징역 7년 선고",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "8b05d3b1-5280-4813-84bb-cbba06197bca",
+              "452ce64e-e053-48d4-a404-e75d6d3bec6c"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "디 어밴던스부터 위드 러브, 메건까지: 홀리데이 기념 – 이번 주 스트리밍할 최고의 프로그램 7가지",
+        "country": "GB",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "디 어밴던스부터 위드 러브, 메건까지: 홀리데이 기념 – 이번 주 스트리밍할 최고의 프로그램 7가지",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "c6607fe4-494b-418f-8795-5ab904650471",
+              "af00d2e7-67b1-4f70-84c7-f26cd6b8b6c7"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "이재명, 개표 80% 진행 후 한국 대선 선두",
+    "countries": [
+      "RU",
+      "BE",
+      "KR"
+    ],
+    "total_articles": 10,
+    "local_topics": [
+      {
+        "name": "이재명, 개표 80% 진행 후 한국 대선 선두",
+        "country": "RU",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "이재명, 개표 80% 진행 후 한국 대선 선두",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "f4e0b3bb-08b3-4036-9e19-5210f89cf0ab",
+              "8c465149-a13d-42ed-898e-4d2ed09eca65",
+              "e219deae-c910-4f2a-a652-be0ce204ab48",
+              "dd9b219b-c5e9-44d9-b269-ef43bdbde88e"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "블랙 프라이데이: 함정을 피하는 방법은? \"70%는 좋은 거래가 아니다\"",
+        "country": "BE",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "블랙 프라이데이: 함정을 피하는 방법은? \"70%는 좋은 거래가 아니다\"",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "c96a56a1-4842-47ec-ad62-af12b388cb74",
+              "be422b36-b6c6-40d5-9eeb-40ff981e2465",
+              "cc570120-ca23-4610-a3b1-63627d85060f"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "배당소득 분리과세 ‘50억 초과구간’ 신설…최고세율 30% 합의",
+        "country": "KR",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "배당소득 분리과세 ‘50억 초과구간’ 신설…최고세율 30% 합의",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "c077f3e5-6237-46ef-89d3-88c4b5e39d5f",
+              "81695a6d-e6c9-4641-a809-a38da92b3751",
+              "67ca4482-2952-4eed-9162-c8612098dd14"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "원나잇 스탠드는 줄고 AI 연인은 늘어: Z세대 성생활의 이면 데이터",
+    "countries": [
+      "DE",
+      "GB",
+      "US"
+    ],
+    "total_articles": 10,
+    "local_topics": [
+      {
+        "name": "원나잇 스탠드는 줄고 AI 연인은 늘어: Z세대 성생활의 이면 데이터",
+        "country": "GB",
+        "size": 5,
+        "original_data": {
+          "topic_name_ko": "원나잇 스탠드는 줄고 AI 연인은 늘어: Z세대 성생활의 이면 데이터",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "8345d4d9-aacc-46fc-b8ea-31466efcb587",
+              "ea4905cf-c057-4ffb-b273-b762a8723b7a",
+              "9e1d9f92-eb26-4a1e-9e17-680858477078",
+              "61d1db50-a20f-47d7-91df-422c65ba4c62",
+              "43956414-1201-46e7-be12-33385b9c413e"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "AI 음악, 차트 정상 차지하며 불안감 조성",
+        "country": "DE",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "AI 음악, 차트 정상 차지하며 불안감 조성",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "46c48100-6c6d-486d-a19c-82dd676e7a77",
+              "df962823-a19e-4888-8205-875f0810ed24",
+              "723bb705-91eb-433e-8019-19e93b2fe21a"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "전직 의원들, AI 안전장치 지지하는 슈퍼팩 출범",
+        "country": "US",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "전직 의원들, AI 안전장치 지지하는 슈퍼팩 출범",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "5209315e-dd06-48f8-85fc-9156c207765b",
+              "a746f5ee-b12b-4d93-81ff-e3085521494c"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "학교에서 8세 아동 칼부림 사건 후 새로운 세부 사항 공개",
+    "countries": [
+      "RU",
+      "BE",
+      "AU"
+    ],
+    "total_articles": 9,
+    "local_topics": [
+      {
+        "name": "학교에서 8세 아동 칼부림 사건 후 새로운 세부 사항 공개",
+        "country": "AU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "학교에서 8세 아동 칼부림 사건 후 새로운 세부 사항 공개",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "3aae1bfc-7420-45a5-91dc-1e59fc581798",
+              "ea570c2f-c656-4e99-a405-03b482a15903",
+              "89c586d2-200b-4496-869d-8c641be664dd"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "러시아 법원, 크림대교 테러 공격 혐의 남성 8명에 종신형 선고",
+        "country": "RU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "러시아 법원, 크림대교 테러 공격 혐의 남성 8명에 종신형 선고",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "77b443d3-bdab-4fd5-9a8d-04fa368e72ba",
+              "ce3eea2e-5880-4ab8-aaa3-d90a9b00b365",
+              "a315d8c2-beff-4267-8771-26cc5ea7ae46"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "\"막대한 금액\": 벨기에 중소기업, 아마존 통해 3억 8천만 유로 수출",
+        "country": "BE",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "\"막대한 금액\": 벨기에 중소기업, 아마존 통해 3억 8천만 유로 수출",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "79e61ecf-b49b-42a4-ad65-956c1e9ca8d4",
+              "3b9a093c-272d-48e4-bbce-5a621637af65",
+              "8393b2a9-f186-4acd-a62b-1f72dd1c0a9c"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "유럽의 가스 재고 보충 평소보다 느려, 상황 긴장 고조",
+    "countries": [
+      "RU",
+      "DE",
+      "CA"
+    ],
+    "total_articles": 8,
+    "local_topics": [
+      {
+        "name": "유럽의 가스 재고 보충 평소보다 느려, 상황 긴장 고조",
+        "country": "RU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "유럽의 가스 재고 보충 평소보다 느려, 상황 긴장 고조",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "c3eb7188-8e4a-42de-a308-13dd99a09ae2",
+              "249742ab-24a8-4f5e-b4bb-e89ab450d6c2",
+              "0964e128-4d07-4eec-850e-63a4c0eee6aa"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "친푸틴 러시아 스타 체조 선수 멜니코바, 독일 클럽 입단",
+        "country": "DE",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "친푸틴 러시아 스타 체조 선수 멜니코바, 독일 클럽 입단",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "b60f5a1e-46bf-415a-82be-75af14873228",
+              "6fe38ecf-cc6c-49fb-9d18-d66a5491841e",
+              "72d7bfa0-fb3b-4d33-94d0-6653a78886a7"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "새로운 누나부트 총리 존 메인 취임, 오타와는 인프라에 집중",
+        "country": "CA",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "새로운 누나부트 총리 존 메인 취임, 오타와는 인프라에 집중",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "03ccab47-971c-4141-93d6-8eadecb7b88d",
+              "35c5ace1-b5b2-43e2-9222-ce40591d1e00"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "독일 뉴스: 의원들, 2026년 예산 통과",
+    "countries": [
+      "RU",
+      "DE"
+    ],
+    "total_articles": 19,
+    "local_topics": [
+      {
+        "name": "독일 뉴스: 의원들, 2026년 예산 통과",
+        "country": "DE",
+        "size": 13,
+        "original_data": {
+          "topic_name_ko": "독일 뉴스: 의원들, 2026년 예산 통과",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "9737db39-31e5-48f9-b669-8f3c89a46845",
+              "e57a67a2-3376-4fd2-b258-906558e9233e",
+              "199a525a-6d98-4b2d-8998-6aefe997f9f6",
+              "be9fe1d5-6bb0-44bf-8bde-d2837fa78f6c",
+              "04de3ad7-35fd-4e8f-b2ec-4179a2e3be59",
+              "b926bb03-3815-47f2-b54d-30222fbd0b62",
+              "0bd234fb-133e-4516-807c-821ce743916e",
+              "f687e0a0-3484-4d13-8cca-9b3247e1fe42",
+              "b52f6e76-c645-479d-8f23-8c0e28d7f978",
+              "6c291a78-e4c1-4ed6-8167-2376887b5ffd",
+              "723c79ab-62c2-488e-8bdf-854ed36bd607",
+              "d2718e81-5a82-4845-a9b8-890e8d1f60c0",
+              "dd76312d-7daf-41df-99d3-f611579514e2"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "푸틴, 2026년부터 부가가치세 22% 인상 승인",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "푸틴, 2026년부터 부가가치세 22% 인상 승인",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "ef1309f6-5239-4c63-92bb-cd19c7fc37db",
+              "bc2904f6-b69c-4635-b8db-3e4a4e208ba7"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "러시아 최대 건설사들의 순이익 26% 감소",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "러시아 최대 건설사들의 순이익 26% 감소",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "96bc9140-fb0d-4d87-af1d-64fb17290c53",
+              "b141f530-1a11-4dec-bf1e-951b42db5deb"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "독일, 슬로바키아전 승리로 2026 월드컵 본선 진출 확정",
+        "country": "DE",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "독일, 슬로바키아전 승리로 2026 월드컵 본선 진출 확정",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "4a8a0b78-1a0f-41a4-8a8e-2ba94d5a3937",
+              "d30d01fd-3b44-465d-af0b-8680052a32c6"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "세계에서 가장 깊은 곳에 사는 물고기를 만나다",
+    "countries": [
+      "RU",
+      "US"
+    ],
+    "total_articles": 14,
+    "local_topics": [
+      {
+        "name": "세계에서 가장 깊은 곳에 사는 물고기를 만나다",
+        "country": "US",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "세계에서 가장 깊은 곳에 사는 물고기를 만나다",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "9ddab4b3-d078-4e20-a383-00a777a0a891",
+              "31ae8831-40ca-451d-a708-d28f758c1d1c",
+              "c4483c60-ab7e-44f7-9778-b4128d2cf711",
+              "9899471c-3c1e-4112-9f5a-c6a1997ecf58"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "검찰총장 소송으로 로스텍흐나드조르 전 부국장 재산 몰수",
+        "country": "RU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "검찰총장 소송으로 로스텍흐나드조르 전 부국장 재산 몰수",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "9b87cfc5-b9f4-4c1e-bf6a-926a5f1f6b62",
+              "eae9b0e2-7aef-4ea6-9e8d-b0e3a3b46293",
+              "265957b5-344f-4975-80e4-8c30fb05b84f"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "카리브해 크루즈선에 복귀하지 않은 미국 여성 실종",
+        "country": "US",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "카리브해 크루즈선에 복귀하지 않은 미국 여성 실종",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "60405fe8-87f3-4776-99ea-821b4a932735",
+              "72ae0a59-91ce-41e0-b0c6-cd35c2cf1d2d",
+              "b3c095a4-7569-43e9-a4bc-222faffd060d"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "노보로시스크에서 드론 공격으로 수십 채의 주택 파손",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "노보로시스크에서 드론 공격으로 수십 채의 주택 파손",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "59222f70-14fd-4751-a30e-7d3cb68a1b0c",
+              "ab3400a7-637f-404f-bc88-31de08a92a55"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "로스카체스트보가 검사한 올리브 오일의 절반이 위조품으로 밝혀졌다",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "로스카체스트보가 검사한 올리브 오일의 절반이 위조품으로 밝혀졌다",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "6d8ce233-2160-488b-b8a3-519f7b3a08f1",
+              "c09b65cc-dae0-49b3-bfe7-657e1a69753b"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "온타리오주, 성범죄 사건에 회복적 정의 허용 촉구",
+    "countries": [
+      "RU",
+      "CA"
+    ],
+    "total_articles": 12,
+    "local_topics": [
+      {
+        "name": "온타리오주, 성범죄 사건에 회복적 정의 허용 촉구",
+        "country": "CA",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "온타리오주, 성범죄 사건에 회복적 정의 허용 촉구",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "814c622b-792f-4956-acde-096cc4ad028f",
+              "4970d0c5-5355-46a7-9b77-935140bc1c98",
+              "8165ee32-4ce3-4ade-a861-353cf1498184"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "푸틴, 새로운 국가 민족 정책 전략 승인",
+        "country": "RU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "푸틴, 새로운 국가 민족 정책 전략 승인",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "ad929069-3f9e-4919-9d19-c53187cf2f7f",
+              "2290e148-9e62-48c9-ac6a-e16c4c5516f5",
+              "7f43cf89-6fe0-4a9a-a54c-8e8562460a90"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "캐나다, 인도 포괄적 무역 협정 논의 재개",
+        "country": "CA",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "캐나다, 인도 포괄적 무역 협정 논의 재개",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "8fc4d796-02c9-481a-9d39-db0cb323b2fb",
+              "8bd05a2b-1689-4621-ba9a-3fb7a20cba98"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "유럽의회, 우크라이나에 나토식 안보 보장 제공 추진",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "유럽의회, 우크라이나에 나토식 안보 보장 제공 추진",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "4c28bba3-8bb8-4a59-a6ec-2fc52bde10d1",
+              "71a12108-1e03-4e15-a020-3dff81b8f555"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "푸틴, 러시아의 유럽 공격 의사 없음 확인",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "푸틴, 러시아의 유럽 공격 의사 없음 확인",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "e85aefd0-d229-4645-8aee-2f5aa7c685eb",
+              "97b7667a-6781-4ed7-a714-012fed57407d"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "우샤코프, 위트코프와의 대화 녹취록에 대해: '우리는 도청하거나 유출하지 않는다'",
+    "countries": [
+      "RU",
+      "NL"
+    ],
+    "total_articles": 12,
+    "local_topics": [
+      {
+        "name": "우샤코프, 위트코프와의 대화 녹취록에 대해: '우리는 도청하거나 유출하지 않는다'",
+        "country": "RU",
+        "size": 8,
+        "original_data": {
+          "topic_name_ko": "우샤코프, 위트코프와의 대화 녹취록에 대해: '우리는 도청하거나 유출하지 않는다'",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "9518d4e8-bec2-4c22-aea1-053c2bd5ff40",
+              "ea81aaa6-5f46-4e52-b185-d8900cc45412",
+              "754b88b3-5a89-40ce-b8cb-6fa78f18ff7f",
+              "53d0a8a0-d17e-4941-9813-ee01cd2845bc",
+              "6feceb9b-4e6f-46b5-a7bb-b50b21d01870",
+              "e13e00d8-7f81-4f8c-94fd-abbccb856fe2",
+              "8d04e68a-5b03-4f49-9576-3a20bd6a26ed",
+              "83150b5d-3e6e-4685-a6ac-258c390a0426"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "블랙 프라이데이 열풍, 국내 최대 쇼핑몰 강타: \"사실 필요 없는 물건을 샀어요\"",
+        "country": "NL",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "블랙 프라이데이 열풍, 국내 최대 쇼핑몰 강타: \"사실 필요 없는 물건을 샀어요\"",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "05fda0c4-e7e8-4aad-adb7-3370bc978a51",
+              "25d139e1-48c9-4e90-934d-f684410ced91",
+              "a4ec555d-8420-43ac-b753-3bdcaf7caaf3",
+              "1bfd990a-c2bf-49e5-84ab-0c2be72c4c23"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "워싱턴 D.C. 국가방위군 2명 총격 사건: 현재까지 알려진 사실들",
+    "countries": [
+      "DE",
+      "US"
+    ],
+    "total_articles": 12,
+    "local_topics": [
+      {
+        "name": "워싱턴 D.C. 국가방위군 2명 총격 사건: 현재까지 알려진 사실들",
+        "country": "US",
+        "size": 6,
+        "original_data": {
+          "topic_name_ko": "워싱턴 D.C. 국가방위군 2명 총격 사건: 현재까지 알려진 사실들",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "261ad8bb-e42c-4ca6-a827-1630aa3b4c0b",
+              "ebfc6f79-11a1-470f-aad8-85a4081d79ef",
+              "e34b94ac-89a8-4f92-a7d4-27d4460f8cba",
+              "24b26997-5735-44fc-886a-d3ce5ad7daea",
+              "c9ded501-64bd-4630-ab19-2ecf4a028b17",
+              "36e88e4c-6e66-4420-a21b-ac561e1e58e7"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "팩트체크: 워싱턴DC 주방위군 총격 사건 후 트럼프 발언 — 무엇이 진실이고 무엇이 아닌가?",
+        "country": "DE",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "팩트체크: 워싱턴DC 주방위군 총격 사건 후 트럼프 발언 — 무엇이 진실이고 무엇이 아닌가?",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "e00f5d78-941e-4c39-b528-96d23739ac41",
+              "ad1e0405-6c21-4829-aee4-ff37776705a3",
+              "79d0a023-ff58-4c66-9c7e-ca793efc871a"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "트럼프, D.C. 총격 사건 후 '제3세계 국가' 이민 중단할 것 밝혀",
+        "country": "US",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "트럼프, D.C. 총격 사건 후 '제3세계 국가' 이민 중단할 것 밝혀",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "374eda6a-5480-48c1-8896-06a7b87becb0",
+              "684cfae1-2962-423a-bd13-38b14960d6e3",
+              "713e3770-d50c-43e6-9315-c9875ec39c8c"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "“건물이 마약 거래소 광고판 역할”: 마르세유에서 오렌지 직원들, 마약 밀매와 더 이상 공존할 수 없다고 밝혀",
+    "countries": [
+      "BE",
+      "FR"
+    ],
+    "total_articles": 10,
+    "local_topics": [
+      {
+        "name": "“건물이 마약 거래소 광고판 역할”: 마르세유에서 오렌지 직원들, 마약 밀매와 더 이상 공존할 수 없다고 밝혀",
+        "country": "FR",
+        "size": 5,
+        "original_data": {
+          "topic_name_ko": "“건물이 마약 거래소 광고판 역할”: 마르세유에서 오렌지 직원들, 마약 밀매와 더 이상 공존할 수 없다고 밝혀",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "186a3ac3-f884-4a17-9b05-98446c09fa73",
+              "0977c181-4572-43ab-a557-9bfe6fba4611",
+              "10eb0cc1-a80f-4617-9559-687d642d2166",
+              "d2d0ce93-385b-4246-a406-cae78b6116c1",
+              "51c78402-f883-4a56-925f-2836c1c0c536"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "\"총을 쏜 짐승은 큰 대가를 치를 것이다\": 도널드 트럼프, 백악관 인근 사건 후 강경 발언 수위 높여",
+        "country": "BE",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "\"총을 쏜 짐승은 큰 대가를 치를 것이다\": 도널드 트럼프, 백악관 인근 사건 후 강경 발언 수위 높여",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "64b22864-2e09-4593-9ef8-cc328af63df3",
+              "15b50684-03a1-4611-bc5a-a340fcf920e0",
+              "2ee99c0e-1c76-4909-8fd7-cd23e4f1172b"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "“그는 벽을 치고 내 코를 부러뜨렸다”: 알렉산드라 로젠펠드, 전 연인 장 임베르에 대해 증언",
+        "country": "BE",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "“그는 벽을 치고 내 코를 부러뜨렸다”: 알렉산드라 로젠펠드, 전 연인 장 임베르에 대해 증언",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "6805d56f-3d92-4266-893f-bb7d350e2396",
+              "9214cc37-7868-4b4f-84a3-329c8709cd60"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "퍼스 해커, 가짜 콴타스 와이파이 사기 및 음란 이미지 절도로 징역형 선고",
+    "countries": [
+      "RU",
+      "AU"
+    ],
+    "total_articles": 10,
+    "local_topics": [
+      {
+        "name": "퍼스 해커, 가짜 콴타스 와이파이 사기 및 음란 이미지 절도로 징역형 선고",
+        "country": "AU",
+        "size": 5,
+        "original_data": {
+          "topic_name_ko": "퍼스 해커, 가짜 콴타스 와이파이 사기 및 음란 이미지 절도로 징역형 선고",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "80d4b55f-0749-4c92-82e4-cc16b20cade0",
+              "ad08b295-5c30-48c6-807b-8aa9e9fdff80",
+              "7ec5b1ff-a56d-41d6-b9a6-0390884e4f7c",
+              "31cba129-db84-48a4-90e3-9b197588d06e",
+              "22e376b2-5660-42c1-8163-42f3ff67845b"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "우크라이나 드론, 랴잔 정유 공장 공격 및 쿠르스크 지역 전력 차단 보도",
+        "country": "RU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "우크라이나 드론, 랴잔 정유 공장 공격 및 쿠르스크 지역 전력 차단 보도",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "e8b7139a-7581-409c-b315-5b018dc4465c",
+              "832b15e8-f695-4d56-9e10-9b7c17a2268b",
+              "6f12cad8-5052-4ca6-8209-2fd32eb55bb0"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "카사치온 법원, 폴리나 루리예의 가수 돌리나에게서 구매한 아파트 반환 요청 기각",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "카사치온 법원, 폴리나 루리예의 가수 돌리나에게서 구매한 아파트 반환 요청 기각",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "8cf64274-2945-445d-99e2-8ff2d52e535b",
+              "f3015cdd-fe75-4f5f-a262-97fe6b24ff92"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "캐나다 제조업 일자리 반등, 물거품 되나",
+    "countries": [
+      "RU",
+      "CA"
+    ],
+    "total_articles": 9,
+    "local_topics": [
+      {
+        "name": "캐나다 제조업 일자리 반등, 물거품 되나",
+        "country": "CA",
+        "size": 7,
+        "original_data": {
+          "topic_name_ko": "캐나다 제조업 일자리 반등, 물거품 되나",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "4756f212-a511-45ba-92ec-22fb1d2cc3e0",
+              "83bf408c-77aa-4425-b68f-ad96ccc3b6c4",
+              "b3711138-3939-4261-b504-598afebab628",
+              "3220be62-f93c-4c61-b836-ca44c1269454",
+              "d2d59d8a-061c-4a14-9ba1-4ee8ba171b3f",
+              "0ddd687f-51b5-4ddb-b344-f42582946454",
+              "e91ae980-edc7-4694-86eb-23a74412d7fc"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "모스칼리크 중장 살해 혐의자, 종신형 선고",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "모스칼리크 중장 살해 혐의자, 종신형 선고",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "72942b6e-6131-4d36-8972-63b9dc3e972f",
+              "be50c052-c86f-4276-b677-623ba6296316"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "멜버른 공항 터미널 대피, 화재 후 여행 대혼란",
+    "countries": [
+      "CN",
+      "AU"
+    ],
+    "total_articles": 8,
+    "local_topics": [
+      {
+        "name": "멜버른 공항 터미널 대피, 화재 후 여행 대혼란",
+        "country": "AU",
+        "size": 5,
+        "original_data": {
+          "topic_name_ko": "멜버른 공항 터미널 대피, 화재 후 여행 대혼란",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "cc6b4e53-9dab-4bbd-abd1-00b0a87e3874",
+              "bffd6397-8d65-4e72-bc59-afcf8f84a87a",
+              "617d91f1-2dde-41c9-ac42-b19ad85315e6",
+              "19ae049b-93be-4921-aa99-2602203fc7cd",
+              "c7e5de3a-f7e8-4857-acb6-146608e23ecf"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "중국 증권 감독 당국, 사상 최고 벌금 부과",
+        "country": "CN",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "중국 증권 감독 당국, 사상 최고 벌금 부과",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "2c1dab5d-24be-4f0c-87de-0635627adc98",
+              "2b212d27-db8d-42ba-81a8-53b281bfc62c",
+              "23e57eb6-5dc7-4104-b865-10186236762f"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "우크라이나: 젤렌스키 비서실장 예르마크 사임",
+    "countries": [
+      "DE",
+      "NL"
+    ],
+    "total_articles": 8,
+    "local_topics": [
+      {
+        "name": "우크라이나: 젤렌스키 비서실장 예르마크 사임",
+        "country": "DE",
+        "size": 5,
+        "original_data": {
+          "topic_name_ko": "우크라이나: 젤렌스키 비서실장 예르마크 사임",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "f5b08663-fff1-4f3c-8800-26aab413b75c",
+              "4aaddaa9-5943-489a-b4e5-53b50783fa29",
+              "0b42ddde-0df4-412f-a412-1516387783cf",
+              "0f495530-38ec-475b-bd85-9f047f70e3fa",
+              "2f44f173-d307-497a-9055-683a584ed18d"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "푸틴: 정당한 휴전보다 영구적인 전쟁 선호",
+        "country": "NL",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "푸틴: 정당한 휴전보다 영구적인 전쟁 선호",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "cb3def57-6a63-4e2c-9a52-c6cbc1e16d1e",
+              "37744eea-6981-434b-9d6c-4534baa78dcd",
+              "0904385d-e9b8-4a74-8572-eccc5013abfb"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "영국 전문가 패널, 대부분 남성 전립선암 검진 반대 권고",
+    "countries": [
+      "GB",
+      "US"
+    ],
+    "total_articles": 8,
+    "local_topics": [
+      {
+        "name": "영국 전문가 패널, 대부분 남성 전립선암 검진 반대 권고",
+        "country": "GB",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "영국 전문가 패널, 대부분 남성 전립선암 검진 반대 권고",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "9d1b826c-e45a-48fb-9c22-ab10cd647e07",
+              "11623573-52ae-4b72-b6c1-95e6ecb07387",
+              "9b02807b-38b5-4da0-b7dd-7cc437dcd5b5",
+              "9ac194bb-1ca3-4bb1-9de0-003fa24138e9"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "카우보이스 조지 피켄스, 드라이브를 살리는 놀라운 공중 동작 선보여",
+        "country": "US",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "카우보이스 조지 피켄스, 드라이브를 살리는 놀라운 공중 동작 선보여",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "9f490dab-a567-49e0-a92c-b0e2e892d40c",
+              "5e5a019a-a00a-4ed5-a788-84102bfe83b5",
+              "c19c626d-7bd5-4690-aca1-2c4b83265476",
+              "652c22a3-b9bd-495c-b983-f59480eb6df0"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "공화당의 오바마케어 개혁 및 보조금 연장 계획은 무엇인가?",
+    "countries": [
+      "CA",
+      "US"
+    ],
+    "total_articles": 7,
+    "local_topics": [
+      {
+        "name": "공화당의 오바마케어 개혁 및 보조금 연장 계획은 무엇인가?",
+        "country": "US",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "공화당의 오바마케어 개혁 및 보조금 연장 계획은 무엇인가?",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "a0340b2c-9790-47bf-a58c-8451580580c7",
+              "1f1eb0b5-c20f-4c13-bdf6-c8e7502e8fc6",
+              "a39d8d93-839d-465f-9160-81e0b8b9b975",
+              "f521f968-ba79-4fa0-8713-0c5b360bfa64"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "라이언 웨딩과 관련된 혐의를 받고 있는 캐나다인들은 누구인가?",
+        "country": "CA",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "라이언 웨딩과 관련된 혐의를 받고 있는 캐나다인들은 누구인가?",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "3f4bb3dd-cee2-401f-baf9-2ddd02c8f45c",
+              "fd002c64-f581-4b33-872d-5573a627ef9c",
+              "645c239e-32b4-4987-860d-91b221addd67"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "레이첼 리브스 자매를 '총알'로 위협한 여성, 괴롭힘 혐의로 수감",
+    "countries": [
+      "RU",
+      "GB"
+    ],
+    "total_articles": 7,
+    "local_topics": [
+      {
+        "name": "레이첼 리브스 자매를 '총알'로 위협한 여성, 괴롭힘 혐의로 수감",
+        "country": "GB",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "레이첼 리브스 자매를 '총알'로 위협한 여성, 괴롭힘 혐의로 수감",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "aee677d2-6126-436a-94a8-eed569692977",
+              "b943a273-5ffd-4a3e-ac17-d32252742ab4",
+              "bc2bb5f4-538e-4180-89e1-6dde8229be0e"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "아나톨리 슈트카, '디모프' 총괄 이사직에서 블라디미르 필립체프 교체",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "아나톨리 슈트카, '디모프' 총괄 이사직에서 블라디미르 필립체프 교체",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "5aabcc5b-c9ab-41ce-a363-c0bd77e31059",
+              "cf59a004-6f56-4d9e-ac26-489c4e326af7"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "프리앙가리예 '시장 학교' 참가자, 시민 운동가 폭행 혐의로 유죄 판결",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "프리앙가리예 '시장 학교' 참가자, 시민 운동가 폭행 혐의로 유죄 판결",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "ec25491d-2f03-4204-9c7e-4f80189c8d6d",
+              "701a11b2-2123-47ec-8466-1384f94931cd"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "Ukraine's Zelensky says his chief of staff Andriy Yermak has resigned after anti-graft raids",
+    "countries": [
+      "FR",
+      "US"
+    ],
+    "total_articles": 6,
+    "local_topics": [
+      {
+        "name": "Ukraine's Zelensky says his chief of staff Andriy Yermak has resigned after anti-graft raids",
+        "country": "FR",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "Ukraine's Zelensky says his chief of staff Andriy Yermak has resigned after anti-graft raids",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "da6f76f8-6617-47f9-8de8-d1aa359f7d07",
+              "2945740d-a3ed-44aa-a292-007157567a56",
+              "00e3b73a-01f6-4ae2-b27f-ce803cecd140",
+              "4ef0dba4-437f-487d-afe1-9665ca995edd"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "Russian authorities detain suspect over St. Petersburg cafe blast",
+        "country": "US",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "Russian authorities detain suspect over St. Petersburg cafe blast",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "1d46d34d-1990-4d74-824f-5e9746e6b3a5",
+              "d2e28bd2-a135-437b-852e-f0384d77aee6"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "십대들, 마체테 난투극 혐의로 기소",
+    "countries": [
+      "RU",
+      "AU"
+    ],
+    "total_articles": 6,
+    "local_topics": [
+      {
+        "name": "십대들, 마체테 난투극 혐의로 기소",
+        "country": "AU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "십대들, 마체테 난투극 혐의로 기소",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "bbfec19d-f933-4747-8b97-cd376fccb261",
+              "adcaaa2f-d105-45aa-82b3-9f75a808c053",
+              "ce68c88c-0cc9-40a5-b591-4f2e4eacf359"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "오르반, 모스크바에서 푸틴과 회담 발표",
+        "country": "RU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "오르반, 모스크바에서 푸틴과 회담 발표",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "ab58a064-2c80-49e1-8494-00e80f11716e",
+              "a6f39df5-cbc4-4b5e-bcfa-1f379f3d7c11",
+              "a4a2bebb-1550-490b-8ee9-e9505f3d465f"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "정치 소식통: 카니, 철강 산업 지원 강화",
+    "countries": [
+      "DE",
+      "CA"
+    ],
+    "total_articles": 6,
+    "local_topics": [
+      {
+        "name": "정치 소식통: 카니, 철강 산업 지원 강화",
+        "country": "CA",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "정치 소식통: 카니, 철강 산업 지원 강화",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "00c55a29-490d-4918-8f52-25c26ea1ce16",
+              "42554ccd-a87b-4cb1-bb83-d6e28ca17f40",
+              "260882d2-a591-43b5-8ccb-1c54c2d243ed"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "크렘린 영접: 푸틴, 오르반에게 따뜻한 말 건네",
+        "country": "DE",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "크렘린 영접: 푸틴, 오르반에게 따뜻한 말 건네",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "ae4a480b-17f0-4073-bb48-ca4b311cf1e8",
+              "84ba58f4-dd36-4263-93c3-d9e79c7e3e15",
+              "2af40ad8-95b5-4f2d-ae47-28b1dadfb873"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "우크라이나 스캔들: 젤렌스키의 오른팔 안드리 예르마크, 반부패 수사 후 사임",
+    "countries": [
+      "BE",
+      "DE"
+    ],
+    "total_articles": 6,
+    "local_topics": [
+      {
+        "name": "우크라이나 스캔들: 젤렌스키의 오른팔 안드리 예르마크, 반부패 수사 후 사임",
+        "country": "BE",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "우크라이나 스캔들: 젤렌스키의 오른팔 안드리 예르마크, 반부패 수사 후 사임",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "47e01425-c451-4a7f-b7ce-1f405f227085",
+              "e1fe16b7-0edd-4b8c-942f-af66c8f0a820",
+              "c9c08d0b-f9ba-42a3-a267-b9b533548ce1",
+              "83e00354-7294-47cf-a453-16ba95cfd804"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "우크라이나: 제네바 회담 중 유럽 국가들, 미국 계획에 제동",
+        "country": "DE",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "우크라이나: 제네바 회담 중 유럽 국가들, 미국 계획에 제동",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "f420e172-bad1-4510-bbed-93d50c4ce3c9",
+              "8da01951-22fa-44a7-8d10-d7d0dec5f153"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "'획기적인 변화': 기술 기업들, 잠수 드론으로 해저 지배력 경쟁",
+    "countries": [
+      "BE",
+      "GB"
+    ],
+    "total_articles": 6,
+    "local_topics": [
+      {
+        "name": "'획기적인 변화': 기술 기업들, 잠수 드론으로 해저 지배력 경쟁",
+        "country": "GB",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "'획기적인 변화': 기술 기업들, 잠수 드론으로 해저 지배력 경쟁",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "d0cbfdc7-bfc6-4cd7-9f83-ebf17a8505f5",
+              "2234e507-184a-45c9-a636-dfc978d30429",
+              "90a04b12-f03e-4225-a709-43e3ccff41ef"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "'근본적으로 잘못됐다': 바르트 드 베버, 폰 데어 라이엔에게 서한 보내 러시아 자산 관련 유럽 계획 비판",
+        "country": "BE",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "'근본적으로 잘못됐다': 바르트 드 베버, 폰 데어 라이엔에게 서한 보내 러시아 자산 관련 유럽 계획 비판",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "92c34747-be2c-4f1b-bf4f-86e658cd647e",
+              "cceab63c-3ad9-4257-8ac0-79d8b02a913d",
+              "1e253a52-7528-480a-a71b-f87e62d344ae"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "러시아 대사관, 프랑스에서 러시아 여성 스파이 혐의 구금 확인",
+    "countries": [
+      "RU",
+      "FR"
+    ],
+    "total_articles": 5,
+    "local_topics": [
+      {
+        "name": "러시아 대사관, 프랑스에서 러시아 여성 스파이 혐의 구금 확인",
+        "country": "RU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "러시아 대사관, 프랑스에서 러시아 여성 스파이 혐의 구금 확인",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "298af045-5753-44cf-8519-dcab9ba73b5a",
+              "e074630f-3eda-485f-8ee4-82d4aba374e5",
+              "df9c0d8e-8175-4fd6-8bf2-9e4f66b37473"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "레오 교황, 니케아 신경 발원지 튀르키예 유적지에서 일치 기념",
+        "country": "FR",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "레오 교황, 니케아 신경 발원지 튀르키예 유적지에서 일치 기념",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "04f5f217-4eaa-4e28-b6df-527a950882d7",
+              "4acc551d-e6df-4cd2-8fd4-e4248a3cbf49"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "젤렌스키 비서실장, 우크라이나 반부패 기관에 자택 및 사무실 압수수색 당해",
+    "countries": [
+      "RU",
+      "CA"
+    ],
+    "total_articles": 5,
+    "local_topics": [
+      {
+        "name": "젤렌스키 비서실장, 우크라이나 반부패 기관에 자택 및 사무실 압수수색 당해",
+        "country": "RU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "젤렌스키 비서실장, 우크라이나 반부패 기관에 자택 및 사무실 압수수색 당해",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "a2ada223-0512-4e74-b2a4-9d99afab5870",
+              "fea9c8bf-c543-4554-9818-162eba0fc7d3",
+              "8364ad22-5433-4609-a359-e52f4c006f65"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "이민부 장관, 월드컵 외국인 직원 대상 취업 허가 요건 해제",
+        "country": "CA",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "이민부 장관, 월드컵 외국인 직원 대상 취업 허가 요건 해제",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "8f8694bb-7fe5-479f-85c3-37a4054259aa",
+              "3f452d80-78af-4307-8354-31031c466083"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "홍콩 고층 건물 화재: 스티로폼 패널이 불을 확산시켰다",
+    "countries": [
+      "CN",
+      "DE"
+    ],
+    "total_articles": 5,
+    "local_topics": [
+      {
+        "name": "홍콩 고층 건물 화재: 스티로폼 패널이 불을 확산시켰다",
+        "country": "DE",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "홍콩 고층 건물 화재: 스티로폼 패널이 불을 확산시켰다",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "909dff39-07ed-4d19-8474-78576b7575ad",
+              "33c5150c-d0cb-4f6a-a44f-961bd980e80d",
+              "c2b6859d-3eea-48de-8fe5-296bf4c85f36"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "홍콩 타이포 화재 참사: 알아야 할 모든 것",
+        "country": "CN",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "홍콩 타이포 화재 참사: 알아야 할 모든 것",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "06dc62fc-c60c-4fd2-8f5e-b95cac9f329a",
+              "7a31a92e-c94e-4403-bb09-85e299efbc07"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "랴브코프 외교부 차관: 곡물 협정의 시간은 지났다",
+    "countries": [
+      "RU",
+      "DE"
+    ],
+    "total_articles": 5,
+    "local_topics": [
+      {
+        "name": "랴브코프 외교부 차관: 곡물 협정의 시간은 지났다",
+        "country": "RU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "랴브코프 외교부 차관: 곡물 협정의 시간은 지났다",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "f55dd432-2781-479a-9757-a38113d9b291",
+              "92722e43-dc74-4d13-b29d-007d2c0a46f9",
+              "166d6138-b56c-47be-b7ce-b4f15971ee79"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "튀르키예 축구 베팅 스캔들: 체포 영장 발부",
+        "country": "DE",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "튀르키예 축구 베팅 스캔들: 체포 영장 발부",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "5d730c2c-5e64-4944-a322-bc91be93d3ac",
+              "8169cf74-f74f-4fe2-b96d-301476d5f154"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "이셀: 경찰차 관련 사고로 어린이 두 명 부상",
+    "countries": [
+      "BE",
+      "RU"
+    ],
+    "total_articles": 5,
+    "local_topics": [
+      {
+        "name": "이셀: 경찰차 관련 사고로 어린이 두 명 부상",
+        "country": "BE",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "이셀: 경찰차 관련 사고로 어린이 두 명 부상",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "9d83ee80-3db2-468e-9eda-568296ab193b",
+              "7638d435-c2c9-4757-8efc-b8143897d83c",
+              "94221997-149c-4a89-a323-54fb2d10a127"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "푸틴: 이민 정책은 러시아 국민과 경제의 이익을 보호해야 한다",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "푸틴: 이민 정책은 러시아 국민과 경제의 이익을 보호해야 한다",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "8bfa02a1-97d5-4b37-a877-01bbac804b99",
+              "140db113-83a9-465a-aaea-441bd8808ea6"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "왜 모두가 불만을 느끼는가? 우리가 스스로 경기 침체를 자초하고 있는 것인가?",
+    "countries": [
+      "US",
+      "NL"
+    ],
+    "total_articles": 5,
+    "local_topics": [
+      {
+        "name": "왜 모두가 불만을 느끼는가? 우리가 스스로 경기 침체를 자초하고 있는 것인가?",
+        "country": "NL",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "왜 모두가 불만을 느끼는가? 우리가 스스로 경기 침체를 자초하고 있는 것인가?",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "c526d858-c394-4d51-b3ae-70f3b5718138",
+              "fd79ffce-e66f-492b-a742-e7db5cb954ea",
+              "e038ffc3-e160-4c02-835b-e8e7ad5c4c27"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "핀란드 총리는 왜 패배했나? 기자가 유권자들이 중요하게 여긴 핵심 쟁점을 설명한다",
+        "country": "US",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "핀란드 총리는 왜 패배했나? 기자가 유권자들이 중요하게 여긴 핵심 쟁점을 설명한다",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "e701dbee-ce09-468e-96e8-ad95b36efe13",
+              "8461e721-9513-49fd-bbc5-86d6ff0628ed"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "대구 간 장동혁, 12·3 앞두고 여전히 남탓···“민주당 의회 폭거가 계엄 불러와”",
+    "countries": [
+      "BE",
+      "KR"
+    ],
+    "total_articles": 5,
+    "local_topics": [
+      {
+        "name": "대구 간 장동혁, 12·3 앞두고 여전히 남탓···“민주당 의회 폭거가 계엄 불러와”",
+        "country": "KR",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "대구 간 장동혁, 12·3 앞두고 여전히 남탓···“민주당 의회 폭거가 계엄 불러와”",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "9b4ee5ab-4c73-4521-926c-55c66103eccb",
+              "ed1680e5-f347-4e1a-bc6d-f6171122005c",
+              "b5686bdb-183b-400f-8b6e-3193910f0813"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "12시간의 침묵 끝에, 바르트 드 베버가 하원에서 구두로 개입했지만 제지당했다: \"이것은 명백한 거짓말이다\"",
+        "country": "BE",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "12시간의 침묵 끝에, 바르트 드 베버가 하원에서 구두로 개입했지만 제지당했다: \"이것은 명백한 거짓말이다\"",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "f2cf5c47-e68a-43a1-9fcc-b21904527a7b",
+              "ade002ca-57a0-4056-98b0-c7aa15d90955"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "팀랩, 몰입형 예술로 교토 방문객 유치",
+    "countries": [
+      "DE",
+      "JP"
+    ],
+    "total_articles": 4,
+    "local_topics": [
+      {
+        "name": "팀랩, 몰입형 예술로 교토 방문객 유치",
+        "country": "JP",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "팀랩, 몰입형 예술로 교토 방문객 유치",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "c0c150ea-6cc1-4622-83d6-fd1defe73d8c",
+              "f7925aee-57e8-4f2c-9617-7865be341655"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "독일, 난민 주거 위기 해결에 나서",
+        "country": "DE",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "독일, 난민 주거 위기 해결에 나서",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "d2841d59-3c21-47ef-b45f-3031cd7941d1",
+              "f4d93c32-0aa7-40bc-9025-e7b171eb5a23"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "존 손튼 후임 계획 무산 후 배릭 수석 이사 사임",
+    "countries": [
+      "CA",
+      "NL"
+    ],
+    "total_articles": 4,
+    "local_topics": [
+      {
+        "name": "존 손튼 후임 계획 무산 후 배릭 수석 이사 사임",
+        "country": "CA",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "존 손튼 후임 계획 무산 후 배릭 수석 이사 사임",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "069133ee-5f31-4b96-adf2-fbec7c3eac96",
+              "8504241e-295d-476f-90ed-7421bc15c4fb"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "마리아 블라르의 요스트 츠바게르만 비판적 초상화와 나의 즐거운 기억 사이의 긴장",
+        "country": "NL",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "마리아 블라르의 요스트 츠바게르만 비판적 초상화와 나의 즐거운 기억 사이의 긴장",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "fe982ba5-562e-45a9-8dba-7fcfd5b46fdc",
+              "f73d79d4-25a8-4976-949d-64c53de5b85c"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "‘모든 것을 잃었습니다’: 인도네시아 홍수 피해 수마트라 사망자 174명으로 증가",
+    "countries": [
+      "RU",
+      "CN"
+    ],
+    "total_articles": 4,
+    "local_topics": [
+      {
+        "name": "‘모든 것을 잃었습니다’: 인도네시아 홍수 피해 수마트라 사망자 174명으로 증가",
+        "country": "CN",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "‘모든 것을 잃었습니다’: 인도네시아 홍수 피해 수마트라 사망자 174명으로 증가",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "1cd46474-8ec6-438f-9044-d39f761ab449",
+              "473074d3-1f19-4735-bce6-8c1648eb70ac"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "인도네시아 홍수 사망자 174명으로 늘어",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "인도네시아 홍수 사망자 174명으로 늘어",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "06add965-5b3a-420f-97d9-c054cad5d41b",
+              "c8a65a52-ad13-4d88-a3ef-7cde5787ec87"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "자산 축적: 재정적 독립은 언제 달성되는가?",
+    "countries": [
+      "DE",
+      "NL"
+    ],
+    "total_articles": 4,
+    "local_topics": [
+      {
+        "name": "자산 축적: 재정적 독립은 언제 달성되는가?",
+        "country": "DE",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "자산 축적: 재정적 독립은 언제 달성되는가?",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "3a889e59-364b-4622-a426-fdb75305f900",
+              "d270ce62-0489-437d-a651-c44911948ee5"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "유럽에서 가장 혁신적인 지역? 고통스러운 답변: 우크라이나",
+        "country": "NL",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "유럽에서 가장 혁신적인 지역? 고통스러운 답변: 우크라이나",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "50838183-7c4d-4f1d-9c21-ae87fbbf1b59",
+              "070d6e9c-52ef-415f-9af6-a5580e264511"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "제노바 시장 부치, 격분 토로: \"학살 게임, 가만있지 않겠다. 명확성 요구, 검찰과 대화할 준비 돼\"",
+    "countries": [
+      "IT",
+      "BE"
+    ],
+    "total_articles": 4,
+    "local_topics": [
+      {
+        "name": "제노바 시장 부치, 격분 토로: \"학살 게임, 가만있지 않겠다. 명확성 요구, 검찰과 대화할 준비 돼\"",
+        "country": "IT",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "제노바 시장 부치, 격분 토로: \"학살 게임, 가만있지 않겠다. 명확성 요구, 검찰과 대화할 준비 돼\"",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "bcd52eca-2986-45db-96a9-1f2c66303afa",
+              "7e272ef7-d160-4cd1-8d89-4cdacfcd739e"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "브뤼셀의 새 보육원, 계속해서 논란 야기: \"행동 자체보다, 그 주장이 충격적이다\"",
+        "country": "BE",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "브뤼셀의 새 보육원, 계속해서 논란 야기: \"행동 자체보다, 그 주장이 충격적이다\"",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "44e7ed53-44ae-415d-b58e-fb6abb9487e5",
+              "aeb59275-1704-494e-b36f-6962a2c15a70"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "크림 대교 교통, 정상 운영 모드 — 러시아 교통부",
+    "countries": [
+      "RU"
+    ],
+    "total_articles": 11,
+    "local_topics": [
+      {
+        "name": "크림 대교 교통, 정상 운영 모드 — 러시아 교통부",
+        "country": "RU",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "크림 대교 교통, 정상 운영 모드 — 러시아 교통부",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "319c1a09-3a3e-41e0-aad7-8ffe3c0a0dd7",
+              "63fd5cf0-25d8-4d99-9d91-f56d3e65dd87",
+              "4ee0c791-cddf-424f-851c-d0d888e30973",
+              "95cd45aa-271b-4673-a1b7-db9951f6a57f"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "미국, 안보 보장 전 우크라이나 평화 협정 원해 – 폴리티코",
+        "country": "RU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "미국, 안보 보장 전 우크라이나 평화 협정 원해 – 폴리티코",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "cec86f2e-1377-4fa8-a8b7-a2e6609bd829",
+              "30b815b5-b190-4d33-a2f3-42eca0fe04b8",
+              "d5be0ced-dca2-4272-9d01-bd7ca83a918f"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "벨라루스, 중국 협력 강화 합의 — 루카셴코",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "벨라루스, 중국 협력 강화 합의 — 루카셴코",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "d05e5df0-2e90-41da-94bc-36f4d30a941b",
+              "0a2d5227-213a-45ce-bf53-d1da19bd8bb5"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "젤렌스키, 나토 정상회의 초청 가능성 높지만 실무 회의에서는 제외될 듯 — 통신",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "젤렌스키, 나토 정상회의 초청 가능성 높지만 실무 회의에서는 제외될 듯 — 통신",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "4eca551b-5933-4abe-8ea7-fbb7fdecb486",
+              "8699dced-6c56-4b63-b6b8-a9042a2d3823"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "Japan to fund supplementary budget with $74bn in new debt",
+    "countries": [
+      "JP"
+    ],
+    "total_articles": 10,
+    "local_topics": [
+      {
+        "name": "Japan to fund supplementary budget with $74bn in new debt",
+        "country": "JP",
+        "size": 7,
+        "original_data": {
+          "topic_name_ko": "Japan to fund supplementary budget with $74bn in new debt",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "345ef042-13c2-4c04-a304-779b3669d215",
+              "fa00b03d-231c-40c9-aa9a-dc48192ffd5a",
+              "f1b60590-2303-45c8-9f52-de60d5bbb7cc",
+              "f67ee249-670a-4312-86d0-798a9a62a425",
+              "2fa7c168-c360-4e0c-9b13-b81ae30fa3f9",
+              "52d6a351-1b2b-4d79-a905-aff1cf787c87",
+              "123ea01a-d32a-4f8e-8b78-e42913c5e8c3"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "Japanese regional airports, Chinese airlines face Taiwan feud fallout",
+        "country": "JP",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "Japanese regional airports, Chinese airlines face Taiwan feud fallout",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "5473af58-a02a-4a86-8d41-3916faebdb0d",
+              "e3dd7233-a5b7-4c01-b7e8-756f29eca954",
+              "da196d1c-5d45-422b-a232-64fd622273cc"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "현대차·기아, 안성에 첫 배터리 개발 거점 조성…“전기차 배터리 기술 내재화 박차”",
+    "countries": [
+      "KR"
+    ],
+    "total_articles": 10,
+    "local_topics": [
+      {
+        "name": "현대차·기아, 안성에 첫 배터리 개발 거점 조성…“전기차 배터리 기술 내재화 박차”",
+        "country": "KR",
+        "size": 8,
+        "original_data": {
+          "topic_name_ko": "현대차·기아, 안성에 첫 배터리 개발 거점 조성…“전기차 배터리 기술 내재화 박차”",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "634a8bdc-d2d2-4cbb-8906-b523dd956814",
+              "95a3b1de-bd15-405c-b608-e70d1e874834",
+              "772646a2-9789-42e5-ba96-4984dc6cad15",
+              "579571bb-fb1d-4cd2-a268-44c059530273",
+              "e8016d48-503d-42fc-9c66-650ca67d763c",
+              "1f8f6b4b-8d60-4974-ba03-5deca49a52b7",
+              "4d231d09-869a-40f4-9b1a-3c0b208824cc",
+              "2e3b5b65-4aba-4e81-9271-96dc9cfecb11"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "이 대통령 “쌀에 뉘 끼듯, 국정원 도매금 비난 없어져야”…국정원 방문 현장",
+        "country": "KR",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "이 대통령 “쌀에 뉘 끼듯, 국정원 도매금 비난 없어져야”…국정원 방문 현장",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "fc2b43d5-c5e5-4cdd-bb71-9a769b154055",
+              "171b0d7c-bec0-4059-99e9-a2a5894460f3"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "정치 소식통: 앨버타-오타와 송유관 합의, BC주 동의 필수적이라고 의원들 밝혀",
+    "countries": [
+      "CA"
+    ],
+    "total_articles": 8,
+    "local_topics": [
+      {
+        "name": "정치 소식통: 앨버타-오타와 송유관 합의, BC주 동의 필수적이라고 의원들 밝혀",
+        "country": "CA",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "정치 소식통: 앨버타-오타와 송유관 합의, BC주 동의 필수적이라고 의원들 밝혀",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "5cb64920-224a-4442-a518-c81ddb2cede0",
+              "b1e7477e-1fa4-44c7-a3f7-65f0e0219307",
+              "2c36d650-a901-409c-834e-bfe2fdd031e8",
+              "0cd4fa57-ffa6-4dbc-81b6-6ac89b961455"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "B.C.에서 학생과 교사 공격 후 회색곰 3마리 수색 계속",
+        "country": "CA",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "B.C.에서 학생과 교사 공격 후 회색곰 3마리 수색 계속",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "408aee2b-7472-46c5-b6c2-fd48e8fa8ad1",
+              "9a896ba9-eb9d-4702-8eb3-a15c2901ae99"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "대부분 접근 불가능한 합법적 안전 공급 프로그램, B.C. 법원 심리",
+        "country": "CA",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "대부분 접근 불가능한 합법적 안전 공급 프로그램, B.C. 법원 심리",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "0dba1b34-8c1a-4ffc-94e3-369a8b971cc3",
+              "977dba05-12d1-4f2b-8b27-3b233870dadd"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "나토의 발트해 훈련은 러시아와의 군사적 충돌 준비의 일환 — 외교관",
+    "countries": [
+      "RU"
+    ],
+    "total_articles": 7,
+    "local_topics": [
+      {
+        "name": "나토의 발트해 훈련은 러시아와의 군사적 충돌 준비의 일환 — 외교관",
+        "country": "RU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "나토의 발트해 훈련은 러시아와의 군사적 충돌 준비의 일환 — 외교관",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "f970dba5-eb3a-4fb5-87f4-997a5d077d8f",
+              "8004cec7-e888-49e9-8d53-e42352acf5ef",
+              "114a7767-6af9-4d92-891b-ceaa3b120935"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "화요일 러시아 증시 지수 상승 — 시장 데이터",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "화요일 러시아 증시 지수 상승 — 시장 데이터",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "658767aa-a529-4f55-b054-2ed90dcf9f2d",
+              "51d488e6-152c-4eb7-80b0-24a2c835207e"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "미국 정보 없이는 러시아 비행장 공격 불가능 — 군사 전문가",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "미국 정보 없이는 러시아 비행장 공격 불가능 — 군사 전문가",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "49baaee6-6eaa-459d-8226-c8a3ddc44c28",
+              "23f700a7-ca78-4883-84a5-f81f38f35acf"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "녹색당 전당대회: 안보 정책과 동종요법 논의",
+    "countries": [
+      "DE"
+    ],
+    "total_articles": 6,
+    "local_topics": [
+      {
+        "name": "녹색당 전당대회: 안보 정책과 동종요법 논의",
+        "country": "DE",
+        "size": 4,
+        "original_data": {
+          "topic_name_ko": "녹색당 전당대회: 안보 정책과 동종요법 논의",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "21056dbb-e3b1-4793-9b05-632c969891cd",
+              "a492f7d6-8fc1-4522-8ed0-6f6a5d9e0135",
+              "6f1b6e1a-4812-4452-9c02-e9595440eafd",
+              "7ed5a6db-e014-44ee-b843-c316564a8297"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "스릅스카 공화국: 카란 승리로 도딕 권력 강화",
+        "country": "DE",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "스릅스카 공화국: 카란 승리로 도딕 권력 강화",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "01b2f859-8070-4919-8ac4-46e1ea9e983a",
+              "4dc0d467-93bc-41a8-a0e1-34bca60c4f6f"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "밸리미나 폭동을 야기했던 강간 혐의 십대들, 기소 취하",
+    "countries": [
+      "GB"
+    ],
+    "total_articles": 6,
+    "local_topics": [
+      {
+        "name": "밸리미나 폭동을 야기했던 강간 혐의 십대들, 기소 취하",
+        "country": "GB",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "밸리미나 폭동을 야기했던 강간 혐의 십대들, 기소 취하",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "8a05c288-46d1-429e-bd87-329333d1087c",
+              "b67bb743-84f7-4275-a0e1-f53353dd1640",
+              "b1e21f82-c8df-4840-996a-6f048edab349"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "코티지 파이 때문에 노인 폭행 살해한 강도, 종신형 선고",
+        "country": "GB",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "코티지 파이 때문에 노인 폭행 살해한 강도, 종신형 선고",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "28ebe2a0-47c1-4b41-b8e8-727c76a93287",
+              "7d334971-e8b1-45bc-89f0-890e2f900843",
+              "902c7f82-5802-4827-b91b-5e857c4caab4"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "비즈니스 브리프: 올해의 CEO들",
+    "countries": [
+      "CA"
+    ],
+    "total_articles": 5,
+    "local_topics": [
+      {
+        "name": "비즈니스 브리프: 올해의 CEO들",
+        "country": "CA",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "비즈니스 브리프: 올해의 CEO들",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "4352e46f-495d-49e9-b365-0349246b8349",
+              "21206dd6-ef6c-40a8-b6c8-51ac861024d9",
+              "83521e80-c71e-461e-a5eb-bbc4155b7277"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "프리랜드, 로즈 트러스트 CEO 새 직책 위해 영국서 활동 예상",
+        "country": "CA",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "프리랜드, 로즈 트러스트 CEO 새 직책 위해 영국서 활동 예상",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "07241145-e976-4193-b2d8-675874f7bcbd",
+              "f5c574a5-8123-4b55-adf2-3a8cebbb0ed1"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "트럼프, 우크라이나 평화 추진에 '진전' 시사",
+    "countries": [
+      "RU"
+    ],
+    "total_articles": 5,
+    "local_topics": [
+      {
+        "name": "트럼프, 우크라이나 평화 추진에 '진전' 시사",
+        "country": "RU",
+        "size": 3,
+        "original_data": {
+          "topic_name_ko": "트럼프, 우크라이나 평화 추진에 '진전' 시사",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "f62787d3-5fdb-467e-8e74-ce38339f686b",
+              "c96c13d7-80d0-4665-8bb1-2ea5023217ce",
+              "c655450e-f5ba-4828-9ff1-501069153c82"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "루카셴코, 우크라이나 협상 '방해하지 말라' 촉구",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "루카셴코, 우크라이나 협상 '방해하지 말라' 촉구",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "1c19c40f-8e7d-45c8-af11-1f269255d297",
+              "cf0da4bc-d8c0-4bf2-a737-1345f05f507b"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "수년간의 의회 논쟁 끝에 '잃어버린 캐나다인' 법안 왕실 재가 획득",
+    "countries": [
+      "CA"
+    ],
+    "total_articles": 4,
+    "local_topics": [
+      {
+        "name": "수년간의 의회 논쟁 끝에 '잃어버린 캐나다인' 법안 왕실 재가 획득",
+        "country": "CA",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "수년간의 의회 논쟁 끝에 '잃어버린 캐나다인' 법안 왕실 재가 획득",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "ec8252e4-f09c-405a-8d1f-72813e93fc6e",
+              "de6f7c75-8857-4bc4-a03e-b1d6eb989b51"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "캐나다 도로에 휴대폰 '불통 지역'이 많은 이유",
+        "country": "CA",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "캐나다 도로에 휴대폰 '불통 지역'이 많은 이유",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "a3bf370d-f1c9-4da8-85b7-d1c065271ec7",
+              "803076f3-7be3-4c6c-ab3b-fed4a844372e"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "푸틴, 비슈케크에서 루카셴코와 회담",
+    "countries": [
+      "RU"
+    ],
+    "total_articles": 4,
+    "local_topics": [
+      {
+        "name": "푸틴, 비슈케크에서 루카셴코와 회담",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "푸틴, 비슈케크에서 루카셴코와 회담",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "0edd14e3-b388-4f0b-8029-4c686fb173ec",
+              "6fd56177-5af0-44d6-bb92-6a079e9118b6"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "로스콤나드조르, 왓츠앱 차단 위협",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "로스콤나드조르, 왓츠앱 차단 위협",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "1c3c85ec-275b-49bf-8359-ddcca0f1d972",
+              "45091204-4346-4d01-b2f6-422067f4100c"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "중앙은행, 경기 둔화 시 신용 위험을 주요 취약점으로 지목",
+    "countries": [
+      "RU"
+    ],
+    "total_articles": 4,
+    "local_topics": [
+      {
+        "name": "중앙은행, 경기 둔화 시 신용 위험을 주요 취약점으로 지목",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "중앙은행, 경기 둔화 시 신용 위험을 주요 취약점으로 지목",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "cc0ac4ce-b2ac-40a2-8595-caa6f90472aa",
+              "5b3cc093-031b-422f-84ed-39e8e8253a68"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "볼로딘, 마켓플레이스 할인 문제 관련 협의 진행 중이라고 밝혀",
+        "country": "RU",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "볼로딘, 마켓플레이스 할인 문제 관련 협의 진행 중이라고 밝혀",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "a3123470-1ab7-44c6-8c34-7d449991c65e",
+              "5007492b-6526-4a93-ad45-6f75b93ab377"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "megatopic_name": "한여름 밤의 꿈 리뷰 – 악몽 같은 해석이 잔혹한 저류를 표면으로 끌어올리다",
+    "countries": [
+      "GB"
+    ],
+    "total_articles": 4,
+    "local_topics": [
+      {
+        "name": "한여름 밤의 꿈 리뷰 – 악몽 같은 해석이 잔혹한 저류를 표면으로 끌어올리다",
+        "country": "GB",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "한여름 밤의 꿈 리뷰 – 악몽 같은 해석이 잔혹한 저류를 표면으로 끌어올리다",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "f6a1b4de-5d20-4ce6-828c-5781b48c17c0",
+              "5aac27d1-1000-4728-bc70-cc0b6dbce1e5"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      },
+      {
+        "name": "데이비드 래미가 배심원단 사용을 줄이는 것이 옳다 – 명백한 사건이다 | 사이먼 젠킨스",
+        "country": "GB",
+        "size": 2,
+        "original_data": {
+          "topic_name_ko": "데이비드 래미가 배심원단 사용을 줄이는 것이 옳다 – 명백한 사건이다 | 사이먼 젠킨스",
+          "summary_ko": "",
+          "keywords": [],
+          "category": "Unclassified",
+          "stances": {
+            "factual": [
+              "41189a40-edda-4a34-afa7-e892c1a7aa6d",
+              "a9ed6b90-1597-46a5-8ac8-fb0b3a3fb1e3"
+            ],
+            "critical": [],
+            "supportive": []
+          }
+        }
+      }
+    ]
+  }
+]

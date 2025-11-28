@@ -1,0 +1,61 @@
+```json
+{
+  "topics": [
+    {
+      "name": "드라마 신작 및 출연진 소식",
+      "headline": "박은빈X양세종, 오컬트 로맨스 '오싹한 연애'로 돌아온다! 🎬",
+      "article_ids": [2, 6, 12],
+      "title_en": "New Drama & Cast News"
+    },
+    {
+      "name": "주요 기업 임원 인사 및 조직 개편",
+      "headline": "삼성·LG, AX·HBM 집중! 대기업들 조직 개편 바람 부는 이유는? 💼",
+      "article_ids": [4, 7, 11],
+      "title_en": "Major Corporate Executive Reshuffles & Restructuring"
+    },
+    {
+      "name": "K-POP 및 엔터테인먼트 업계 이슈",
+      "headline": "트와이스, '케데헌' OST로 美 플래티넘! K팝 걸그룹 최초 기록 세웠다 🏆",
+      "article_ids": [5, 13, 20],
+      "title_en": "K-POP & Entertainment Industry Issues"
+    },
+    {
+      "name": "국제 정세 및 외교",
+      "headline": "폴란드 잠수함 사업 고배, 한국 방산 발목 잡은 지정학적 장벽은? 🌍",
+      "article_ids": [3, 15],
+      "title_en": "International Affairs & Diplomacy"
+    },
+    {
+      "name": "사회 및 법적 판결",
+      "headline": "5.18 고교생 44년 만에 면소! 코로나 예배 강행 목사 벌금형, 정의는 어디로? ⚖️",
+      "article_ids": [8, 17],
+      "title_en": "Social & Legal Verdicts"
+    },
+    {
+      "name": "성수동 지역 개발 및 경제 활동",
+      "headline": "성수동에 79층 빌딩 들어선다! 팝업스토어까지, 이 동네 왜 이렇게 핫해? ✨",
+      "article_ids": [16, 18],
+      "title_en": "Seongsu-dong Area Development & Economic Activity"
+    },
+    {
+      "name": "비즈니스 혁신 및 ESG 경영",
+      "headline": "서울대 출신 경영자들, AI·웹3 융합 도전! SK바이오팜은 신약 개발 박차 🚀",
+      "article_ids": [9, 10, 14],
+      "title_en": "Business Innovation & ESG Management"
+    },
+    {
+      "name": "국내 정치 및 예산 협력",
+      "headline": "이재명 대표, 예산안 초당적 협력 촉구! 야당 요구 과감히 수용할까? 🤝",
+      "article_ids": [19],
+      "title_en": "Domestic Politics & Budget Cooperation"
+    },
+    {
+      "name": "스포츠 - 격투기 한일전",
+      "headline": "축구선수 출신 배동현, 일본 챔피언과 한일전! 링 위에서 펼쳐질 숙명의 대결은? 🥊",
+      "article_ids": [1],
+      "title_en": "Sports - MMA Korea-Japan Match"
+    }
+  ],
+  "unassigned_article_ids": []
+}
+```

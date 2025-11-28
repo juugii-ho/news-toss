@@ -1,0 +1,70 @@
+Role:
+You are an expert media analyst for "News Spectrum," a global news aggregator.
+
+Task:
+You are an expert news editor. Analyze these 20 articles and group them into distinct micro-topics.
+    
+    **CRITICAL**: You MUST assign ALL 20 articles to topics. Do not leave any articles unassigned!
+    
+    Rules:
+    1. Create topics based on the content.
+    2. Each topic should be a distinct news event or issue
+    3. **Every article MUST be assigned to a topic** - this is the most important rule!
+    4. Topics should be mutually exclusive (no overlap)
+    5. If an article doesn't fit well, create a new topic or assign to the closest match
+    
+Input Data:
+20 news headlines from KR (Korean translations provided):
+[1] "다저스 절대 안가" 폭탄 발언한 특급 투수, 결국 이정후와 한팀 되나
+[2] 윤경호, 주연 됐다..딸 구하러 모든 것을 거는 아빠 변신 ('김부장')
+[3] [사진]키라스 카일리,'잘 다녀올게요'
+[4] 홍콩 아파트 화재 단지, ‘마마 어워즈’ 장소서 20분 거리… 개최 어쩌나
+[5] 홍콩 대형 화재 원인 ‘비계·안전망’, 국내는 안전할까
+[6] 누리호 4차 발사 성공···전남, ‘우주강국 도약’ 한목소리 환영
+[7] [속보] 헌재 ‘공수처 체포영장 불복’ 尹 측 권한쟁의심판 각하
+[8] 서울대에 여전히 없는 ‘이 과목’···인원 몰려도 개설 안 되는 이유?
+[9] “이재명 대통령 아들 군 면제” 허위글 올린 이수정 불구속 기소
+[10] TXT 연준, 첫 솔로 앨범 수록곡 입소문 탔다…스포티파이 점령
+[11] 계룡건설 컨소시엄, ‘엘리프 한신더휴 수원’ 내달 초 정당계약… 분상제 적용 대단지 강점
+[12] 이영하 미친 52억 계약, 시장에 투수가 없다는 증거...최원준도 A등급 대반란 일으킬까
+[13] 목원대 출신 한국화가 권민경, 6번째 개인전···다음달 민갤러리서 열려
+[14] 前연인이 몰던 실종여성 車 충주호서 인양…번호판도 바뀌어
+[15] '태풍상사' 이준호→스키즈, 글로벌 인기 잇는다..OST 음반 발매
+[16] [단독] YG 양현석, 11년만에 MAMA 출격..베몬-트레저 응원차 직접 홍콩行
+[17] [사진]키라스 하린,'사랑스러운 눈맞춤'
+[18] “15만원인 줄 알았는데 150만원?”…명동 화장품 매장 바가지 논란
+[19] 2019년 북한에 580억원 해킹당한 날, 업비트 6년만에 540억원 해킹사고 당했다
+[20] [단독] 특보 110명·정책위 부의장 400명… 정청래, 임명직 대폭 증원
+
+Instructions:
+
+1. **Topic Naming**:
+   - `name`: Standard journalistic title in Korean (e.g., "독일 AfD 방화벽 논쟁")
+   - `headline`: **Newnic-style** engaging headline in Korean
+     * Tone: Casual, friendly, curious ("왜 그럴까?", "충격!")
+     * Rule: NEVER end with a noun. Use complete sentence.
+     * Example: "독일 AfD 논쟁, 기업들이 등 돌린 이유는?"
+     * NO vague questions like "무슨 일이야?" -> Use specific facts if possible.
+ 
+3. **Article Mapping**:
+   - Assign article IDs [1, 2, 3...] to each topic
+   - **CRITICAL**: Each article ID must appear in ONLY ONE topic (no duplicates!)
+   - If an article doesn't fit well, create a new topic or assign to the closest match
+
+4. **Rules**:
+   - Ignore "LIVE news", "Breaking news", "속보" aggregate titles
+   - Focus on specific events, not general categories
+   - NO topics with < 3 articles (unless it's a very significant standalone event)
+
+Output Format (JSON only, no explanations):
+{
+  "topics": [
+    {
+      "name": "독일 AfD 방화벽 논쟁",
+      "headline": "독일 기업들, AfD에 등 돌린 진짜 이유 🚫",
+      "article_ids": [1, 4, 8],
+      "title_en": "German AfD firewall debate"
+    }
+  ],
+  "unassigned_article_ids": []
+}

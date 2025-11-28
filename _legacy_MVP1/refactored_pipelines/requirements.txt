@@ -1,0 +1,17 @@
+# Core Libraries
+pandas
+numpy
+scikit-learn
+
+# API Clients
+openai
+google-generativeai
+supabase
+psycopg2-binary
+
+# Other utilities
+requests
+beautifulsoup4
+feedparser
+tqdm
+python-dotenv

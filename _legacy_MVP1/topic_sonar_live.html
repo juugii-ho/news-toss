@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글로벌 뉴스 지형도 - Live Data</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif;
+            background: #fafaf9;
+            color: #27272a;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Loading */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #fafaf9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 16px;
+            z-index: 1000;
+        }
+
+        .loading.hidden {
+            display: none;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #e4e4e7;
+            border-top-color: #10b981;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 14px;
+            color: #71717a;
+        }
+
+        /* Header */
+        .header {
+            padding: 20px 40px;
+            background: white;
+            border-bottom: 1px solid #e4e4e7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #18181b;
+        }
+
+        .meta {
+            font-size: 13px;
+            color: #71717a;
+        }
+
+        .status-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #10b981;
+            border-radius: 50%;
+            margin-right: 6px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Canvas */
+        .canvas-wrapper {
+            flex: 1;
+            position: relative;
+            background: #fafaf9;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: absolute;
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 8px;
+            padding: 12px 16px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            z-index: 100;
+            max-width: 300px;
+        }
+
+        .tooltip.show {
+            opacity: 1;
+        }
+
+        .tooltip-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 6px;
+        }
+
+        .tooltip-meta {
+            font-size: 12px;
+            color: #71717a;
+        }
+
+        .tooltip-badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            margin-top: 6px;
+        }
+
+        /* Layer Controls */
+        .layer-controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 8px;
+            padding: 16px;
+            z-index: 10;
+            min-width: 200px;
+        }
+
+        .layer-title {
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+
+        .layer-toggle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .layer-toggle:hover {
+            background: #f4f4f5;
+        }
+
+        .layer-checkbox {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .layer-label {
+            font-size: 13px;
+            color: #52525b;
+            flex: 1;
+            cursor: pointer;
+        }
+
+        .layer-count {
+            font-size: 11px;
+            color: #a1a1aa;
+        }
+
+        .layer-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 4px;
+        }
+
+        /* Legend */
+        .legend {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 8px;
+            padding: 16px;
+            font-size: 12px;
+            max-width: 200px;
+        }
+
+        .legend-title {
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 10px;
+        }
+
+        .legend-section {
+            margin-bottom: 12px;
+        }
+
+        .legend-section-title {
+            font-size: 11px;
+            color: #71717a;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+            color: #52525b;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Controls */
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 20px;
+            padding: 6px;
+            display: flex;
+            gap: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .control-btn {
+            background: none;
+            border: none;
+            padding: 6px 14px;
+            font-size: 12px;
+            color: #52525b;
+            cursor: pointer;
+            border-radius: 14px;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        .control-btn:hover {
+            background: #f4f4f5;
+            color: #18181b;
+        }
+
+        .control-btn.active {
+            background: #18181b;
+            color: white;
+        }
+
+        /* Error */
+        .error {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border: 1px solid #fca5a5;
+            border-radius: 8px;
+            padding: 24px;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .error-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #991b1b;
+            margin-bottom: 8px;
+        }
+
+        .error-message {
+            font-size: 13px;
+            color: #71717a;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <div class="loading-text">데이터 로딩 중...</div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="title">글로벌 뉴스 지형도</div>
+            <div class="meta">
+                <span class="status-dot"></span>
+                <span id="metaText">실시간 데이터</span>
+            </div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="canvas"></canvas>
+
+            <div class="tooltip" id="tooltip">
+                <div class="tooltip-title"></div>
+                <div class="tooltip-meta"></div>
+                <div class="tooltip-badge"></div>
+            </div>
+
+            <div class="layer-controls">
+                <div class="layer-title">레이어</div>
+
+                <label class="layer-toggle">
+                    <input type="checkbox" class="layer-checkbox" id="layerArticles" checked>
+                    <span class="layer-indicator" style="background: #a1a1aa;"></span>
+                    <span class="layer-label">개별 기사</span>
+                    <span class="layer-count" id="countArticles">-</span>
+                </label>
+
+                <label class="layer-toggle">
+                    <input type="checkbox" class="layer-checkbox" id="layerNational" checked>
+                    <span class="layer-indicator" style="background: #60a5fa;"></span>
+                    <span class="layer-label">국내 토픽</span>
+                    <span class="layer-count" id="countNational">-</span>
+                </label>
+
+                <label class="layer-toggle">
+                    <input type="checkbox" class="layer-checkbox" id="layerMega" checked>
+                    <span class="layer-indicator" style="background: #10b981;"></span>
+                    <span class="layer-label">글로벌 메가</span>
+                    <span class="layer-count" id="countMega">-</span>
+                </label>
+            </div>
+
+            <div class="legend">
+                <div class="legend-title">범례</div>
+
+                <div class="legend-section">
+                    <div class="legend-section-title">국가 (기사)</div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #ef4444;"></span>
+                        <span>미국</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #3b82f6;"></span>
+                        <span>영국</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #8b5cf6;"></span>
+                        <span>한국</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #f59e0b;"></span>
+                        <span>기타</span>
+                    </div>
+                </div>
+
+                <div class="legend-section">
+                    <div class="legend-section-title">성향 (토픽)</div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #f87171;"></span>
+                        <span>비판적</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #d4d4d8;"></span>
+                        <span>중립</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #10b981;"></span>
+                        <span>지지</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="control-btn" onclick="triggerPulse()">펄스 트리거</button>
+                <button class="control-btn" onclick="resetView()">리셋</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.11.0"></script>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const tooltip = document.getElementById('tooltip');
+        const loading = document.getElementById('loading');
+
+        let width, height;
+        let articles = [];
+        let nationalTopics = [];
+        let megaTopics = [];
+        let hoveredItem = null;
+        let activePulses = [];
+
+        let layerStates = {
+            articles: true,
+            national: true,
+            mega: true
+        };
+
+        const COUNTRY_COLORS = {
+            'US': '#ef4444', 'UK': '#3b82f6', 'KR': '#8b5cf6', 'DE': '#f59e0b',
+            'FR': '#ec4899', 'JP': '#06b6d4', 'CN': '#f97316', 'RU': '#84cc16'
+        };
+
+        const STANCE_COLORS = {
+            critical: '#f87171',
+            neutral: '#d4d4d8',
+            supportive: '#10b981'
+        };
+
+        function getCountryColor(code) {
+            return COUNTRY_COLORS[code] || '#a1a1aa';
+        }
+
+        function getStanceColor(score) {
+            if (score < 34) return STANCE_COLORS.critical;
+            if (score < 67) return STANCE_COLORS.neutral;
+            return STANCE_COLORS.supportive;
+        }
+
+        function getStanceLabel(score) {
+            if (score < 34) return { text: '비판적', bg: '#fee2e2', color: '#991b1b' };
+            if (score < 67) return { text: '중립', bg: '#f4f4f5', color: '#52525b' };
+            return { text: '지지', bg: '#d1fae5', color: '#065f46' };
+        }
+
+        // t-SNE 간소화 버전 (PCA + 약간의 jitter)
+        function reduceDimensions(embeddings) {
+            if (embeddings.length === 0) return [];
+
+            // PCA를 간단히 구현 (첫 2개 주성분만)
+            const dim = embeddings[0].length;
+            const n = embeddings.length;
+
+            // 평균 제거
+            const means = new Array(dim).fill(0);
+            embeddings.forEach(emb => {
+                emb.forEach((val, i) => means[i] += val);
+            });
+            means.forEach((_, i) => means[i] /= n);
+
+            const centered = embeddings.map(emb =>
+                emb.map((val, i) => val - means[i])
+            );
+
+            // 간단한 투영 (첫 2개 차원 + normalize)
+            const projected = centered.map(emb => {
+                const x = emb.slice(0, 384).reduce((a, b) => a + b, 0) / 384;
+                const y = emb.slice(384).reduce((a, b) => a + b, 0) / (dim - 384);
+                return [x, y];
+            });
+
+            // Normalize to 0-1
+            const xs = projected.map(p => p[0]);
+            const ys = projected.map(p => p[1]);
+            const minX = Math.min(...xs), maxX = Math.max(...xs);
+            const minY = Math.min(...ys), maxY = Math.max(...ys);
+            const rangeX = maxX - minX || 1;
+            const rangeY = maxY - minY || 1;
+
+            return projected.map(([x, y]) => ({
+                x: 0.15 + ((x - minX) / rangeX) * 0.7,
+                y: 0.15 + ((y - minY) / rangeY) * 0.7
+            }));
+        }
+
+        async function loadData() {
+            try {
+                // Fetch topics
+                const topicsRes = await fetch('/api/topics');
+                if (!topicsRes.ok) throw new Error('Failed to fetch topics');
+                const topicsData = await topicsRes.json();
+
+                console.log('Loaded topics:', topicsData.length);
+
+                // Filter topics with embeddings
+                const validTopics = topicsData.filter(t =>
+                    t.centroid_embedding && t.article_count >= 3
+                );
+
+                if (validTopics.length === 0) {
+                    throw new Error('No valid topics with embeddings found');
+                }
+
+                // Extract embeddings and reduce dimensions
+                const embeddings = validTopics.map(t => {
+                    const emb = t.centroid_embedding;
+                    return typeof emb === 'string' ? JSON.parse(emb) : emb;
+                });
+
+                console.log('Reducing dimensions...');
+                const positions = reduceDimensions(embeddings);
+
+                // Classify topics
+                megaTopics = [];
+                nationalTopics = [];
+
+                validTopics.forEach((topic, i) => {
+                    const pos = positions[i];
+                    const importance = topic.article_count * topic.country_count;
+
+                    const baseTopic = {
+                        id: topic.id,
+                        title: topic.title_kr || topic.title,
+                        article_count: topic.article_count,
+                        country_count: topic.country_count,
+                        stance: topic.avg_stance_score || 50,
+                        x: pos.x,
+                        y: pos.y,
+                        absX: pos.x * width,
+                        absY: pos.y * height,
+                        targetX: pos.x * width,
+                        targetY: pos.y * height,
+                        color: getStanceColor(topic.avg_stance_score || 50),
+                        scale: 0,
+                        targetScale: 1,
+                        pulsePhase: Math.random() * Math.PI * 2
+                    };
+
+                    if (topic.country_count >= 3) {
+                        megaTopics.push({
+                            ...baseTopic,
+                            type: 'mega',
+                            size: Math.sqrt(importance) * 4 + 30,
+                            countries: topic.countries || []
+                        });
+                    } else if (topic.country_count >= 1) {
+                        nationalTopics.push({
+                            ...baseTopic,
+                            type: 'national',
+                            size: Math.sqrt(importance) * 3 + 15,
+                            country: topic.countries?.[0] || 'US'
+                        });
+                    }
+                });
+
+                console.log(`Mega: ${megaTopics.length}, National: ${nationalTopics.length}`);
+
+                // Generate scattered articles around topics
+                articles = [];
+                let articleId = 1000;
+
+                [...megaTopics, ...nationalTopics].forEach(topic => {
+                    const articlesPerTopic = Math.min(topic.article_count, 20); // Limit for performance
+                    const countries = topic.countries || [topic.country];
+
+                    for (let i = 0; i < articlesPerTopic; i++) {
+                        const angle = Math.random() * Math.PI * 2;
+                        const distance = Math.random() * (topic.size + 40);
+                        const country = countries[i % countries.length];
+
+                        articles.push({
+                            id: articleId++,
+                            type: 'article',
+                            title: `${country} 기사`,
+                            country: country,
+                            parentTopic: topic.id,
+                            absX: topic.absX + Math.cos(angle) * distance,
+                            absY: topic.absY + Math.sin(angle) * distance,
+                            size: 3,
+                            color: getCountryColor(country),
+                            scale: 0,
+                            targetScale: 1
+                        });
+                    }
+                });
+
+                // Update counts
+                document.getElementById('countArticles').textContent = articles.length;
+                document.getElementById('countNational').textContent = nationalTopics.length;
+                document.getElementById('countMega').textContent = megaTopics.length;
+
+                // Update meta
+                const total = articles.length + nationalTopics.length + megaTopics.length;
+                document.getElementById('metaText').textContent =
+                    `총 ${total}개 항목 · 메가 ${megaTopics.length} · 국내 ${nationalTopics.length}`;
+
+                // Hide loading
+                loading.classList.add('hidden');
+
+                // Start animations
+                [...articles, ...nationalTopics, ...megaTopics].forEach((item, i) => {
+                    setTimeout(() => {
+                        item.targetScale = 1;
+                    }, i * 3 + 300);
+                });
+
+                // Start random pulses
+                setTimeout(() => {
+                    triggerPulse();
+                    startRandomPulses();
+                }, 2000);
+
+            } catch (error) {
+                console.error('Error loading data:', error);
+                loading.innerHTML = `
+                    <div class="error">
+                        <div class="error-title">데이터 로드 실패</div>
+                        <div class="error-message">${error.message}</div>
+                        <div class="error-message" style="margin-top: 12px;">
+                            Next.js dev 서버가 실행 중인지 확인하세요:<br>
+                            <code>cd app/frontend && npm run dev</code>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        function resize() {
+            width = canvas.offsetWidth;
+            height = canvas.offsetHeight;
+            canvas.width = width;
+            canvas.height = height;
+
+            // Update positions
+            [...articles, ...nationalTopics, ...megaTopics].forEach(item => {
+                if (item.x !== undefined) {
+                    item.absX = item.x * width;
+                    item.absY = item.y * height;
+                    item.targetX = item.absX;
+                    item.targetY = item.absY;
+                }
+            });
+        }
+
+        function drawGrid() {
+            ctx.strokeStyle = '#f5f5f4';
+            ctx.lineWidth = 1;
+            const step = 60;
+
+            for (let x = 0; x < width; x += step) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, height);
+                ctx.stroke();
+            }
+            for (let y = 0; y < height; y += step) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(width, y);
+                ctx.stroke();
+            }
+        }
+
+        function draw() {
+            ctx.fillStyle = '#fafaf9';
+            ctx.fillRect(0, 0, width, height);
+            drawGrid();
+
+            const spring = 0.15;
+
+            // Layer 1: Articles
+            if (layerStates.articles) {
+                articles.forEach(article => {
+                    article.scale += (article.targetScale - article.scale) * spring;
+                    const isHovered = hoveredItem === article;
+                    const size = article.size * article.scale;
+
+                    if (size < 0.5) return;
+
+                    ctx.fillStyle = article.color + (isHovered ? 'FF' : 'CC');
+                    ctx.strokeStyle = isHovered ? 'white' : 'transparent';
+                    ctx.lineWidth = 1.5;
+
+                    ctx.beginPath();
+                    ctx.arc(article.absX, article.absY, size, 0, Math.PI * 2);
+                    ctx.fill();
+                    if (isHovered) ctx.stroke();
+                });
+            }
+
+            // Layer 2: National Topics
+            if (layerStates.national) {
+                nationalTopics.forEach(topic => {
+                    topic.scale += (topic.targetScale - topic.scale) * spring;
+
+                    const breathe = Math.sin(Date.now() / 2000 + topic.pulsePhase) * 1.5;
+                    const currentSize = topic.size * topic.scale + breathe;
+
+                    if (currentSize < 1) return;
+
+                    const isHovered = hoveredItem === topic;
+
+                    ctx.shadowColor = 'rgba(0,0,0,0.1)';
+                    ctx.shadowBlur = 8;
+                    ctx.shadowOffsetY = 3;
+
+                    ctx.fillStyle = topic.color + (isHovered ? 'DD' : 'AA');
+                    ctx.strokeStyle = 'white';
+                    ctx.lineWidth = 2;
+
+                    ctx.beginPath();
+                    ctx.arc(topic.absX, topic.absY, currentSize, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.stroke();
+
+                    ctx.shadowColor = 'transparent';
+
+                    if (isHovered) {
+                        ctx.strokeStyle = topic.color;
+                        ctx.lineWidth = 1.5;
+                        ctx.setLineDash([3, 3]);
+                        ctx.beginPath();
+                        ctx.arc(topic.absX, topic.absY, currentSize + 6, 0, Math.PI * 2);
+                        ctx.stroke();
+                        ctx.setLineDash([]);
+                    }
+                });
+            }
+
+            // Layer 3: Mega Topics with pulses
+            if (layerStates.mega) {
+                megaTopics.forEach(topic => {
+                    topic.scale += (topic.targetScale - topic.scale) * spring;
+
+                    const breathe = Math.sin(Date.now() / 2000 + topic.pulsePhase) * 2;
+                    const currentSize = topic.size * topic.scale + breathe;
+
+                    if (currentSize < 1) return;
+
+                    const isHovered = hoveredItem === topic;
+
+                    // Random Pulse
+                    const activePulse = activePulses.find(p => p.topicId === topic.id);
+                    if (activePulse) {
+                        const elapsed = Date.now() - activePulse.startTime;
+                        const pulseRadius = elapsed * 0.15;
+                        const pulseDuration = 2000;
+
+                        if (elapsed < pulseDuration) {
+                            const opacity = Math.max(0, 1 - elapsed / pulseDuration);
+
+                            [pulseRadius, pulseRadius * 0.6].forEach(radius => {
+                                if (radius > 0) {
+                                    ctx.strokeStyle = topic.color + Math.floor(opacity * 100).toString(16).padStart(2, '0');
+                                    ctx.lineWidth = 3;
+                                    ctx.beginPath();
+                                    ctx.arc(topic.absX, topic.absY, radius, 0, Math.PI * 2);
+                                    ctx.stroke();
+                                }
+                            });
+                        } else {
+                            activePulses = activePulses.filter(p => p.topicId !== topic.id);
+                        }
+                    }
+
+                    ctx.shadowColor = 'rgba(0,0,0,0.12)';
+                    ctx.shadowBlur = 12;
+                    ctx.shadowOffsetY = 4;
+
+                    ctx.fillStyle = topic.color + (isHovered ? 'EE' : 'BB');
+                    ctx.strokeStyle = 'white';
+                    ctx.lineWidth = isHovered ? 3 : 2;
+
+                    ctx.beginPath();
+                    ctx.arc(topic.absX, topic.absY, currentSize, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.stroke();
+
+                    ctx.shadowColor = 'transparent';
+
+                    if (isHovered) {
+                        ctx.strokeStyle = topic.color;
+                        ctx.lineWidth = 1.5;
+                        ctx.setLineDash([3, 3]);
+                        ctx.beginPath();
+                        ctx.arc(topic.absX, topic.absY, currentSize + 8, 0, Math.PI * 2);
+                        ctx.stroke();
+                        ctx.setLineDash([]);
+                    }
+                });
+            }
+
+            requestAnimationFrame(draw);
+        }
+
+        // Mouse interaction
+        canvas.addEventListener('mousemove', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+
+            let found = null;
+
+            const checkLayers = [];
+            if (layerStates.mega) checkLayers.push(...megaTopics);
+            if (layerStates.national) checkLayers.push(...nationalTopics);
+            if (layerStates.articles) checkLayers.push(...articles);
+
+            for (let item of checkLayers) {
+                const dist = Math.sqrt(
+                    Math.pow(mouseX - item.absX, 2) +
+                    Math.pow(mouseY - item.absY, 2)
+                );
+                const checkSize = item.type === 'article' ? item.size : item.size * item.scale;
+                if (dist < checkSize) {
+                    found = item;
+                    break;
+                }
+            }
+
+            if (found !== hoveredItem) {
+                hoveredItem = found;
+
+                if (found) {
+                    if (found.type === 'article') {
+                        tooltip.querySelector('.tooltip-title').textContent = found.title;
+                        tooltip.querySelector('.tooltip-meta').innerHTML = `<span>${found.country}</span>`;
+                        tooltip.querySelector('.tooltip-badge').textContent = '개별 기사';
+                        tooltip.querySelector('.tooltip-badge').style.background = '#f4f4f5';
+                        tooltip.querySelector('.tooltip-badge').style.color = '#52525b';
+                    } else {
+                        const stance = getStanceLabel(found.stance);
+                        tooltip.querySelector('.tooltip-title').textContent = found.title;
+                        tooltip.querySelector('.tooltip-meta').innerHTML = `<span>${found.country_count}개국 · ${found.article_count}건</span>`;
+                        const badge = tooltip.querySelector('.tooltip-badge');
+                        badge.textContent = stance.text;
+                        badge.style.background = stance.bg;
+                        badge.style.color = stance.color;
+                    }
+
+                    tooltip.style.left = e.clientX + 20 + 'px';
+                    tooltip.style.top = e.clientY - 40 + 'px';
+                    tooltip.classList.add('show');
+
+                    if (found.type !== 'article') {
+                        found.targetScale = 1.15;
+                    }
+                } else {
+                    tooltip.classList.remove('show');
+                }
+            }
+
+            [...megaTopics, ...nationalTopics].forEach(t => {
+                if (t !== hoveredItem && t.targetScale > 1) {
+                    t.targetScale = 1;
+                }
+            });
+
+            if (found) {
+                tooltip.style.left = e.clientX + 20 + 'px';
+                tooltip.style.top = e.clientY - 40 + 'px';
+            }
+        });
+
+        canvas.addEventListener('mouseleave', () => {
+            hoveredItem = null;
+            tooltip.classList.remove('show');
+            [...megaTopics, ...nationalTopics].forEach(t => t.targetScale = 1);
+        });
+
+        canvas.addEventListener('click', () => {
+            if (hoveredItem && hoveredItem.type !== 'article') {
+                window.location.href = `/topics/${hoveredItem.id}`;
+            }
+        });
+
+        // Layer toggles
+        document.getElementById('layerArticles').addEventListener('change', (e) => {
+            layerStates.articles = e.target.checked;
+            articles.forEach(a => a.targetScale = e.target.checked ? 1 : 0);
+        });
+
+        document.getElementById('layerNational').addEventListener('change', (e) => {
+            layerStates.national = e.target.checked;
+            nationalTopics.forEach(t => t.targetScale = e.target.checked ? 1 : 0);
+        });
+
+        document.getElementById('layerMega').addEventListener('change', (e) => {
+            layerStates.mega = e.target.checked;
+            megaTopics.forEach(t => t.targetScale = e.target.checked ? 1 : 0);
+        });
+
+        function triggerPulse() {
+            if (megaTopics.length === 0) return;
+
+            const numPulses = Math.random() > 0.5 ? 2 : 1;
+            const shuffled = [...megaTopics].sort(() => Math.random() - 0.5);
+
+            for (let i = 0; i < Math.min(numPulses, shuffled.length); i++) {
+                const topic = shuffled[i];
+                if (!activePulses.find(p => p.topicId === topic.id)) {
+                    activePulses.push({
+                        topicId: topic.id,
+                        startTime: Date.now() + (i * 500)
+                    });
+                }
+            }
+        }
+
+        function startRandomPulses() {
+            function scheduleNext() {
+                const delay = 3000 + Math.random() * 4000;
+                setTimeout(() => {
+                    if (layerStates.mega && megaTopics.length > 0) {
+                        triggerPulse();
+                    }
+                    scheduleNext();
+                }, delay);
+            }
+            scheduleNext();
+        }
+
+        function resetView() {
+            loadData();
+        }
+
+        // Init
+        resize();
+        window.addEventListener('resize', resize);
+        draw();
+        loadData();
+    </script>
+</body>
+</html>

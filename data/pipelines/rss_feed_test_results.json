@@ -1,0 +1,220 @@
+{
+  "US": {
+    "name": "CNN",
+    "bias": "NEUTRAL",
+    "url": "http://rss.cnn.com/rss/edition.rss",
+    "success": true,
+    "source_title": "CNN.com - RSS Channel - App International Edition",
+    "total_items": 50,
+    "sample_item": {
+      "title": "No Title",
+      "link": "",
+      "published_at": null,
+      "description": "",
+      "categories": [],
+      "author": null
+    }
+  },
+  "GB": {
+    "name": "BBC",
+    "bias": "NEUTRAL",
+    "url": "https://feeds.bbci.co.uk/news/rss.xml",
+    "success": true,
+    "source_title": "BBC News",
+    "total_items": 33,
+    "sample_item": {
+      "title": "No Title",
+      "link": "",
+      "published_at": null,
+      "description": "",
+      "categories": [],
+      "author": null
+    }
+  },
+  "DE": {
+    "name": "Deutsche Welle",
+    "bias": "NEUTRAL",
+    "url": "https://rss.dw.com/rdf/rss-en-all",
+    "success": true,
+    "source_title": "Deutsche Welle",
+    "total_items": 148,
+    "sample_item": {
+      "title": "AfD Youth: A training ground for Germany's far right",
+      "link": "https://www.dw.com/en/afd-youth-a-training-ground-for-germany-s-far-right/a-74934896?maca=en-rss-en-all-1573-rdf",
+      "published_at": "2025-11-28T13:30:00Z",
+      "description": "The far-right AfD party is launching a new youth organization. Experts expect it to be as radical as its predecessor.",
+      "categories": [],
+      "author": null
+    }
+  },
+  "FR": {
+    "name": "France 24",
+    "bias": "NEUTRAL",
+    "url": "https://www.france24.com/en/rss",
+    "success": true,
+    "source_title": "France 24 - International breaking news, top stories and headlines",
+    "total_items": 24,
+    "sample_item": {
+      "title": "No Title",
+      "link": "",
+      "published_at": null,
+      "description": "",
+      "categories": [
+        "Focus"
+      ],
+      "author": null
+    }
+  },
+  "IT": {
+    "name": "La Repubblica",
+    "bias": "PROGRESSIVE",
+    "url": "https://www.repubblica.it/rss/homepage/rss2.0.xml",
+    "success": true,
+    "source_title": "Repubblica.it",
+    "total_items": 30,
+    "sample_item": {
+      "title": "No Title",
+      "link": "",
+      "published_at": null,
+      "description": "",
+      "categories": [
+        "Cronaca"
+      ],
+      "author": "repubblicawww@repubblica.it (Redazione Repubblica.it)"
+    }
+  },
+  "JP": {
+    "name": "NHK",
+    "bias": "NEUTRAL",
+    "url": "https://www3.nhk.or.jp/rss/news/cat0.xml",
+    "success": true,
+    "source_title": "NHKニュース",
+    "total_items": 7,
+    "sample_item": {
+      "title": "No Title",
+      "link": "",
+      "published_at": null,
+      "description": "",
+      "categories": [],
+      "author": null
+    }
+  },
+  "KR": {
+    "name": "조선일보",
+    "bias": "CONSERVATIVE",
+    "url": "https://www.chosun.com/arc/outboundfeeds/rss/?outputType=xml",
+    "success": true,
+    "source_title": "조선일보",
+    "total_items": 100,
+    "sample_item": {
+      "title": "No Title",
+      "link": "",
+      "published_at": null,
+      "description": "",
+      "categories": [],
+      "author": null
+    }
+  },
+  "CA": {
+    "name": "CBC",
+    "bias": "NEUTRAL",
+    "url": "https://www.cbc.ca/cmlink/rss-topstories",
+    "success": true,
+    "source_title": "CBC | Top Stories News",
+    "total_items": 20,
+    "sample_item": {
+      "title": "No Title",
+      "link": "",
+      "published_at": null,
+      "description": "",
+      "categories": [
+        "News/Canada"
+      ],
+      "author": null
+    }
+  },
+  "AU": {
+    "name": "ABC Australia",
+    "bias": "NEUTRAL",
+    "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
+    "success": true,
+    "source_title": "Just In",
+    "total_items": 25,
+    "sample_item": {
+      "title": "No Title",
+      "link": "",
+      "published_at": null,
+      "description": "",
+      "categories": [
+        "Corruption",
+        "World Politics",
+        "Law, Crime and Justice"
+      ],
+      "author": null
+    }
+  },
+  "BE": {
+    "name": "RTBF",
+    "bias": "NEUTRAL",
+    "url": "https://rss.rtbf.be/article/rss/highlight_rtbf_info.xml?source=internal",
+    "success": true,
+    "source_title": " - Info",
+    "total_items": 20,
+    "sample_item": {
+      "title": "No Title",
+      "link": "",
+      "published_at": null,
+      "description": "",
+      "categories": [],
+      "author": "rtbf.info@rtbf.be (Africa Gordillo)"
+    }
+  },
+  "NL": {
+    "name": "NOS",
+    "bias": "NEUTRAL",
+    "url": "https://feeds.nos.nl/nosnieuwsalgemeen",
+    "success": true,
+    "source_title": "NOS Nieuws",
+    "total_items": 20,
+    "sample_item": {
+      "title": "No Title",
+      "link": "",
+      "published_at": null,
+      "description": "",
+      "categories": [],
+      "author": null
+    }
+  },
+  "RU": {
+    "name": "RT (Russia Today)",
+    "bias": "CONSERVATIVE",
+    "url": "https://www.rt.com/rss/news/",
+    "success": true,
+    "source_title": "RT World News",
+    "total_items": 100,
+    "sample_item": {
+      "title": "No Title",
+      "link": "",
+      "published_at": null,
+      "description": "",
+      "categories": [],
+      "author": null
+    }
+  },
+  "CN": {
+    "name": "South China Morning Post",
+    "bias": "NEUTRAL",
+    "url": "https://www.scmp.com/rss/91/feed",
+    "success": true,
+    "source_title": "News - South China Morning Post",
+    "total_items": 50,
+    "sample_item": {
+      "title": "No Title",
+      "link": "",
+      "published_at": null,
+      "description": "",
+      "categories": [],
+      "author": "Natalie Wong,Ambrose Li,Mike Chan"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+feedparser
+supabase
+google-generativeai
+langdetect
+python-dotenv
+numpy
+scikit-learn
+hdbscan
+beautifulsoup4
+python-dateutil

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글로벌 뉴스 지형도</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif;
+            background: #fafaf9;
+            color: #27272a;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header - 차분함 */
+        .header {
+            padding: 20px 40px;
+            background: white;
+            border-bottom: 1px solid #e4e4e7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #18181b;
+        }
+
+        .meta {
+            font-size: 13px;
+            color: #71717a;
+        }
+
+        /* Canvas */
+        .canvas-wrapper {
+            flex: 1;
+            position: relative;
+            background: #fafaf9;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        /* Tooltip - 호버 시에만 */
+        .tooltip {
+            position: absolute;
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 8px;
+            padding: 12px 16px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            z-index: 100;
+            max-width: 280px;
+        }
+
+        .tooltip.show {
+            opacity: 1;
+        }
+
+        .tooltip-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 6px;
+        }
+
+        .tooltip-meta {
+            font-size: 12px;
+            color: #71717a;
+            display: flex;
+            gap: 12px;
+        }
+
+        .tooltip-stance {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            margin-top: 6px;
+        }
+
+        /* Legend */
+        .legend {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 8px;
+            padding: 16px;
+            font-size: 12px;
+        }
+
+        .legend-title {
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 10px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+            color: #52525b;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        /* Controls */
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border: 1px solid #e4e4e7;
+            border-radius: 20px;
+            padding: 6px;
+            display: flex;
+            gap: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .control-btn {
+            background: none;
+            border: none;
+            padding: 6px 14px;
+            font-size: 12px;
+            color: #52525b;
+            cursor: pointer;
+            border-radius: 14px;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        .control-btn:hover {
+            background: #f4f4f5;
+            color: #18181b;
+        }
+
+        .control-btn.active {
+            background: #18181b;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">글로벌 뉴스 지형도</div>
+            <div class="meta">2025년 11월 27일 · 핵심 15개 토픽</div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="canvas"></canvas>
+
+            <div class="tooltip" id="tooltip">
+                <div class="tooltip-title"></div>
+                <div class="tooltip-meta"></div>
+                <div class="tooltip-stance"></div>
+            </div>
+
+            <div class="legend">
+                <div class="legend-title">범례</div>
+                <div class="legend-item">
+                    <span class="legend-dot" style="background: #f87171;"></span>
+                    <span>비판적</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot" style="background: #d4d4d8;"></span>
+                    <span>중립</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot" style="background: #10b981;"></span>
+                    <span>지지</span>
+                </div>
+                <div style="margin-top: 12px; font-size: 11px; color: #a1a1aa;">
+                    크기 = 영향력<br>
+                    호버 = 상세정보
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="control-btn active" onclick="setView('top')">핵심</button>
+                <button class="control-btn" onclick="setView('all')">전체</button>
+                <button class="control-btn" onclick="triggerPulse()">펄스</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const tooltip = document.getElementById('tooltip');
+
+        let width, height;
+        let topics = [];
+        let hoveredTopic = null;
+        let pulseActive = false;
+        let pulseTime = 0;
+
+        // 색상 팔레트 (차분한 에디토리얼)
+        const COLORS = {
+            critical: '#f87171',
+            neutral: '#d4d4d8',
+            supportive: '#10b981',
+            background: '#fafaf9',
+            grid: '#f5f5f4'
+        };
+
+        // Mock 데이터
+        const mockTopics = [
+            { id: 1, title_kr: "Trump 행정부 이민 정책 강화", country_count: 5, article_count: 23, stance: 28, x: 0.25, y: 0.3 },
+            { id: 2, title_kr: "AI 규제 법안 국제 논의", country_count: 4, article_count: 18, stance: 52, x: 0.55, y: 0.35 },
+            { id: 3, title_kr: "유럽 에너지 위기 심화", country_count: 4, article_count: 15, stance: 35, x: 0.7, y: 0.55 },
+            { id: 4, title_kr: "중국 경제 회복 전망", country_count: 3, article_count: 12, stance: 68, x: 0.35, y: 0.65 },
+            { id: 5, title_kr: "기후 정상회의 합의안 도출", country_count: 3, article_count: 10, stance: 58, x: 0.65, y: 0.75 },
+            { id: 6, title_kr: "러시아-우크라이나 협상", country_count: 3, article_count: 14, stance: 32, x: 0.45, y: 0.5 },
+            { id: 7, title_kr: "일본 엔화 급등", country_count: 2, article_count: 8, stance: 55, x: 0.8, y: 0.35 },
+            { id: 8, title_kr: "인도 GDP 성장률 상승", country_count: 2, article_count: 7, stance: 72, x: 0.2, y: 0.7 },
+        ];
+
+        function getColor(stance) {
+            if (stance < 34) return COLORS.critical;
+            if (stance < 67) return COLORS.neutral;
+            return COLORS.supportive;
+        }
+
+        function getStanceLabel(stance) {
+            if (stance < 34) return { text: '비판적', bg: '#fee2e2', color: '#991b1b' };
+            if (stance < 67) return { text: '중립', bg: '#f4f4f5', color: '#52525b' };
+            return { text: '지지', bg: '#d1fae5', color: '#065f46' };
+        }
+
+        function initTopics(count = 5) {
+            topics = mockTopics.slice(0, count).map(t => {
+                const importance = t.article_count * t.country_count;
+                return {
+                    ...t,
+                    absX: t.x * width,
+                    absY: t.y * height,
+                    targetX: t.x * width,
+                    targetY: t.y * height,
+                    size: Math.sqrt(importance) * 4 + 20, // 명확한 크기 차이
+                    color: getColor(t.stance),
+                    pulsePhase: Math.random() * Math.PI * 2, // 각자 다른 위상
+                    scale: 0, // 시작은 0에서 튀어오름
+                    targetScale: 1
+                };
+            });
+        }
+
+        function resize() {
+            width = canvas.offsetWidth;
+            height = canvas.offsetHeight;
+            canvas.width = width;
+            canvas.height = height;
+
+            if (topics.length > 0) {
+                topics.forEach(t => {
+                    t.absX = t.x * width;
+                    t.absY = t.y * height;
+                    t.targetX = t.absX;
+                    t.targetY = t.absY;
+                });
+            } else {
+                initTopics();
+            }
+        }
+
+        function drawGrid() {
+            ctx.strokeStyle = COLORS.grid;
+            ctx.lineWidth = 1;
+            const step = 60;
+
+            for (let x = 0; x < width; x += step) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, height);
+                ctx.stroke();
+            }
+            for (let y = 0; y < height; y += step) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(width, y);
+                ctx.stroke();
+            }
+        }
+
+        function draw() {
+            // Clear
+            ctx.fillStyle = COLORS.background;
+            ctx.fillRect(0, 0, width, height);
+
+            // Grid
+            drawGrid();
+
+            // Update & Draw topics
+            topics.forEach((topic, i) => {
+                // 스프링 애니메이션 (경쾌하게 튀어오름)
+                const spring = 0.15;
+                const damping = 0.8;
+
+                topic.absX += (topic.targetX - topic.absX) * spring;
+                topic.absY += (topic.targetY - topic.absY) * spring;
+                topic.scale += (topic.targetScale - topic.scale) * spring;
+
+                // 미세한 호흡 (자연스럽게)
+                const breathe = Math.sin(Date.now() / 2000 + topic.pulsePhase) * 2;
+                const currentSize = topic.size * topic.scale + breathe;
+
+                // 소나 펄스 (활성화 시)
+                if (pulseActive) {
+                    const pulseRadius = (pulseTime - i * 100) * 0.5; // 순차적으로 탐지
+                    if (pulseRadius > 0 && pulseRadius < topic.size + 50) {
+                        const pulseOpacity = Math.max(0, 1 - pulseRadius / (topic.size + 50));
+                        ctx.strokeStyle = topic.color + Math.floor(pulseOpacity * 128).toString(16).padStart(2, '0');
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+                        ctx.arc(topic.absX, topic.absY, pulseRadius, 0, Math.PI * 2);
+                        ctx.stroke();
+                    }
+                }
+
+                // 버블 그림자 (depth)
+                ctx.shadowColor = 'rgba(0,0,0,0.08)';
+                ctx.shadowBlur = 12;
+                ctx.shadowOffsetY = 4;
+
+                // 버블
+                const isHovered = hoveredTopic === topic;
+                ctx.fillStyle = topic.color + (isHovered ? 'CC' : '99'); // 호버 시 더 진하게
+                ctx.strokeStyle = 'white';
+                ctx.lineWidth = isHovered ? 3 : 2;
+
+                ctx.beginPath();
+                ctx.arc(topic.absX, topic.absY, currentSize, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.stroke();
+
+                ctx.shadowColor = 'transparent';
+
+                // 호버 시 확대 효과
+                if (isHovered) {
+                    ctx.strokeStyle = topic.color;
+                    ctx.lineWidth = 1.5;
+                    ctx.setLineDash([3, 3]);
+                    ctx.beginPath();
+                    ctx.arc(topic.absX, topic.absY, currentSize + 8, 0, Math.PI * 2);
+                    ctx.stroke();
+                    ctx.setLineDash([]);
+                }
+            });
+
+            requestAnimationFrame(draw);
+        }
+
+        // 마우스 인터랙션
+        canvas.addEventListener('mousemove', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+
+            let found = null;
+            topics.forEach(topic => {
+                const dist = Math.sqrt(
+                    Math.pow(mouseX - topic.absX, 2) +
+                    Math.pow(mouseY - topic.absY, 2)
+                );
+                if (dist < topic.size * topic.scale) {
+                    found = topic;
+                }
+            });
+
+            if (found !== hoveredTopic) {
+                hoveredTopic = found;
+
+                if (found) {
+                    // 툴팁 표시
+                    const stance = getStanceLabel(found.stance);
+                    tooltip.querySelector('.tooltip-title').textContent = found.title_kr;
+                    tooltip.querySelector('.tooltip-meta').innerHTML =
+                        `<span>🌍 ${found.country_count}개국</span><span>📰 ${found.article_count}건</span>`;
+
+                    const stanceEl = tooltip.querySelector('.tooltip-stance');
+                    stanceEl.textContent = stance.text;
+                    stanceEl.style.background = stance.bg;
+                    stanceEl.style.color = stance.color;
+
+                    tooltip.style.left = e.clientX + 20 + 'px';
+                    tooltip.style.top = e.clientY - 40 + 'px';
+                    tooltip.classList.add('show');
+
+                    // 호버 시 살짝 확대 (스프링)
+                    found.targetScale = 1.15;
+                } else {
+                    tooltip.classList.remove('show');
+                }
+            }
+
+            // 호버 해제 시 원래 크기로
+            topics.forEach(t => {
+                if (t !== hoveredTopic && t.targetScale > 1) {
+                    t.targetScale = 1;
+                }
+            });
+
+            if (found) {
+                tooltip.style.left = e.clientX + 20 + 'px';
+                tooltip.style.top = e.clientY - 40 + 'px';
+            }
+        });
+
+        canvas.addEventListener('mouseleave', () => {
+            hoveredTopic = null;
+            tooltip.classList.remove('show');
+            topics.forEach(t => t.targetScale = 1);
+        });
+
+        // 클릭
+        canvas.addEventListener('click', () => {
+            if (hoveredTopic) {
+                alert(`${hoveredTopic.title_kr}\n\n상세 페이지로 이동 (실제로는 /topics/${hoveredTopic.id})`);
+            }
+        });
+
+        // 컨트롤
+        function setView(mode) {
+            document.querySelectorAll('.control-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+
+            if (mode === 'top') {
+                initTopics(5);
+            } else {
+                initTopics(8);
+            }
+
+            // 등장 애니메이션 (순차적으로 튀어오름)
+            topics.forEach((t, i) => {
+                t.scale = 0;
+                setTimeout(() => {
+                    t.targetScale = 1;
+                }, i * 80);
+            });
+        }
+
+        function triggerPulse() {
+            pulseActive = true;
+            pulseTime = 0;
+
+            const interval = setInterval(() => {
+                pulseTime += 20;
+                if (pulseTime > 1500) {
+                    pulseActive = false;
+                    clearInterval(interval);
+                }
+            }, 20);
+        }
+
+        // Init
+        resize();
+        window.addEventListener('resize', resize);
+
+        // 시작 애니메이션 (순차 등장)
+        topics.forEach((t, i) => {
+            setTimeout(() => {
+                t.targetScale = 1;
+            }, i * 100 + 300);
+        });
+
+        draw();
+
+        // 3초 후 자동 펄스 한 번 (데모용)
+        setTimeout(triggerPulse, 1500);
+    </script>
+</body>
+</html>

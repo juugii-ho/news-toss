@@ -224,9 +224,45 @@ def main():
             
     finally:
         if final_output:
+            # Save to JSON (Backup)
             with open(output_file, "w", encoding="utf-8") as f:
                 json.dump(final_output, f, ensure_ascii=False, indent=2)
             print(f"\n✅ Clustering Complete. Saved {len(final_output)} topics to {output_file}")
+            
+            # Save to DB
+            print("Saving topics to Supabase DB (mvp2_topics)...")
+            try:
+                # 1. Clear existing topics for this country (Optional: or we can use upsert/versioning)
+                # For MVP, let's clear old ones to keep it clean, OR we can just append.
+                # Clearing is safer to avoid duplicates if we run often.
+                # But wait, if we clear, we lose history. 
+                # Let's just INSERT. We can filter by created_at in frontend.
+                
+                db_rows = []
+                for topic_name, stances in final_output.items():
+                    article_ids = stances['factual'] + stances['critical'] + stances['supportive']
+                    db_rows.append({
+                        "country_code": COUNTRY,
+                        "topic_name": topic_name,
+                        "article_ids": article_ids,
+                        "article_count": len(article_ids),
+                        "stances": stances,
+                        "created_at": datetime.utcnow().isoformat()
+                    })
+                
+                if db_rows:
+                    # Batch insert
+                    batch_size = 50
+                    for i in range(0, len(db_rows), batch_size):
+                        batch = db_rows[i:i+batch_size]
+                        supabase.table("mvp2_topics").insert(batch).execute()
+                        print(f"  Inserted batch {i//batch_size + 1}")
+                        
+                print("✅ Saved to DB successfully.")
+                
+            except Exception as e:
+                print(f"❌ Error saving to DB: {e}")
+
     print(f"Total Topics: {len(final_output)}")
     
     # Preview

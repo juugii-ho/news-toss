@@ -6,6 +6,8 @@ import google.generativeai as genai
 from sklearn.cluster import HDBSCAN
 from sklearn.metrics.pairwise import cosine_distances
 from dotenv import load_dotenv
+from supabase import create_client, Client
+from datetime import datetime
 
 # Load environment variables
 load_dotenv('backend/.env')
@@ -127,6 +129,43 @@ def main():
         json.dump(final_output, f, ensure_ascii=False, indent=2)
         
     print(f"✅ Megatopic Analysis Complete. Saved to data/pipelines/megatopics.json")
+    
+    # Save to DB
+    print("Saving Megatopics to Supabase DB (mvp2_megatopics)...")
+    
+    # Init Supabase
+    url = os.getenv("NEXT_PUBLIC_SUPABASE_URL")
+    key = os.getenv("NEXT_PUBLIC_SUPABASE_ANON_KEY")
+    
+    if url and key:
+        try:
+            supabase: Client = create_client(url, key)
+            
+            # Prepare rows
+            db_rows = []
+            for m in final_output:
+                db_rows.append({
+                    "name": m['megatopic_name'],
+                    "countries": m['countries'],
+                    "total_articles": m['total_articles'],
+                    "content": m, # Store full JSON structure for easy frontend use
+                    "created_at": datetime.utcnow().isoformat()
+                })
+            
+            if db_rows:
+                # Batch insert
+                batch_size = 20
+                for i in range(0, len(db_rows), batch_size):
+                    batch = db_rows[i:i+batch_size]
+                    supabase.table("mvp2_megatopics").insert(batch).execute()
+                    print(f"  Inserted batch {i//batch_size + 1}")
+                    
+            print("✅ Saved to DB successfully.")
+            
+        except Exception as e:
+            print(f"❌ Error saving to DB: {e}")
+    else:
+        print("⚠️ Supabase credentials not found. Skipping DB save.")
     
     # Preview
     print("\n--- Top 10 Megatopics ---")

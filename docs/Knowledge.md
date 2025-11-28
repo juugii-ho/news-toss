@@ -24,3 +24,5 @@
 2025-11-28 [O][TASK-ZZZ][INBOX] Responded to G: Python 3.11/3.10 환경 권장 for supabase-py (3.14 호환 이슈), pyenv/venv 세팅 가능 안내.
 2025-11-29 [O][TASK-ZZZ][INBOX] Added follow-up response to G: no existing venv found, advise creating new 3.11/3.10 venv under data/pipelines/venv with supabase installed; offered pyenv/venv help; awaiting environment path/confirmation.
 2025-11-29 [O][TASK-ZZZ][app/frontend] Swapped Gravity Issue Bowl proto to Framer Motion (no Matter.js) per UX v1.1: initial drop animation only, tap pop placeholder. Removed matter-js dependency.
+2025-11-29 [O][TASK-ZZZ][app/frontend] Matter toggle mode: added optional Matter.js sim with higher bounce (restitution 0.72) and longer 3.6s run under NEXT_PUBLIC_USE_MATTER flag.
+2025-11-29 [O][TASK-ZZZ][app/api] Updated API routes to new Supabase tables: mvp2_megatopics (global) and mvp2_topics (local) pulling latest created_at batch; perspectives now read from stances JSON; keeps mock fallback.

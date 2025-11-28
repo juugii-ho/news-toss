@@ -12,64 +12,44 @@ export async function GET() {
   }
 
   try {
+    const { data: latest } = await supabase
+      .from("mvp2_megatopics")
+      .select("created_at")
+      .order("created_at", { ascending: false })
+      .limit(1)
+      .maybeSingle();
+
+    if (!latest?.created_at) {
+      const mock = await readGlobalList();
+      return NextResponse.json(mock.items, { status: 200 });
+    }
+
     const { data, error } = await supabase
-      .from("MVP2_global_topics")
-      .select(
-        `
-        id,
-        title_ko,
-        title_en,
-        intro_ko,
-        intro_en,
-        article_count,
-        country_count,
-        rank,
-        is_pinned,
-        perspectives:MVP2_perspectives(
-          country_code,
-          stance,
-          one_liner_ko,
-          one_liner_en,
-          source_link,
-          country:MVP2_countries(
-            name_ko,
-            name_en,
-            flag_emoji
-          )
-        )
-      `
-      )
-      .order("is_pinned", { ascending: false })
+      .from("mvp2_megatopics")
+      .select("*")
+      .eq("created_at", latest.created_at)
       .order("rank", { ascending: true, nullsLast: true })
       .order("article_count", { ascending: false })
-      .limit(10);
+      .limit(15);
 
     if (error) throw error;
 
-    return NextResponse.json(
-      (data || []).map((topic) => ({
+    const mapped =
+      data?.map((topic: any) => ({
         id: topic.id,
-        title_ko: topic.title_ko,
-        title_en: topic.title_en,
-        intro_ko: topic.intro_ko,
-        intro_en: topic.intro_en,
-        article_count: topic.article_count,
-        country_count: topic.country_count,
+        title_ko: topic.title_ko ?? topic.title ?? "",
+        title_en: topic.title_en ?? "",
+        intro_ko: topic.intro_ko ?? "",
+        intro_en: topic.intro_en ?? "",
+        article_count: topic.article_count ?? 0,
+        country_count: topic.country_count ?? 0,
         rank: topic.rank,
-        is_pinned: topic.is_pinned,
-        perspectives: (topic as any).perspectives?.map((p: any) => ({
-          country_code: p.country_code,
-          country_name_ko: p.country?.name_ko,
-          country_name_en: p.country?.name_en,
-          flag_emoji: p.country?.flag_emoji,
-          stance: p.stance,
-          one_liner_ko: p.one_liner_ko,
-          one_liner_en: p.one_liner_en,
-          source_link: p.source_link
-        })) ?? []
-      })),
-      { status: 200 }
-    );
+        is_pinned: topic.is_pinned ?? false,
+        hero_image_url: topic.hero_image_url ?? null,
+        hot_topic_badge: topic.hot_topic_badge ?? null
+      })) ?? [];
+
+    return NextResponse.json(mapped, { status: 200 });
   } catch (err) {
     console.error("GET /api/global/insights failed", err);
     const mock = await readGlobalList();

@@ -18,17 +18,30 @@ export async function GET(request: NextRequest) {
   }
 
   try {
+    // 최신 created_at 배치 선택
+    const { data: latest } = await supabase
+      .from("mvp2_topics")
+      .select("created_at")
+      .eq("country_code", country)
+      .order("created_at", { ascending: false })
+      .limit(1)
+      .maybeSingle();
+
+    if (!latest?.created_at) {
+      const mock = await readLocalList();
+      return NextResponse.json(mock, { status: 200 });
+    }
+
     const { data: topics, error, count } = await supabase
-      .from("MVP2_local_topics")
+      .from("mvp2_topics")
       .select("*", { count: "exact" })
       .eq("country_code", country)
+      .eq("created_at", latest.created_at)
       .order("article_count", { ascending: false })
-      .order("created_at", { ascending: false })
       .range(from, to);
 
     if (error) throw error;
 
-    // display_level이 없을 경우 article_count 순서로 계산 (20/30/50% 구간)
     const computed = (topics || []).map((topic, idx, arr) => {
       if (topic.display_level) return topic;
       const total = arr.length;
@@ -44,13 +57,14 @@ export async function GET(request: NextRequest) {
       {
         country_code: country,
         topics: computed.map((topic) => ({
-          topic_id: topic.id,
-          title: topic.title,
+          topic_id: topic.id ?? topic.topic_id,
+          title: topic.title_ko ?? topic.title ?? "",
           keyword: topic.keyword,
-          article_count: topic.article_count,
-          display_level: topic.display_level,
-          media_type: topic.media_type,
-          media_url: topic.media_url
+          article_count: topic.article_count ?? 0,
+          display_level: topic.display_level as 1 | 2 | 3,
+          media_type: (topic.media_type as any) ?? "NONE",
+          media_url: topic.media_url ?? null,
+          stances: (topic as any).stances ?? []
         })),
         page,
         total_count: count ?? computed.length

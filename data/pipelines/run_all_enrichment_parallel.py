@@ -16,7 +16,7 @@ def main():
         while len(processes) < MAX_CONCURRENT and queue:
             country = queue.pop(0)
             print(f"  ✨ Starting {country}...")
-            cmd = ["/Users/sml/gemini_env/bin/python", "data/pipelines/llm_topic_enrichment.py", country]
+            cmd = [sys.executable, "data/pipelines/llm_topic_enrichment.py", country]
             p = subprocess.Popen(cmd)
             processes.append((country, p))
             

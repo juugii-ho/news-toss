@@ -13,7 +13,7 @@ def main():
         
         try:
             # Run the clustering script
-            cmd = ["/Users/sml/gemini_env/bin/python", "data/pipelines/llm_topic_clustering_embedding.py", country]
+            cmd = [sys.executable, "data/pipelines/llm_topic_clustering_embedding.py", country]
             subprocess.run(cmd, check=True)
             print(f"✅ {country} Completed.")
         except subprocess.CalledProcessError as e:

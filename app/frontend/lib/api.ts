@@ -54,7 +54,14 @@ export async function getLocalList(params?: { country?: string; page?: number })
           keyword: t.keyword,
           article_count: t.article_count,
           display_level: t.display_level,
-          media_type: (t.media_type as any) === "IMAGE" ? "IMAGE" : (t.media_type as any) === "VIDEO" ? "VIDEO" : "NONE",
+          media_type:
+            (t.media_type as any) === "IMAGE"
+              ? "IMAGE"
+              : (t.media_type as any) === "VIDEO"
+                ? "VIDEO"
+                : t.media_type === "NONE"
+                  ? "NONE"
+                  : "NONE",
           media_url: t.media_url
         })),
         hasNextPage: Boolean(

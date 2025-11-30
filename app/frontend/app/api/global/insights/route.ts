@@ -66,13 +66,13 @@ export async function GET() {
       if (localTopicIds.length > 0) {
         const { data: localTopics } = await supabase
           .from("mvp2_topics")
-          .select("id, stances")
+          .select("id, stances, thumbnail_url")
           .in("id", localTopicIds);
 
         if (localTopics) {
-          // Map local topic ID to stances
-          const localStanceMap = localTopics.reduce((acc: any, t: any) => {
-            acc[t.id] = t.stances;
+          // Map local topic ID to stances AND thumbnails
+          const localDataMap = localTopics.reduce((acc: any, t: any) => {
+            acc[t.id] = { stances: t.stances, thumbnail: t.thumbnail_url };
             return acc;
           }, {});
 
@@ -84,14 +84,21 @@ export async function GET() {
               critical: [],
               supportive: []
             };
+            let thumb: string | null = null;
 
             childIds.forEach(childId => {
-              const s = localStanceMap[childId] || {};
+              const d = localDataMap[childId] || {};
+              const s = d.stances || {};
               if (s.factual) aggregated.factual.push(...(s.factual as string[]));
               if (s.critical) aggregated.critical.push(...(s.critical as string[]));
               if (s.supportive) aggregated.supportive.push(...(s.supportive as string[]));
+
+              // Pick first available thumbnail
+              if (!thumb && d.thumbnail) thumb = d.thumbnail;
             });
             stanceMap[globalId] = aggregated;
+            // Hack: Store thumbnail in stanceMap temporarily
+            (stanceMap[globalId] as any)._thumbnail = thumb;
           });
         }
       }
@@ -122,7 +129,7 @@ export async function GET() {
           title_en: topic.title_en ?? "",
           intro_ko: topic.intro_ko ?? "",
           intro_en: topic.intro_en ?? "",
-          thumbnail_url: topic.thumbnail_url || null,
+          thumbnail_url: topic.thumbnail_url || (stanceMap[topic.id] as any)?._thumbnail || null,
           article_count: topic.article_count ?? 0,
           country_count,
           countries,

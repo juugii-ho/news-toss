@@ -38,17 +38,40 @@ export async function GET(_req: Request, { params }: Params) {
       .select("id, title_original, title_ko, source_name, published_at, url, global_topic_id, country_code")
       .eq("local_topic_id", id)
       .order("published_at", { ascending: false })
+      .order("published_at", { ascending: false })
       .limit(50);
 
     if (articlesError) throw articlesError;
 
-    const keywords = Array.isArray((topicData as any).keywords)
-      ? (topicData as any).keywords
-      : [];
-
     // Transform stances from DB (JSON with IDs) to Frontend (Array of Objects)
     const stancesRaw = (topicData as any).stances || { factual: [], critical: [], supportive: [] };
-    const articlesMap = new Map((articlesData || []).map(a => [a.id, a]));
+
+    // Collect all stance article IDs
+    const stanceArticleIds = [
+      ...(stancesRaw.factual || []),
+      ...(stancesRaw.critical || []),
+      ...(stancesRaw.supportive || [])
+    ];
+
+    // Fetch stance articles if they are not already in articlesData
+    let allArticles = articlesData || [];
+    if (stanceArticleIds.length > 0) {
+      const existingIds = new Set(allArticles.map(a => a.id));
+      const missingIds = stanceArticleIds.filter(id => !existingIds.has(id));
+
+      if (missingIds.length > 0) {
+        const { data: stanceArticles, error: stanceError } = await supabase
+          .from("mvp2_articles")
+          .select("id, title_original, title_ko, source_name, published_at, url, global_topic_id, country_code")
+          .in("id", missingIds);
+
+        if (!stanceError && stanceArticles) {
+          allArticles = [...allArticles, ...stanceArticles];
+        }
+      }
+    }
+
+    const articlesMap = new Map(allArticles.map(a => [a.id, a]));
     const stances: any[] = [];
 
     const addStances = (ids: any[], type: string) => {

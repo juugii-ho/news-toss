@@ -84,7 +84,7 @@ def generate_thumbnail_prompt(topic, article_map):
     quoted_titles = [f"'{t}'" for t in selected_titles]
     sentence = "과 ".join(quoted_titles)
 
-    final_prompt = f"{country}의 '{topic_name}' 주제로 {sentence} 내용이 담긴 언론사진 느낌의 한국어 썸네일. **주의사항** : 1.마침표 사용 금지, 2. 같은 문장 재사용 절대 금지 3.하단에 'AI로 생성된 이미지'라는 문구 삽입 "
+    final_prompt = f"{country}의 '{topic_name}' 주제로 {sentence} 내용이 담긴 언론사진 느낌의 썸네일. **주의사항** : 1. 글자 사용 금지"
     
     # Post-processing replacements (from user snippet)
     final_prompt = final_prompt.replace('李', '이')

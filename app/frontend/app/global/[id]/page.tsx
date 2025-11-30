@@ -101,7 +101,7 @@ export default async function GlobalDetailPage({ params }: Props) {
           ) : <div />}
         </div>
         <h1 style={{ margin: 0, fontSize: 24, fontWeight: 800, letterSpacing: "-0.02em", lineHeight: 1.3 }}>
-          {data.title}
+          {data.title_ko}
         </h1>
         {data.intro_ko ? (
           <p style={{ margin: "var(--space-2) 0 0", color: "var(--color-neutral-700)", lineHeight: 1.5 }}>

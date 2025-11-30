@@ -380,10 +380,37 @@ Output JSON:
             
         # Batch insert
         batch_size = 50
+        inserted_megatopics = []
         for i in range(0, len(rows), batch_size):
             batch = rows[i:i+batch_size]
-            supabase.table("mvp2_megatopics").insert(batch).execute()
+            result = supabase.table("mvp2_megatopics").insert(batch).execute()
+            inserted_megatopics.extend(result.data)
             print(f"  Inserted batch {i//batch_size + 1}")
+        
+        # 2. Link articles to megatopics
+        print("\n  🔗 Linking articles to megatopics...")
+        total_linked = 0
+        for mega in inserted_megatopics:
+            mega_id = mega['id']
+            local_topic_ids = mega.get('topic_ids', [])
+            
+            if not local_topic_ids:
+                continue
+            
+            # Update all articles that belong to these local topics
+            for local_id in local_topic_ids:
+                try:
+                    result = supabase.from_("mvp2_articles")\
+                        .update({"global_topic_id": mega_id})\
+                        .eq("local_topic_id", local_id)\
+                        .execute()
+                    
+                    if result.data:
+                        total_linked += len(result.data)
+                except Exception as e:
+                    print(f"    ⚠️ Error linking articles for local topic {local_id}: {e}")
+        
+        print(f"  ✓ Linked {total_linked} articles to megatopics")
             
         print("✅ Saved to DB successfully.")
         

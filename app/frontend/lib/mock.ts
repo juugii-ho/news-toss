@@ -47,7 +47,7 @@ export type VsCard = {
   title_ko: string;
   intro_ko: string;
   perspectives: Perspective[];
-  related_articles: { title: string; url: string }[];
+  related_articles: { title: string; url: string; source?: string }[];
   ai_summary?: string;
   editor_comment?: string;
 };

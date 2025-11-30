@@ -64,9 +64,9 @@ if __name__ == "__main__":
         # Check if there are any unpublished topics without batch_id
         # or just take all unpublished topics and assign a new batch_id
         
-        # Generate new batch_id
-        from datetime import datetime
-        new_batch_id = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+        # Generate new batch_id (UUID)
+        import uuid
+        new_batch_id = str(uuid.uuid4())
         
         print(f"  Generating new batch_id: {new_batch_id}")
         

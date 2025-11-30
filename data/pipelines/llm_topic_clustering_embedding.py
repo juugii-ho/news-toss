@@ -209,6 +209,50 @@ Output JSON:
         "stances": {"factual": [a['id'] for a in cluster_articles], "critical": [], "supportive": []} # Default to factual
     }
 
+def find_similar_topic(new_topic_name, country_code, supabase, threshold=0.8):
+    """
+    Find similar existing topic within last 7 days.
+    
+    Args:
+        new_topic_name: New topic name to match
+        country_code: Country code
+        supabase: Supabase client
+        threshold: Similarity threshold (0.0 to 1.0)
+    
+    Returns:
+        Existing topic dict or None
+    """
+    seven_days_ago = (datetime.utcnow() - timedelta(days=7)).isoformat()
+    
+    try:
+        response = supabase.table("mvp2_topics") \
+            .select("id, topic_name, article_ids, stances") \
+            .eq("country_code", country_code) \
+            .gte("created_at", seven_days_ago) \
+            .execute()
+        
+        existing_topics = response.data
+        
+        best_match = None
+        best_score = 0.0
+        
+        for topic in existing_topics:
+            similarity = SequenceMatcher(None, new_topic_name, topic['topic_name']).ratio()
+            
+            if similarity > best_score and similarity >= threshold:
+                best_score = similarity
+                best_match = topic
+        
+        if best_match:
+            print(f"    🔍 Found similar topic: '{best_match['topic_name']}' (similarity: {best_score:.2f})")
+        
+        return best_match
+        
+    except Exception as e:
+        print(f"    ⚠️ Error finding similar topic: {e}")
+        return None
+
+
 def main():
     COUNTRY = sys.argv[1] if len(sys.argv) > 1 else 'RU'
     

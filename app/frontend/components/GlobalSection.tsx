@@ -13,17 +13,17 @@ type Props = {
 
 export function GlobalSection({ items }: Props) {
   const params = useSearchParams();
-  const includeKr = params.get("kr") !== "exclude";
+  const onlyKr = params.get("kr") === "include"; // Default: Show All
 
   const filteredItems = React.useMemo(() => {
     const hasKr = (item: GlobalItem) => (item.countries || []).includes("KR");
-    if (includeKr) {
-      // KR 반영 모드: KR을 포함한 토픽만 노출
+    if (onlyKr) {
+      // KR 모드: KR을 포함한 토픽만 노출
       return items.filter(hasKr);
     }
-    // KR 무시 모드: 정렬 그대로 전체 노출
+    // 기본: 전체 노출
     return items;
-  }, [items, includeKr]);
+  }, [items, onlyKr]);
 
   // Re-rank for display
   const displayItems = filteredItems.map((item, idx) => ({

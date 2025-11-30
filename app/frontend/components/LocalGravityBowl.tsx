@@ -246,8 +246,18 @@ function MatterBubbles({
     const overlay = overlayRef.current;
     if (!container || !canvas) return;
 
-    const width = container.clientWidth || 360;
-    const height = 560; // Increased from 520 to allow more space at bottom
+    // Get actual rendered dimensions
+    const rect = container.getBoundingClientRect();
+    const width = rect.width > 0 ? rect.width : 360;
+    const height = rect.height > 0 ? rect.height : 560;
+
+    // Explicitly set canvas dimensions
+    canvas.width = width;
+    canvas.height = height;
+    if (overlay) {
+      overlay.width = width;
+      overlay.height = height;
+    }
 
     const engine = Matter.Engine.create({ gravity: { x: 0, y: 1, scale: 0.001 } });
     const world = engine.world;

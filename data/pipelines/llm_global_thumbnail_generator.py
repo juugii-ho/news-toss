@@ -69,42 +69,28 @@ def generate_thumbnail_prompt(topic, local_topics):
 def generate_and_upload_image(topic_id, prompt):
     print(f"  🎨 Generating image for global topic {topic_id}...")
     try:
-        response = client.models.generate_content(
+        # Use chat create pattern for gemini-3-pro-image-preview
+        chat = client.chats.create(
             model="gemini-3-pro-image-preview",
-            contents=prompt,
             config=types.GenerateContentConfig(
-                response_modalities=['Image'],
-                image_config=types.ImageConfig(
-                    aspect_ratio="16:9",
-                )
+                response_modalities=['TEXT', 'IMAGE'],
             )
         )
         
-        image = None
-        for part in response.parts:
-            if part.as_image():
-                image = part.as_image()
-                break
+        # Append Aspect Ratio to prompt as config might not support it directly in this SDK version for this model
+        full_prompt = prompt + " Aspect Ratio 16:9."
+        
+        response = chat.send_message(full_prompt)
+        
+        image_bytes = None
+        if response.candidates and response.candidates[0].content.parts:
+            for part in response.candidates[0].content.parts:
+                if part.inline_data:
+                    image_bytes = part.inline_data.data
+                    break
                 
-        if not image:
-            print("    ❌ No image generated.")
-            return False
-
-        # Save to temp file
-        temp_filename = f"/tmp/temp_{topic_id}.png"
-        try:
-            image.save(temp_filename)
-            
-            # Read bytes
-            with open(temp_filename, "rb") as f:
-                img_bytes = f.read()
-                
-            # Clean up
-            if os.path.exists(temp_filename):
-                os.remove(temp_filename)
-                
-        except Exception as e:
-            print(f"    ❌ Error saving/reading temp file: {e}")
+        if not image_bytes:
+            print("    ❌ No image generated (no inline_data found).")
             return False
 
         # Upload to Supabase Storage
@@ -114,15 +100,15 @@ def generate_and_upload_image(topic_id, prompt):
         try:
             res = supabase.storage.from_("thumbnails").upload(
                 path=file_path,
-                file=img_bytes,
+                file=image_bytes,
                 file_options={"content-type": "image/png", "upsert": "true"}
             )
             
             # Get Public URL
             public_url = supabase.storage.from_("thumbnails").get_public_url(file_path)
             
-            # Update Global Topic
-            supabase.table("mvp2_global_topics").update({"thumbnail_url": public_url}).eq("id", topic_id).execute()
+            # Update Global Topic (Megatopic)
+            supabase.table("mvp2_megatopics").update({"thumbnail_url": public_url}).eq("id", topic_id).execute()
             print(f"    ✅ Saved URL: {public_url}")
             return True
             
@@ -141,7 +127,7 @@ def main():
     time_threshold = (datetime.utcnow() - timedelta(days=7)).isoformat()
     
     try:
-        response = supabase.table("mvp2_global_topics") \
+        response = supabase.table("mvp2_megatopics") \
             .select("*") \
             .is_("thumbnail_url", "null") \
             .gte("created_at", time_threshold) \

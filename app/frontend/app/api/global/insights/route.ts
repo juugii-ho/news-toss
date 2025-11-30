@@ -14,9 +14,10 @@ export async function GET() {
     const timeThreshold = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
 
     const { data, error } = await supabase
-      .from("mvp2_global_topics")
+      .from("mvp2_megatopics")
       .select("*")
       .gte("created_at", timeThreshold)
+      .eq("is_published", true)
       .order("created_at", { ascending: false })
       .limit(50);
 

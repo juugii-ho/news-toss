@@ -54,10 +54,20 @@ def publish_batch(batch_id):
         return False
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python publish_batch.py <batch_id>")
-        sys.exit(1)
+    batch_id = None
+    if len(sys.argv) >= 2:
+        batch_id = sys.argv[1]
     
-    batch_id = sys.argv[1]
+    if not batch_id:
+        print("No batch_id provided, fetching latest...")
+        # Fetch latest batch_id from topics
+        res = supabase.table("mvp2_topics").select("batch_id").order("created_at", desc=True).limit(1).execute()
+        if res.data and res.data[0].get('batch_id'):
+            batch_id = res.data[0]['batch_id']
+            print(f"Latest batch_id found: {batch_id}")
+        else:
+            print("❌ Could not find any batch_id in database.")
+            sys.exit(1)
+            
     success = publish_batch(batch_id)
     sys.exit(0 if success else 1)

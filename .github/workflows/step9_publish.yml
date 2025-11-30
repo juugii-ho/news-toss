@@ -5,7 +5,7 @@ on:
     inputs:
       batch_id:
         description: 'Batch ID to publish'
-        required: true
+        required: false
 
 jobs:
   publish:

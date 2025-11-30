@@ -4,7 +4,9 @@
 >
 > 뉴스토스는 전 세계 13개국 이상의 다양한 시각을 모아 균형 잡힌 "뉴스 스펙트럼"을 제공하는 AI 기반 글로벌 뉴스 애그리게이터입니다.
 
-![News Toss Hero](/assets/news_toss_hero.png)
+https://news-toss-ecru.vercel.app/
+
+<img src="app/frontend/public/assets/news_toss_hero.jpg" alt="News Toss Hero" width="600">
 
 ## 🚀 프로젝트 소개
 

@@ -1,0 +1,52 @@
+{
+  "id": "global_001",
+  "title_ko": "엔비디아, 거품일까요? 멈추지 않는 AI 열풍",
+  "intro_ko": "엔비디아가 또 한 번 시장의 예상을 뛰어넘는 실적을 발표하며 주가가 사상 최고치를 경신했습니다. AI 혁명의 심장으로 불리는 엔비디아의 독주가 계속될지, 아니면 곧 거품이 꺼질지에 대해 전 세계의 관심이 집중되고 있습니다.",
+  "perspectives": [
+    {
+      "country_code": "US",
+      "country_name": "미국",
+      "flag_emoji": "🇺🇸",
+      "stance": "POSITIVE",
+      "one_liner_ko": "어닝 서프라이즈 봤지? AI는 이제 시작이야. 반도체는 우리가 계속 주도한다!",
+      "source_link": "https://www.reuters.com/technology/nvidia-smashes-quarterly-revenue-forecasts-q2-outlook-beats-estimates-2025-05-22/"
+    },
+    {
+      "country_code": "CN",
+      "country_name": "중국",
+      "flag_emoji": "🇨🇳",
+      "stance": "NEGATIVE",
+      "one_liner_ko": "미국의 기술 통제 속에서 자체 기술로 따라잡아야 해. 저렇게 의존해서는 미래가 없어.",
+      "source_link": "https://www.globaltimes.cn/page/2025/05/1243025.shtml"
+    },
+    {
+      "country_code": "DE",
+      "country_name": "독일",
+      "flag_emoji": "🇩🇪",
+      "stance": "NEUTRAL",
+      "one_liner_ko": "자동차 산업의 AI 도입이 시급하지만, 공급망이 특정 기업에 너무 집중되는 건 리스크가 크지.",
+      "source_link": "https://www.handelsblatt.com/technik/it-internet/nvidia-aktie-die-rally-stoppt-nicht-und-nicht/100038822.html"
+    },
+    {
+      "country_code": "KR",
+      "country_name": "대한민국",
+      "flag_emoji": "🇰🇷",
+      "stance": "POSITIVE",
+      "one_liner_ko": "HBM 우리 거 잘 팔리겠네! 이 기회에 메모리 초격차 더 벌려야지.",
+      "source_link": "https://www.chosun.com/economy/tech/2025/05/23/WGM23..."
+    },
+    {
+      "country_code": "JP",
+      "country_name": "일본",
+      "flag_emoji": "🇯🇵",
+      "stance": "NEUTRAL",
+      "one_liner_ko": "소프트뱅크도 AI에 엄청 투자하고 있다던데. 우리도 빨리 이 흐름에 타야 해.",
+      "source_link": "https://asia.nikkei.com/Business/Tech/Semiconductors/Japan-races-to-build-up-semiconductor-industry-to-rival-TSMC"
+    }
+  ],
+  "related_articles": [
+    {"title": "Nvidia's 'astonishing' blowout quarter proves AI spending is real", "url": "https://finance.yahoo.com/news/nvidias-astonishing-blowout-quarter-proves-ai-spending-is-real-160133893.html"},
+    {"title": "China’s top chipmakers push ahead with 5nm development despite US curbs", "url": "https://www.scmp.com/tech/tech-war/article/3263158/chinas-top-chipmakers-push-ahead-5nm-development-despite-us-curbs-sources-say"},
+    {"title": "How worried should investors be about an Nvidia stock bubble?", "url": "https://www.ft.com/content/1f7e3b5a-9b4d-4d3e-8d5c-7f2a1b7c4e9f"}
+  ]
+}

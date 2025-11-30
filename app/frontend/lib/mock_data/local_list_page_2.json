@@ -1,0 +1,89 @@
+{
+  "country": "KR",
+  "page": 2,
+  "items": [
+    {
+      "topic_id": "local_kr_12",
+      "title": "K-방산, 해외 수출 잭팟",
+      "keyword": "K-방산",
+      "article_count": 275,
+      "display_level": 3,
+      "media_type": "NONE"
+    },
+    {
+      "topic_id": "local_kr_13",
+      "title": "자영업자 대출 연체율 '빨간불'",
+      "keyword": "자영업자",
+      "article_count": 260,
+      "display_level": 3,
+      "media_type": "NONE"
+    },
+    {
+      "topic_id": "local_kr_14",
+      "title": "국내 게임사, 콘솔 게임 시장 도전",
+      "keyword": "콘솔게임",
+      "article_count": 240,
+      "display_level": 3,
+      "media_type": "IMAGE",
+      "media_url": "https://images.unsplash.com/photo-1585858089363-2658428419e2?q=80&w=2874&auto=format&fit=crop"
+    },
+    {
+      "topic_id": "local_kr_15",
+      "title": "해외 직구 플랫폼, 국내 시장 공습",
+      "keyword": "해외직구",
+      "article_count": 225,
+      "display_level": 3,
+      "media_type": "NONE"
+    },
+    {
+      "topic_id": "local_kr_16",
+      "title": "중고차 시장, 대기업 진출 후 지각 변동",
+      "keyword": "중고차",
+      "article_count": 210,
+      "display_level": 3,
+      "media_type": "NONE"
+    },
+    {
+      "topic_id": "local_kr_17",
+      "title": "배달앱 시장 3파전, 점유율 경쟁 치열",
+      "keyword": "배달앱",
+      "article_count": 190,
+      "display_level": 3,
+      "media_type": "IMAGE",
+      "media_url": "https://images.unsplash.com/photo-1581094794329-c8112a89af10?q=80&w=2940&auto=format&fit=crop"
+    },
+    {
+      "topic_id": "local_kr_18",
+      "title": "전세 사기 여파, 빌라 기피 현상 심화",
+      "keyword": "전세사기",
+      "article_count": 180,
+      "display_level": 3,
+      "media_type": "NONE"
+    },
+    {
+      "topic_id": "local_kr_19",
+      "title": "AI 프로필 사진 서비스 인기",
+      "keyword": "AI프로필",
+      "article_count": 155,
+      "display_level": 3,
+      "media_type": "NONE"
+    },
+    {
+      "topic_id": "local_kr_20",
+      "title": "저가 커피 프랜차이즈, 골목 상권 장악",
+      "keyword": "저가커피",
+      "article_count": 130,
+      "display_level": 3,
+      "media_type": "NONE"
+    },
+    {
+      "topic_id": "local_kr_21",
+      "title": "제로 슈거 제품, 건강 논란 계속",
+      "keyword": "제로슈거",
+      "article_count": 110,
+      "display_level": 3,
+      "media_type": "NONE"
+    }
+  ],
+  "hasNextPage": true
+}

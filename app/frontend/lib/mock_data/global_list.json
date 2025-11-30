@@ -1,0 +1,87 @@
+{
+  "items": [
+    {
+      "id": "global_001",
+      "rank": 1,
+      "is_pinned": true,
+      "title_ko": "엔비디아, 거품일까요? 멈추지 않는 AI 열풍",
+      "category": "Tech",
+      "hero_image_url": "https://images.unsplash.com/photo-1678136893699-95965492c6a4?q=80&w=2832&auto=format&fit=crop",
+      "hot_topic_badge": "🔥 Hot Topic"
+    },
+    {
+      "id": "global_002",
+      "rank": 2,
+      "is_pinned": false,
+      "title_ko": "미-중 무역 갈등, 전기차 관세 장벽으로 새 국면",
+      "category": "Politics",
+      "hero_image_url": "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=2940&auto=format&fit=crop",
+      "hot_topic_badge": null
+    },
+    {
+      "id": "global_003",
+      "rank": 3,
+      "is_pinned": false,
+      "title_ko": "기후 변화의 가속: 올 여름, 역대 가장 더운 해 되나",
+      "category": "Science",
+      "hero_image_url": "https://images.unsplash.com/photo-1523912824254-3ac5bb3b333a?q=80&w=2940&auto=format&fit=crop",
+      "hot_topic_badge": "📈 Rising"
+    },
+    {
+      "id": "global_004",
+      "rank": 4,
+      "is_pinned": false,
+      "title_ko": "일본, 엔저 현상 장기화에 따른 경기 부양책 고심",
+      "keywords": ["#엔저", "#일본경제"],
+      "thumbnail_url": "https://images.unsplash.com/photo-1580519442979-3d1a3c7a3645?q=80&w=200"
+    },
+    {
+      "id": "global_005",
+      "rank": 5,
+      "is_pinned": false,
+      "title_ko": "우주 탐사 경쟁: 스페이스X의 스타십 4차 발사 성공",
+      "keywords": ["#우주항공", "#스페이스X"],
+      "thumbnail_url": "https://images.unsplash.com/photo-1614728263952-84ea256ec347?q=80&w=200"
+    },
+    {
+      "id": "global_006",
+      "rank": 6,
+      "is_pinned": false,
+      "title_ko": "글로벌 공급망 재편, 동남아시아의 부상",
+      "keywords": ["#공급망", "#베트남"],
+      "thumbnail_url": "https://images.unsplash.com/photo-1590846420593-2f6c0d481f18?q=80&w=200"
+    },
+    {
+      "id": "global_007",
+      "rank": 7,
+      "is_pinned": false,
+      "title_ko": "틱톡, 개인정보 보호 문제로 유럽에서 연일 압박",
+      "keywords": ["#틱톡", "#개인정보"],
+      "thumbnail_url": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=200"
+    },
+    {
+      "id": "global_008",
+      "rank": 8,
+      "is_pinned": false,
+      "title_ko": "OTT 플랫폼의 미래, 광고 모델 도입 확산",
+      "keywords": ["#OTT", "#넷플릭스"],
+      "thumbnail_url": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=200"
+    },
+    {
+      "id": "global_009",
+      "rank": 9,
+      "is_pinned": false,
+      "title_ko": "인공지능 저작권, 창작의 경계는 어디까지인가",
+      "keywords": ["#AI", "#저작권"],
+      "thumbnail_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=200"
+    },
+    {
+      "id": "global_010",
+      "rank": 10,
+      "is_pinned": false,
+      "title_ko": "전 세계 중앙은행, 디지털 화폐(CBDC) 도입 속도",
+      "keywords": ["#CBDC", "#디지털화폐"],
+      "thumbnail_url": "https://images.unsplash.com/photo-1640241238838-39c6e8321a5a?q=80&w=200"
+    }
+  ]
+}

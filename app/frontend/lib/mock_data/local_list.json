@@ -1,0 +1,117 @@
+{
+  "country": "KR",
+  "page": 1,
+  "items": [
+    {
+      "topic_id": "local_kr_01",
+      "title": "손흥민, 시즌 마지막 경기서 득점왕 도전",
+      "keyword": "손흥민",
+      "article_count": 2105,
+      "category": "스포츠",
+      "bubble_size": 135,
+      "color": "#FF8C42",
+      "emoji": "⚽"
+    },
+    {
+      "topic_id": "local_kr_02",
+      "title": "국내 증시, 환율 변동성 속 혼조세 마감",
+      "keyword": "코스피",
+      "article_count": 1850,
+      "category": "경제",
+      "bubble_size": 130,
+      "color": "#FFD93D",
+      "emoji": "💰"
+    },
+    {
+      "topic_id": "local_kr_03",
+      "title": "전국 무더위 계속, 주말 최대 35도 예상",
+      "keyword": "폭염",
+      "article_count": 1510,
+      "category": "사회",
+      "bubble_size": 125,
+      "color": "#6BCB77",
+      "emoji": "🌡️"
+    },
+    {
+      "topic_id": "local_kr_04",
+      "title": "정부, 부동산 공급 대책 추가 발표",
+      "keyword": "부동산",
+      "article_count": 980,
+      "category": "정치",
+      "bubble_size": 110,
+      "color": "#FF6B6B",
+      "emoji": "🏛️"
+    },
+    {
+      "topic_id": "local_kr_05",
+      "title": "OTT 오리지널 시리즈, 해외 영화제서 K-콘텐츠 위상 높여",
+      "keyword": "K-드라마",
+      "article_count": 720,
+      "category": "연예",
+      "bubble_size": 100,
+      "color": "#F3A0FF",
+      "emoji": "🎬"
+    },
+    {
+      "topic_id": "local_kr_06",
+      "title": "전기차 보조금 개편안, 하반기부터 적용",
+      "keyword": "전기차",
+      "article_count": 450,
+      "category": "IT",
+      "bubble_size": 85,
+      "color": "#A084DC",
+      "emoji": "🚗"
+    },
+    {
+      "topic_id": "local_kr_07",
+      "title": "MZ세대 새로운 재테크, '조각 투자' 열풍",
+      "keyword": "조각투자",
+      "article_count": 430,
+      "category": "경제",
+      "bubble_size": 83,
+      "color": "#FFD93D",
+      "emoji": "💰"
+    },
+    {
+      "topic_id": "local_kr_08",
+      "title": "반려동물 인구 1500만 시대, 펫 보험 시장 급성장",
+      "keyword": "펫보험",
+      "article_count": 390,
+      "category": "사회",
+      "bubble_size": 80,
+      "color": "#6BCB77",
+      "emoji": "🐾"
+    },
+    {
+      "topic_id": "local_kr_09",
+      "title": "G7 정상회의, 우크라이나 지원 논의",
+      "keyword": "G7",
+      "article_count": 350,
+      "category": "국제",
+      "bubble_size": 75,
+      "color": "#4D96FF",
+      "emoji": "🌍"
+    },
+    {
+      "topic_id": "local_kr_10",
+      "title": "알뜰폰 가입자 1000만 돌파",
+      "keyword": "알뜰폰",
+      "article_count": 320,
+      "category": "IT",
+      "bubble_size": 70,
+      "color": "#A084DC",
+      "emoji": "📱"
+    },
+    {
+      "topic_id": "local_kr_11",
+      "title": "웹툰 원작 드라마/영화 흥행 계속",
+      "keyword": "웹툰",
+      "article_count": 280,
+      "category": "연예",
+      "bubble_size": 65,
+      "color": "#F3A0FF",
+      "emoji": "🎬"
+    }
+  ],
+  "hasNextPage": true
+}

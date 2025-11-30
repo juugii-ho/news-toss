@@ -7,7 +7,7 @@ import Matter, { Bodies, Body, Engine, Query, Runner, World } from "matter-js";
 import type { LocalItem } from "../lib/mock";
 import { getCategoryIcon } from "@/lib/categories";
 
-type Props = { items: LocalItem[]; showStatus?: boolean; countryName?: string };
+type Props = { items: LocalItem[]; showStatus?: boolean; countryName?: string; showHeader?: boolean };
 
 type Bubble = {
   id: string;

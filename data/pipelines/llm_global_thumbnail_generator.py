@@ -27,17 +27,11 @@ if not SUPABASE_URL or not KEY_TO_USE or not GOOGLE_API_KEY:
 supabase: Client = create_client(SUPABASE_URL, KEY_TO_USE)
 client = genai.Client(api_key=GOOGLE_API_KEY)
 
-def fetch_local_topics(global_topic_id):
+def fetch_local_topics(local_topic_ids):
     """Fetch local topics linked to this global topic"""
-    if not global_topic_id: return []
+    if not local_topic_ids or len(local_topic_ids) == 0:
+        return []
     try:
-        # Get articles linked to this global topic
-        articles_response = supabase.table("mvp2_articles").select("local_topic_id").eq("global_topic_id", global_topic_id).execute()
-        local_topic_ids = list(set([a['local_topic_id'] for a in articles_response.data if a.get('local_topic_id')]))
-        
-        if not local_topic_ids:
-            return []
-        
         # Get local topics
         topics_response = supabase.table("mvp2_topics").select("topic_name, country_code").in_("id", local_topic_ids).execute()
         return topics_response.data
@@ -93,15 +87,25 @@ def generate_and_upload_image(topic_id, prompt):
             print("    ❌ No image generated (no inline_data found).")
             return False
 
+        # Convert to WebP
+        try:
+            image = Image.open(io.BytesIO(image_bytes))
+            webp_io = io.BytesIO()
+            image.save(webp_io, format="WEBP", quality=80)
+            webp_bytes = webp_io.getvalue()
+        except Exception as e:
+            print(f"    ❌ WebP Conversion Failed: {e}")
+            return False
+
         # Upload to Supabase Storage
-        file_path = f"thumbnails/{topic_id}.png"
+        file_path = f"thumbnails/{topic_id}.webp"
         print(f"    📤 Uploading to {file_path}...")
         
         try:
             res = supabase.storage.from_("thumbnails").upload(
                 path=file_path,
-                file=image_bytes,
-                file_options={"content-type": "image/png", "upsert": "true"}
+                file=webp_bytes,
+                file_options={"content-type": "image/webp", "upsert": "true"}
             )
             
             # Get Public URL
@@ -142,7 +146,7 @@ def main():
             print(f"\nProcessing: {topic_name}")
             
             # 1. Get Local Topics
-            local_topics = fetch_local_topics(topic['id'])
+            local_topics = fetch_local_topics(topic.get('topic_ids', []))
             
             # 2. Generate Prompt
             prompt = generate_thumbnail_prompt(topic, local_topics)

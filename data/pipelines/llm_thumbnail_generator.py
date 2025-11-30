@@ -116,8 +116,8 @@ def generate_thumbnail_prompt(topic, article_map):
     quoted_titles = [f"'{t}'" for t in selected_titles]
     sentence = "과 ".join(quoted_titles)
 
-    final_prompt = f"{country}의 '{topic_name}' 주제로 {sentence} 내용이 담긴 언론사진과 혹은 뉴스채널 느낌의 한국어 썸네일. **주의사항** : 1. 텍스트는 딱 문장만 사용 가능"
-    
+    final_prompt = f"{country}의 '{topic_name}' 주제로 {sentence} 내용이 담긴 언론사진 느낌의 썸네일. **주의사항** : 1. 글자 사용 금지"
+
     # Post-processing replacements (from user snippet)
     final_prompt = final_prompt.replace('李', '이')
     final_prompt = final_prompt.replace('이 대통령', '이재명 대통령') # Context-specific, maybe risky to generalize but user had it.
@@ -151,21 +151,18 @@ def generate_and_upload_image(topic_id, prompt):
             print("    ❌ No image generated.")
             return False
 
-        # Get bytes directly (already have it)
-        img_bytes = image_bytes
-        
-        # Optional: Save to temp for debugging/verification if needed, 
-        # but we can just use img_bytes for upload.
-        # If we really want to verify it's a valid image, we could use PIL.
+        # Convert to WebP
         try:
-            # Verify it's a valid image
-            Image.open(io.BytesIO(img_bytes)).verify()
+            image = Image.open(io.BytesIO(img_bytes))
+            webp_io = io.BytesIO()
+            image.save(webp_io, format="WEBP", quality=80)
+            webp_bytes = webp_io.getvalue()
         except Exception as e:
-             print(f"    ❌ Invalid image bytes: {e}")
-             return False
+            print(f"    ❌ WebP Conversion Failed: {e}")
+            return False
 
         # Upload to Supabase Storage
-        file_path = f"thumbnails/{topic_id}.png"
+        file_path = f"thumbnails/{topic_id}.webp"
         print(f"    📤 Uploading to {file_path}...")
         
         try:
@@ -173,8 +170,8 @@ def generate_and_upload_image(topic_id, prompt):
             # upsert=True to overwrite
             res = supabase.storage.from_("thumbnails").upload(
                 path=file_path,
-                file=img_bytes,
-                file_options={"content-type": "image/png", "upsert": "true"}
+                file=webp_bytes,
+                file_options={"content-type": "image/webp", "upsert": "true"}
             )
             
             # Get Public URL

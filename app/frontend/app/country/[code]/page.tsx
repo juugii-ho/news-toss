@@ -26,7 +26,7 @@ export default async function CountryPage({ params }: Props) {
             </header>
 
             <LocalGravityBowl items={localList.items} />
-            <LocalMosaic initial={localList} />
+            <LocalMosaic initial={localList} country={countryCode} />
         </main>
     );
 }

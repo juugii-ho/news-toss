@@ -8,6 +8,7 @@ export const revalidate = 0;
 type Params = { params: { id: string } };
 
 export async function GET(_req: Request, { params }: Params) {
+  // Trigger redeploy
   const id = params.id;
 
   if (!id) {

@@ -10,6 +10,8 @@ from PIL import Image
 
 # Load environment variables
 load_dotenv('backend/.env')
+load_dotenv('.env.local')
+load_dotenv('.env')
 
 SUPABASE_URL = os.getenv("NEXT_PUBLIC_SUPABASE_URL")
 SUPABASE_KEY = os.getenv("NEXT_PUBLIC_SUPABASE_ANON_KEY") # Service Role Key preferred for Storage Upload if RLS is on
@@ -95,25 +97,32 @@ def generate_thumbnail_prompt(topic, article_map):
 
 def generate_and_upload_image(topic_id, prompt):
     print(f"  🎨 Generating image for topic {topic_id}...")
+    
+    # Append aspect ratio to prompt since config doesn't support it for this model
+    prompt += " Aspect Ratio 16:9."
+
     try:
-        response = client.models.generate_images(
+        chat = client.chats.create(
             model="gemini-3-pro-image-preview",
-            prompt=prompt,
-            config=types.GenerateImagesConfig(
-                aspect_ratio="16:9",
+            config=types.GenerateContentConfig(
+                response_modalities=['TEXT', 'IMAGE'],
             )
         )
+        response = chat.send_message(prompt)
         
-        image = None
-        if response.generated_images:
-            image = response.generated_images[0].image
+        image_bytes = None
+        if response.candidates and response.candidates[0].content.parts:
+            for part in response.candidates[0].content.parts:
+                if part.inline_data:
+                    image_bytes = part.inline_data.data
+                    break
                 
-        if not image:
+        if not image_bytes:
             print("    ❌ No image generated.")
             return False
 
-        # Get bytes directly
-        img_bytes = image.image_bytes
+        # Get bytes directly (already have it)
+        img_bytes = image_bytes
         
         # Optional: Save to temp for debugging/verification if needed, 
         # but we can just use img_bytes for upload.

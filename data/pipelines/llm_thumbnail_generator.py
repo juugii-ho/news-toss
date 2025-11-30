@@ -112,24 +112,18 @@ def generate_and_upload_image(topic_id, prompt):
             print("    ❌ No image generated.")
             return False
 
-        print(f"    DEBUG: Image type: {type(image)}")
-        print(f"    DEBUG: Image attributes: {dir(image)}")
-        # Save to temp file
-        temp_filename = f"/tmp/temp_{topic_id}.png"
+        # Get bytes directly
+        img_bytes = image.image_bytes
+        
+        # Optional: Save to temp for debugging/verification if needed, 
+        # but we can just use img_bytes for upload.
+        # If we really want to verify it's a valid image, we could use PIL.
         try:
-            image.save(temp_filename)
-            
-            # Read bytes
-            with open(temp_filename, "rb") as f:
-                img_bytes = f.read()
-                
-            # Clean up
-            if os.path.exists(temp_filename):
-                os.remove(temp_filename)
-                
+            # Verify it's a valid image
+            Image.open(io.BytesIO(img_bytes)).verify()
         except Exception as e:
-            print(f"    ❌ Error saving/reading temp file: {e}")
-            return False
+             print(f"    ❌ Invalid image bytes: {e}")
+             return False
 
         # Upload to Supabase Storage
         file_path = f"thumbnails/{topic_id}.png"

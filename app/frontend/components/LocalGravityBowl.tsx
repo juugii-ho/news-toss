@@ -425,8 +425,51 @@ function MatterBubbles({
     resizeObserver = new ResizeObserver((entries) => {
       for (const entry of entries) {
         const { width, height } = entry.contentRect;
-        if (width >= 280 && !hasInitialized && isVisible) {
-          initPhysics(width, height);
+
+        if (!hasInitialized) {
+          if (width >= 280 && isVisible) {
+            initPhysics(width, height);
+          }
+        } else {
+          // Handle resize after init
+          if (Math.abs(canvas.width - width) > 10 || Math.abs(canvas.height - height) > 10) {
+            // Update canvas dimensions
+            canvas.width = width;
+            canvas.height = height;
+            if (overlay) {
+              overlay.width = width;
+              overlay.height = height;
+            }
+
+            // Update walls
+            if (engineRef.current) {
+              const world = engineRef.current.world;
+              const walls = world.bodies.filter((b: any) => b.isStatic && !b.label); // Filter walls (bubbles have labels)
+
+              // We expect 3 walls: Bottom, Left, Right
+              // Re-create or reposition? Repositioning is safer for stability
+              // But dimensions might change too. Easiest is to remove and re-add walls.
+              Matter.World.remove(world, walls);
+
+              const thickness = 100;
+              const newWalls = [
+                Matter.Bodies.rectangle(width / 2, height + thickness / 2 - 10, width, thickness, { isStatic: true }), // Bottom
+                Matter.Bodies.rectangle(-thickness / 2, height / 2, thickness, height * 2, { isStatic: true }), // Left
+                Matter.Bodies.rectangle(width + thickness / 2, height / 2, thickness, height * 2, { isStatic: true }) // Right
+              ];
+              Matter.World.add(world, newWalls);
+
+              // Wake up engine
+              if (runnerRef.current) runnerRef.current.enabled = true;
+              bodiesRef.current.forEach(b => Matter.Body.setStatic(b, false));
+
+              // Auto-sleep again
+              setTimeout(() => {
+                if (runnerRef.current) runnerRef.current.enabled = false;
+                bodiesRef.current.forEach((b) => Matter.Body.setStatic(b, true));
+              }, 3000);
+            }
+          }
         }
       }
     });
@@ -439,7 +482,18 @@ function MatterBubbles({
           const rect = container.getBoundingClientRect();
           if (rect.width >= 280 && !hasInitialized) {
             initPhysics(rect.width, rect.height);
+          } else if (hasInitialized && runnerRef.current) {
+            // Re-activate if scrolling back into view
+            runnerRef.current.enabled = true;
+            bodiesRef.current.forEach(b => Matter.Body.setStatic(b, false));
+            setTimeout(() => {
+              if (runnerRef.current) runnerRef.current.enabled = false;
+              bodiesRef.current.forEach((b) => Matter.Body.setStatic(b, true));
+            }, 2000);
           }
+        } else {
+          isVisible = false;
+          if (runnerRef.current) runnerRef.current.enabled = false;
         }
       });
     });

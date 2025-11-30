@@ -1,110 +1,110 @@
-# 🌍 News Toss (News Spectrum)
+# 🌍 뉴스토스 (News Toss) - News Spectrum
 
-> **"See the World, Not Just the Headline."**
+> **"헤드라인 너머, 세상을 보다."**
 >
-> News Toss is an AI-powered global news aggregator that clusters diverse perspectives from 13+ countries to provide a balanced "News Spectrum".
+> 뉴스토스는 전 세계 13개국 이상의 다양한 시각을 모아 균형 잡힌 "뉴스 스펙트럼"을 제공하는 AI 기반 글로벌 뉴스 애그리게이터입니다.
 
 ![News Toss Hero](/assets/news_toss_hero.png)
 
-## 🚀 About The Project
+## 🚀 프로젝트 소개
 
-In a polarized world, News Toss helps you understand global events from multiple angles. Instead of just showing a list of articles, we analyze the **stance** (Pro/Con/Neutral) of news coverage across different countries and visualize the "spectrum" of opinions.
+양극화된 세상에서 뉴스토스는 사용자가 글로벌 이슈를 다각도로 이해할 수 있도록 돕습니다. 단순히 기사 목록을 나열하는 대신, 국가별 보도의 **스탠스(지지/비판/중립)** 를 AI로 분석하고 의견의 "스펙트럼"을 시각화하여 보여줍니다.
 
-This project is an **Automated AI News Pipeline** that runs daily, collecting thousands of articles, translating them, and synthesizing them into digestible "Megatopics".
+이 프로젝트는 매일 수천 건의 기사를 수집, 번역하고 "메가토픽"으로 합성하는 **완전 자동화된 AI 뉴스 파이프라인**으로 운영됩니다.
 
-### ✨ Key Features
+### ✨ 핵심 기능
 
-*   **🌐 Global Megatopics**: Automatically clusters related news from 13 countries (US, KR, JP, CN, UK, FR, DE, etc.) into single global narratives.
-*   **⚖️ Stance Spectrum**: AI analyzes the tone of each article to show the distribution of perspectives (Supportive vs. Critical vs. Factual).
-*   **🥣 Topic Bowl**: An interactive, physics-based UI (using Matter.js) to visualize local trending topics as bouncing balls.
-*   **🤖 Fully Automated**: A 9-step data pipeline powered by **Gemini 2.5** and **GitHub Actions** runs every day at 15:00 KST to fetch, analyze, and publish news without human intervention.
-*   **⚡ Zero-Downtime Updates**: Atomic publishing ensures users always see consistent data during updates.
+*   **🌐 글로벌 메가토픽**: 미국, 한국, 일본, 중국, 영국, 프랑스, 독일 등 13개국의 관련 뉴스를 자동으로 클러스터링하여 하나의 글로벌 서사로 묶습니다.
+*   **⚖️ 스탠스 스펙트럼**: AI가 각 기사의 어조를 분석하여 관점의 분포(지지 vs 비판 vs 사실 전달)를 시각적으로 보여줍니다.
+*   **🥣 토픽 볼 (Topic Bowl)**: 로컬 트렌드 토픽을 통통 튀는 공 모양으로 시각화한 인터랙티브 UI (Matter.js 물리 엔진 활용)를 제공합니다.
+*   **🤖 완전 자동화**: **Gemini 2.5**와 **GitHub Actions**를 기반으로 한 9단계 데이터 파이프라인이 매일 오후 3시(KST)에 사람의 개입 없이 뉴스를 수집, 분석, 발행합니다.
+*   **⚡ 무중단 배포**: Atomic Publishing 방식을 적용하여 업데이트 중에도 사용자는 항상 일관된 데이터를 볼 수 있습니다.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ 기술 스택 (Tech Stack)
 
-### Frontend
+### 프론트엔드 (Frontend)
 *   **Framework**: Next.js 14 (App Router)
-*   **Styling**: Vanilla CSS (Mobile-first, Apple-style aesthetics)
+*   **Styling**: Vanilla CSS (모바일 우선, Apple 스타일의 미니멀한 디자인)
 *   **Animation**: Framer Motion
-*   **Physics Engine**: Matter.js (for Topic Bowl)
+*   **Physics**: Matter.js (Topic Bowl 구현)
 
-### Backend & Data
-*   **Database**: Supabase (PostgreSQL + pgvector for semantic search)
-*   **AI/LLM**: Google Gemini 2.5 Pro & Flash (Translation, Summarization, Stance Analysis)
-*   **Language**: Python 3.10 (Data Pipeline)
+### 백엔드 & 데이터 (Backend & Data)
+*   **Database**: Supabase (PostgreSQL + pgvector 의미 기반 검색)
+*   **AI/LLM**: Google Gemini 2.5 Pro & Flash (번역, 요약, 스탠스 분석, 썸네일 생성)
+*   **Language**: Python 3.10 (데이터 파이프라인)
 
-### Infrastructure
+### 인프라 (Infrastructure)
 *   **CI/CD**: GitHub Actions (Daily Cron Jobs)
 *   **Hosting**: Vercel (Frontend)
 
 ---
 
-## 🔄 The 9-Step AI Pipeline
+## 🔄 9단계 AI 파이프라인
 
-Our core engine is a sophisticated Python pipeline that transforms raw RSS feeds into structured insights:
+뉴스토스의 핵심 엔진은 RSS 피드를 구조화된 인사이트로 변환하는 정교한 Python 파이프라인입니다:
 
-1.  **RSS Collection**: Fetches 5,000+ daily articles from major global outlets.
-2.  **Translation**: Translates non-English headlines to Korean/English using Gemini.
-3.  **Clustering**: Uses **HDBSCAN** and Embedding vectors to group similar articles into "Topics".
-4.  **Enrichment**: AI extracts keywords, categories, and stances for each topic.
-5.  **Megatopic Analysis**: Merges local topics into "Global Megatopics" across borders.
-6.  **Summarization**: Generates concise 3-line summaries for each topic.
-7.  **Editor Comments**: AI "Editor" provides context and insight for global issues.
-8.  **Thumbnail Generation**: Selects or generates representative images.
-9.  **Atomic Publishing**: Batches updates and publishes them instantly with zero downtime.
+1.  **RSS 수집 (RSS Collection)**: 주요 글로벌 언론사에서 매일 5,000건 이상의 기사를 수집합니다.
+2.  **번역 (Translation)**: 비영어권 헤드라인을 Gemini를 통해 한국어/영어로 번역합니다.
+3.  **클러스터링 (Clustering)**: **HDBSCAN**과 임베딩 벡터를 사용하여 유사한 기사들을 "토픽"으로 그룹화합니다.
+4.  **데이터 보강 (Enrichment)**: AI가 각 토픽의 키워드, 카테고리, 스탠스를 추출합니다.
+5.  **메가토픽 분석 (Megatopic Analysis)**: 국경을 넘어 연결되는 로컬 토픽들을 "글로벌 메가토픽"으로 병합합니다.
+6.  **요약 (Summarization)**: 각 토픽에 대해 3줄 요약을 생성합니다.
+7.  **에디터 코멘트 (Editor Comments)**: AI "에디터"가 글로벌 이슈에 대한 맥락과 통찰을 제공합니다.
+8.  **썸네일 생성 (Thumbnail Generation)**: 대표 이미지를 선택하거나 생성합니다.
+9.  **일괄 발행 (Atomic Publishing)**: 업데이트를 배치 단위로 처리하여 다운타임 없이 즉시 발행합니다.
 
 ---
 
-## 🏃‍♂️ Getting Started
+## 🏃‍♂️ 시작하기 (Getting Started)
 
-### Prerequisites
+### 필수 요구사항
 *   Node.js 18+
 *   Python 3.10+
-*   Supabase Account
+*   Supabase 계정
 *   Google Gemini API Key
 
-### Installation
+### 설치 방법
 
-1.  **Clone the repo**
+1.  **저장소 복제**
     ```bash
     git clone https://github.com/juugii-ho/news-toss.git
     cd news-toss
     ```
 
-2.  **Setup Environment**
+2.  **환경 변수 설정**
     ```bash
     cp .env.example .env
-    # Fill in SUPABASE_URL, SUPABASE_KEY, GOOGLE_API_KEY, etc.
+    # .env 파일에 SUPABASE_URL, SUPABASE_KEY, GOOGLE_API_KEY 등을 입력하세요.
     ```
 
-3.  **Install Dependencies**
+3.  **의존성 설치**
     ```bash
-    # Frontend
+    # 프론트엔드
     cd app/frontend
     npm install
 
-    # Data Pipeline
+    # 데이터 파이프라인
     cd ../../
     python -m venv venv
     source venv/bin/activate
     pip install -r data/pipelines/requirements.txt
     ```
 
-4.  **Run Locally**
+4.  **로컬 실행**
     ```bash
-    # Frontend
+    # 프론트엔드 개발 서버
     cd app/frontend
     npm run dev
     ```
 
 ---
 
-## 🤝 Contributing
+## 🤝 기여하기
 
-This project is an MVP (Minimum Viable Product) developed to demonstrate the power of AI agents in news curation. Suggestions and Pull Requests are welcome!
+이 프로젝트는 AI 에이전트를 활용한 뉴스 큐레이션의 가능성을 보여주기 위한 MVP(Minimum Viable Product)입니다. 제안이나 풀 리퀘스트(PR)는 언제나 환영합니다!
 
-## 📝 License
+## 📝 라이선스
 
-Distributed under the MIT License. See `LICENSE` for more information.
+MIT 라이선스 하에 배포됩니다. 자세한 내용은 `LICENSE` 파일을 참조하세요.

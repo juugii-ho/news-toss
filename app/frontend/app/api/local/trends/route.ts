@@ -22,6 +22,7 @@ export async function GET(request: NextRequest) {
       .from("mvp2_topics")
       .select("*", { count: "exact" })
       .eq("country_code", country)
+      .eq("is_published", true)
       .order("article_count", { ascending: false })
       .order("created_at", { ascending: false })
       .range(from, to);

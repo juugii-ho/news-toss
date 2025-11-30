@@ -116,12 +116,12 @@ def generate_thumbnail_prompt(topic, article_map):
     quoted_titles = [f"'{t}'" for t in selected_titles]
     sentence = "과 ".join(quoted_titles)
 
-    final_prompt = f"{country}의 '{topic_name}' 주제로 {sentence} 내용이 담긴 언론사진 느낌의 썸네일. **주의사항** : 1. 글자 사용 금지"
-
     # Post-processing replacements (from user snippet)
     final_prompt = final_prompt.replace('李', '이')
     final_prompt = final_prompt.replace('이 대통령', '이재명 대통령') # Context-specific, maybe risky to generalize but user had it.
     # I will keep it as user requested "using my code".
+    final_prompt = f"{country}의 '{topic_name}' 주제로 {sentence} 내용이 담긴 언론사진 느낌의 썸네일. **주의사항** : 1. 글자 사용 금지"
+
     
     return final_prompt
 

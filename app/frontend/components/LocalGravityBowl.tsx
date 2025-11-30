@@ -246,202 +246,211 @@ function MatterBubbles({
     const overlay = overlayRef.current;
     if (!container || !canvas) return;
 
-    // Get actual rendered dimensions
-    const rect = container.getBoundingClientRect();
-    const width = rect.width > 0 ? rect.width : 360;
-    const height = rect.height > 0 ? rect.height : 560;
+    let resizeObserver: ResizeObserver | null = null;
+    let intersectionObserver: IntersectionObserver | null = null;
+    let isVisible = false;
+    let hasInitialized = false;
 
-    // Explicitly set canvas dimensions
-    canvas.width = width;
-    canvas.height = height;
-    if (overlay) {
-      overlay.width = width;
-      overlay.height = height;
-    }
+    const initPhysics = (width: number, height: number) => {
+      if (hasInitialized || width < 280) return; // Too small, wait for proper layout
+      hasInitialized = true;
 
-    const engine = Matter.Engine.create({ gravity: { x: 0, y: 1, scale: 0.001 } });
-    const world = engine.world;
-    engineRef.current = engine;
+      // Explicitly set canvas dimensions
+      canvas.width = width;
+      canvas.height = height;
+      if (overlay) {
+        overlay.width = width;
+        overlay.height = height;
+      }
 
-    const thickness = 60;
-    const walls = [
-      Matter.Bodies.rectangle(width / 2, height - 30, width, thickness, { isStatic: true }), // Wall further down to fill bottom
-      Matter.Bodies.rectangle(-thickness / 2, height / 2, thickness, height * 2, { isStatic: true }),
-      Matter.Bodies.rectangle(width + thickness / 2, height / 2, thickness, height * 2, { isStatic: true })
-    ];
-    Matter.World.add(world, walls);
+      const engine = Matter.Engine.create({ gravity: { x: 0, y: 1, scale: 0.001 } });
+      const world = engine.world;
+      engineRef.current = engine;
 
-    bodiesRef.current = [];
-    bubbles.forEach((bubble, idx) => {
+      const thickness = 100; // Thicker walls to prevent tunneling
+      const walls = [
+        Matter.Bodies.rectangle(width / 2, height + thickness / 2 - 10, width, thickness, { isStatic: true }), // Bottom
+        Matter.Bodies.rectangle(-thickness / 2, height / 2, thickness, height * 2, { isStatic: true }), // Left
+        Matter.Bodies.rectangle(width + thickness / 2, height / 2, thickness, height * 2, { isStatic: true }) // Right
+      ];
+      Matter.World.add(world, walls);
+
+      bodiesRef.current = [];
+      bubbles.forEach((bubble, idx) => {
+        setTimeout(() => {
+          if (!engineRef.current) return; // Cleanup check
+          const body = Matter.Bodies.circle(
+            Math.random() * (width - bubble.size * 1.5) + bubble.size, // Safer random range
+            -200 - (idx * 120), // Start higher
+            bubble.size / 2,
+            {
+              restitution: 0.72,
+              friction: 0.06,
+              frictionAir: 0.015,
+              render: { fillStyle: bubble.color },
+              label: bubble.id
+            }
+          );
+          bodiesRef.current.push(body);
+          Matter.World.add(world, body);
+        }, idx * 80);
+      });
+
+      // Custom rendering loop
+      let renderAnimId: number | null = null;
+      const customRender = () => {
+        const engine = engineRef.current;
+        if (!engine) return;
+
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return;
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw gradient background
+        const bgGradient = ctx.createLinearGradient(0, 0, width, height);
+        bgGradient.addColorStop(0, "#f8fafc");
+        bgGradient.addColorStop(1, "#f1f5f9");
+        ctx.fillStyle = bgGradient;
+        ctx.fillRect(0, 0, width, height);
+
+        // Draw bodies
+        bodiesRef.current.forEach((body) => {
+          const bubble = bubbles.find((b) => b.id === body.label);
+          if (!bubble) return;
+
+          const x = body.position.x;
+          const y = body.position.y;
+          const radius = bubble.size / 2;
+
+          if (y < -radius * 2 || y > height + radius * 2) return;
+
+          // Shadow
+          ctx.save();
+          ctx.shadowColor = "rgba(15, 23, 42, 0.15)";
+          ctx.shadowBlur = 24;
+          ctx.shadowOffsetX = 0;
+          ctx.shadowOffsetY = 8;
+
+          // Gradient Circle
+          const gradient = ctx.createLinearGradient(x - radius, y - radius, x + radius, y + radius);
+          gradient.addColorStop(0, bubble.color);
+          gradient.addColorStop(1, bubble.color + "dd");
+
+          ctx.fillStyle = gradient;
+          ctx.beginPath();
+          ctx.arc(x, y, radius, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+
+          // Border
+          ctx.strokeStyle = "rgba(255, 255, 255, 0.3)";
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.arc(x, y, radius, 0, Math.PI * 2);
+          ctx.stroke();
+
+          // Highlight
+          ctx.save();
+          const highlightGradient = ctx.createRadialGradient(x - radius * 0.3, y - radius * 0.3, 0, x, y, radius);
+          highlightGradient.addColorStop(0, "rgba(255, 255, 255, 0.4)");
+          highlightGradient.addColorStop(0.5, "rgba(255, 255, 255, 0.1)");
+          highlightGradient.addColorStop(1, "transparent");
+          ctx.fillStyle = highlightGradient;
+          ctx.beginPath();
+          ctx.arc(x, y, radius, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        });
+
+        renderAnimId = requestAnimationFrame(customRender);
+      };
+      customRender();
+
+      // Runner
+      const runner = Matter.Runner.create();
+      runnerRef.current = runner;
+      Matter.Runner.run(runner, engine);
+
+      // Overlay loop
+      let overlayAnimId: number | null = null;
+      const drawOverlay = () => {
+        if (!overlay) return;
+        const ctx = overlay.getContext("2d");
+        if (!ctx) return;
+        ctx.clearRect(0, 0, overlay.width, overlay.height);
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillStyle = "#ffffff";
+        ctx.shadowColor = "rgba(0,0,0,0.4)";
+        ctx.shadowBlur = 6;
+        ctx.shadowOffsetY = 2;
+        ctx.font = "800 15px -apple-system, BlinkMacSystemFont, 'Pretendard', 'Inter', sans-serif";
+
+        bodiesRef.current.forEach((body) => {
+          const bubble = bubbles.find((b) => b.id === body.label);
+          if (!bubble) return;
+          const x = Math.round(body.position.x);
+          const y = Math.round(body.position.y);
+          if (y < bubble.size * 0.3 || y > height + bubble.size) return;
+
+          const lines = bubble.keyword.split(/\s+/);
+          const lineHeight = 16;
+          const offsetY = -(lines.length - 1) * lineHeight * 0.5;
+          lines.forEach((line, idx) => {
+            ctx.fillText(line, x, y + offsetY + idx * lineHeight);
+          });
+        });
+        overlayAnimId = requestAnimationFrame(drawOverlay);
+      };
+      if (overlay) drawOverlay();
+
+      // Auto-stop
       setTimeout(() => {
-        const body = Matter.Bodies.circle(
-          Math.random() * (width - bubble.size) + bubble.size / 2,
-          -150 - (idx * 100), // Start further up to prevent top ghosting
-          bubble.size / 2,
-          {
-            restitution: 0.72,
-            friction: 0.06,
-            frictionAir: 0.015,
-            render: { fillStyle: bubble.color },
-            label: bubble.id
-          }
-        );
-        bodiesRef.current.push(body);
-        Matter.World.add(world, body);
-      }, idx * 80);
-    });
+        if (runnerRef.current) runnerRef.current.enabled = false;
+        bodiesRef.current.forEach((b) => Matter.Body.setStatic(b, true));
+      }, 8000); // Increased to 8s
 
-    const render = Matter.Render.create({
-      engine,
-      canvas,
-      options: {
-        width,
-        height,
-        wireframes: false,
-        background: "transparent"
+      // Cleanup function for this init instance
+      (container as any)._cleanup = () => {
+        if (renderAnimId) cancelAnimationFrame(renderAnimId);
+        if (overlayAnimId) cancelAnimationFrame(overlayAnimId);
+        Matter.Runner.stop(runner);
+        Matter.Engine.clear(engine);
+        bodiesRef.current = [];
+      };
+    };
+
+    // Observer setup
+    resizeObserver = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        const { width, height } = entry.contentRect;
+        if (width >= 280 && !hasInitialized && isVisible) {
+          initPhysics(width, height);
+        }
       }
     });
+    resizeObserver.observe(container);
 
-    // Custom rendering function for better visuals
-    let renderAnimId: number | null = null;
-    const customRender = () => {
-      const engine = engineRef.current;
-      const canvas = canvasRef.current;
-      const overlay = overlayRef.current;
-      if (!engine || !canvas || !overlay) return;
-
-      const ctx = canvas.getContext("2d");
-      const overlayCtx = overlay.getContext("2d");
-      if (!ctx || !overlayCtx) return;
-
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      overlayCtx.clearRect(0, 0, overlay.width, overlay.height);
-
-      // Draw gradient background
-      const bgGradient = ctx.createLinearGradient(0, 0, width, height);
-      bgGradient.addColorStop(0, "#f8fafc");
-      bgGradient.addColorStop(1, "#f1f5f9");
-      ctx.fillStyle = bgGradient;
-      ctx.fillRect(0, 0, width, height);
-
-      // Draw each bubble with gradient and shadow
-      bodiesRef.current.forEach((body) => {
-        const bubble = bubbles.find((b) => b.id === body.label);
-        if (!bubble) return;
-
-        const x = body.position.x;
-        const y = body.position.y;
-        const radius = bubble.size / 2;
-
-        // Skip if off-screen
-        if (y < -radius || y > height + radius) return;
-
-        // Draw shadow
-        ctx.save();
-        ctx.shadowColor = "rgba(15, 23, 42, 0.15)";
-        ctx.shadowBlur = 24;
-        ctx.shadowOffsetX = 0;
-        ctx.shadowOffsetY = 8;
-
-        // Draw gradient circle
-        const gradient = ctx.createLinearGradient(
-          x - radius, y - radius,
-          x + radius, y + radius
-        );
-        gradient.addColorStop(0, bubble.color);
-        gradient.addColorStop(1, bubble.color + "dd");
-
-        ctx.fillStyle = gradient;
-        ctx.beginPath();
-        ctx.arc(x, y, radius, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
-
-        // Draw white border
-        ctx.strokeStyle = "rgba(255, 255, 255, 0.3)";
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.arc(x, y, radius, 0, Math.PI * 2);
-        ctx.stroke();
-
-        // Draw inner highlight
-        ctx.save();
-        const highlightGradient = ctx.createRadialGradient(
-          x - radius * 0.3, y - radius * 0.3, 0,
-          x, y, radius
-        );
-        highlightGradient.addColorStop(0, "rgba(255, 255, 255, 0.4)");
-        highlightGradient.addColorStop(0.5, "rgba(255, 255, 255, 0.1)");
-        highlightGradient.addColorStop(1, "transparent");
-        ctx.fillStyle = highlightGradient;
-        ctx.beginPath();
-        ctx.arc(x, y, radius, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
+    intersectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          isVisible = true;
+          const rect = container.getBoundingClientRect();
+          if (rect.width >= 280 && !hasInitialized) {
+            initPhysics(rect.width, rect.height);
+          }
+        }
       });
-
-      renderAnimId = requestAnimationFrame(customRender);
-    };
-
-    customRender();
-    // Don't run Matter's default renderer - we're using custom rendering
-    // Matter.Render.run(render);
-
-    const runner = Matter.Runner.create();
-    runnerRef.current = runner;
-    Matter.Runner.run(runner, engine);
-
-    // Overlay text rendering loop
-    let animId: number | null = null;
-    const drawOverlay = () => {
-      if (!overlay) return;
-      const ctx = overlay.getContext("2d");
-      if (!ctx) return;
-      ctx.clearRect(0, 0, overlay.width, overlay.height);
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      ctx.fillStyle = "#ffffff";
-      ctx.shadowColor = "rgba(0,0,0,0.4)";
-      ctx.shadowBlur = 6;
-      ctx.shadowOffsetY = 2;
-      ctx.font = "800 15px -apple-system, BlinkMacSystemFont, 'Pretendard', 'Inter', sans-serif";
-
-      bodiesRef.current.forEach((body) => {
-        const bubble = bubbles.find((b) => b.id === body.label);
-        if (!bubble) return;
-        const x = Math.round(body.position.x);
-        const y = Math.round(body.position.y);
-        if (y < bubble.size * 0.3 || y > height + bubble.size) return; // 화면 밖이면 스킵해 잔상/떨림 방지
-        const lines = bubble.keyword.split(/\s+/);
-        const lineHeight = 16;
-        const offsetY = -(lines.length - 1) * lineHeight * 0.5;
-        lines.forEach((line, idx) => {
-          ctx.fillText(line, x, y + offsetY + idx * lineHeight);
-        });
-      });
-      animId = requestAnimationFrame(drawOverlay);
-    };
-    if (overlay) {
-      overlay.width = width;
-      overlay.height = height;
-      drawOverlay();
-    }
-
-    const timeout = setTimeout(() => {
-      runner.enabled = false;
-      bodiesRef.current.forEach((b) => Matter.Body.setStatic(b, true));
-    }, 7000);
+    });
+    intersectionObserver.observe(container);
 
     return () => {
-      if (renderAnimId) cancelAnimationFrame(renderAnimId);
-      if (animId) cancelAnimationFrame(animId);
-      clearTimeout(timeout);
-      Matter.Runner.stop(runner);
-      Matter.Render.stop(render);
-      Matter.Engine.clear(engine);
-      bodiesRef.current = [];
+      resizeObserver?.disconnect();
+      intersectionObserver?.disconnect();
+      if ((container as any)._cleanup) (container as any)._cleanup();
     };
-  }, [bubbles, canvasRef, containerRef, bodiesRef, engineRef, runnerRef]);
+  }, [bubbles]);
 
   useEffect(() => {
     const canvas = canvasRef.current;

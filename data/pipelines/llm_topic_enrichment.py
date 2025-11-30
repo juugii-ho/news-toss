@@ -207,10 +207,15 @@ def main():
     # Save to DB
     print("Saving enriched topics to Supabase DB (mvp2_topics)...")
     try:
-        # 1. Clear existing topics for this country
-        print(f"  🧹 Clearing existing topics for {COUNTRY}...")
-        supabase.table("mvp2_articles").update({"local_topic_id": None}).eq("country_code", COUNTRY).execute()
-        supabase.table("mvp2_topics").delete().eq("country_code", COUNTRY).execute()
+        # Generate batch_id for this country's topics
+        import uuid
+        batch_id = str(uuid.uuid4())
+        print(f"  🔖 Generated batch_id: {batch_id}")
+        
+        # 1. Clear only UNPUBLISHED topics for this country (preserve published ones)
+        print(f"  🧹 Clearing unpublished topics for {COUNTRY}...")
+        supabase.table("mvp2_topics").delete().eq("country_code", COUNTRY).eq("is_published", False).execute()
+        # Note: Article linkage will be updated in Step 9 when publishing
         
         db_rows = []
         # Create a lookup for article sources
@@ -236,6 +241,8 @@ def main():
                 "stances": stances,
                 "keywords": details.get('keywords', []),
                 "category": details.get('category', 'Unclassified'),
+                "batch_id": batch_id,
+                "is_published": False,
                 "created_at": datetime.utcnow().isoformat()
             })
         

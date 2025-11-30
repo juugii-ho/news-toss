@@ -353,10 +353,13 @@ Output JSON:
     print(f"Saving {len(final_output)} megatopics to Supabase...")
     
     try:
-        # 1. Clear existing megatopics (Full Refresh)
-        print("  🧹 Clearing existing megatopics...")
-        # Hack to delete all rows since truncate is not exposed directly
-        supabase.table("mvp2_megatopics").delete().neq("name", "______").execute()
+        # 1. Clear ONLY unpublished DRAFTS (Preserve published ones and archived history)
+        print("  🧹 Clearing unpublished drafts (preserving history)...")
+        # Only delete drafts (batch_id is NULL), keep history (batch_id set) intact
+        supabase.table("mvp2_megatopics").delete()\
+            .eq("is_published", False)\
+            .is_("batch_id", "null")\
+            .execute()
         
         # Prepare rows
         rows = []

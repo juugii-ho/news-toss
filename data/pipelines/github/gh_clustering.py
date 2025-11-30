@@ -228,14 +228,17 @@ def process_country(country):
     print(f"✅ Saved {len(final_output)} topics to {output_file}")
     
     # Save to DB (Initial Save - Enrichment will overwrite/update)
-    # Actually, let's SKIP DB save here and let Enrichment do it to avoid double writes?
-    # But if Enrichment fails, we have nothing.
-    # Let's save here too, just in case.
+    # Zero-Downtime Strategy: Keep published topics visible during update
     
     try:
-        print(f"  Saving to DB for {country}...")
-        supabase.table("mvp2_articles").update({"local_topic_id": None}).eq("country_code", country).execute()
-        supabase.table("mvp2_topics").delete().eq("country_code", country).execute()
+        # Generate batch_id for this country's topics
+        import uuid
+        batch_id = str(uuid.uuid4())
+        print(f"  Saving to DB for {country} (batch_id: {batch_id})...")
+        
+        # Only delete UNPUBLISHED topics (preserve published ones for users)
+        supabase.table("mvp2_topics").delete().eq("country_code", country).eq("is_published", False).execute()
+        # Note: Article linkage will be updated in Step 9 when publishing
         
         db_rows = []
         article_source_map = {a['id']: a.get('source_name', 'Unknown') for a in articles}
@@ -254,6 +257,8 @@ def process_country(country):
                 "stances": stances,
                 "keywords": details.get('keywords', []),
                 "category": details.get('category', 'Unclassified'),
+                "batch_id": batch_id,
+                "is_published": False,
                 "created_at": datetime.utcnow().isoformat()
             })
             

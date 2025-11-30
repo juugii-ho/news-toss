@@ -64,6 +64,7 @@ export type LocalItem = {
   stances?: any;
   summary?: string;
   category?: string;
+  published_at?: string;
 };
 
 export type LocalListResponse = {

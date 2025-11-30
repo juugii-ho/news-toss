@@ -100,10 +100,8 @@ def generate_and_upload_image(topic_id, prompt):
             model="gemini-3-pro-image-preview", # Use the preview model as requested
             contents=prompt,
             config=types.GenerateContentConfig(
-                response_modalities=['Image'],
-                image_config=types.ImageConfig(
-                    aspect_ratio="16:9",
-                )
+                response_modalities=['IMAGE'],
+                media_resolution="media_resolution_16_9",
             )
         )
         

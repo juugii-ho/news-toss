@@ -1,7 +1,9 @@
+```typescript
 import { NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase-client";
 import { readGlobalList } from "@/lib/mock";
 
+export const dynamic = 'force-dynamic';
 export const revalidate = 0; // debugging, can set to 3600 for ISR
 
 export async function GET() {

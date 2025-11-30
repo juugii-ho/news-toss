@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase-client";
 import { readVsCard } from "@/lib/mock";
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 type Params = {
   params: { id: string };
@@ -27,7 +28,7 @@ export async function GET(_req: Request, { params }: Params) {
   try {
     const fetchLatest = async () => {
       const { data, error } = await supabase!
-        .from("mvp2_global_topics")
+        .from("mvp2_megatopics")
         .select("*")
         .order("created_at", { ascending: false })
         .order("rank", { ascending: true })
@@ -39,7 +40,7 @@ export async function GET(_req: Request, { params }: Params) {
 
     const tryId = async () => {
       const { data, error } = await supabase!
-        .from("mvp2_global_topics")
+        .from("mvp2_megatopics")
         .select("*")
         .eq("id", id)
         .maybeSingle();
@@ -83,10 +84,18 @@ export async function GET(_req: Request, { params }: Params) {
       if (localTopicIds.length > 0) {
         const { data: topics } = await supabase!
           .from("mvp2_topics")
-          .select("stances, category")
+          .select("id, stances, category, thumbnail_url")
           .in("id", localTopicIds);
         localTopics = topics || [];
       }
+    }
+
+    // Pick a thumbnail from local topics if global doesn't have one
+    let thumbnail_url = data.thumbnail_url;
+    if (!thumbnail_url && localTopics.length > 0) {
+      // Try to find one with a thumbnail
+      const withThumb = localTopics.find(t => t.thumbnail_url);
+      if (withThumb) thumbnail_url = withThumb.thumbnail_url;
     }
 
     // 2. Aggregate stance article IDs from all local topics
@@ -231,7 +240,7 @@ export async function GET(_req: Request, { params }: Params) {
       title_en: data.title_en ?? "",
       intro_ko: data.intro_ko ?? "",
       intro_en: data.intro_en ?? "",
-      thumbnail_url: data.thumbnail_url || null,
+      thumbnail_url: thumbnail_url || null,
       ai_summary: data.ai_summary || null,
       editor_comment: data.editor_comment || null,
       category: category || null,

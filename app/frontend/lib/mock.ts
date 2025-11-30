@@ -64,7 +64,9 @@ export type LocalItem = {
   media_url?: string;
   keywords?: string[];
   stances?: any;
+  is_global?: boolean;
   summary?: string;
+  created_at?: string;
   category?: string;
   published_at?: string;
 };

@@ -71,7 +71,8 @@ export async function GET(request: NextRequest) {
             stances: topic.stances ?? [],
             category: (topic as any).category ?? null,
             is_global: isGlobal,
-            summary: topic.summary || ""
+            summary: topic.summary || "",
+            created_at: topic.created_at
           };
         }),
         page,

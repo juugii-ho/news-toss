@@ -1,84 +1,110 @@
-# MVP2 - AI-Powered Collaboration Template
+# 🌍 News Toss (News Spectrum)
 
-> S + AI Agents (C, G, O) 협업을 위한 최적화된 프로젝트 보일러플레이트
+> **"See the World, Not Just the Headline."**
+>
+> News Toss is an AI-powered global news aggregator that clusters diverse perspectives from 13+ countries to provide a balanced "News Spectrum".
 
-## Quick Start
+![News Toss Hero](/assets/news_toss_hero.png)
 
-```bash
-# 1. 환경 변수 설정
-cp .env.example .env
-# .env 파일을 열어 실제 값 입력
+## 🚀 About The Project
 
-# 2. 의존성 설치
-make setup
+In a polarized world, News Toss helps you understand global events from multiple angles. Instead of just showing a list of articles, we analyze the **stance** (Pro/Con/Neutral) of news coverage across different countries and visualize the "spectrum" of opinions.
 
-# 3. 개발 서버 시작
-make dev
-```
+This project is an **Automated AI News Pipeline** that runs daily, collecting thousands of articles, translating them, and synthesizing them into digestible "Megatopics".
 
-## Team Structure
+### ✨ Key Features
 
-- **S**: Product Owner & Final Decision Maker
-- **C** (Claude Code): Tech Lead, Full-Stack Developer
-- **G** (Gemini CLI): Data Engineer, UX Designer
-- **O** (Codex CLI): DevOps Engineer, Infrastructure Architect
+*   **🌐 Global Megatopics**: Automatically clusters related news from 13 countries (US, KR, JP, CN, UK, FR, DE, etc.) into single global narratives.
+*   **⚖️ Stance Spectrum**: AI analyzes the tone of each article to show the distribution of perspectives (Supportive vs. Critical vs. Factual).
+*   **🥣 Topic Bowl**: An interactive, physics-based UI (using Matter.js) to visualize local trending topics as bouncing balls.
+*   **🤖 Fully Automated**: A 9-step data pipeline powered by **Gemini 2.5** and **GitHub Actions** runs every day at 15:00 KST to fetch, analyze, and publish news without human intervention.
+*   **⚡ Zero-Downtime Updates**: Atomic publishing ensures users always see consistent data during updates.
 
-## Core Documentation
+---
 
-- **[VISION.md](docs/VISION.md)**: 제품 비전, MVP 스코프, 성공 지표
-- **[RULES.md](docs/RULES.md)**: 역할, 디렉토리 소유권, 협업 규칙
-- **[WORK.md](docs/WORK.md)**: 작업 목록 및 이력
-- **[PRIORITY.md](docs/PRIORITY.md)**: 우선순위 큐 (S가 관리)
-- **[STATUS.md](docs/STATUS.md)**: 실시간 작업 상태
-- **[DECISIONS.md](docs/DECISIONS.md)**: 주요 의사결정 기록
-- **[ARCHITECTURE.md](docs/ARCHITECTURE.md)**: 시스템 아키텍처
-- **[DEPLOYMENT.md](docs/DEPLOYMENT.md)**: 배포 가이드
+## 🛠️ Tech Stack
 
-## Project Structure
+### Frontend
+*   **Framework**: Next.js 14 (App Router)
+*   **Styling**: Vanilla CSS (Mobile-first, Apple-style aesthetics)
+*   **Animation**: Framer Motion
+*   **Physics Engine**: Matter.js (for Topic Bowl)
 
-```
-.
-├── app/
-│   ├── frontend/       # Next.js 프론트엔드 (C 소유)
-│   └── backend/        # 백엔드 API (C 소유)
-├── packages/           # 공유 라이브러리 (C 소유)
-│   ├── ui/            # UI 컴포넌트
-│   ├── config/        # 공통 설정
-│   └── lib/           # 공통 로직
-├── data/              # 데이터 파이프라인 (G 소유)
-│   ├── pipelines/
-│   ├── notebooks/
-│   └── analysis/
-├── infra/             # 인프라 코드 (O 소유)
-│   ├── environments/
-│   ├── supabase/
-│   ├── monitoring/
-│   └── backup/
-├── docs/              # 프로젝트 문서
-├── outputs/           # 로컬 산출물 (gitignore)
-└── .github/workflows/ # CI/CD 파이프라인 (O 소유)
-```
+### Backend & Data
+*   **Database**: Supabase (PostgreSQL + pgvector for semantic search)
+*   **AI/LLM**: Google Gemini 2.5 Pro & Flash (Translation, Summarization, Stance Analysis)
+*   **Language**: Python 3.10 (Data Pipeline)
 
-## Development Commands
+### Infrastructure
+*   **CI/CD**: GitHub Actions (Daily Cron Jobs)
+*   **Hosting**: Vercel (Frontend)
 
-```bash
-make help        # 사용 가능한 명령어 확인
-make setup       # 의존성 설치
-make dev         # 프론트엔드 개발 서버
-make dev-be      # 백엔드 개발 서버
-make build       # 프로덕션 빌드
-make test        # 테스트 실행
-make lint        # 코드 린트
-make pipeline    # 데이터 파이프라인 실행
-make clean       # 생성 파일 제거
-```
+---
 
-## Workflow
+## 🔄 The 9-Step AI Pipeline
 
-1. **작업 시작 전**: `docs/STATUS.md`와 `docs/PRIORITY.md` 확인
-2. **작업 중**: `docs/STATUS.md`에 진행 상황 업데이트
-3. **작업 완료 후**: `docs/CHANGELOG.md`에 요약 추가
+Our core engine is a sophisticated Python pipeline that transforms raw RSS feeds into structured insights:
 
-## License
+1.  **RSS Collection**: Fetches 5,000+ daily articles from major global outlets.
+2.  **Translation**: Translates non-English headlines to Korean/English using Gemini.
+3.  **Clustering**: Uses **HDBSCAN** and Embedding vectors to group similar articles into "Topics".
+4.  **Enrichment**: AI extracts keywords, categories, and stances for each topic.
+5.  **Megatopic Analysis**: Merges local topics into "Global Megatopics" across borders.
+6.  **Summarization**: Generates concise 3-line summaries for each topic.
+7.  **Editor Comments**: AI "Editor" provides context and insight for global issues.
+8.  **Thumbnail Generation**: Selects or generates representative images.
+9.  **Atomic Publishing**: Batches updates and publishes them instantly with zero downtime.
 
-MIT
+---
+
+## 🏃‍♂️ Getting Started
+
+### Prerequisites
+*   Node.js 18+
+*   Python 3.10+
+*   Supabase Account
+*   Google Gemini API Key
+
+### Installation
+
+1.  **Clone the repo**
+    ```bash
+    git clone https://github.com/juugii-ho/news-toss.git
+    cd news-toss
+    ```
+
+2.  **Setup Environment**
+    ```bash
+    cp .env.example .env
+    # Fill in SUPABASE_URL, SUPABASE_KEY, GOOGLE_API_KEY, etc.
+    ```
+
+3.  **Install Dependencies**
+    ```bash
+    # Frontend
+    cd app/frontend
+    npm install
+
+    # Data Pipeline
+    cd ../../
+    python -m venv venv
+    source venv/bin/activate
+    pip install -r data/pipelines/requirements.txt
+    ```
+
+4.  **Run Locally**
+    ```bash
+    # Frontend
+    cd app/frontend
+    npm run dev
+    ```
+
+---
+
+## 🤝 Contributing
+
+This project is an MVP (Minimum Viable Product) developed to demonstrate the power of AI agents in news curation. Suggestions and Pull Requests are welcome!
+
+## 📝 License
+
+Distributed under the MIT License. See `LICENSE` for more information.

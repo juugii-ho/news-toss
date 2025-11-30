@@ -3,7 +3,7 @@
 import { useMemo, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-import Matter, { Bodies, Body, Engine, Query, Runner, World } from "matter-js";
+import Matter from "matter-js";
 import type { LocalItem } from "../lib/mock";
 import { getCategoryIcon } from "@/lib/categories";
 
@@ -40,9 +40,9 @@ export function LocalGravityBowl({ items, showStatus = true, countryName = "대�
   const containerRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const overlayRef = useRef<HTMLCanvasElement | null>(null);
-  const engineRef = useRef<Matter.Engine | null>(null);
-  const runnerRef = useRef<Matter.Runner | null>(null);
-  const bodiesRef = useRef<Matter.Body[]>([]);
+  const engineRef = useRef<any>(null);
+  const runnerRef = useRef<any>(null);
+  const bodiesRef = useRef<any[]>([]);
   const loadedImagesRef = useRef<Record<string, HTMLImageElement>>({});
 
   const bubbles = useMemo<Bubble[]>(() => {
@@ -235,9 +235,9 @@ function MatterBubbles({
   canvasRef: React.RefObject<HTMLCanvasElement>;
   overlayRef: React.RefObject<HTMLCanvasElement>;
   containerRef: React.RefObject<HTMLDivElement>;
-  engineRef: React.MutableRefObject<Engine | null>;
-  runnerRef: React.MutableRefObject<Runner | null>;
-  bodiesRef: React.MutableRefObject<Body[]>;
+  engineRef: React.MutableRefObject<any>;
+  runnerRef: React.MutableRefObject<any>;
+  bodiesRef: React.MutableRefObject<any[]>;
   onNavigate: (id: string) => void;
 }) {
   useEffect(() => {
@@ -249,22 +249,22 @@ function MatterBubbles({
     const width = container.clientWidth || 360;
     const height = 560; // Increased from 520 to allow more space at bottom
 
-    const engine = Engine.create({ gravity: { x: 0, y: 1, scale: 0.001 } });
+    const engine = Matter.Engine.create({ gravity: { x: 0, y: 1, scale: 0.001 } });
     const world = engine.world;
     engineRef.current = engine;
 
     const thickness = 60;
     const walls = [
-      Bodies.rectangle(width / 2, height - 30, width, thickness, { isStatic: true }), // Wall further down to fill bottom
-      Bodies.rectangle(-thickness / 2, height / 2, thickness, height * 2, { isStatic: true }),
-      Bodies.rectangle(width + thickness / 2, height / 2, thickness, height * 2, { isStatic: true })
+      Matter.Bodies.rectangle(width / 2, height - 30, width, thickness, { isStatic: true }), // Wall further down to fill bottom
+      Matter.Bodies.rectangle(-thickness / 2, height / 2, thickness, height * 2, { isStatic: true }),
+      Matter.Bodies.rectangle(width + thickness / 2, height / 2, thickness, height * 2, { isStatic: true })
     ];
-    World.add(world, walls);
+    Matter.World.add(world, walls);
 
     bodiesRef.current = [];
     bubbles.forEach((bubble, idx) => {
       setTimeout(() => {
-        const body = Bodies.circle(
+        const body = Matter.Bodies.circle(
           Math.random() * (width - bubble.size) + bubble.size / 2,
           -150 - (idx * 100), // Start further up to prevent top ghosting
           bubble.size / 2,
@@ -277,7 +277,7 @@ function MatterBubbles({
           }
         );
         bodiesRef.current.push(body);
-        World.add(world, body);
+        Matter.World.add(world, body);
       }, idx * 80);
     });
 
@@ -377,9 +377,9 @@ function MatterBubbles({
     // Don't run Matter's default renderer - we're using custom rendering
     // Matter.Render.run(render);
 
-    const runner = Runner.create();
+    const runner = Matter.Runner.create();
     runnerRef.current = runner;
-    Runner.run(runner, engine);
+    Matter.Runner.run(runner, engine);
 
     // Overlay text rendering loop
     let animId: number | null = null;
@@ -419,16 +419,16 @@ function MatterBubbles({
 
     const timeout = setTimeout(() => {
       runner.enabled = false;
-      bodiesRef.current.forEach((b) => Body.setStatic(b, true));
+      bodiesRef.current.forEach((b) => Matter.Body.setStatic(b, true));
     }, 7000);
 
     return () => {
       if (renderAnimId) cancelAnimationFrame(renderAnimId);
       if (animId) cancelAnimationFrame(animId);
       clearTimeout(timeout);
-      Runner.stop(runner);
+      Matter.Runner.stop(runner);
       Matter.Render.stop(render);
-      Engine.clear(engine);
+      Matter.Engine.clear(engine);
       bodiesRef.current = [];
     };
   }, [bubbles, canvasRef, containerRef, bodiesRef, engineRef, runnerRef]);
@@ -444,16 +444,16 @@ function MatterBubbles({
       const clientX = "touches" in ev ? ev.touches[0].clientX : ev.clientX;
       const clientY = "touches" in ev ? ev.touches[0].clientY : ev.clientY;
       const point = { x: clientX - rect.left, y: clientY - rect.top };
-      const hit = Query.point(bodiesRef.current, point)[0];
+      const hit = Matter.Query.point(bodiesRef.current, point)[0];
       if (hit) {
         runner.enabled = true;
-        Body.setStatic(hit, false);
-        Body.applyForce(hit, hit.position, { x: (Math.random() - 0.5) * 0.03, y: -0.04 });
+        Matter.Body.setStatic(hit, false);
+        Matter.Body.applyForce(hit, hit.position, { x: (Math.random() - 0.5) * 0.03, y: -0.04 });
         // 즉시 상세로 이동 (물리 효과는 짧게만)
         onNavigate(hit.label || "");
         setTimeout(() => {
           runner.enabled = false;
-          Body.setStatic(hit, true);
+          Matter.Body.setStatic(hit, true);
         }, 600);
       }
     };

@@ -43,6 +43,10 @@ export async function GET(_req: Request, { params }: Params) {
 
     if (articlesError) throw articlesError;
 
+    const keywords = Array.isArray((topicData as any).keywords)
+      ? (topicData as any).keywords
+      : [];
+
     // Transform stances from DB (JSON with IDs) to Frontend (Array of Objects)
     const stancesRaw = (topicData as any).stances || { factual: [], critical: [], supportive: [] };
 

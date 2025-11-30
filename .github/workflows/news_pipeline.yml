@@ -1,9 +1,9 @@
 name: News Pipeline
 
 on:
-  schedule:
-    - cron: '0 */3 * * *'  # Every 3 hours
-  workflow_dispatch:  # Manual trigger
+  # schedule:
+  #   - cron: '0 */3 * * *'  # Every 3 hours (DISABLED)
+  workflow_dispatch:  # Manual trigger only
 
 jobs:
   run-pipeline:

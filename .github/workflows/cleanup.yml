@@ -1,8 +1,9 @@
 name: Cleanup Old Artifacts
 
 on:
-  schedule:
-    - cron: '0 0 * * 0' # Runs every Sunday at midnight
+  # schedule:
+  #   - cron: '0 0 * * 0' # Runs every Sunday at midnight (DISABLED)
+  workflow_dispatch:
 
 jobs:
   cleanup:

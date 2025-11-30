@@ -5,8 +5,8 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  schedule:
-    - cron: '30 5 * * 1'
+  # schedule:
+  #   - cron: '30 5 * * 1' # (DISABLED)
 
 jobs:
   codeql:

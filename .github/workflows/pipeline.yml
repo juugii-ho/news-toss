@@ -1,8 +1,8 @@
 name: News Pipeline (Every 3 Hours)
 
 on:
-  schedule:
-    - cron: '0 */3 * * *' # Runs at minute 0 past every 3rd hour
+  # schedule:
+  #   - cron: '0 */3 * * *' # Runs at minute 0 past every 3rd hour (DISABLED)
   workflow_dispatch: # Allow manual trigger from GitHub UI
 
 jobs:

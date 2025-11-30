@@ -11,6 +11,7 @@ type Props = {
   initial?: LocalListResponse;
   country: string;
   className?: string;
+  style?: React.CSSProperties;
   viewMode?: "grid" | "list";
 };
 

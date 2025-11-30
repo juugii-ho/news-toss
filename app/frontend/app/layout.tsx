@@ -35,7 +35,9 @@ export default function RootLayout({
             <ScrollRestoration />
           </Suspense>
           <div style={{ maxWidth: 480, margin: "0 auto", padding: "12px 16px 0", position: "sticky", top: 0, zIndex: 30, background: "#f8fafc" }}>
-            <NavTabs />
+            <Suspense fallback={null}>
+              <NavTabs />
+            </Suspense>
           </div>
           {children}
         </Providers>

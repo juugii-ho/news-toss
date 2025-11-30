@@ -13,7 +13,8 @@ export async function GET() {
   }
 
   try {
-    const timeThreshold = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+    // Relax time filter to 7 days to avoid timezone issues
+    const timeThreshold = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
 
     const { data, error } = await supabase
       .from("mvp2_megatopics")
@@ -24,6 +25,14 @@ export async function GET() {
       .limit(50);
 
     if (error) throw error;
+
+    // Debug: If no data found, return specific message
+    if (!data || data.length === 0) {
+      return NextResponse.json({
+        message: "No data found in mvp2_megatopics",
+        filter: { timeThreshold, is_published: true }
+      }, { status: 404 });
+    }
 
     const megatopics = (data || []).map((m: any) => ({
       ...m,
@@ -161,14 +170,20 @@ export async function GET() {
     });
 
     if (!mapped.length) {
-      const mock = await readGlobalList();
-      return NextResponse.json(mock.items, { status: 200 });
+      return NextResponse.json({
+        message: "No mapped data found",
+        raw_count: data?.length
+      }, { status: 404 });
     }
 
     return NextResponse.json(mapped, { status: 200 });
-  } catch (err) {
+  } catch (err: any) {
     console.error("GET /api/global/insights failed", err);
-    const mock = await readGlobalList();
-    return NextResponse.json(mock.items, { status: 200 });
+    // Return actual error instead of mock
+    return NextResponse.json({
+      error: "Internal Server Error",
+      details: err.message,
+      code: err.code
+    }, { status: 500 });
   }
 }

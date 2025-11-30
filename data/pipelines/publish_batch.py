@@ -59,15 +59,42 @@ if __name__ == "__main__":
         batch_id = sys.argv[1]
     
     if not batch_id:
-        print("No batch_id provided, fetching latest...")
-        # Fetch latest batch_id from topics
-        res = supabase.table("mvp2_topics").select("batch_id").order("created_at", desc=True).limit(1).execute()
-        if res.data and res.data[0].get('batch_id'):
-            batch_id = res.data[0]['batch_id']
-            print(f"Latest batch_id found: {batch_id}")
+        print("No batch_id provided, checking for pending topics...")
+        
+        # Check if there are any unpublished topics without batch_id
+        # or just take all unpublished topics and assign a new batch_id
+        
+        # Generate new batch_id
+        from datetime import datetime
+        new_batch_id = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+        
+        print(f"  Generating new batch_id: {new_batch_id}")
+        
+        # Assign to pending topics (is_published is false or null)
+        # We assume anything not published is part of this new batch
+        res_topics = supabase.table("mvp2_topics").update({"batch_id": new_batch_id}).is_("is_published", "null").execute()
+        # Also handle false
+        res_topics_false = supabase.table("mvp2_topics").update({"batch_id": new_batch_id}).eq("is_published", False).execute()
+        
+        count = len(res_topics.data) + len(res_topics_false.data)
+        
+        if count > 0:
+            print(f"  ✅ Assigned {new_batch_id} to {count} pending topics")
+            batch_id = new_batch_id
+            
+            # Also update megatopics
+            supabase.table("mvp2_megatopics").update({"batch_id": new_batch_id}).is_("is_published", "null").execute()
+            supabase.table("mvp2_megatopics").update({"batch_id": new_batch_id}).eq("is_published", False).execute()
+            
         else:
-            print("❌ Could not find any batch_id in database.")
-            sys.exit(1)
+            # Try to find latest existing if no pending
+            res = supabase.table("mvp2_topics").select("batch_id").order("created_at", desc=True).limit(1).execute()
+            if res.data and res.data[0].get('batch_id'):
+                batch_id = res.data[0]['batch_id']
+                print(f"  ⚠️ No pending topics found. Using latest existing batch_id: {batch_id}")
+            else:
+                print("❌ Could not find any batch_id in database and no pending topics to assign.")
+                sys.exit(1)
             
     success = publish_batch(batch_id)
     sys.exit(0 if success else 1)

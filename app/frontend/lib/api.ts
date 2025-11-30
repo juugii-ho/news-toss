@@ -11,7 +11,10 @@ async function fetchJson<T>(url: string): Promise<T> {
         ? `https://${process.env.VERCEL_URL}${url}`
         : `${process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"}${url}`;
   const res = await fetch(absoluteUrl, { next: { revalidate: REVALIDATE_SECONDS } });
-  if (!res.ok) throw new Error(`Failed fetch: ${url}`);
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Failed fetch: ${url} (${res.status}) - ${text}`);
+  }
   return (await res.json()) as T;
 }
 
@@ -29,8 +32,10 @@ export async function getGlobalList(): Promise<GlobalListResponse> {
     if (data?.items) return data as GlobalListResponse;
     return { items: [] };
   } catch (err) {
-    console.warn("Falling back to mock global list:", err);
-    return readGlobalList();
+    console.warn("API Error (getGlobalList):", err);
+    // STOP FALLING BACK TO MOCK
+    // return readGlobalList(); 
+    throw err;
   }
 }
 

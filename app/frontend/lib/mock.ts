@@ -99,5 +99,13 @@ export function readVsCard() {
 }
 
 export function readLocalList() {
-  return localList as LocalListResponse;
+  const raw = localList as any;
+  return {
+    ...raw,
+    items: raw.items.map((item: any) => ({
+      ...item,
+      display_level: item.display_level || 1,
+      media_type: item.media_type || "NONE",
+    }))
+  } as LocalListResponse;
 }

@@ -1,0 +1,22 @@
+name: Step 5 - Global Megatopic
+
+on:
+  workflow_dispatch:
+
+jobs:
+  megatopic:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - run: |
+        pip install --upgrade pip
+        pip install -r data/pipelines/requirements.txt
+    - name: Run Megatopic Analysis
+      env:
+        NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+        GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      run: python data/pipelines/llm_megatopic_analysis.py

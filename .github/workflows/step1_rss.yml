@@ -1,0 +1,21 @@
+name: Step 1 - RSS Collection
+
+on:
+  workflow_dispatch:
+
+jobs:
+  rss-collection:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - run: |
+        pip install --upgrade pip
+        pip install -r data/pipelines/requirements.txt
+    - name: Run RSS Collector
+      env:
+        NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+      run: python data/pipelines/rss_collector.py

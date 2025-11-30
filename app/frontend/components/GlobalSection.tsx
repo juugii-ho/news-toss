@@ -13,17 +13,17 @@ type Props = {
 
 export function GlobalSection({ items }: Props) {
   const params = useSearchParams();
-  const onlyKr = params.get("kr") === "include"; // Default: Show All
+  const includeKr = params.get("kr") !== "exclude";
 
   const filteredItems = React.useMemo(() => {
     const hasKr = (item: GlobalItem) => (item.countries || []).includes("KR");
-    if (onlyKr) {
-      // KR 모드: KR을 포함한 토픽만 노출
+    if (includeKr) {
+      // KR 반영 모드: KR을 포함한 토픽만 노출
       return items.filter(hasKr);
     }
-    // 기본: 전체 노출
+    // KR 무시 모드: 정렬 그대로 전체 노출
     return items;
-  }, [items, onlyKr]);
+  }, [items, includeKr]);
 
   // Re-rank for display
   const displayItems = filteredItems.map((item, idx) => ({
@@ -66,8 +66,22 @@ export function GlobalSection({ items }: Props) {
 
   return (
     <section className="section">
-      <div className="section-header">
+      <div className="section-header" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <h2 style={{ margin: 0 }}>Global Insight</h2>
+        <Link
+          href={includeKr ? "/global?kr=exclude" : "/global"}
+          className="chip"
+          style={{
+            background: includeKr ? "#f1f5f9" : "#0ea5e9",
+            color: includeKr ? "#475569" : "#ffffff",
+            border: `1px solid ${includeKr ? "#e2e8f0" : "#0ea5e9"}`,
+            textDecoration: "none",
+            cursor: "pointer",
+            transition: "all 0.2s ease"
+          }}
+        >
+          {includeKr ? "🇰🇷 KR만 보기" : "🌐 전체 보기"}
+        </Link>
       </div>
 
       <div className="stack gap-12">

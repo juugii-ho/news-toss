@@ -312,10 +312,10 @@ Output JSON:
         countries = list(set([t['country'] for t in filtered_items]))
         total_articles = sum([t['size'] for t in filtered_items])
         
-        # Filter by Minimum Countries (User Request: Weekend data is sparse)
-        # Rule: Must have at least 2 countries OR > 10 articles if single country
-        if len(countries) < 2 and total_articles < 10:
-            print(f"    Skipping small local megatopic: {megatopic_name} ({len(countries)} countries, {total_articles} articles)")
+        # Filter by Minimum Countries
+        # Rule: Must have at least 3 countries to be considered a true "global" megatopic
+        if len(countries) < 3:
+            print(f"    Skipping small local megatopic (Pre-filter): {megatopic_name} ({len(countries)} countries, {total_articles} articles)")
             continue
         
         print(f"  [{i+1}/{len(megatopics)}] {megatopic_name} ({len(countries)} countries, {total_articles} articles)")

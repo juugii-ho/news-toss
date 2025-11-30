@@ -96,20 +96,17 @@ def generate_thumbnail_prompt(topic, article_map):
 def generate_and_upload_image(topic_id, prompt):
     print(f"  🎨 Generating image for topic {topic_id}...")
     try:
-        response = client.models.generate_content(
-            model="gemini-3-pro-image-preview", # Use the preview model as requested
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                response_modalities=['IMAGE'],
-                image_config={"aspect_ratio": "16:9"},
+        response = client.models.generate_images(
+            model="gemini-3-pro-image-preview",
+            prompt=prompt,
+            config=types.GenerateImagesConfig(
+                aspect_ratio="16:9",
             )
         )
         
         image = None
-        for part in response.parts:
-            if part.as_image():
-                image = part.as_image()
-                break
+        if response.generated_images:
+            image = response.generated_images[0].image
                 
         if not image:
             print("    ❌ No image generated.")

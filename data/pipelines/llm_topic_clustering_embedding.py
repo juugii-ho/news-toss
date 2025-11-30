@@ -3,7 +3,8 @@ import json
 import time
 import sys
 import numpy as np
-from datetime import datetime
+from datetime import datetime, timedelta
+from difflib import SequenceMatcher
 from sklearn.cluster import KMeans
 from sklearn.metrics.pairwise import cosine_distances
 
@@ -371,16 +372,11 @@ def main():
             # Save to DB
             print("Saving topics to Supabase DB (mvp2_topics)...")
             try:
-                # 1. Clear existing topics for this country to prevent duplicates/ghosts
-                print(f"  🧹 Clearing existing topics for {COUNTRY}...")
-                # First, clear article references to avoid FK constraint violation
-                supabase.table("mvp2_articles").update({"local_topic_id": None}).eq("country_code", COUNTRY).execute()
-                # Then delete topics
-                supabase.table("mvp2_topics").delete().eq("country_code", COUNTRY).execute()
-                
-                db_rows = []
                 # Create a lookup for article sources
                 article_source_map = {a['id']: a.get('source_name', 'Unknown') for a in articles}
+                
+                updated_count = 0
+                inserted_count = 0
                 
                 for topic_name, stances in final_output.items():
                     article_ids = stances['factual'] + stances['critical'] + stances['supportive']
@@ -391,25 +387,40 @@ def main():
                         if aid in article_source_map:
                             unique_sources.add(article_source_map[aid])
                     
-                    db_rows.append({
-                        "country_code": COUNTRY,
-                        "topic_name": topic_name,
-                        "article_ids": article_ids,
-                        "article_count": len(article_ids),
-                        "source_count": len(unique_sources),
-                        "stances": stances,
-                        "keywords": stances.get('keywords', []),
-                        "category": stances.get('category', 'Unclassified'),
-                        "created_at": datetime.utcnow().isoformat()
-                    })
+                    # Check if similar topic exists
+                    existing = find_similar_topic(topic_name, COUNTRY, supabase)
+                    
+                    if existing:
+                        # Update existing topic
+                        print(f"  🔄 Updating: {topic_name}")
+                        supabase.table("mvp2_topics").update({
+                            "article_ids": article_ids,
+                            "article_count": len(article_ids),
+                            "source_count": len(unique_sources),
+                            "stances": stances,
+                            "keywords": stances.get('keywords', []),
+                            "category": stances.get('category', 'Unclassified'),
+                            "last_updated_at": datetime.utcnow().isoformat()
+                        }).eq("id", existing['id']).execute()
+                        updated_count += 1
+                    else:
+                        # Insert new topic
+                        print(f"  ✨ Creating: {topic_name}")
+                        supabase.table("mvp2_topics").insert({
+                            "country_code": COUNTRY,
+                            "topic_name": topic_name,
+                            "article_ids": article_ids,
+                            "article_count": len(article_ids),
+                            "source_count": len(unique_sources),
+                            "stances": stances,
+                            "keywords": stances.get('keywords', []),
+                            "category": stances.get('category', 'Unclassified'),
+                            "first_seen_at": datetime.utcnow().isoformat(),
+                            "last_updated_at": datetime.utcnow().isoformat()
+                        }).execute()
+                        inserted_count += 1
                 
-                if db_rows:
-                    # Batch insert
-                    batch_size = 50
-                    for i in range(0, len(db_rows), batch_size):
-                        batch = db_rows[i:i+batch_size]
-                        supabase.table("mvp2_topics").insert(batch).execute()
-                        print(f"  Inserted batch {i//batch_size + 1}")
+                print(f"  📊 Updated: {updated_count}, Inserted: {inserted_count}")
                         
                 print("✅ Saved to DB successfully.")
                 

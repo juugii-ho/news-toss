@@ -1,9 +1,9 @@
-name: Global News Pipeline
+name: News Pipeline
 
 on:
   schedule:
-    - cron: '0 */3 * * *' # Run every 3 hours
-  workflow_dispatch: # Allow manual trigger
+    - cron: '0 */3 * * *'  # Every 3 hours
+  workflow_dispatch:  # Manual trigger
 
 jobs:
   run-pipeline:
@@ -12,8 +12,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -24,6 +22,26 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r data/pipelines/requirements.txt
+
+    - name: Run Database Migration
+      env:
+        NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+      run: |
+        python -c "
+        import os
+        from supabase import create_client
+        
+        url = os.getenv('NEXT_PUBLIC_SUPABASE_URL')
+        key = os.getenv('NEXT_PUBLIC_SUPABASE_ANON_KEY')
+        supabase = create_client(url, key)
+        
+        with open('data/pipelines/add_topic_persistence_columns.sql', 'r') as f:
+            sql = f.read()
+            # Note: Supabase Python client doesn't support raw SQL
+            # This is a placeholder - you'll need to run this manually once
+            print('Migration SQL ready - run manually in Supabase dashboard')
+        "
 
     - name: Run RSS Collector
       env:
@@ -38,14 +56,14 @@ jobs:
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
       run: python data/pipelines/llm_translator.py
 
-    - name: Run Clustering (HDBSCAN)
+    - name: Run Clustering
       env:
         NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
         NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
       run: python data/pipelines/run_all_clustering.py
 
-    - name: Run Enrichment (Source Dedup)
+    - name: Run Enrichment
       env:
         NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
         NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
@@ -55,6 +73,8 @@ jobs:
     - name: Run Global Megatopic Analysis
       env:
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
       run: python data/pipelines/llm_megatopic_analysis.py
 
     - name: Run Topic Summary Generator
@@ -78,10 +98,16 @@ jobs:
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
       run: python data/pipelines/llm_global_editor_comment_generator.py
 
-    - name: Commit and Push Results
-      run: |
-        git config --global user.name 'GitHub Action'
-        git config --global user.email 'action@github.com'
-        git add data/pipelines/megatopics.json data/pipelines/enriched_topics_*.json data/pipelines/clusters_*_hdbscan.json
-        git commit -m "Update Global News Data (Automated)" || echo "No changes to commit"
-        git push
+    - name: Run Thumbnail Generator (Local)
+      env:
+        NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+        GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      run: python data/pipelines/llm_thumbnail_generator.py
+
+    - name: Run Thumbnail Generator (Global)
+      env:
+        NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+        GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      run: python data/pipelines/llm_global_thumbnail_generator.py

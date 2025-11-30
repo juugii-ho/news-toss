@@ -78,13 +78,17 @@ export async function GET() {
           // Aggregate back to global topics
           Object.keys(globalToLocalMap).forEach(globalId => {
             const childIds = Array.from(globalToLocalMap[globalId]);
-            const aggregated = { factual: [], critical: [], supportive: [] };
+            const aggregated: { factual: string[], critical: string[], supportive: string[] } = {
+              factual: [],
+              critical: [],
+              supportive: []
+            };
 
             childIds.forEach(childId => {
               const s = localStanceMap[childId] || {};
-              if (s.factual) aggregated.factual.push(...s.factual);
-              if (s.critical) aggregated.critical.push(...s.critical);
-              if (s.supportive) aggregated.supportive.push(...s.supportive);
+              if (s.factual) aggregated.factual.push(...(s.factual as string[]));
+              if (s.critical) aggregated.critical.push(...(s.critical as string[]));
+              if (s.supportive) aggregated.supportive.push(...(s.supportive as string[]));
             });
             stanceMap[globalId] = aggregated;
           });

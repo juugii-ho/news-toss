@@ -26,7 +26,7 @@
 
 ### 프론트엔드 (Frontend)
 *   **Framework**: Next.js 14 (App Router)
-*   **Styling**: Vanilla CSS (모바일 우선, Apple 스타일의 미니멀한 디자인)
+*   **Styling**: Vanilla CSS (모바일 우선, 애플/토스 스타일의 미니멀한 디자인)
 *   **Animation**: Framer Motion
 *   **Physics**: Matter.js (Topic Bowl 구현)
 

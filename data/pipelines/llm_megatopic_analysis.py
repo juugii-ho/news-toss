@@ -389,9 +389,6 @@ Output JSON:
         
     except Exception as e:
         print(f"❌ Error saving to DB: {e}")
-        
-    except Exception as e:
-        print(f"❌ Error saving to DB: {e}")
     
     # Preview
     print("\n--- Top 10 Megatopics ---")

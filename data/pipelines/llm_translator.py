@@ -1,4 +1,3 @@
-#!/Users/sml/gemini_env/bin/python
 import os
 import time
 import json

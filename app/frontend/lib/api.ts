@@ -7,7 +7,9 @@ async function fetchJson<T>(url: string): Promise<T> {
   const absoluteUrl =
     url.startsWith("http") || url.startsWith("https")
       ? url
-      : `${process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"}${url}`;
+      : process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}${url}`
+        : `${process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"}${url}`;
   const res = await fetch(absoluteUrl, { next: { revalidate: REVALIDATE_SECONDS } });
   if (!res.ok) throw new Error(`Failed fetch: ${url}`);
   return (await res.json()) as T;

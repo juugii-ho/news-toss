@@ -82,9 +82,15 @@ async function readJson<T>(relativePath: string): Promise<T> {
     : cwd.includes("/app")
       ? path.resolve(cwd, "..")
       : cwd;
-  const filePath = path.join(repoRoot, relativePath);
-  const file = await fs.readFile(filePath, "utf-8");
-  return JSON.parse(file) as T;
+  try {
+    const filePath = path.join(repoRoot, relativePath);
+    const file = await fs.readFile(filePath, "utf-8");
+    return JSON.parse(file) as T;
+  } catch (err) {
+    console.warn(`Failed to read mock file: ${relativePath}`, err);
+    // Return empty object/array based on expected type (unsafe but prevents crash)
+    return { items: [] } as unknown as T;
+  }
 }
 
 export async function readGlobalList() {

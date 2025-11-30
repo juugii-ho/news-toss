@@ -101,7 +101,7 @@ def generate_and_upload_image(topic_id, prompt):
             contents=prompt,
             config=types.GenerateContentConfig(
                 response_modalities=['IMAGE'],
-                media_resolution="MEDIA_RESOLUTION_16_9",
+                image_config={"aspect_ratio": "16:9"},
             )
         )
         

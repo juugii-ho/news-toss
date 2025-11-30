@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 
-export const revalidate = 3600; // ISR: refresh every hour
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default async function HomePage() {
   redirect("/global");

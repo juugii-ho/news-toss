@@ -2,7 +2,8 @@ import { getLocalList } from "@/lib/api";
 import { readLocalList } from "@/lib/mock";
 import { LocalPageClient } from "@/components/LocalPageClient";
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 type Props = {
   searchParams: { country?: string };

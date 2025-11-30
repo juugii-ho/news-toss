@@ -1,7 +1,8 @@
 import { getGlobalList } from "@/lib/api";
 import { GlobalSection } from "@/components/GlobalSection";
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default async function GlobalPage() {
   const globalList = await getGlobalList();

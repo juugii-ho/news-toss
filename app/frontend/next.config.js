@@ -10,9 +10,6 @@ const nextConfig = {
         ],
     },
     // Skip static generation for API routes and pages that need mock data
-    experimental: {
-        skipTrailingSlashRedirect: true,
-    },
 };
 
 module.exports = nextConfig;

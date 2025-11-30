@@ -1,4 +1,7 @@
+import { readVsCard } from "@/lib/mock";
 import { NextResponse } from "next/server";
+
+export const dynamic = 'force-dynamic';
 import path from "node:path";
 import { promises as fs } from "node:fs";
 

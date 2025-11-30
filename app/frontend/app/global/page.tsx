@@ -1,7 +1,9 @@
+```
 import { getGlobalList } from "@/lib/api";
-import { GlobalSection } from "@/components/GlobalSection";
+import { GlobalGravityBowl } from "../../components/GlobalGravityBowl";
+import { getGlobalList } from "../../lib/api";
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
 
 export default async function GlobalPage() {
   const globalList = await getGlobalList();

@@ -1,7 +1,11 @@
 import { getLocalList } from "@/lib/api";
+import { LocalMosaic } from "../../components/LocalMosaic";
+import { LocalGravityBowl } from "../../components/LocalGravityBowl";
+import { getLocalTopics } from "../../lib/api";
 import { readLocalList } from "@/lib/mock";
 import { LocalPageClient } from "@/components/LocalPageClient";
 
+export const dynamic = 'force-dynamic';
 export const revalidate = 3600;
 
 type Props = {

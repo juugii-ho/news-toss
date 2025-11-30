@@ -1,12 +1,42 @@
 import os
 import io
 import time
+import difflib
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
 from supabase import create_client, Client
 from google import genai
 from google.genai import types
 from PIL import Image
+
+# ... (rest of imports)
+
+def find_similar_thumbnail(target_topic, existing_topics):
+    """
+    Finds a topic with a similar title that already has a thumbnail.
+    Returns the thumbnail_url if found, else None.
+    """
+    if not existing_topics:
+        return None
+        
+    target_title = target_topic['topic_name']
+    best_ratio = 0.0
+    best_url = None
+    
+    for et in existing_topics:
+        # Skip self (though unlikely as we filter by null thumbnail)
+        if et['id'] == target_topic['id']:
+            continue
+            
+        ratio = difflib.SequenceMatcher(None, target_title, et['topic_name']).ratio()
+        if ratio > best_ratio:
+            best_ratio = ratio
+            best_url = et['thumbnail_url']
+            
+    # Threshold for similarity (e.g., 80% match)
+    if best_ratio > 0.8:
+        return best_url
+    return None
 
 # Load environment variables
 load_dotenv('backend/.env')
@@ -181,6 +211,14 @@ def main():
         topics = response.data
         print(f"Found {len(topics)} topics needing thumbnails.")
         
+        # Fetch topics WITH thumbnails for comparison
+        res_existing = supabase.table("mvp2_topics") \
+            .select("id, topic_name, thumbnail_url") \
+            .not_.is_("thumbnail_url", "null") \
+            .execute()
+        topics_with_thumbnails = res_existing.data
+        print(f"Found {len(topics_with_thumbnails)} existing thumbnails for reuse check.")
+        
         for topic in topics:
             print(f"\nProcessing: {topic['topic_name']}")
             
@@ -189,7 +227,14 @@ def main():
             all_ids = stances.get('factual', []) + stances.get('critical', []) + stances.get('supportive', [])
             article_map = fetch_article_titles(all_ids)
             
-            # 2. Generate Prompt
+            # 2. Check for Similar Topic (Reuse Thumbnail)
+            similar_url = find_similar_thumbnail(topic, topics_with_thumbnails)
+            if similar_url:
+                print(f"    ♻️ Found similar topic! Reusing thumbnail.")
+                supabase.table("mvp2_topics").update({"thumbnail_url": similar_url}).eq("id", topic['id']).execute()
+                continue
+
+            # 3. Generate Prompt
             prompt = generate_thumbnail_prompt(topic, article_map)
             if not prompt:
                 print("    ⚠️ Could not generate prompt (no articles?).")
@@ -197,7 +242,7 @@ def main():
                 
             print(f"    📝 Prompt: {prompt[:100]}...")
             
-            # 3. Generate & Upload
+            # 4. Generate & Upload
             generate_and_upload_image(topic['id'], prompt)
             
             time.sleep(2) # Rate limit

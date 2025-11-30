@@ -30,7 +30,7 @@ google_search_tool = Tool(
 )
 
 def get_topics_needing_comment(limit=10, force=False, threshold=3):
-    query = supabase.from_("mvp2_global_topics").select("id, title_ko, title_en, ai_summary")
+    query = supabase.from_("mvp2_megatopics").select("id, title_ko, title_en, ai_summary")
     
     if not force:
         query = query.is_("editor_comment", "null")
@@ -199,7 +199,7 @@ def process_batch(topics):
         
         if comment:
             print("  - Comment generated, updating DB...")
-            supabase.from_("mvp2_global_topics").update({"editor_comment": comment}).eq("id", topic['id']).execute()
+            supabase.from_("mvp2_megatopics").update({"editor_comment": comment}).eq("id", topic['id']).execute()
             print("  - Done")
             print("\n--- Generated Output ---\n")
             print(comment)

@@ -4,7 +4,8 @@ import { getVsCard } from "@/lib/api";
 import { readVsCard } from "@/lib/mock";
 import { getCategoryIcon } from "@/lib/categories";
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 type Props = {
   params: { id: string };

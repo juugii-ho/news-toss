@@ -7,6 +7,8 @@ from supabase import create_client, Client
 from dotenv import load_dotenv
 
 load_dotenv()
+load_dotenv('.env.local')
+load_dotenv('.env')
 
 # Supabase setup
 url: str = os.environ.get("NEXT_PUBLIC_SUPABASE_URL") or os.environ.get("SUPABASE_URL")

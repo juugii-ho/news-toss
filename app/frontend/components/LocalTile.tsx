@@ -211,7 +211,7 @@ export function LocalTile({ item, sentinelRef, viewMode = "list" }: Props) {
 
                     <div style={{ display: "flex", alignItems: "center", gap: "4px", flexWrap: "wrap" }}>
                         <span style={{ fontSize: "12px", color: "#64748b" }}>
-                            {formatRelativeTime(item.published_at || new Date().toISOString())} {/* Using item.published_at or current date as placeholder */}
+                            {formatRelativeTime((item as any).created_at)}
                         </span>
                         <span style={{ fontSize: "12px", color: "#64748b" }}>•</span>
                         <div style={{ display: "flex", gap: "4px" }}>

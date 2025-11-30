@@ -163,7 +163,7 @@ def main():
     parser.add_argument("--limit", type=int, default=5, help="Number of topics to process")
     parser.add_argument("--force", action="store_true", help="Reprocess topics that already have comments")
     parser.add_argument("--all", action="store_true", help="Process all topics in batches")
-    parser.add_argument("--threshold", type=int, default=3, help="Minimum number of countries required")
+    parser.add_argument("--threshold", type=int, default=1, help="Minimum number of countries required")
     args = parser.parse_args()
 
     if args.all:

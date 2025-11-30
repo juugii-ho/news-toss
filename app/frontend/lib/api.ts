@@ -1,5 +1,5 @@
 import { readGlobalList, readLocalList, readVsCard } from "./mock";
-import type { GlobalListResponse, VsCard, LocalListResponse } from "./mock";
+import type { GlobalItem, GlobalListResponse, VsCard, LocalListResponse, LocalItem } from "./mock";
 
 const REVALIDATE_SECONDS = 0;
 

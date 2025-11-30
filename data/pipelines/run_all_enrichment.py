@@ -1,7 +1,8 @@
 import subprocess
 import time
+import sys
 
-COUNTRIES = ['AU', 'BE', 'CA', 'CN', 'DE', 'FR', 'GB', 'IT', 'JP', 'KR', 'NL', 'RU', 'US']
+COUNTRIES = ['AU', 'BE', 'CA', 'CN', 'DE', 'FR', 'UK', 'IT', 'JP', 'KR', 'NL', 'RU', 'US']
 
 def main():
     print(f"🚀 Starting Global Enrichment for {len(COUNTRIES)} countries...")

@@ -32,7 +32,7 @@ generation_config = {
 }
 
 model = genai.GenerativeModel(
-    model_name="gemini-2.5-flash",
+    model_name="gemini-2.5-flash-lite",
     generation_config=generation_config,
     safety_settings={
         "HARM_CATEGORY_HARASSMENT": "BLOCK_NONE",
@@ -87,6 +87,8 @@ Task Instructions:
     - Extract exactly {target_topics} distinct and **highly specific** topics.
     - **Granularity Rule:** A topic should cover only 5~10 articles. If it's too broad, split it into sub-events.
     - **CRITICAL:** The topic names (keys in JSON) MUST be written in KOREAN (No underscores, use spaces).
+    - **PROHIBITION:** Do NOT use generic category names like "경제 동향" (Economic Trends), "사건 사고" (Accidents), "정치 이슈" (Political Issues).
+    - **REQUIREMENT:** Use specific event-based names like "비트코인 10만 달러 돌파", "강남역 묻지마 폭행 사건", "민주당 전당대회 결과".
 
 2. **Stance Classification (Based on Explicit Linguistic Markers)**:
     - For each topic, select relevant articles from the input.
@@ -143,7 +145,8 @@ def main():
         return
 
     # Balanced Batching
-    batches = get_balanced_batches(articles, target_size=200)
+    # Reduce target size to 50 to force more granular event detection
+    batches = get_balanced_batches(articles, target_size=50)
     print(f"Split into {len(batches)} balanced batches.")
     for i, b in enumerate(batches):
         print(f"  Batch {i+1}: {len(b)} articles")

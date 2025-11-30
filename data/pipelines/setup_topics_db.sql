@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS mvp2_topics (
     summary TEXT, -- Optional: AI summary
     article_ids UUID[] NOT NULL, -- Array of article IDs
     article_count INT NOT NULL,
+    source_count INT, -- Number of unique news sources
     created_at TIMESTAMPTZ DEFAULT NOW(),
     
     -- Metadata from analysis

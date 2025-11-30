@@ -36,6 +36,6 @@
 
 ## **O (Codex CLI)**
 - **Current Task**: `TASK-ZZZ`
-- **Status**: `Coding: Gravity Issue Bowl(Lite) Framer Motion proto + API Routes/모크 연동`
+- **Status**: `Coding: Gravity Issue Bowl + API 연동 (Supabase 24h) / 로컬 dev 포트 EPERM 대체 확인 중`
 - **지시 반영 여부**: `S 요청(라이트 톤, ISR 1h, PWA 최소 셋업) 반영, G 목업/카피/UX/색상 가이드 반영, C API 스펙 반영`
 - **Blocker**: `N/A`

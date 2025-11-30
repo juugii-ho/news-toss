@@ -1,350 +1,149 @@
 {
-  "COP30: 시위, 혼란, 타협 끝에 화석 연료 합의 불발": {
-    "topic_name_ko": "COP30: 시위, 혼란, 타협 끝에 화석 연료 합의 불발",
+  "독일 AfD 청년 조직 설립과 시위 충돌": {
+    "topic_name_ko": "독일 AfD 청년 조직 설립과 시위 충돌",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "AfD 청년 조직",
+      "기젠 시위",
+      "극우",
+      "이민"
+    ],
+    "category": "Politics",
     "stances": {
       "factual": [
-        "44ededba-6da6-4068-8dd9-a5735aa4f13d",
-        "74cfb938-c467-4652-9d91-0e026be1a64a"
+        "ec8c99f4-33d5-4a15-a820-4c3f352b378a",
+        "fe6a9b4a-9570-43f0-a1aa-448b8bf20ab3",
+        "5c47d367-dac1-4964-a376-9eb5d750f545",
+        "3aaf5b75-9b6f-42cc-aa97-7792b3021cfd",
+        "4fceaa78-8045-4090-967c-b22b4986c7ff",
+        "5af0df4d-2038-451c-abd8-d4801e6f3fe5",
+        "6a65268f-525d-49db-8540-fb667ddea2bc",
+        "76e46590-2668-4661-b28c-f177bf8cf2cb",
+        "c1b59c24-f2e7-4007-8812-a5594cf877c0",
+        "d212c878-ed47-42a7-bdff-2762291f43ae",
+        "3efe65d5-48fe-41b7-a154-9cd1c4e56b1d",
+        "e285d35b-c27f-446f-9525-f9805f798e1f",
+        "47dc34f0-fc0d-4a5b-9ea1-f14e4fb7c171",
+        "ec451881-beb8-4539-b8f2-be74ba41c671",
+        "cbf9c665-c121-43a0-90d4-f744cb1e14ce",
+        "6de885c5-7fa7-472a-a2b7-959631a3ab2f",
+        "1d401a43-6048-45a2-8c68-d623f8fb72c0",
+        "e39e851a-f7e6-4b55-be46-5fd5b9daafae",
+        "f5ea2149-3654-4221-8ac1-625900e509da",
+        "8448c103-1ea4-44a3-ad68-60a7d0045942",
+        "f883e7d6-1d15-474c-9c83-292d579420de",
+        "3460b733-88f3-46f7-80af-68871b04b15c",
+        "15b61c15-0ecd-4fae-a078-424a59e3ca48"
+      ],
+      "critical": [
+        "ec8c99f4-33d5-4a15-a820-4c3f352b378a",
+        "fe6a9b4a-9570-43f0-a1aa-448b8bf20ab3",
+        "5c47d367-dac1-4964-a376-9eb5d750f545",
+        "3aaf5b75-9b6f-42cc-aa97-7792b3021cfd",
+        "5af0df4d-2038-451c-abd8-d4801e6f3fe5",
+        "6a65268f-525d-49db-8540-fb667ddea2bc",
+        "d212c878-ed47-42a7-bdff-2762291f43ae",
+        "47dc34f0-fc0d-4a5b-9ea1-f14e4fb7c171",
+        "ec451881-beb8-4539-b8f2-be74ba41c671",
+        "cbf9c665-c121-43a0-90d4-f744cb1e14ce",
+        "6de885c5-7fa7-472a-a2b7-959631a3ab2f",
+        "1d401a43-6048-45a2-8c68-d623f8fb72c0",
+        "e39e851a-f7e6-4b55-be46-5fd5b9daafae",
+        "f5ea2149-3654-4221-8ac1-625900e509da",
+        "3460b733-88f3-46f7-80af-68871b04b15c"
+      ],
+      "supportive": []
+    }
+  },
+  "우크라이나 전쟁 관련 외교 및 군사 동향": {
+    "topic_name_ko": "우크라이나 전쟁 관련 외교 및 군사 동향",
+    "summary_ko": "",
+    "keywords": [
+      "우크라이나",
+      "러시아",
+      "전쟁",
+      "외교",
+      "군사"
+    ],
+    "category": "World",
+    "stances": {
+      "factual": [
+        "079fc2ef-d374-4f0a-9872-8b05902a851b",
+        "a2888964-ffe2-4eec-99f0-0d24c5205d1b",
+        "41932dec-2d9f-4b57-892f-f5fc214bc150",
+        "fdbd3488-ac14-4016-a49c-528053afd4e5",
+        "6fd7e001-2f40-4a3c-839b-610d24805440",
+        "e8f68f95-a22b-4f11-bb61-8070edf8e6de"
+      ],
+      "critical": [
+        "a1fa675d-4db6-48ba-86ba-d641a7a1cd02",
+        "dbe43fab-92fe-4f29-b4fe-55f789415a1b"
+      ],
+      "supportive": []
+    }
+  },
+  "독일 축구 리그 및 국가대표팀 경기 결과": {
+    "topic_name_ko": "독일 축구 리그 및 국가대표팀 경기 결과",
+    "summary_ko": "",
+    "keywords": [
+      "분데스리가",
+      "독일 축구 국가대표팀",
+      "바이에른 뮌헨",
+      "보루시아 도르트문트",
+      "스페인"
+    ],
+    "category": "Sports",
+    "stances": {
+      "factual": [
+        "fd7457ed-36cd-4ccc-b6b8-dcc94daddab2",
+        "588edc17-5e4b-48c4-9e51-a9622d66f708",
+        "030c5ec1-e8ee-477e-9a1e-779297729652",
+        "d8a643cd-6636-47e4-9b55-1cb95cd613da",
+        "21a2dd63-a597-4f0f-8b0b-c7e63d2139b9",
+        "aaf43a5f-555e-4ce4-80a9-69fe54ff3bad"
       ],
       "critical": [],
       "supportive": []
     }
   },
-  "독일 뉴스: 의원들, 2026년 예산 통과": {
-    "topic_name_ko": "독일 뉴스: 의원들, 2026년 예산 통과",
+  "트럼프, 베네수엘라 영공 폐쇄 선언 및 군사적 위협": {
+    "topic_name_ko": "트럼프, 베네수엘라 영공 폐쇄 선언 및 군사적 위협",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "트럼프",
+      "베네수엘라",
+      "영공 폐쇄",
+      "군사 공격",
+      "마두로"
+    ],
+    "category": "World",
     "stances": {
       "factual": [
-        "9737db39-31e5-48f9-b669-8f3c89a46845",
-        "e57a67a2-3376-4fd2-b258-906558e9233e",
-        "199a525a-6d98-4b2d-8998-6aefe997f9f6",
-        "be9fe1d5-6bb0-44bf-8bde-d2837fa78f6c",
-        "04de3ad7-35fd-4e8f-b2ec-4179a2e3be59",
-        "b926bb03-3815-47f2-b54d-30222fbd0b62",
-        "0bd234fb-133e-4516-807c-821ce743916e",
-        "f687e0a0-3484-4d13-8cca-9b3247e1fe42",
-        "b52f6e76-c645-479d-8f23-8c0e28d7f978",
-        "6c291a78-e4c1-4ed6-8167-2376887b5ffd",
-        "723c79ab-62c2-488e-8bdf-854ed36bd607",
-        "d2718e81-5a82-4845-a9b8-890e8d1f60c0",
-        "dd76312d-7daf-41df-99d3-f611579514e2"
+        "996a73b2-e39f-41a1-8114-117cc22243c0",
+        "3d98009c-0a38-4372-bb83-fa6e6b9a361c"
       ],
-      "critical": [],
+      "critical": [
+        "412f66a1-a1e8-4102-be78-148c6f02c3c6",
+        "257d2c08-06d8-4779-93bc-27c048805439"
+      ],
       "supportive": []
     }
   },
-  "욕망은 어떻게 생겨나는가: '부부들은 일주일에 한 번 섹스가 정상이라고 생각한다'": {
-    "topic_name_ko": "욕망은 어떻게 생겨나는가: '부부들은 일주일에 한 번 섹스가 정상이라고 생각한다'",
+  "토니상 수상 극작가 톰 스토파드 별세": {
+    "topic_name_ko": "토니상 수상 극작가 톰 스토파드 별세",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "톰 스토파드",
+      "극작가",
+      "셰익스피어 인 러브",
+      "88세"
+    ],
+    "category": "Culture",
     "stances": {
       "factual": [
-        "f3bd0f81-867f-4e61-b54c-ca102b7d1e6c",
-        "eaf88c5c-a9d0-4698-8156-2394ad4330a5",
-        "5c8f3457-dc3e-4ae6-91ef-68c175db0408"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "노르트 스트림: 배후 조종 혐의자 세르히 K., 독일에서 미결 구금": {
-    "topic_name_ko": "노르트 스트림: 배후 조종 혐의자 세르히 K., 독일에서 미결 구금",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "f214e171-95b6-4390-91e5-737f82190521",
-        "8d85e83a-e86a-4ce0-ba55-abe17bf724ba",
-        "f766e4b6-5d23-4cdb-9c5c-3f9d138dea52",
-        "664e314f-560d-4572-b30f-8f554a22065c",
-        "3b18d64a-6223-4b77-af97-20a37be772fa",
-        "ff66665c-c43e-4d08-a27d-d8a886ae8e72",
-        "12d45eb6-32cc-4b00-af15-a5e7f1fbb034"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "중국, 미국 제치고 독일 최대 교역국 지위 탈환": {
-    "topic_name_ko": "중국, 미국 제치고 독일 최대 교역국 지위 탈환",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "0c93f686-9552-4e37-a4e7-666123049a42",
-        "eec57a71-038f-4d92-9939-ffedc6b1983d"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "녹색당 전당대회: 안보 정책과 동종요법 논의": {
-    "topic_name_ko": "녹색당 전당대회: 안보 정책과 동종요법 논의",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "21056dbb-e3b1-4793-9b05-632c969891cd",
-        "a492f7d6-8fc1-4522-8ed0-6f6a5d9e0135",
-        "6f1b6e1a-4812-4452-9c02-e9595440eafd",
-        "7ed5a6db-e014-44ee-b843-c316564a8297"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "우크라이나: 젤렌스키 비서실장 예르마크 사임": {
-    "topic_name_ko": "우크라이나: 젤렌스키 비서실장 예르마크 사임",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "f5b08663-fff1-4f3c-8800-26aab413b75c",
-        "4aaddaa9-5943-489a-b4e5-53b50783fa29",
-        "0b42ddde-0df4-412f-a412-1516387783cf",
-        "0f495530-38ec-475b-bd85-9f047f70e3fa",
-        "2f44f173-d307-497a-9055-683a584ed18d"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "건강한 식단: '올바른 식단으로 수년간의 수명을 늘릴 수 있다'": {
-    "topic_name_ko": "건강한 식단: '올바른 식단으로 수년간의 수명을 늘릴 수 있다'",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "4fbf9f0c-74d9-4f1c-a6c5-09c6e7c98887",
-        "038cd0d1-e0e0-4399-abd6-67684701eb0e"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "독일, 난민 주거 위기 해결에 나서": {
-    "topic_name_ko": "독일, 난민 주거 위기 해결에 나서",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "d2841d59-3c21-47ef-b45f-3031cd7941d1",
-        "f4d93c32-0aa7-40bc-9025-e7b171eb5a23"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "튀르키예 축구 베팅 스캔들: 체포 영장 발부": {
-    "topic_name_ko": "튀르키예 축구 베팅 스캔들: 체포 영장 발부",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "5d730c2c-5e64-4944-a322-bc91be93d3ac",
-        "8169cf74-f74f-4fe2-b96d-301476d5f154"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "새로운 지원 프로그램: 전기차에 최대 5000유로 보조금": {
-    "topic_name_ko": "새로운 지원 프로그램: 전기차에 최대 5000유로 보조금",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "7f652520-797d-4e89-adfe-94f1c6042b89",
-        "c0954725-f244-4886-a090-1c27f73d7fbc",
-        "7f7b58cc-b193-46f5-8898-c7e429f4810d",
-        "4823630a-2790-44cc-a3e5-6afb7f59274a"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "AI 음악, 차트 정상 차지하며 불안감 조성": {
-    "topic_name_ko": "AI 음악, 차트 정상 차지하며 불안감 조성",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "46c48100-6c6d-486d-a19c-82dd676e7a77",
-        "df962823-a19e-4888-8205-875f0810ed24",
-        "723bb705-91eb-433e-8019-19e93b2fe21a"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "우크라이나: 제네바 회담 중 유럽 국가들, 미국 계획에 제동": {
-    "topic_name_ko": "우크라이나: 제네바 회담 중 유럽 국가들, 미국 계획에 제동",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "f420e172-bad1-4510-bbed-93d50c4ce3c9",
-        "8da01951-22fa-44a7-8d10-d7d0dec5f153"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "북한 여자 축구팀이 강한 이유": {
-    "topic_name_ko": "북한 여자 축구팀이 강한 이유",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "b65d74f7-9d37-4e79-8d50-7092730cc097",
-        "a3c9563e-3442-4324-9893-e15680e90593"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "친푸틴 러시아 스타 체조 선수 멜니코바, 독일 클럽 입단": {
-    "topic_name_ko": "친푸틴 러시아 스타 체조 선수 멜니코바, 독일 클럽 입단",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "b60f5a1e-46bf-415a-82be-75af14873228",
-        "6fe38ecf-cc6c-49fb-9d18-d66a5491841e",
-        "72d7bfa0-fb3b-4d33-94d0-6653a78886a7"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "자산 축적: 재정적 독립은 언제 달성되는가?": {
-    "topic_name_ko": "자산 축적: 재정적 독립은 언제 달성되는가?",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "3a889e59-364b-4622-a426-fdb75305f900",
-        "d270ce62-0489-437d-a651-c44911948ee5"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "스릅스카 공화국: 카란 승리로 도딕 권력 강화": {
-    "topic_name_ko": "스릅스카 공화국: 카란 승리로 도딕 권력 강화",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "01b2f859-8070-4919-8ac4-46e1ea9e983a",
-        "4dc0d467-93bc-41a8-a0e1-34bca60c4f6f"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "크렘린 영접: 푸틴, 오르반에게 따뜻한 말 건네": {
-    "topic_name_ko": "크렘린 영접: 푸틴, 오르반에게 따뜻한 말 건네",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "ae4a480b-17f0-4073-bb48-ca4b311cf1e8",
-        "84ba58f4-dd36-4263-93c3-d9e79c7e3e15",
-        "2af40ad8-95b5-4f2d-ae47-28b1dadfb873"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "EU는 아프리카에서 중국에 어떻게 맞서려 하는가": {
-    "topic_name_ko": "EU는 아프리카에서 중국에 어떻게 맞서려 하는가",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "b3ceb161-6e3d-49aa-85d3-59596d25d901",
-        "5f0e89e2-7333-4811-8bbd-41a12beaddbb"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "독일, 슬로바키아전 승리로 2026 월드컵 본선 진출 확정": {
-    "topic_name_ko": "독일, 슬로바키아전 승리로 2026 월드컵 본선 진출 확정",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "4a8a0b78-1a0f-41a4-8a8e-2ba94d5a3937",
-        "d30d01fd-3b44-465d-af0b-8680052a32c6"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "홍콩 고층 건물 화재: 스티로폼 패널이 불을 확산시켰다": {
-    "topic_name_ko": "홍콩 고층 건물 화재: 스티로폼 패널이 불을 확산시켰다",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "909dff39-07ed-4d19-8474-78576b7575ad",
-        "33c5150c-d0cb-4f6a-a44f-961bd980e80d",
-        "c2b6859d-3eea-48de-8fe5-296bf4c85f36"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "팩트체크: 워싱턴DC 주방위군 총격 사건 후 트럼프 발언 — 무엇이 진실이고 무엇이 아닌가?": {
-    "topic_name_ko": "팩트체크: 워싱턴DC 주방위군 총격 사건 후 트럼프 발언 — 무엇이 진실이고 무엇이 아닌가?",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "e00f5d78-941e-4c39-b528-96d23739ac41",
-        "ad1e0405-6c21-4829-aee4-ff37776705a3",
-        "79d0a023-ff58-4c66-9c7e-ca793efc871a"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "양육: 형제자매, 가장 사랑스러운 적!": {
-    "topic_name_ko": "양육: 형제자매, 가장 사랑스러운 적!",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "8b506655-70aa-4e83-a8fa-571b2fce17cc",
-        "ff11e820-3b37-4554-b124-91007fb1d6e4"
+        "aedcc022-01f3-446c-9140-80f4a752c096",
+        "eb566024-0105-43b6-8681-8901a3d6f7bd",
+        "645591a2-dc14-470f-9113-39951cd5f840"
       ],
       "critical": [],
       "supportive": []

@@ -1,104 +1,43 @@
 {
-  "시진핑, 트럼프 상호 이익 협력 확대 및 이견 관리 약속": {
-    "topic_name_ko": "시진핑, 트럼프 상호 이익 협력 확대 및 이견 관리 약속",
+  "홍콩 대형 화재 참사, 희생자 추모 및 복구 지원 노력": {
+    "topic_name_ko": "홍콩 대형 화재 참사, 희생자 추모 및 복구 지원 노력",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "홍콩 화재",
+      "희생자",
+      "구조 활동",
+      "복구 지원",
+      "애도"
+    ],
+    "category": "Society",
     "stances": {
       "factual": [
-        "cd937476-48b3-49ff-93cc-69d4eda04574",
-        "54d24ad1-0d14-46df-9126-77d73e3eb8be",
-        "565f846a-9370-4fb0-bf55-b7d2770302d0",
-        "fa3dadc5-cfc3-4821-a417-d674d95c1977",
-        "ffc042d4-c53d-493c-9c88-6cee123157ed"
+        "ad7bd01c-7b33-4126-b3ef-f84829c612a2",
+        "bd7a41cc-a8f2-4f45-a8ab-7efb8b815fac"
       ],
       "critical": [],
       "supportive": []
     }
   },
-  "홍콩 타이포 화재 참사: 알아야 할 모든 것": {
-    "topic_name_ko": "홍콩 타이포 화재 참사: 알아야 할 모든 것",
+  "우크라이나 전쟁 및 대만 해협 긴장 고조": {
+    "topic_name_ko": "우크라이나 전쟁 및 대만 해협 긴장 고조",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "우크라이나",
+      "러시아",
+      "대만",
+      "중국",
+      "드론"
+    ],
+    "category": "World",
     "stances": {
       "factual": [
-        "06dc62fc-c60c-4fd2-8f5e-b95cac9f329a",
-        "7a31a92e-c94e-4403-bb09-85e299efbc07"
+        "21cc9fb2-ab08-4b56-af30-613de907b8a5",
+        "3499e17e-27a2-49ed-97b4-27b730966eea"
       ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "중국 부총리, 태국 공주와 회담": {
-    "topic_name_ko": "중국 부총리, 태국 공주와 회담",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "58719b62-7fa0-40e3-9e7f-3ac53f8c6bc8",
-        "abae87c8-3052-481e-b0d2-f7fc284e17fa",
-        "94edbd66-fb4a-4104-b3f9-b9f3708107c2"
+      "critical": [
+        "f180a629-092c-433f-965a-6c89822551ff"
       ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "‘모든 것을 잃었습니다’: 인도네시아 홍수 피해 수마트라 사망자 174명으로 증가": {
-    "topic_name_ko": "‘모든 것을 잃었습니다’: 인도네시아 홍수 피해 수마트라 사망자 174명으로 증가",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "1cd46474-8ec6-438f-9044-d39f761ab449",
-        "473074d3-1f19-4735-bce6-8c1648eb70ac"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "안와르 총리의 전 보좌관, 말레이시아 반부패청에 체포": {
-    "topic_name_ko": "안와르 총리의 전 보좌관, 말레이시아 반부패청에 체포",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "1e70cef4-5921-497a-88f2-946aedd063f8",
-        "dc978b45-26c3-41ab-96b4-08434042656b"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "홍콩 달러 채권, 420억 달러 기록적 한 해 이후 급증세 지속될 것": {
-    "topic_name_ko": "홍콩 달러 채권, 420억 달러 기록적 한 해 이후 급증세 지속될 것",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "f9c10e13-b7d1-4646-af1f-55fc6b7b2131",
-        "9ab8fc5b-6052-45f8-8751-756314297d3a"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "중국 증권 감독 당국, 사상 최고 벌금 부과": {
-    "topic_name_ko": "중국 증권 감독 당국, 사상 최고 벌금 부과",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "2c1dab5d-24be-4f0c-87de-0635627adc98",
-        "2b212d27-db8d-42ba-81a8-53b281bfc62c",
-        "23e57eb6-5dc7-4104-b865-10186236762f"
-      ],
-      "critical": [],
       "supportive": []
     }
   }

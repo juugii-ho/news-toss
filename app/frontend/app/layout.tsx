@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
+import { Suspense } from "react";
 import { Providers } from "./providers";
 import { ScrollRestoration } from "../components/ScrollRestoration";
+import { NavTabs } from "../components/NavTabs";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -29,7 +31,12 @@ export default function RootLayout({
     <html lang="ko">
       <body className="bg-white text-neutral-900 antialiased">
         <Providers>
-          <ScrollRestoration />
+          <Suspense fallback={null}>
+            <ScrollRestoration />
+          </Suspense>
+          <div style={{ maxWidth: 480, margin: "0 auto", padding: "12px 16px 0", position: "sticky", top: 0, zIndex: 30, background: "#f8fafc" }}>
+            <NavTabs />
+          </div>
           {children}
         </Providers>
       </body>

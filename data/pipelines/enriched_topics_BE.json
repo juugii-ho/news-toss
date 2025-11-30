@@ -1,175 +1,82 @@
 {
-  "우크라이나 스캔들: 젤렌스키의 오른팔 안드리 예르마크, 반부패 수사 후 사임": {
-    "topic_name_ko": "우크라이나 스캔들: 젤렌스키의 오른팔 안드리 예르마크, 반부패 수사 후 사임",
+  "벨기에, 가스 의존도 심화와 역사적 파업의 영향": {
+    "topic_name_ko": "벨기에, 가스 의존도 심화와 역사적 파업의 영향",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "벨기에",
+      "천연가스",
+      "파업",
+      "에너지 위기"
+    ],
+    "category": "Economy",
     "stances": {
       "factual": [
-        "47e01425-c451-4a7f-b7ce-1f405f227085",
-        "e1fe16b7-0edd-4b8c-942f-af66c8f0a820",
-        "c9c08d0b-f9ba-42a3-a267-b9b533548ce1",
-        "83e00354-7294-47cf-a453-16ba95cfd804"
+        "ba7bd675-06f1-47bf-ae76-5cfb5060bc68",
+        "10da6759-0d14-4fd4-bea9-3cfe4ddeb173",
+        "f69b7bf2-e6e1-438e-bd61-fccbc1e221e4",
+        "4688590a-5dd3-48b1-bb52-7878113309d8"
       ],
       "critical": [],
       "supportive": []
     }
   },
-  "브뤼셀의 새 보육원, 계속해서 논란 야기: \"행동 자체보다, 그 주장이 충격적이다\"": {
-    "topic_name_ko": "브뤼셀의 새 보육원, 계속해서 논란 야기: \"행동 자체보다, 그 주장이 충격적이다\"",
+  "트럼프, 전 온두라스 대통령 사면 의사 및 베네수엘라 영공 폐쇄 선언": {
+    "topic_name_ko": "트럼프, 전 온두라스 대통령 사면 의사 및 베네수엘라 영공 폐쇄 선언",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "트럼프",
+      "온두라스",
+      "베네수엘라",
+      "사면",
+      "영공"
+    ],
+    "category": "Politics",
     "stances": {
       "factual": [
-        "44e7ed53-44ae-415d-b58e-fb6abb9487e5",
-        "aeb59275-1704-494e-b36f-6962a2c15a70"
+        "212cccce-1447-48ff-84ac-b222783be1fb",
+        "a2ab8f00-10b6-41a1-9178-2fd8bc78510c",
+        "13b654d8-18b2-44e3-bcc8-bd122a94b42f"
       ],
       "critical": [],
       "supportive": []
     }
   },
-  "\"총을 쏜 짐승은 큰 대가를 치를 것이다\": 도널드 트럼프, 백악관 인근 사건 후 강경 발언 수위 높여": {
-    "topic_name_ko": "\"총을 쏜 짐승은 큰 대가를 치를 것이다\": 도널드 트럼프, 백악관 인근 사건 후 강경 발언 수위 높여",
+  "리투아니아서 훈련 중 부상 벨기에 군인 사망": {
+    "topic_name_ko": "리투아니아서 훈련 중 부상 벨기에 군인 사망",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "벨기에 군인",
+      "리투아니아",
+      "훈련 사고",
+      "사망"
+    ],
+    "category": "World",
     "stances": {
       "factual": [
-        "64b22864-2e09-4593-9ef8-cc328af63df3",
-        "15b50684-03a1-4611-bc5a-a340fcf920e0",
-        "2ee99c0e-1c76-4909-8fd7-cd23e4f1172b"
+        "d44505e1-d39c-4040-8b95-0fd828da295b",
+        "f34a421c-0202-426c-a0cb-3b2c668a3cea",
+        "0976e8c2-bcc6-4765-9f54-20d1f88f4d6d"
       ],
       "critical": [],
       "supportive": []
     }
   },
-  "\"막대한 금액\": 벨기에 중소기업, 아마존 통해 3억 8천만 유로 수출": {
-    "topic_name_ko": "\"막대한 금액\": 벨기에 중소기업, 아마존 통해 3억 8천만 유로 수출",
+  "에어버스 A320 항공기 결함 및 수리 현황": {
+    "topic_name_ko": "에어버스 A320 항공기 결함 및 수리 현황",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "에어버스",
+      "A320",
+      "결함",
+      "수리",
+      "항공기"
+    ],
+    "category": "Tech",
     "stances": {
       "factual": [
-        "79e61ecf-b49b-42a4-ad65-956c1e9ca8d4",
-        "3b9a093c-272d-48e4-bbce-5a621637af65",
-        "8393b2a9-f186-4acd-a62b-1f72dd1c0a9c"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "“베이징? 문제가 생겼습니다…”: 중국, 우주정거장에 고립된 우주비행사 3명 구출 위해 우주선 발사 가속화": {
-    "topic_name_ko": "“베이징? 문제가 생겼습니다…”: 중국, 우주정거장에 고립된 우주비행사 3명 구출 위해 우주선 발사 가속화",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "54247156-eee9-4f08-b93e-5af9b31e8c19",
-        "3440be2c-807a-42fe-9d0e-7ddaea5142ed",
-        "8903115f-5b35-4146-a25a-c66298b19589"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "향락적인 (때로는 마약에 취한) \"좌파\"에서 보수적인 \"우파\"로: 볼로레의 영향력 아래 놓인 프랑스 반항아의 여정": {
-    "topic_name_ko": "향락적인 (때로는 마약에 취한) \"좌파\"에서 보수적인 \"우파\"로: 볼로레의 영향력 아래 놓인 프랑스 반항아의 여정",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "27ee5247-889c-4115-9543-6d6f625bc692",
-        "6c7f54f4-2f0d-4c7b-b3f5-a7f40713765e"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "12시간의 침묵 끝에, 바르트 드 베버가 하원에서 구두로 개입했지만 제지당했다: \"이것은 명백한 거짓말이다\"": {
-    "topic_name_ko": "12시간의 침묵 끝에, 바르트 드 베버가 하원에서 구두로 개입했지만 제지당했다: \"이것은 명백한 거짓말이다\"",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "f2cf5c47-e68a-43a1-9fcc-b21904527a7b",
-        "ade002ca-57a0-4056-98b0-c7aa15d90955"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "블랙 프라이데이: 함정을 피하는 방법은? \"70%는 좋은 거래가 아니다\"": {
-    "topic_name_ko": "블랙 프라이데이: 함정을 피하는 방법은? \"70%는 좋은 거래가 아니다\"",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "c96a56a1-4842-47ec-ad62-af12b388cb74",
-        "be422b36-b6c6-40d5-9eeb-40ff981e2465",
-        "cc570120-ca23-4610-a3b1-63627d85060f"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "“그는 벽을 치고 내 코를 부러뜨렸다”: 알렉산드라 로젠펠드, 전 연인 장 임베르에 대해 증언": {
-    "topic_name_ko": "“그는 벽을 치고 내 코를 부러뜨렸다”: 알렉산드라 로젠펠드, 전 연인 장 임베르에 대해 증언",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "6805d56f-3d92-4266-893f-bb7d350e2396",
-        "9214cc37-7868-4b4f-84a3-329c8709cd60"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "'근본적으로 잘못됐다': 바르트 드 베버, 폰 데어 라이엔에게 서한 보내 러시아 자산 관련 유럽 계획 비판": {
-    "topic_name_ko": "'근본적으로 잘못됐다': 바르트 드 베버, 폰 데어 라이엔에게 서한 보내 러시아 자산 관련 유럽 계획 비판",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "92c34747-be2c-4f1b-bf4f-86e658cd647e",
-        "cceab63c-3ad9-4257-8ac0-79d8b02a913d",
-        "1e253a52-7528-480a-a71b-f87e62d344ae"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "이셀: 경찰차 관련 사고로 어린이 두 명 부상": {
-    "topic_name_ko": "이셀: 경찰차 관련 사고로 어린이 두 명 부상",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "9d83ee80-3db2-468e-9eda-568296ab193b",
-        "7638d435-c2c9-4757-8efc-b8143897d83c",
-        "94221997-149c-4a89-a323-54fb2d10a127"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "터키: 요한 바오로 2세 테러범, 레오 교황과 격리": {
-    "topic_name_ko": "터키: 요한 바오로 2세 테러범, 레오 교황과 격리",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "a48fb375-0bbf-42cb-a532-749ce7ea19e3",
-        "372c2536-213a-4447-9177-8c138769fe17"
+        "f3a5f150-e93f-4a4e-acd5-e0321ef43d8d",
+        "4ddd3994-dc72-4549-b4b3-186ba450e4de",
+        "91b4ac58-429c-4c33-a83c-3c801e379e92"
       ],
       "critical": [],
       "supportive": []

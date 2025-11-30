@@ -1,237 +1,155 @@
 {
-  "미국이 추수감사절을 기념하는 동안, 세계 기아가 주목받다": {
+  "트럼프, 베네수엘라 제재 및 마약 범죄 연루 전직 대통령 사면 논란": {
     "factual": [
-      "6574bf93-9652-459f-9677-a21cf1c4f9cc",
-      "c8cc353e-8e3c-41b8-90b9-97015888d8d9",
-      "4cc6964e-1b5f-43d7-a8f8-7f31902d31e8",
-      "b011494c-d66e-4303-a505-155e805fb9c4",
-      "f56ef12f-e695-4b6d-830d-7862f006ed8a",
-      "02d10a84-db3e-4568-b9d1-51fc2f140c1f",
-      "c4ffb8f1-e49d-4155-b22a-fca5b9f00ab1",
-      "cfd0e732-7582-4d8e-84d3-9d52afd9f7ae",
-      "8dc3af31-7b4f-49a8-a469-e4cfad86a243",
-      "c4eedd5d-a4d7-4cae-adcd-a94db0c442fd",
-      "f2eee760-5dd0-44c6-b10c-7aca6e368b4c",
-      "10d80ff5-09d2-4c2b-887d-ed257e2a57fe",
-      "1827f7b9-7226-4e97-adcb-e7e06ef8dd2a",
-      "0819627b-fd31-4d68-9a68-204d2c3f8edb",
-      "61a462b3-e140-4393-9f48-080103cd2823",
-      "c845998f-b1c1-4446-9014-59a2692566c8",
-      "f14ac352-0aa3-4332-a6f2-d3a0588041d7",
-      "60722ef1-81a8-49cb-917e-c14064ae4eb4",
-      "f3b1563e-a87f-4a63-9511-4b3815caf9bd",
-      "bf8726f7-a60d-4d9e-b66e-0eb42f988059",
-      "68071f6c-e069-4982-a585-4cd73882b31a"
+      "31e0be2e-e5f0-4cf2-a1b1-3730e1614abe",
+      "21e60244-042d-4b9e-a81d-a005f7146d33",
+      "5fe02bbd-89c7-4a4c-aa89-4c6979f3f71a",
+      "5010a3ec-b407-410b-96ee-b4ca9f442b13",
+      "e1f87676-cee8-4259-8412-8f18b4b91ae3",
+      "dad70570-205a-40bd-b054-94995a8c0741"
     ],
-    "critical": [],
-    "supportive": []
+    "critical": [
+      "bb34e8d5-a4b6-4dbd-95b4-988656f1c8fb",
+      "83658330-548d-4335-9861-7e02143506c4",
+      "97ee8a5e-1a15-4d3d-bea7-fcb8265af7c7",
+      "1af522fb-ec6a-4d0c-a04e-2ee97fb23c97",
+      "fadb959e-080d-4a25-9586-1c53d974ef28"
+    ],
+    "supportive": [],
+    "keywords": [
+      "트럼프",
+      "베네수엘라",
+      "사면",
+      "마약",
+      "제재"
+    ],
+    "category": "Politics"
   },
-  "워싱턴 D.C. 국가방위군 2명 총격 사건: 현재까지 알려진 사실들": {
+  "미국, 아프간 난민 및 망명 신청 전면 중단": {
     "factual": [
-      "36e88e4c-6e66-4420-a21b-ac561e1e58e7",
-      "f1689f4b-a764-44d8-8e5d-34784fa7d329",
-      "8f7a722f-baa4-4d8e-9077-7aa0073a2a06",
-      "2534f180-56fd-4545-8d28-c772eaac283e",
-      "c5e5aa1f-66a7-4052-870e-cd0de3803140",
-      "261ad8bb-e42c-4ca6-a827-1630aa3b4c0b",
-      "ebfc6f79-11a1-470f-aad8-85a4081d79ef",
-      "c9ded501-64bd-4630-ab19-2ecf4a028b17",
-      "0bf6bb8b-d7c4-4109-9e6c-d7395f51d7a6",
-      "e34b94ac-89a8-4f92-a7d4-27d4460f8cba",
-      "24b26997-5735-44fc-886a-d3ce5ad7daea"
+      "51e61d6c-1d2a-4500-a237-bf19efbfd3c1",
+      "e009233c-aa3c-4dec-ad38-4a1f66050183",
+      "50555a18-65cc-4839-a3e0-e5670a98326e"
     ],
-    "critical": [],
-    "supportive": []
+    "critical": [
+      "2a5b88d3-251e-4ff7-905b-5c6f99b45748"
+    ],
+    "supportive": [
+      "3ece25e7-31d9-44da-afec-486997d47ec8"
+    ],
+    "keywords": [
+      "망명 신청",
+      "비자 발급 중단",
+      "아프가니스탄",
+      "미국 이민 정책"
+    ],
+    "category": "Politics"
   },
-  "마이크론 테크놀로지: 기술 갈등 고조 속 중국, 미국 칩 제조업체 사이버 보안 위험 조사": {
+  "2026년 총선 불출마 의원 및 의회 개혁 논쟁": {
     "factual": [
-      "eb7e7b22-4118-491c-b4e7-efbe04c6a398",
-      "b3341319-2aec-42f2-8704-36dbab6fa08a",
-      "e2101b96-2759-4863-b12d-3003720ef5f2",
-      "ff225b13-126a-48a0-b6ad-d1459180fe77",
-      "13ae43f0-ebc9-447b-a48d-3c8883fb605e",
-      "e883d7f2-b104-4560-b823-d26a024a7c8e",
-      "a378737b-6971-410c-a6a1-4a4796fe61de",
-      "648f4b0d-e4a1-47eb-980c-5337245248a5"
+      "8be23dfd-f2b1-4c90-8762-c5d7de5c3377",
+      "6c2063c0-1b4e-45aa-9988-eed9b8e94c27",
+      "b37db425-d5a4-4e5a-b71f-2f34acfb142f",
+      "81a379d8-d446-4dff-ac99-dd41bfd9e8ab"
     ],
-    "critical": [],
-    "supportive": []
+    "critical": [
+      "aea4e977-e2d7-4cdf-bb19-bc71b9360d50",
+      "da2dd9dc-804e-42c5-8155-55a6ad004e37",
+      "f1bbb0aa-6dc3-4956-b2cd-7cbaa8bb0eea"
+    ],
+    "supportive": [],
+    "keywords": [
+      "총선 불출마",
+      "의회 개혁",
+      "임기 제한",
+      "의회 지도자",
+      "필리버스터"
+    ],
+    "category": "Politics"
   },
-  "공화당의 오바마케어 개혁 및 보조금 연장 계획은 무엇인가?": {
+  "러시아, 우크라이나 대규모 공습 및 내부 사건 발생": {
     "factual": [
-      "a0340b2c-9790-47bf-a58c-8451580580c7",
-      "f5e0be99-41db-4d9f-9398-638d775c54ee",
-      "2a9289b8-a373-45a3-8a4c-8df933c7b068",
-      "1f1eb0b5-c20f-4c13-bdf6-c8e7502e8fc6",
-      "a39d8d93-839d-465f-9160-81e0b8b9b975",
-      "f521f968-ba79-4fa0-8713-0c5b360bfa64"
+      "c212079c-81c9-4b93-9853-955c1a05145e",
+      "2129b00e-9428-4982-b93c-7fac8f741f6d"
     ],
-    "critical": [],
-    "supportive": []
+    "critical": [
+      "b6c45a7d-ac36-41e5-bc1a-ac058252f7e9"
+    ],
+    "supportive": [],
+    "keywords": [
+      "러시아",
+      "우크라이나",
+      "공습",
+      "상트페테르부르크",
+      "체포"
+    ],
+    "category": "World"
   },
-  "세계에서 가장 깊은 곳에 사는 물고기를 만나다": {
+  "노스웨스턴 대학, 반유대주의 조사 관련 7500만 달러 합의": {
     "factual": [
-      "9ddab4b3-d078-4e20-a383-00a777a0a891",
-      "9899471c-3c1e-4112-9f5a-c6a1997ecf58",
-      "9bcc5146-4579-43b0-a446-8804c3601ae9",
-      "31ae8831-40ca-451d-a708-d28f758c1d1c",
-      "c4483c60-ab7e-44f7-9778-b4128d2cf711",
-      "068aec54-be80-48a4-829e-ffcf7c6536ac"
+      "ba1eebf5-e4fa-4c9e-977e-1b5a720bfd64",
+      "aea6c016-578b-4a18-8145-80dd53a08524",
+      "1b61f3e4-a0d6-471d-a827-4c1baf317a83",
+      "2be9519b-813a-4d27-b2e6-f9c7b38a0e99"
     ],
     "critical": [],
-    "supportive": []
+    "supportive": [],
+    "keywords": [
+      "노스웨스턴 대학",
+      "반유대주의",
+      "연방 민권",
+      "합의",
+      "트럼프 행정부"
+    ],
+    "category": "Society"
   },
-  "법무부: 노엠, 판사 명령 후 추방 비행 최종 결정": {
+  "Hegseth, '모든 사람을 죽여라' 발언 논란": {
     "factual": [
-      "86dc489d-7aff-4924-8348-99345b693e91",
-      "f294ba97-8189-4511-8dde-a22a654c9fe0",
-      "bd18e3e3-fcc8-4bd4-89ed-d2bfa4a0e0fe",
-      "3a002806-0556-48e9-96de-7620661e342b",
-      "30ea22bc-a41b-499b-91ee-339d4cdbf602"
+      "34df221b-f2a8-4d71-a270-cbc1d4dcd5ba",
+      "2d5498d4-00a0-4791-9d2c-5d8c8f4c0da7"
     ],
-    "critical": [],
-    "supportive": []
+    "critical": [
+      "77685607-4a21-404b-a435-cb119ce039fd"
+    ],
+    "supportive": [],
+    "keywords": [
+      "Hegseth",
+      "치명적 타격",
+      "마약 밀매업자",
+      "가짜 뉴스",
+      "상원 감독"
+    ],
+    "category": "Politics"
   },
-  "트럼프, D.C. 총격 사건 후 '제3세계 국가' 이민 중단할 것 밝혀": {
+  "오하이오 주립대, 미시간대와의 라이벌전에서 승리하며 복수 성공": {
     "factual": [
-      "c7a5ac33-1f22-4f93-be7f-ce8bab8f7332",
-      "684cfae1-2962-423a-bd13-38b14960d6e3",
-      "713e3770-d50c-43e6-9315-c9875ec39c8c",
-      "dfc67841-0f91-4a0d-928b-53611f3e7d3a",
-      "374eda6a-5480-48c1-8896-06a7b87becb0"
+      "678af3bd-0f24-4ff1-bae8-e39516cf239d",
+      "b9ac820f-7eb9-46a3-a637-7812afd741de",
+      "00e2eda6-5ed4-44a8-bc80-749a4b53da65"
     ],
     "critical": [],
-    "supportive": []
+    "supportive": [],
+    "keywords": [
+      "오하이오 주립대",
+      "미시간대",
+      "라이벌전",
+      "미식축구",
+      "승리"
+    ],
+    "category": "Sports"
   },
-  "What to know about the Trump indictment on the eve of his court appearance": {
+  "트럼프 동맹 의원 트로이 네얼스, 은퇴 선언": {
     "factual": [
-      "b731612c-b5e2-457f-929c-d9c1a3378999",
-      "d1247102-a766-48cf-b6ac-e125297e6e08",
-      "09e72862-b537-41bc-aedb-8c9df69e257a",
-      "3307e19b-92de-465c-8994-35c65ab90462"
+      "3b722aee-896b-46ac-a031-4512c03510e1"
     ],
     "critical": [],
-    "supportive": []
-  },
-  "EPA, 바이든 시대 석유 및 가스 메탄 규제 연기 확정": {
-    "factual": [
-      "adf810dc-0e13-4982-9199-73f579c17603",
-      "8473afe3-28c8-48ee-9e89-bb2e375b5376",
-      "a66ff4ad-fccf-42c4-a9fc-455e5101f91c",
-      "58bd19ad-c3df-450b-b862-4d741d252d22"
+    "supportive": [],
+    "keywords": [
+      "트로이 네얼스",
+      "미국 하원의원",
+      "공화당",
+      "은퇴"
     ],
-    "critical": [],
-    "supportive": []
-  },
-  "카우보이스 조지 피켄스, 드라이브를 살리는 놀라운 공중 동작 선보여": {
-    "factual": [
-      "9f490dab-a567-49e0-a92c-b0e2e892d40c",
-      "5e5a019a-a00a-4ed5-a788-84102bfe83b5",
-      "c19c626d-7bd5-4690-aca1-2c4b83265476",
-      "652c22a3-b9bd-495c-b983-f59480eb6df0"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "Russian authorities detain suspect over St. Petersburg cafe blast": {
-    "factual": [
-      "d2e28bd2-a135-437b-852e-f0384d77aee6",
-      "f57f2c88-96e6-4e6c-84f0-0aa6baecc83f",
-      "1d46d34d-1990-4d74-824f-5e9746e6b3a5",
-      "7c9a9db1-e668-4f41-998a-b309392a8f70"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "이스라엘군, 서안 지구에서 항복 의사 밝힌 팔레스타인인 2명 사살…영상 공개": {
-    "factual": [
-      "437d81e2-af65-4b04-be60-7e2b56cde189",
-      "c90b2bae-ea6d-45ea-9f6b-7cb0ace9ed89",
-      "a28c394e-655b-4711-8a6e-5b30c3628230",
-      "7d84d819-a873-4c49-9461-218937e8f6c8"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "공화당 상원의원, 주 방위군 총격 사건 관련 '이슬람' 이민자 금지 및 추방 요구": {
-    "factual": [
-      "4338eba6-0002-48aa-9c6f-ad9f19a0e4a3",
-      "1e99d6cf-048f-4f5c-be69-9710f2f2a4a2",
-      "03f20c92-1cc5-428e-8a61-9fed301059b7"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "트럼프, 주방위군 살인 용의자 관련 긴장된 설전 중 기자에게 '멍청한 사람' 발언": {
-    "factual": [
-      "bd43093e-3ae6-4690-924e-a79f3b624387",
-      "24953795-b402-4a41-8175-f5603feae3c8",
-      "62114104-7d47-49a7-baf6-36767b6c6492"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "판사, 엡스타인 파일 공개로 노출된 피해자 보호 모색": {
-    "factual": [
-      "3ced20a2-29b7-4e3b-b840-6b1080cb5169",
-      "89b8e5df-25b2-42c2-86fa-bd837acfb689",
-      "cf181fc1-1d0b-4eed-8323-2b7587adfd5d"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "홍콩 아파트 단지 치명적 화재: 알아야 할 점": {
-    "factual": [
-      "34a44318-5799-4ca3-9ae0-a7994adbbb87",
-      "f812bfd3-85d0-42ac-82f3-ff71f8717b4a",
-      "2e70bffe-ae01-4b0c-b215-7ae3ee31af27"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "튀르키예에서 교황, 오랜 기독교 분열 완화 모색": {
-    "factual": [
-      "b373934c-3a17-4813-ac15-4c974ba4bf78",
-      "56673fb5-9046-4ee3-98d7-e5e1ae1629e0",
-      "63ca98cd-8ced-4ee8-a304-7c150cd52b72"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "핀란드 총리는 왜 패배했나? 기자가 유권자들이 중요하게 여긴 핵심 쟁점을 설명한다": {
-    "factual": [
-      "e701dbee-ce09-468e-96e8-ad95b36efe13",
-      "0cb5226c-10a4-42a3-b1af-5ad5ec48cadc",
-      "8461e721-9513-49fd-bbc5-86d6ff0628ed"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "'그냥 미쳤어': FDA, 일부 화장품 석면 검사 제안 규칙 철회에 대한 비난 직면": {
-    "factual": [
-      "b2e6fda2-e439-4966-a213-1ddaff8988c6",
-      "6737ccdf-1941-4935-a73b-453a5f151b0d",
-      "fe1950aa-c118-48f8-aaf1-64e73bed2490"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "카리브해 크루즈선에 복귀하지 않은 미국 여성 실종": {
-    "factual": [
-      "b3c095a4-7569-43e9-a4bc-222faffd060d",
-      "60405fe8-87f3-4776-99ea-821b4a932735",
-      "72ae0a59-91ce-41e0-b0c6-cd35c2cf1d2d"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "전직 의원들, AI 안전장치 지지하는 슈퍼팩 출범": {
-    "factual": [
-      "5209315e-dd06-48f8-85fc-9156c207765b",
-      "a746f5ee-b12b-4d93-81ff-e3085521494c",
-      "92266a7f-1ea9-4743-8f21-3a39dde7b432"
-    ],
-    "critical": [],
-    "supportive": []
+    "category": "Politics"
   }
 }

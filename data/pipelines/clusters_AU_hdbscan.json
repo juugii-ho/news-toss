@@ -1,105 +1,276 @@
 {
-  "마틸다스, 고스포드에서 뉴질랜드에 후반 맹공으로 5대0 승리": {
+  "잉글랜드 크리켓 '바즈볼' 전략 비판과 선수들의 반박": {
     "factual": [
-      "5863c1bd-414e-4dcd-b5ed-0ff07d71adf8",
-      "11178f40-3ff6-4b2e-984d-ad729f1828ea",
-      "2e5ec156-b37c-44bb-9445-acbf14cbf592",
-      "88ff0217-9ff0-471b-8897-890defd73401",
-      "ed624f74-a42b-45ea-a79a-2424f8d03a53",
-      "d65db52c-3015-4f02-99ad-ef2fd58b535f",
-      "4755cd1f-73de-4a93-a293-7bc7690e5bee",
-      "e59e23a0-7d48-43a4-9650-be73a4341db1"
+      "39030ea3-ca6b-4c3c-b77e-9f3fa3faa1f5",
+      "7aa036c9-03fb-4930-8e75-bf85fa066483"
     ],
-    "critical": [],
-    "supportive": []
+    "critical": [
+      "b1b4a65d-3d9f-47cd-ba42-d0c28d95a64c",
+      "4751a64d-2960-4440-8c6f-7424e59a4336",
+      "c4a18cf3-a848-4ff8-80a2-7ecfc8105999",
+      "edbd7137-4ba2-4651-852e-14716e6056a3"
+    ],
+    "supportive": [],
+    "keywords": [
+      "바즈볼",
+      "잉글랜드 크리켓",
+      "벤 스토크스",
+      "비판",
+      "적응"
+    ],
+    "category": "Sports"
   },
-  "버지니아 주프레 유산 분쟁, 법정으로": {
+  "청소년 및 수감자 대상 흉기 사건 발생": {
     "factual": [
-      "065ea9f4-dbc0-48c0-8766-0084211322d7",
-      "a1d8b47a-c4bc-4665-a495-252318fd5bdc",
-      "00eda9e5-796b-4499-bbb7-f8c18e6ef5f9",
-      "180a5b30-ac6e-449a-8cbf-33e928e4c8b3",
-      "4abeb27a-8bf5-47b4-84fc-1761da2dd35a"
+      "7d3e56d7-66d6-4c91-a07c-9cc21adb8cc6",
+      "663fbce9-0df5-43b8-acbe-e957c81ec458",
+      "b6e23acb-638b-46cd-af82-775fecc8ad2b",
+      "45ba068c-d353-437a-8de7-058c28d3df7b",
+      "f6a2b155-0560-4e41-8f01-77cf890cd257",
+      "4561484a-aee0-4065-b87a-1a6172cfb0ea"
     ],
     "critical": [],
-    "supportive": []
+    "supportive": [],
+    "keywords": [
+      "청소년",
+      "수감자",
+      "흉기",
+      "폭행",
+      "사건"
+    ],
+    "category": "Society"
   },
-  "퍼스 해커, 가짜 콴타스 와이파이 사기 및 음란 이미지 절도로 징역형 선고": {
+  "우크라이나, 흑해에서 러시아 유조선 드론 공격으로 타격": {
     "factual": [
-      "80d4b55f-0749-4c92-82e4-cc16b20cade0",
-      "ad08b295-5c30-48c6-807b-8aa9e9fdff80",
-      "7ec5b1ff-a56d-41d6-b9a6-0390884e4f7c",
-      "31cba129-db84-48a4-90e3-9b197588d06e",
-      "22e376b2-5660-42c1-8163-42f3ff67845b"
+      "65fdeaff-16e5-48ea-9c6e-dc5c44df55c6",
+      "5d2d38ec-bf9b-4a4b-b31a-ed4e30b2de57",
+      "039a88b8-eaf3-4f16-ad38-63954ccf4c6d",
+      "7ea683a8-758b-46ff-9e48-6d35f6d984c0",
+      "72ad16ca-b218-49e2-bb46-2d2bc50ed70a"
     ],
     "critical": [],
-    "supportive": []
+    "supportive": [],
+    "keywords": [
+      "우크라이나",
+      "러시아",
+      "흑해",
+      "유조선",
+      "드론"
+    ],
+    "category": "World"
   },
-  "멜버른 공항 터미널 대피, 화재 후 여행 대혼란": {
+  "NBA 선수 Giddey, 관중과 언쟁 후 퇴장 조치": {
     "factual": [
-      "cc6b4e53-9dab-4bbd-abd1-00b0a87e3874",
-      "bffd6397-8d65-4e72-bc59-afcf8f84a87a",
-      "617d91f1-2dde-41c9-ac42-b19ad85315e6",
-      "19ae049b-93be-4921-aa99-2602203fc7cd",
-      "c7e5de3a-f7e8-4857-acb6-146608e23ecf"
+      "ddb9dd5b-3bcb-4589-ae6a-a3a02047b4e0",
+      "197ca2ef-d964-4ec1-8133-10cd90428876",
+      "73a8faa2-4c65-4e88-b9db-63a2745d3465"
     ],
     "critical": [],
-    "supportive": []
+    "supportive": [],
+    "keywords": [
+      "Giddey",
+      "NBA",
+      "관중",
+      "퇴장",
+      "언쟁"
+    ],
+    "category": "Sports"
   },
-  "현재 빅토리아에서 판매 중인 최고의 주택 7곳": {
+  "시드니 총격 살인 사건 용의자 기소": {
     "factual": [
-      "c662f7c7-3958-4608-a47b-6d1167acde6b",
-      "e7c20fe8-d696-49de-9273-7dc77d75146b",
-      "60a6804e-e4e4-4fbd-ad5a-a47fd2a7d09d",
-      "fba90e98-3bf2-4657-8021-e83333e0db4f"
+      "e56bf805-9c6f-4fac-aa3a-e4ae26fe6890",
+      "95f05275-87db-4206-8917-1c7bd1767a54"
     ],
     "critical": [],
-    "supportive": []
+    "supportive": [],
+    "keywords": [
+      "시드니",
+      "총격",
+      "살인",
+      "기소"
+    ],
+    "category": "Society"
   },
-  "NT 청소년 구금자들이 가족 모르게 이송되고 있다는 주장": {
+  "연립 정부의 에너지 정책 난맥상과 위기": {
     "factual": [
-      "3fcf49a7-83b0-4d1c-946b-c4c58ef6f407",
-      "c4d3b229-7909-412e-8e43-010abd742e18",
-      "0ee1246c-d561-434d-ac95-bdc24a29259e",
-      "96f8910d-cadd-4a95-81f3-20d561bd158b"
+      "39485245-4bec-4852-955e-b9bd726b1b66",
+      "d9547c08-bd78-4df2-9436-704d9a1d3da3",
+      "7575ae82-bce5-4cf2-b213-c1b287583c4b",
+      "ea25f72c-f1ff-4713-aff7-397b80592c0c",
+      "63e87404-4250-4844-8b5c-937dbb53ad4d"
     ],
     "critical": [],
-    "supportive": []
+    "supportive": [],
+    "keywords": [
+      "연립 정부",
+      "에너지 정책",
+      "기후 변화",
+      "정치적 위기",
+      "에너지 독립"
+    ],
+    "category": "Politics"
   },
-  "홍콩 화재 사망자 수 증가": {
+  "멜버른 메트로 터널 첫 열차 운행 시작": {
     "factual": [
-      "44bb4069-7ca0-4785-80b4-ff15eba36a92",
-      "d41eda8b-34e8-40ba-a0dd-164a7d2375cf",
-      "bee777cb-5109-477d-a1b2-4e9bbc8d7489"
+      "aff7c25c-7521-411a-b6e7-df911fb584fb",
+      "987ab529-cf08-48c3-9dc4-9d5ef83ad2ca",
+      "8d1e0655-7cd6-4272-bbf0-16199be70d4a",
+      "b26ba887-b14c-437e-8d5b-2617bf62bcc9"
     ],
     "critical": [],
-    "supportive": []
+    "supportive": [],
+    "keywords": [
+      "멜버른 메트로 터널",
+      "첫 열차 운행",
+      "개통",
+      "지연",
+      "화재 경보"
+    ],
+    "category": "Society"
   },
-  "십대들, 마체테 난투극 혐의로 기소": {
+  "알바네제 총리 결혼식 관련 소식": {
     "factual": [
-      "bbfec19d-f933-4747-8b97-cd376fccb261",
-      "adcaaa2f-d105-45aa-82b3-9f75a808c053",
-      "ce68c88c-0cc9-40a5-b591-4f2e4eacf359"
+      "acefdb99-d5c2-47f1-82ce-2ab81b87ee43",
+      "b4fdfa2c-5023-4501-8cff-3b87ba78fcec"
     ],
     "critical": [],
-    "supportive": []
+    "supportive": [],
+    "keywords": [
+      "알바네제",
+      "총리",
+      "결혼식",
+      "케이크",
+      "플레이리스트"
+    ],
+    "category": "Culture"
   },
-  "폭풍 복구 작업 계속되는 가운데 브리즈번 폭염에 시달려": {
+  "북쪽 캥거루스, AFLW 2연패 달성": {
     "factual": [
-      "398261a1-7914-4428-8d9c-f99ec852dbe1",
-      "12f03f8e-5b81-412b-8f6c-2eb67ffb7364",
-      "fda609cd-1b6d-4593-8d99-f5c7be9091ce"
+      "a6aacec1-afe8-4b65-9b34-cf7bda8b221d",
+      "1c7ba5b5-8f34-42bd-b249-56205749bbb3",
+      "3f726cc9-d08f-4738-8c67-f5b8f9827ab5"
     ],
     "critical": [],
-    "supportive": []
+    "supportive": [
+      "5a7fd164-a384-41e2-826d-117985b80f1f"
+    ],
+    "keywords": [
+      "AFLW",
+      "결승",
+      "우승",
+      "캥거루스",
+      "브리즈번"
+    ],
+    "category": "Sports"
   },
-  "학교에서 8세 아동 칼부림 사건 후 새로운 세부 사항 공개": {
+  "호주 연극계 거장 토니 라몬드, 93세로 별세": {
     "factual": [
-      "3aae1bfc-7420-45a5-91dc-1e59fc581798",
-      "ea570c2f-c656-4e99-a405-03b482a15903",
-      "89c586d2-200b-4496-869d-8c641be664dd"
+      "060d7144-2721-46ba-a8d4-6945e80aee83",
+      "e66ff84b-9b58-4c1c-a8f4-473d9d477c30",
+      "8a076561-a993-43c8-a91c-5a6ddf74a4d4"
     ],
     "critical": [],
-    "supportive": []
+    "supportive": [],
+    "keywords": [
+      "토니 라몬드",
+      "호주 연극",
+      "배우",
+      "93세"
+    ],
+    "category": "Culture"
+  },
+  "NT 구치소 인권 침해 실태 보고서 공개": {
+    "factual": [
+      "f53fc93c-ddc3-475a-bd85-9542ad16c9a3"
+    ],
+    "critical": [],
+    "supportive": [],
+    "keywords": [
+      "NT 구치소",
+      "인권 침해",
+      "열악한 환경",
+      "보고서"
+    ],
+    "category": "Politics"
+  },
+  "호주 총리 앤서니 앨버니지, 조디 헤이든과 결혼": {
+    "factual": [
+      "8699dd90-9a9c-4faf-8574-b05b26162701",
+      "e8fcaed9-b50a-4969-aad6-38982e5ce442",
+      "e1384351-cad3-4156-8369-01d964dda4d0"
+    ],
+    "critical": [],
+    "supportive": [],
+    "keywords": [
+      "앤서니 앨버니지",
+      "조디 헤이든",
+      "호주 총리",
+      "결혼식"
+    ],
+    "category": "Politics"
+  },
+  "조디 헤이든 드레스와 호주 토종 식물": {
+    "factual": [
+      "e7bbc039-15be-4149-acf8-ad48b611ab2a",
+      "43b025cb-a0ef-4ee3-a927-c163556691ab"
+    ],
+    "critical": [],
+    "supportive": [],
+    "keywords": [
+      "조디 헤이든",
+      "호주 토종 식물",
+      "드레스",
+      "패션"
+    ],
+    "category": "Culture"
+  },
+  "엘리 카토아, 뇌수술 후 NRL 복귀 의지 밝혀": {
+    "factual": [
+      "1812d329-50a5-4691-9faf-bc1c5003326c",
+      "bfc0ffd0-3cd9-430a-9b67-729dce25c526",
+      "5f020e54-2ec7-4c3a-875d-845b12444f34"
+    ],
+    "critical": [],
+    "supportive": [],
+    "keywords": [
+      "엘리 카토아",
+      "뇌수술",
+      "NRL 복귀",
+      "럭비"
+    ],
+    "category": "Sports"
+  },
+  "퀸즐랜드 주 보궐선거 LNP 승리": {
+    "factual": [
+      "60187a18-573c-4eca-a49a-533a1a03b8d5",
+      "5c85e58b-6afe-4f77-b466-c548e5c45d2f",
+      "69e489bb-4b77-445a-b872-2552270b1e4e"
+    ],
+    "critical": [],
+    "supportive": [],
+    "keywords": [
+      "퀸즐랜드",
+      "LNP",
+      "보궐선거",
+      "KAP"
+    ],
+    "category": "Politics"
+  },
+  "NFL 레전드, 아들 데뷔전서 격한 반응 보여": {
+    "factual": [
+      "c51f13af-d07a-4536-a896-6d02da5d06a8",
+      "1ae6a1fd-1655-42b3-9f40-6916a26fae2c",
+      "dbe7e185-bb85-49d5-833d-037242cbcbfa"
+    ],
+    "critical": [],
+    "supportive": [],
+    "keywords": [
+      "NFL",
+      "레전드",
+      "아들",
+      "데뷔전",
+      "반응"
+    ],
+    "category": "Sports"
   }
 }

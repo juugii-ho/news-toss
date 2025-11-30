@@ -1,7 +1,7 @@
 import { readGlobalList, readLocalList, readVsCard } from "./mock";
 import type { GlobalListResponse, VsCard, LocalListResponse } from "./mock";
 
-const REVALIDATE_SECONDS = 3600;
+const REVALIDATE_SECONDS = 0;
 
 async function fetchJson<T>(url: string): Promise<T> {
   const absoluteUrl =
@@ -18,6 +18,10 @@ export async function getGlobalList(): Promise<GlobalListResponse> {
     const data = await fetchJson<any>("/api/global/insights");
     // API spec returns array; wrap into { items }
     if (Array.isArray(data)) {
+      if (data.length === 0) {
+        const fallback = await readGlobalList();
+        return fallback;
+      }
       return { items: data };
     }
     if (data?.items) return data as GlobalListResponse;
@@ -54,6 +58,7 @@ export async function getLocalList(params?: { country?: string; page?: number })
           keyword: t.keyword,
           article_count: t.article_count,
           display_level: t.display_level,
+          ai_summary: t.ai_summary,
           media_type:
             (t.media_type as any) === "IMAGE"
               ? "IMAGE"
@@ -62,7 +67,8 @@ export async function getLocalList(params?: { country?: string; page?: number })
                 : t.media_type === "NONE"
                   ? "NONE"
                   : "NONE",
-          media_url: t.media_url
+          media_url: t.media_url,
+          is_global: Boolean(t.is_global)
         })),
         hasNextPage: Boolean(
           data.total_count
@@ -75,5 +81,17 @@ export async function getLocalList(params?: { country?: string; page?: number })
   } catch (err) {
     console.warn("Falling back to mock local list:", err);
     return readLocalList();
+  }
+}
+
+export async function getLocalTopic(id: string): Promise<LocalItem> {
+  try {
+    return await fetchJson<LocalItem>(`/api/local/topics/${id}`);
+  } catch (err) {
+    console.warn("Falling back to mock local topic:", err);
+    const mock = await readLocalList();
+    const found = mock.items.find((i) => i.topic_id === id);
+    if (found) return found;
+    throw err;
   }
 }

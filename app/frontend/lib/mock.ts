@@ -11,6 +11,22 @@ export type GlobalItem = {
   hot_topic_badge?: string | null;
   keywords?: string[];
   thumbnail_url?: string;
+  countries?: string[];
+  country_count?: number;
+  article_count?: number;
+  summary?: string;
+  x?: number;
+  y?: number;
+  localTopics?: LocalTopic[];
+  stances?: any;
+};
+
+export type LocalTopic = {
+  id: string;
+  topic_name: string;
+  country_code: string;
+  x?: number;
+  y?: number;
 };
 
 export type GlobalListResponse = {
@@ -32,6 +48,8 @@ export type VsCard = {
   intro_ko: string;
   perspectives: Perspective[];
   related_articles: { title: string; url: string }[];
+  ai_summary?: string;
+  editor_comment?: string;
 };
 
 export type LocalItem = {
@@ -42,6 +60,10 @@ export type LocalItem = {
   display_level: 1 | 2 | 3;
   media_type: "IMAGE" | "VIDEO" | "NONE";
   media_url?: string;
+  keywords?: string[];
+  stances?: any;
+  summary?: string;
+  category?: string;
 };
 
 export type LocalListResponse = {
@@ -63,8 +85,22 @@ async function readJson<T>(relativePath: string): Promise<T> {
   return JSON.parse(file) as T;
 }
 
-export function readGlobalList() {
-  return readJson<GlobalListResponse>("outputs/mock_data/global_list.json");
+export async function readGlobalList() {
+  const data = await readJson<GlobalListResponse>("outputs/mock_data/global_list.json");
+  // Inject random coords for visualization testing
+  data.items = data.items.map((item, i) => ({
+    ...item,
+    x: (Math.random() - 0.5) * 160, // [-80, 80]
+    y: (Math.random() - 0.5) * 160,
+    localTopics: Array(3).fill(null).map((_, j) => ({
+      id: `mock-local-${i}-${j}`,
+      topic_name: `Mock Local Topic ${j + 1}`,
+      country_code: ["KR", "US", "JP"][j % 3],
+      x: (Math.random() - 0.5) * 160,
+      y: (Math.random() - 0.5) * 160
+    }))
+  }));
+  return data;
 }
 
 export function readVsCard() {

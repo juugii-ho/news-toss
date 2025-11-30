@@ -1,84 +1,52 @@
 {
-  "시진핑, 트럼프 상호 이익 협력 확대 및 이견 관리 약속": {
+  "홍콩 대형 화재 참사, 희생자 추모 및 복구 지원 노력": {
     "factual": [
-      "f088da1e-3e7f-49c5-a5d1-b6498e05ec93",
-      "cd937476-48b3-49ff-93cc-69d4eda04574",
-      "54d24ad1-0d14-46df-9126-77d73e3eb8be",
-      "fa3dadc5-cfc3-4821-a417-d674d95c1977",
-      "ffc042d4-c53d-493c-9c88-6cee123157ed",
-      "18efc52c-c888-4cc7-9b48-161ad2d072c1",
-      "a68856d6-7014-42f6-813b-2cf1aa9b87d1",
-      "2b91239f-2aed-4cc7-8fc8-04382115a65f",
-      "4d30515c-0068-48ef-93da-e4eae4298d9e",
-      "565f846a-9370-4fb0-bf55-b7d2770302d0"
+      "2ded8b6f-f7fa-4e83-9540-c00b6b49eece",
+      "8d07ee78-7976-4c97-82cf-fb8edf329ae4",
+      "3ae8b2e2-ce0a-427b-a981-8a21e2594fc2",
+      "2ce6bef6-75a6-498f-934c-09ca9b1bb440",
+      "f895fa7e-08f2-4cf8-8951-a72cfd2300e6",
+      "75573c9c-3a8a-4ca8-8be5-bc82e6463647",
+      "9cdc3274-25a3-4cb1-913f-fa00c6f2b4cd",
+      "ec7eeb47-9c4d-473c-8582-6c77b27267dc",
+      "ae7ff71a-1d97-4849-bb98-ee7e12315c88",
+      "ad7bd01c-7b33-4126-b3ef-f84829c612a2",
+      "72ca540f-7180-427b-9ee8-7b2848ec3715",
+      "fc756f8b-e704-4110-a072-ec2432b06119",
+      "1124af81-238e-4b7c-8eff-8eb38d890dfb",
+      "929effa8-b536-48b7-8511-8cbc477a3bae",
+      "41a1b70f-4691-4e6d-9b05-6ef8cf094251",
+      "17bfe138-a743-4e48-9f4c-ddf65427561a",
+      "bd7a41cc-a8f2-4f45-a8ab-7efb8b815fac"
     ],
     "critical": [],
-    "supportive": []
+    "supportive": [],
+    "keywords": [
+      "홍콩 화재",
+      "희생자",
+      "구조 활동",
+      "복구 지원",
+      "애도"
+    ],
+    "category": "Society"
   },
-  "홍콩 타이포 화재 참사: 알아야 할 모든 것": {
+  "우크라이나 전쟁 및 대만 해협 긴장 고조": {
     "factual": [
-      "7a31a92e-c94e-4403-bb09-85e299efbc07",
-      "e5592649-176d-40c0-b019-b0876984e17f",
-      "1e727cbb-a789-4cad-a2ef-9261cd9ea9ba",
-      "48f890a2-f5fe-426e-9ab3-39eeff258ede",
-      "06dc62fc-c60c-4fd2-8f5e-b95cac9f329a",
-      "bf8a473e-fa43-4311-9f0c-1bc2d2d57e57",
-      "797e7609-7642-4a40-bcc4-0eb6abaa2dca",
-      "551da46b-d7b7-4046-ae1d-67d02a56ca62",
-      "110b5691-c9d4-4ad0-b1b7-26ba90aafa72",
-      "8211aec5-9ff9-414b-9544-ccda6b353cf5"
+      "a4ee71c4-faca-467c-9f71-27edd7231c24",
+      "3499e17e-27a2-49ed-97b4-27b730966eea",
+      "21cc9fb2-ab08-4b56-af30-613de907b8a5"
     ],
-    "critical": [],
-    "supportive": []
-  },
-  "중국 부총리, 태국 공주와 회담": {
-    "factual": [
-      "abae87c8-3052-481e-b0d2-f7fc284e17fa",
-      "94edbd66-fb4a-4104-b3f9-b9f3708107c2",
-      "f958482b-f031-418d-b227-c79dcf5e1188",
-      "58719b62-7fa0-40e3-9e7f-3ac53f8c6bc8",
-      "17ca5b69-5b30-4de8-89da-693161d5802b"
+    "critical": [
+      "f180a629-092c-433f-965a-6c89822551ff"
     ],
-    "critical": [],
-    "supportive": []
-  },
-  "‘모든 것을 잃었습니다’: 인도네시아 홍수 피해 수마트라 사망자 174명으로 증가": {
-    "factual": [
-      "2ec5d3e1-6517-461d-9798-bd37c424e3fe",
-      "931881b8-fa8f-402e-b0d4-cadcae90ab5c",
-      "759c0724-bb97-4cc1-b175-0edd060d53fb",
-      "473074d3-1f19-4735-bce6-8c1648eb70ac",
-      "1cd46474-8ec6-438f-9044-d39f761ab449"
+    "supportive": [],
+    "keywords": [
+      "우크라이나",
+      "러시아",
+      "대만",
+      "중국",
+      "드론"
     ],
-    "critical": [],
-    "supportive": []
-  },
-  "안와르 총리의 전 보좌관, 말레이시아 반부패청에 체포": {
-    "factual": [
-      "d1c4ba7f-e9fc-41c5-a47e-5c492f78d57a",
-      "1e70cef4-5921-497a-88f2-946aedd063f8",
-      "dc978b45-26c3-41ab-96b4-08434042656b",
-      "0831e583-3f30-441d-9840-a2ff4d8ba8d3"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "홍콩 달러 채권, 420억 달러 기록적 한 해 이후 급증세 지속될 것": {
-    "factual": [
-      "f9c10e13-b7d1-4646-af1f-55fc6b7b2131",
-      "170f691f-5cdf-4ba2-b9f8-8ed431fed4fc",
-      "9ab8fc5b-6052-45f8-8751-756314297d3a"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "중국 증권 감독 당국, 사상 최고 벌금 부과": {
-    "factual": [
-      "2b212d27-db8d-42ba-81a8-53b281bfc62c",
-      "23e57eb6-5dc7-4104-b865-10186236762f",
-      "2c1dab5d-24be-4f0c-87de-0635627adc98"
-    ],
-    "critical": [],
-    "supportive": []
+    "category": "World"
   }
 }

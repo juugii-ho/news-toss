@@ -1,449 +1,84 @@
 {
-  "정치 소식통: 앨버타-오타와 송유관 합의, BC주 동의 필수적이라고 의원들 밝혀": {
-    "topic_name_ko": "정치 소식통: 앨버타-오타와 송유관 합의, BC주 동의 필수적이라고 의원들 밝혀",
+  "캐나다 주요 현안 분석: 경제, 정치, 사회적 논쟁": {
+    "topic_name_ko": "캐나다 주요 현안 분석: 경제, 정치, 사회적 논쟁",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "캐나다 경제",
+      "정치적 논쟁",
+      "사회적 이슈",
+      "원주민 권리",
+      "보건 의료"
+    ],
+    "category": "Politics",
     "stances": {
       "factual": [
-        "5cb64920-224a-4442-a518-c81ddb2cede0",
-        "b1e7477e-1fa4-44c7-a3f7-65f0e0219307",
-        "2c36d650-a901-409c-834e-bfe2fdd031e8",
-        "0cd4fa57-ffa6-4dbc-81b6-6ac89b961455"
+        "25a914df-ad8a-447a-8d08-0f2f7b255aba",
+        "ba3c3598-2960-48a5-b060-008127090fbe",
+        "1f0555ad-175e-4052-8a42-093357bd381b"
+      ],
+      "critical": [
+        "7485e950-409b-4c85-a605-3484ec6eb4d5",
+        "607e704d-98f3-4a78-8b3d-be42f449053f",
+        "d38dbd15-afea-48f8-8276-816e9de02ae7",
+        "85b31e90-cc6f-452e-959f-afbb565d10ac",
+        "9512c0fd-4df0-4278-98e1-96d1615228c5",
+        "b5f2c3e4-a44c-4c18-9083-97817f426647",
+        "5c3e3b35-cf64-43c5-95d3-0ff74d5bcefd"
+      ],
+      "supportive": []
+    }
+  },
+  "트럼프, 마약 밀매 유죄 판결 받은 전 온두라스 대통령 사면 시사": {
+    "topic_name_ko": "트럼프, 마약 밀매 유죄 판결 받은 전 온두라스 대통령 사면 시사",
+    "summary_ko": "",
+    "keywords": [
+      "트럼프",
+      "온두라스",
+      "사면",
+      "마약 밀매"
+    ],
+    "category": "Politics",
+    "stances": {
+      "factual": [
+        "cfe8d450-7925-44d0-9c19-838510bac174"
       ],
       "critical": [],
       "supportive": []
     }
   },
-  "비즈니스 브리프: 올해의 CEO들": {
-    "topic_name_ko": "비즈니스 브리프: 올해의 CEO들",
+  "머라이어 캐리 'All I Want for Christmas Is You' 연간 300만 달러 수익": {
+    "topic_name_ko": "머라이어 캐리 'All I Want for Christmas Is You' 연간 300만 달러 수익",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "머라이어 캐리",
+      "크리스마스 캐럴",
+      "음원 수익",
+      "저작권료"
+    ],
+    "category": "Culture",
     "stances": {
       "factual": [
-        "4352e46f-495d-49e9-b365-0349246b8349",
-        "21206dd6-ef6c-40a8-b6c8-51ac861024d9",
-        "83521e80-c71e-461e-a5eb-bbc4155b7277"
+        "0c64f746-f1bf-4126-aa1f-b40f44049c66"
       ],
       "critical": [],
       "supportive": []
     }
   },
-  "라이언 웨딩과 관련된 혐의를 받고 있는 캐나다인들은 누구인가?": {
-    "topic_name_ko": "라이언 웨딩과 관련된 혐의를 받고 있는 캐나다인들은 누구인가?",
+  "에어버스 항공기 소프트웨어 결함, 운항 차질 우려 완화": {
+    "topic_name_ko": "에어버스 항공기 소프트웨어 결함, 운항 차질 우려 완화",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "에어버스",
+      "항공기",
+      "소프트웨어",
+      "결함",
+      "운항"
+    ],
+    "category": "World",
     "stances": {
       "factual": [
-        "3f4bb3dd-cee2-401f-baf9-2ddd02c8f45c",
-        "fd002c64-f581-4b33-872d-5573a627ef9c",
-        "645c239e-32b4-4987-860d-91b221addd67"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "B.C.에서 학생과 교사 공격 후 회색곰 3마리 수색 계속": {
-    "topic_name_ko": "B.C.에서 학생과 교사 공격 후 회색곰 3마리 수색 계속",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "408aee2b-7472-46c5-b6c2-fd48e8fa8ad1",
-        "9a896ba9-eb9d-4702-8eb3-a15c2901ae99"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "캐나다 제조업 일자리 반등, 물거품 되나": {
-    "topic_name_ko": "캐나다 제조업 일자리 반등, 물거품 되나",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "4756f212-a511-45ba-92ec-22fb1d2cc3e0",
-        "83bf408c-77aa-4425-b68f-ad96ccc3b6c4",
-        "b3711138-3939-4261-b504-598afebab628",
-        "3220be62-f93c-4c61-b836-ca44c1269454",
-        "d2d59d8a-061c-4a14-9ba1-4ee8ba171b3f",
-        "0ddd687f-51b5-4ddb-b344-f42582946454",
-        "e91ae980-edc7-4694-86eb-23a74412d7fc"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "카니 정부, 연방 예산 신임 투표 통과": {
-    "topic_name_ko": "카니 정부, 연방 예산 신임 투표 통과",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "91183da9-2db7-4a9a-9165-972ac978d9e4",
-        "4b615c8e-c691-452d-a086-8b2d407b3e0c"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "카니, 목요일 공개될 앨버타 에너지 협상 내각에 보고": {
-    "topic_name_ko": "카니, 목요일 공개될 앨버타 에너지 협상 내각에 보고",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "7b6b5be6-f324-4546-956c-5a6146acb531",
-        "9028870b-48a3-4c10-9bcc-7cbf2d73cf70",
-        "4d571520-33ae-427c-a85c-5573b6841d81",
-        "5461b340-a2a0-41c0-b4af-f5da982ac28b"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "카니, 아부다비 방문 중 UAE와 투자 협정 체결 및 무역 회담 시작": {
-    "topic_name_ko": "카니, 아부다비 방문 중 UAE와 투자 협정 체결 및 무역 회담 시작",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "e58a47bc-8ccd-4aa2-8f31-8664e4b2ff0e",
-        "0fb715d0-9d44-4d88-841e-d8cc9adaaf2b"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "캐나다 증권거래소, 소규모 증권거래소 통합 위해 CBOE 캐나다 인수 모색": {
-    "topic_name_ko": "캐나다 증권거래소, 소규모 증권거래소 통합 위해 CBOE 캐나다 인수 모색",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "285ab736-9bb9-47b9-a998-aeb28aa9ded1",
-        "e64537e8-768b-45b2-9b03-5ebaabf94ac2"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "모닝 업데이트: 냉온탕 G20 정상회담": {
-    "topic_name_ko": "모닝 업데이트: 냉온탕 G20 정상회담",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "5b70d412-8500-49e0-b83f-b460e3ff143d",
-        "5cb184f2-2fe3-4357-ba51-5f2201346d3b"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "수년간의 의회 논쟁 끝에 '잃어버린 캐나다인' 법안 왕실 재가 획득": {
-    "topic_name_ko": "수년간의 의회 논쟁 끝에 '잃어버린 캐나다인' 법안 왕실 재가 획득",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "ec8252e4-f09c-405a-8d1f-72813e93fc6e",
-        "de6f7c75-8857-4bc4-a03e-b1d6eb989b51"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "내부 위기로 당이 흔들리는 가운데 반부패 경찰, 퀘벡 자유당 조사 착수": {
-    "topic_name_ko": "내부 위기로 당이 흔들리는 가운데 반부패 경찰, 퀘벡 자유당 조사 착수",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "85393190-1756-48f5-a264-2fa145d19ad1",
-        "ad83ba6d-2c84-4af4-84d0-01636c799900"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "새로운 누나부트 총리 존 메인 취임, 오타와는 인프라에 집중": {
-    "topic_name_ko": "새로운 누나부트 총리 존 메인 취임, 오타와는 인프라에 집중",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "03ccab47-971c-4141-93d6-8eadecb7b88d",
-        "35c5ace1-b5b2-43e2-9222-ce40591d1e00"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "정치 소식통: 무역 협상 교착 속 카니, 워싱턴 월드컵 조 추첨 참석 고려": {
-    "topic_name_ko": "정치 소식통: 무역 협상 교착 속 카니, 워싱턴 월드컵 조 추첨 참석 고려",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "e45cd781-4916-4dba-a293-2ebd8c20feb8",
-        "fa33d502-fff4-4dfa-8259-0107ac2cdae7"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "온타리오주, 폭설에 대비": {
-    "topic_name_ko": "온타리오주, 폭설에 대비",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "1c07b297-925e-4326-92b0-39452f76dbf4",
-        "171f0598-18e5-4827-89e2-6575e4d39575"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "지연된 보고서에 따르면 9월 미국 소매 판매 소폭 증가": {
-    "topic_name_ko": "지연된 보고서에 따르면 9월 미국 소매 판매 소폭 증가",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "f6f12dae-53aa-40bb-8c78-59b98950d791",
-        "1243c1cf-3f06-4220-9e85-897808324085"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "캐나다, 인도 포괄적 무역 협정 논의 재개": {
-    "topic_name_ko": "캐나다, 인도 포괄적 무역 협정 논의 재개",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "8fc4d796-02c9-481a-9d39-db0cb323b2fb",
-        "8bd05a2b-1689-4621-ba9a-3fb7a20cba98"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "존 손튼 후임 계획 무산 후 배릭 수석 이사 사임": {
-    "topic_name_ko": "존 손튼 후임 계획 무산 후 배릭 수석 이사 사임",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "069133ee-5f31-4b96-adf2-fbec7c3eac96",
-        "8504241e-295d-476f-90ed-7421bc15c4fb"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "오타와, 앵글로의 텍 리소스 인수 제안을 국가 안보상 이유로 승인": {
-    "topic_name_ko": "오타와, 앵글로의 텍 리소스 인수 제안을 국가 안보상 이유로 승인",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "12bf099f-0757-42b7-8711-e795acb3eab1",
-        "9b23c9e4-a63c-4ae4-922f-842176d6f15b"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "카니의 놀라운 기대치 조율 캠페인": {
-    "topic_name_ko": "카니의 놀라운 기대치 조율 캠페인",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "0c6ad830-ac56-4f4c-8d03-5d8de9995799",
-        "2930a038-64fa-4f0e-9534-27d40604dae5",
-        "f07cce0d-43bd-4785-be38-b1f6f237cdf5"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "몬트리올 학생들, 기도실 금지 제안에 반대 목소리": {
-    "topic_name_ko": "몬트리올 학생들, 기도실 금지 제안에 반대 목소리",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "0e23e745-6102-44d9-9387-65a7b4323975",
-        "f406a6bc-23d2-4a45-a165-fffb1bdb6bc6"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "앨버타 UCP 의원 5명 추가 소환 청원 직면, 총 14명으로 증가": {
-    "topic_name_ko": "앨버타 UCP 의원 5명 추가 소환 청원 직면, 총 14명으로 증가",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "72da9c7b-642b-4de6-b8a7-f97400a84d22",
-        "09b2ad4b-31f8-4d6c-9d5c-f2893c22c578",
-        "8bf1619f-ee63-46d1-86a7-93df787156da"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "온타리오 교육부 장관, EQAO 시험 점수 공개 보류 발표에 비난 쇄도": {
-    "topic_name_ko": "온타리오 교육부 장관, EQAO 시험 점수 공개 보류 발표에 비난 쇄도",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "ef0530f6-a4f0-4c1b-a990-e4b150b8d80d",
-        "db003541-6dbf-4d62-a3dd-56400a027177",
-        "aec553b9-97af-4868-93fa-cdf27ad357a8"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "정치 소식통: 카니, 철강 산업 지원 강화": {
-    "topic_name_ko": "정치 소식통: 카니, 철강 산업 지원 강화",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "00c55a29-490d-4918-8f52-25c26ea1ce16",
-        "42554ccd-a87b-4cb1-bb83-d6e28ca17f40",
-        "260882d2-a591-43b5-8ccb-1c54c2d243ed"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "캐나다 도로에 휴대폰 '불통 지역'이 많은 이유": {
-    "topic_name_ko": "캐나다 도로에 휴대폰 '불통 지역'이 많은 이유",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "a3bf370d-f1c9-4da8-85b7-d1c065271ec7",
-        "803076f3-7be3-4c6c-ab3b-fed4a844372e"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "대부분 접근 불가능한 합법적 안전 공급 프로그램, B.C. 법원 심리": {
-    "topic_name_ko": "대부분 접근 불가능한 합법적 안전 공급 프로그램, B.C. 법원 심리",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "0dba1b34-8c1a-4ffc-94e3-369a8b971cc3",
-        "977dba05-12d1-4f2b-8b27-3b233870dadd"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "이민부 장관, 월드컵 외국인 직원 대상 취업 허가 요건 해제": {
-    "topic_name_ko": "이민부 장관, 월드컵 외국인 직원 대상 취업 허가 요건 해제",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "8f8694bb-7fe5-479f-85c3-37a4054259aa",
-        "3f452d80-78af-4307-8354-31031c466083"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "브램턴 주택 화재로 2명 추가 사망 확인 후 이웃 반응": {
-    "topic_name_ko": "브램턴 주택 화재로 2명 추가 사망 확인 후 이웃 반응",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "80e08591-d5ab-4fa5-bd4c-80994b5f3975",
-        "7752e919-2a9b-4ab7-9421-aaed3aa00790"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "온타리오주, 성범죄 사건에 회복적 정의 허용 촉구": {
-    "topic_name_ko": "온타리오주, 성범죄 사건에 회복적 정의 허용 촉구",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "814c622b-792f-4956-acde-096cc4ad028f",
-        "4970d0c5-5355-46a7-9b77-935140bc1c98",
-        "8165ee32-4ce3-4ade-a861-353cf1498184"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "프리랜드, 로즈 트러스트 CEO 새 직책 위해 영국서 활동 예상": {
-    "topic_name_ko": "프리랜드, 로즈 트러스트 CEO 새 직책 위해 영국서 활동 예상",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "07241145-e976-4193-b2d8-675874f7bcbd",
-        "f5c574a5-8123-4b55-adf2-3a8cebbb0ed1"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "PBO, 연방 부처들이 지출 삭감 세부 내역 제공을 거부하고 있다고 밝혀": {
-    "topic_name_ko": "PBO, 연방 부처들이 지출 삭감 세부 내역 제공을 거부하고 있다고 밝혀",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "8718d292-50a5-4a6c-b247-b78c08c9c614",
-        "d3419602-2ec9-4c65-95ec-de64233d2875"
+        "bc6a1dbe-87ef-4360-bb17-f6fe42b08c7c",
+        "519db1c6-37fd-435c-bbe1-792414e0c8ec"
       ],
       "critical": [],
       "supportive": []

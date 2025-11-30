@@ -1,313 +1,93 @@
 {
-  "Wednesday evening news briefing: Priti Patel first to be eliminated from Tory leadership race": {
+  "레이첼 리브스 예산안 비판 및 정치권 논란": {
     "factual": [
-      "69e8efc0-ad53-4cfe-81c2-8bfa8731bc40",
-      "a6d1c9c9-c8bd-4776-8e42-f12e5ce39a15",
-      "c9a4f095-ab91-4c16-a72a-8323eb62d105",
-      "7d05143d-8ed3-4367-971b-fb01ce6aaacc",
-      "3a9abbb2-e493-4d89-a482-c10bc3256e77",
-      "b374d8e5-6b23-4176-b07e-9d31b707e686",
-      "68af199b-36d5-4236-8581-fc775274e4cd",
-      "801a5114-6520-434f-9372-c1ccd96e8a8f",
-      "455ef36d-f6c6-427d-bc57-d9de3cd62fac",
-      "66dc5eed-bea7-4db2-b57d-43951608d2ed",
-      "e222df4e-86cd-444b-929f-bb8cdeb70473",
-      "492128b3-1c2e-438c-8f48-c6e63057844b",
-      "67fe39c2-056e-4c96-9671-97dd364f2da2",
-      "0d193b8d-dd32-406e-88df-86928e03df09",
-      "c5acba93-80bd-4d31-b072-042644080605",
-      "046f9d06-76df-4a5f-b9f3-d213e783e1cb",
-      "a4740a79-8d82-46ea-8ba1-0cc8c4e7267a",
-      "2105e12a-fbd8-4340-a2f6-cd0ba7a7c896",
-      "877bec17-b450-4f51-903c-87b26b4a014d",
-      "a1b186e7-dda2-443b-9a40-be5ff820d2fa",
-      "250dac96-675a-46fb-9b9f-f68946b57196",
-      "4243826c-1188-4f92-a688-ee46e05b07f6",
-      "3f56b630-3d20-4def-8ee8-770b48dbf960",
-      "a3520d0e-55e6-497d-b163-357a6e77e217",
-      "44aa3449-fb58-4b72-a9a8-64374e4be690",
-      "a7e681f8-2e96-424c-ab15-eb66ceadbcc6",
-      "0467653e-6011-42ce-a684-458676a6ce73",
-      "f9d942de-a7ca-4755-8193-0b48c404cc99",
-      "578215f6-bad7-4694-9ec6-907235d5b630",
-      "8ecdccd2-61c9-43a7-9f68-8482b11f9712",
-      "0b24de44-abf2-4c68-a276-a6e8d5bb4090",
-      "817b2506-9eec-400b-8704-785f79394f65",
-      "66efe887-131b-4b99-975e-f8e8270c12c0",
-      "86c623f7-4278-4004-99dc-35cdde8b0614",
-      "791c7858-0c30-4840-a543-7e46b0e90d2d",
-      "83b5998b-bceb-4df8-a66f-2ac3fd60f759",
-      "efd75265-7f2c-47b2-b884-da08e7cc03af",
-      "30d0ed9b-93c7-471b-9fda-d3a5d68ac9d0",
-      "d08c16b5-7a6b-405b-a572-a2520de62759",
-      "39dcaaee-9032-4ca7-980a-041204b2fd0b",
-      "da8b8512-2e60-4598-b60d-f253de13a44e",
-      "2c688448-fc73-4739-881b-8aa1819dc9cf",
-      "ff4fbc76-a37f-4d98-890f-20768d7379c5",
-      "30a9964c-78e9-48f9-b329-4f44e886d12e",
-      "f67f1303-2d09-4059-9f59-627d6aee57b8",
-      "bbfd5fc6-ce67-4c03-9cfc-2ce7278bcf4c",
-      "9b3b2bdd-a0c8-46ea-a1e5-7706407b02a8",
-      "3d652cdc-dcd0-472c-b87b-cf25efb3f85a",
-      "0eb3c89e-8ff4-4a6f-93ad-fc15bd7c2f44",
-      "4ee2d5ca-3bde-49ed-b6e3-453cb54db389",
-      "7bd048ca-4fc2-4f45-82bf-2f4690ede88a",
-      "22a5da03-a7cb-48fe-86bd-49b1cbb5d7c1",
-      "c9342889-0533-44f6-90c7-3470d950a9e1",
-      "2abaca10-ccdc-48ce-9e5e-06617b57e063",
-      "346a2039-4f57-4421-8040-28b39753c2f9",
-      "51fbdf02-b040-4d28-b126-4b9147fe2aa8",
-      "008831c9-cdcd-40dd-97e9-3c6721ee2586",
-      "60b33efa-8940-47b4-9b13-c4c7b253e9cc",
-      "c31803c5-2151-4e90-8c26-390be6e6f88c",
-      "86df6d43-dc12-479e-8638-80145c2858da",
-      "daf6716b-79bc-4d0b-9a7f-9a18f68cfd67",
-      "62542c24-64d3-47b9-896a-85607af58e9a",
-      "9abfc8a9-ab4a-48d7-88c6-50763dbe0e4f",
-      "efaca9ca-1727-4723-9ff9-ca98a4bc0429",
-      "1a44448f-d6a1-45e2-b5f5-f705c68b3a09",
-      "aa89c066-f157-4a3f-ac40-9b87ad8420df",
-      "b76e979e-8d33-4476-acac-69a0cff448d8",
-      "1982eabb-b777-4fac-997a-4ff7e0cd45cd",
-      "d9ba831b-d459-4b04-bcf5-793cfb23161a",
-      "4402e300-c8b3-4924-bf02-a05bcd7fbb4e",
-      "5edc8dea-b45b-4e5c-8293-10f1cd477dd4",
-      "d9c7d0ac-7b9a-49d7-899e-8873858817af",
-      "f7cc206d-fd7a-448c-9a98-6ea594967a27",
-      "84a3145b-a049-4839-a8c4-c3a3d0d443bf",
-      "8d24a45e-4685-4b06-9ced-5e48e81d0707",
-      "2e204620-f775-4928-903c-f38dee71aebe",
-      "1fbbec91-ec15-4ba3-8072-d68a89bba933",
-      "23518824-4597-418e-81c3-db01add3f4df",
-      "265f592a-623b-49bd-8469-54ab552e2984",
-      "fc8a4b06-5d8f-4410-8a76-12b49cd8f8c8"
+      "9d3ddc6b-8e13-4b3f-9259-2604c6fc9bb8",
+      "3d4ce193-500e-493e-9302-2e1903613f07",
+      "8ff79665-608f-42c8-a427-ee9170ee5f88",
+      "83eced1b-7e91-44f9-b1eb-d0c0e605db7c",
+      "0ce79367-0e8f-4beb-803e-248c84ff9d1c",
+      "02d9b7e5-cdf3-4dc8-a657-3905be589495",
+      "808f02fe-f2b3-47f0-801d-f395a8270bef",
+      "bfdaff0b-fd90-4aa8-89ab-f9d28a34260f",
+      "8511c2e6-ecf6-42d7-a5f7-fadf5d0fbb34",
+      "9f53a1d3-8021-4c57-b178-528df04b083e",
+      "60a730ea-9c9a-4bbd-8a63-4530e3b152af",
+      "65485a4d-ca0d-4b24-8810-dda699403a82",
+      "9c2dc55b-9898-4418-8151-974d113827cd",
+      "5fb7b0e0-12b8-4ff7-95c4-46ae3e80f367"
     ],
-    "critical": [],
-    "supportive": []
+    "critical": [
+      "08951a5b-dd52-45cd-a5ef-d1c405888f46",
+      "6c0fe87b-b4fd-4dd6-9763-0544957b8154",
+      "7aab025f-be22-406c-88bd-426c09075aed",
+      "c1f83fef-65a4-49a3-bf32-b8ab355bb00d",
+      "f93a6525-99aa-43fb-9c75-8595dd5d973b",
+      "c653c4e2-5517-44eb-ad8e-b35fd630bf74",
+      "7bbc0d37-8775-491e-8680-7de98119d72b"
+    ],
+    "supportive": [
+      "c3b14acb-4e94-470d-b177-f4c0a4d6d92b"
+    ],
+    "keywords": [
+      "레이첼 리브스",
+      "예산안",
+      "노동당",
+      "정치"
+    ],
+    "category": "Politics"
   },
-  "2025년 최고의 크리스마스 선물 305가지: 필터 UK가 직접 사용해보고, 테스트하고, 엄선한 정말 훌륭한 선물": {
+  "영국 망명 신청자 택시 이용 제한": {
     "factual": [
-      "4276a103-e36c-40e9-8383-63a6470f5d54",
-      "029acce9-3a2f-43b6-a1c0-c89429387581",
-      "39f074bd-268c-4341-8fb8-a7c89fa22207",
-      "dcbc4c2d-58e5-4cfc-8fd1-6f5ec4f32523",
-      "61e388b1-459e-4c1b-a070-66ffbadc0786",
-      "ee4dcdeb-acb5-4c83-86c1-0ed0f2d3d572",
-      "db4a3ad2-9da7-42db-897c-e0869239330d",
-      "dc14777c-6aa6-41ca-80b6-67a70491e6ab",
-      "852f763f-72f7-43fc-b474-7c996da1da4c",
-      "17cae35c-e74e-4098-b642-65e72c2887ee",
-      "6ebd3b07-2b4e-477d-b756-c2218e7a7e01"
+      "24ba9d23-0276-4b95-ad25-1f6a5041ab98",
+      "11b914ed-a32b-41f5-a0d7-11dfa8d05361",
+      "7689b748-809b-4e8f-af76-e08c58926200",
+      "959f4c54-76cc-4a18-b662-531e0ad651c9"
     ],
     "critical": [],
-    "supportive": []
+    "supportive": [],
+    "keywords": [
+      "망명 신청자",
+      "택시",
+      "의료 지원",
+      "영국"
+    ],
+    "category": "Society"
   },
-  "2025년 예산: 귀하의 재정에 대한 질문에 답변해 드립니다": {
+  "에어버스 A320 항공기 소프트웨어 결함으로 인한 운항 차질": {
     "factual": [
-      "fb6a4084-0c47-4432-b693-fb3a334a21e3",
-      "2f5f4fd2-9dd1-49c7-9a7a-e74358a1045a",
-      "0ae3e308-2e71-4c02-8b39-08f4f8ce0556",
-      "c1224ecc-c36a-4e31-853b-d40c2131ab41",
-      "332997f4-8e6c-4ec0-8a66-5acdc42b354a",
-      "08cb61ad-d45f-4dc7-9cac-a4c48e16d519",
-      "85213a1c-0904-40e4-aa00-068b0efb7e43",
-      "4edc6d6d-1ae2-4b25-86c4-0f8a39b9fe98",
-      "b58ffef1-40cf-4d5f-844f-8e0c91a10ec1",
-      "b9b959bc-ff60-4c66-a88b-5db734fdf038"
+      "072ede28-b1df-4808-b160-fdb4c9915084",
+      "ac762530-7055-40c8-8c4d-413d1708b26f",
+      "6f6b391f-24d5-4abb-885d-3bc63e1d4234"
     ],
-    "critical": [],
-    "supportive": []
+    "critical": [
+      "e4020adf-3d57-4987-9e72-bdb77fc182a1",
+      "b8d9ac1b-bccb-42c7-b6eb-251803ef5b9b"
+    ],
+    "supportive": [],
+    "keywords": [
+      "에어버스",
+      "A320",
+      "소프트웨어 결함",
+      "운항 차질",
+      "태양 방사선"
+    ],
+    "category": "World"
   },
-  "영국 기상청, 영국 일부 지역에 80mm 폭우 및 홍수 경보 발령": {
+  "인도네시아 및 동남아시아 홍수·산사태 피해": {
     "factual": [
-      "d8c34b5d-525a-4ba2-90d1-a55f200c75cb",
-      "e2d5e9db-db7d-4020-967a-caceafc15d8e",
-      "75370b22-4048-47b6-8fc2-324227208efd",
-      "e83893b7-cc86-4e42-a1cd-f0cf68f806fc",
-      "45cb0660-30c3-4ee3-bb73-c25bbeab076f",
-      "728685d6-6c84-46bf-b963-459d36c0f343",
-      "f62ad032-e59f-4c80-9e26-d23bc47aa8f2",
-      "e722598c-f460-43fc-b5f1-9c914409f37e"
+      "d23316cb-6b40-4d75-94be-ddbbbab1c9f9",
+      "1567caf9-dca9-4f95-a347-081f00c9762c",
+      "fc615cd0-06de-4796-be3a-d9f253ff9238"
     ],
     "critical": [],
-    "supportive": []
-  },
-  "테네리페 해안에서 유람선 추락 후 영국인 승객 실종": {
-    "factual": [
-      "4b0366c2-5b4d-4c15-b771-792e5573b781",
-      "256a5610-1f40-4e0d-a959-4adc0daa138b",
-      "61dc2d1b-31aa-4419-8ae7-cd443bc40955",
-      "ed740783-d572-4344-9809-202b3445f245",
-      "9d7294cc-9ca3-48d9-8f31-78f7614ecc74"
+    "supportive": [],
+    "keywords": [
+      "홍수",
+      "산사태",
+      "인명 피해",
+      "인도네시아",
+      "동남아시아"
     ],
-    "critical": [],
-    "supportive": []
-  },
-  "원나잇 스탠드는 줄고 AI 연인은 늘어: Z세대 성생활의 이면 데이터": {
-    "factual": [
-      "8345d4d9-aacc-46fc-b8ea-31466efcb587",
-      "ea4905cf-c057-4ffb-b273-b762a8723b7a",
-      "9e1d9f92-eb26-4a1e-9e17-680858477078",
-      "61d1db50-a20f-47d7-91df-422c65ba4c62",
-      "43956414-1201-46e7-be12-33385b9c413e"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "영국 전문가 패널, 대부분 남성 전립선암 검진 반대 권고": {
-    "factual": [
-      "9d1b826c-e45a-48fb-9c22-ab10cd647e07",
-      "11623573-52ae-4b72-b6c1-95e6ecb07387",
-      "9b02807b-38b5-4da0-b7dd-7cc437dcd5b5",
-      "9ac194bb-1ca3-4bb1-9de0-003fa24138e9"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "Ucas Clearing 2024: How to get a last-minute university place on A-level results day": {
-    "factual": [
-      "f00fad6f-98e0-4d51-90cc-7d88aa2989a8",
-      "2265826e-1fb7-4f91-8140-e7ca702a1727",
-      "0d6a703d-b923-47a4-b64d-063a96bf8926",
-      "a057df5b-7b05-4fcd-aa62-5add24beba51"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "우크라이나: 최신 소식 - 세계에서 가장 신뢰받고 수상 경력에 빛나는 전쟁 관련 팟캐스트": {
-    "factual": [
-      "712eb5d3-e615-45a8-9627-02999bd73c92",
-      "cd0dd642-20df-4a20-8521-d9233972ef40",
-      "72c6d76b-e00d-4bc0-9697-1fc868808b55",
-      "06275180-c603-41eb-83c1-b78f6f33653f"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "스타머의 압력 후, 프랑스, 해상 난민 보트 저지 합의": {
-    "factual": [
-      "c200abbe-dadc-4063-9347-38833e2fed04",
-      "4598e32e-d40a-4725-97d5-c33a41dffadf",
-      "0db39cda-adc7-4610-888a-f3e5e4aecf39"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "영국 부모 10명 중 1명, 자녀가 온라인 협박 당했다고 응답... NSPCC 조사 결과": {
-    "factual": [
-      "f82610f9-a9c5-4f52-a76f-a472d23480f7",
-      "d5d64897-f583-4f93-944b-c0d590b58d6b",
-      "cf3c8da8-98f0-4466-aa23-8347fffbc1e5"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "레이첼 리브스 자매를 '총알'로 위협한 여성, 괴롭힘 혐의로 수감": {
-    "factual": [
-      "aee677d2-6126-436a-94a8-eed569692977",
-      "bc2bb5f4-538e-4180-89e1-6dde8229be0e",
-      "b943a273-5ffd-4a3e-ac17-d32252742ab4"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "포데모스의 흥망성쇠를 들여다보다: '우리는 미래에 대한 지분을 가지고 있다고 믿었다'": {
-    "factual": [
-      "4ec35d38-fb21-47da-8a6f-0c1b2286269d",
-      "2461850f-5fec-48af-9926-cc077a916f49",
-      "efa5a355-9c45-4622-87ee-df34ca3e2451"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "근막의 비밀: 건강에 어떤 영향을 미치며, 폼롤러로 풀어줘야 할까?": {
-    "factual": [
-      "1c504e5c-e4e8-4c2b-9436-dc784c78fd0f",
-      "01bed616-d331-43ca-8cff-32ba82829076",
-      "43977f2e-2b71-4c00-980a-cc1121aff31e"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "밸리미나 폭동을 야기했던 강간 혐의 십대들, 기소 취하": {
-    "factual": [
-      "8a05c288-46d1-429e-bd87-329333d1087c",
-      "b67bb743-84f7-4275-a0e1-f53353dd1640",
-      "b1e21f82-c8df-4840-996a-6f048edab349"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "코티지 파이 때문에 노인 폭행 살해한 강도, 종신형 선고": {
-    "factual": [
-      "28ebe2a0-47c1-4b41-b8e8-727c76a93287",
-      "7d334971-e8b1-45bc-89f0-890e2f900843",
-      "902c7f82-5802-4827-b91b-5e857c4caab4"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "Far-Right rioters target migrant hotels as unrest continues": {
-    "factual": [
-      "bcfabfcd-37b9-438d-b7fb-0adf167e6e32",
-      "e3b9493f-1d2d-4cd9-8093-917968551aa0",
-      "3d1c024c-9f1d-4777-90be-49e1ffec1dcf"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "한여름 밤의 꿈 리뷰 – 악몽 같은 해석이 잔혹한 저류를 표면으로 끌어올리다": {
-    "factual": [
-      "5aac27d1-1000-4728-bc70-cc0b6dbce1e5",
-      "031f2f98-b460-4279-8b6c-84a88dbbdc98",
-      "f6a1b4de-5d20-4ce6-828c-5781b48c17c0"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "데이비드 래미가 배심원단 사용을 줄이는 것이 옳다 – 명백한 사건이다 | 사이먼 젠킨스": {
-    "factual": [
-      "6b1cab86-d640-4b8f-88a0-6a66928d07a8",
-      "41189a40-edda-4a34-afa7-e892c1a7aa6d",
-      "a9ed6b90-1597-46a5-8ac8-fb0b3a3fb1e3"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "'획기적인 변화': 기술 기업들, 잠수 드론으로 해저 지배력 경쟁": {
-    "factual": [
-      "90a04b12-f03e-4225-a709-43e3ccff41ef",
-      "2234e507-184a-45c9-a636-dfc978d30429",
-      "d0cbfdc7-bfc6-4cd7-9f83-ebf17a8505f5"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "홍콩 고층 빌딩 화재 구조 작업 종료, 사망자 128명으로 늘어": {
-    "factual": [
-      "ac08c566-c40e-46a2-a0ef-73774f5221d8",
-      "d6ce4f27-a210-4a4f-a699-082ea0193dfc",
-      "459cc4c7-ae7e-4020-90a8-10bec75f27d3"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "독일, EU에 2035년 신형 휘발유·경유차 판매 금지 완화 촉구 예정": {
-    "factual": [
-      "9f0ff85d-3d38-4f70-b602-10f001c5ce05",
-      "a87c217b-205f-414c-944d-111c158715c2",
-      "fd2d1543-74a4-4e5d-8898-df84ae482407"
-    ],
-    "critical": [],
-    "supportive": []
-  },
-  "디 어밴던스부터 위드 러브, 메건까지: 홀리데이 기념 – 이번 주 스트리밍할 최고의 프로그램 7가지": {
-    "factual": [
-      "03a28281-094f-4436-9b45-97ac7eb630f9",
-      "af00d2e7-67b1-4f70-84c7-f26cd6b8b6c7",
-      "c6607fe4-494b-418f-8795-5ab904650471"
-    ],
-    "critical": [],
-    "supportive": []
+    "category": "World"
   }
 }

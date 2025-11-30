@@ -1,9 +1,10 @@
 import subprocess
 import time
 import sys
+import os
 
 COUNTRIES = ['AU', 'BE', 'CA', 'CN', 'DE', 'FR', 'GB', 'IT', 'JP', 'KR', 'NL', 'RU', 'US']
-MAX_CONCURRENT = 4
+MAX_CONCURRENT = 10
 
 def main():
     print(f"🚀 Starting Parallel Enrichment for {len(COUNTRIES)} countries (Max {MAX_CONCURRENT} concurrent)...")
@@ -16,7 +17,11 @@ def main():
         while len(processes) < MAX_CONCURRENT and queue:
             country = queue.pop(0)
             print(f"  ✨ Starting {country}...")
-            cmd = [sys.executable, "data/pipelines/llm_topic_enrichment.py", country]
+            # Use absolute path to ensure it works from any directory
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            enrichment_script = os.path.join(script_dir, "llm_topic_enrichment.py")
+            
+            cmd = [sys.executable, enrichment_script, country]
             p = subprocess.Popen(cmd)
             processes.append((country, p))
             

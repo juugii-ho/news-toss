@@ -564,3 +564,77 @@ const insights: GlobalInsightDetail[] = await fetchGlobalInsights()
 
 **작성 완료**: 2025-11-28 23:52  
 **다음 단계**: O가 API 구현 시작
+
+---
+
+### GET /api/local/topics/[id]
+
+**설명**: 특정 로컬 토픽의 상세 정보 및 관련 기사 목록을 페이지네이션으로 조회
+
+**응답 타입**: `LocalTopicDetail` (신규 타입 정의 필요)
+
+#### Request
+```
+GET /api/local/topics/660e8400-e29b-41d4-a716-446655440001?page=1&limit=10
+```
+
+**Path Parameters**:
+- `id` (UUID): Local topic ID
+
+**Query Parameters**:
+- `page` (optional, number): 기사 목록의 페이지 번호 (기본값: 1)
+- `limit` (optional, number): 페이지당 기사 수 (기본값: 10, 최대: 30)
+
+#### Response (200 OK)
+```typescript
+{
+  "id": "660e8400-e29b-41d4-a716-446655440001",
+  "title": "손흥민, 시즌 마지막 경기서 득점왕 도전",
+  "category": "스포츠",
+  "article_count": 2105,
+  "trend_score": 850,
+  "articles_in_last_24h": 312,
+  "keywords": ["#손흥민", "#프리미어리그", "#득점왕", "#토트넘"],
+  "articles": {
+    "page": 1,
+    "total_articles": 2105,
+    "items": [
+      {
+        "id": "article-uuid-1",
+        "title": "'시즌 23호골' 손흥민, 살라와 공동 득점왕...아시아 선수 최초",
+        "source_name": "조선일보",
+        "published_at": "2025-11-28T10:00:00Z",
+        "url": "https://example.com/article1"
+      },
+      {
+        "id": "article-uuid-2",
+        "title": "\"SON IS GOLDEN\" 현지 매체 극찬, 평점 9점...득점왕 등극",
+        "source_name": "YTN",
+        "published_at": "2025-11-28T09:00:00Z",
+        "url": "https://example.com/article2"
+      }
+    ]
+  }
+}
+```
+
+#### Supabase Query (Conceptual)
+```typescript
+// 1. Fetch topic details
+const { data: topicData, error: topicError } = await supabase
+  .from('MVP2_local_topics')
+  .select('*')
+  .eq('id', id)
+  .single();
+
+// 2. Fetch related articles with pagination
+const { data: articlesData, error: articlesError, count: articlesCount } = await supabase
+  .from('MVP2_articles')
+  .select('id, title_original, source_name, published_at, url', { count: 'exact' })
+  .eq('local_topic_id', id)
+  .order('published_at', { ascending: false })
+  .range((page - 1) * limit, page * limit - 1);
+```
+
+---
+

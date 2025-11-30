@@ -132,23 +132,41 @@ def main():
             source_articles.append(article)
             
         # Batch insert (upsert to handle duplicates)
-        if source_articles:
+        # Deduplicate articles by URL within this batch
+        # Supabase upsert fails if the batch itself contains duplicates
+        unique_articles = {}
+        for article in source_articles:
+            if article['url'] not in unique_articles:
+                unique_articles[article['url']] = article
+        
+        final_batch = list(unique_articles.values())
+        
+        if final_batch:
             try:
-                # Upsert based on URL
+                # Upsert to DB (ignore duplicates if they exist in DB already, update if needed)
+                # on_conflict="url" ensures we don't create duplicates
                 data = supabase.table("mvp2_articles").upsert(
-                    source_articles, 
-                    on_conflict="url"
+                    final_batch, 
+                    on_conflict="url",
+                    ignore_duplicates=True # If it exists, just ignore (or False to update)
                 ).execute()
                 
-                # Count actually inserted (this is tricky with upsert/ignore, 
-                # but we can assume if no error, we processed them)
-                # Supabase response doesn't always give count of inserted vs ignored easily with ignore_duplicates
-                # So we just track processed count
-                print(f"  Processed {len(source_articles)} articles.")
-                total_articles += len(source_articles)
-                
+                print(f"  Saved {len(final_batch)} articles.")
+                new_articles += len(final_batch)
+                total_articles += len(final_batch)
             except Exception as e:
                 print(f"  Error inserting articles: {e}")
+                # Fallback: Insert one by one if batch fails
+                print("  Retrying one by one...")
+                for article in final_batch:
+                    try:
+                        supabase.table("mvp2_articles").upsert(
+                            article, 
+                            on_conflict="url",
+                            ignore_duplicates=True
+                        ).execute()
+                    except Exception as inner_e:
+                        pass # Ignore individual errors
         
         time.sleep(0.5) # Be nice to RSS servers
 

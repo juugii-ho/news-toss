@@ -5,6 +5,7 @@ import sys
 from collections import Counter
 import google.generativeai as genai
 from supabase import create_client, Client
+from datetime import datetime
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -170,13 +171,22 @@ def main():
     print(f"  Processing {total_clusters} clusters...")
     
     for i, (topic_key, data) in enumerate(clusters.items()):
-        cluster_ids = data.get("factual", []) + data.get("critical", []) + data.get("supportive", [])
-        cluster_articles = [article_map.get(aid) for aid in cluster_ids if article_map.get(aid)]
+        # Process each stance group separately to preserve classification
+        stances_result = {"factual": [], "critical": [], "supportive": []}
+        has_articles = False
         
-        # 1. Source Deduplication (The ONLY task)
-        filtered_articles = deduplicate_sources(cluster_articles)
+        for stance_type in ["factual", "critical", "supportive"]:
+            ids = data.get(stance_type, [])
+            articles = [article_map.get(aid) for aid in ids if article_map.get(aid)]
+            
+            # Deduplicate per stance group
+            filtered = deduplicate_sources(articles)
+            stances_result[stance_type] = [a['id'] for a in filtered]
+            
+            if filtered:
+                has_articles = True
         
-        if not filtered_articles:
+        if not has_articles:
             continue
             
         # 2. Save without LLM Generation
@@ -184,19 +194,77 @@ def main():
         enriched_data[topic_key] = {
             "topic_name_ko": topic_key, # Keep original title
             "summary_ko": "", # Empty
-            "keywords": [],
-            "category": "Unclassified",
-            "stances": {
-                "factual": [a['id'] for a in filtered_articles],
-                "critical": [],
-                "supportive": []
-            }
+            "keywords": data.get('keywords', []),
+            "category": data.get('category', 'Unclassified'),
+            "stances": stances_result
         }
         
     # Final Save
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(enriched_data, f, ensure_ascii=False, indent=2)
     print(f"✅ Deduplication Complete. Saved {len(enriched_data)} topics to {output_file}")
+
+    # Save to DB
+    print("Saving enriched topics to Supabase DB (mvp2_topics)...")
+    try:
+        # 1. Clear existing topics for this country
+        print(f"  🧹 Clearing existing topics for {COUNTRY}...")
+        supabase.table("mvp2_articles").update({"local_topic_id": None}).eq("country_code", COUNTRY).execute()
+        supabase.table("mvp2_topics").delete().eq("country_code", COUNTRY).execute()
+        
+        db_rows = []
+        # Create a lookup for article sources
+        article_source_map = {a['id']: a.get('source_name', 'Unknown') for a in article_map.values()}
+        
+        # Prepare rows
+        for topic_name, details in enriched_data.items():
+            stances = details['stances']
+            article_ids = stances['factual'] + stances['critical'] + stances['supportive']
+            
+            # Calculate unique source count
+            unique_sources = set()
+            for aid in article_ids:
+                if aid in article_source_map:
+                    unique_sources.add(article_source_map[aid])
+            
+            db_rows.append({
+                "country_code": COUNTRY,
+                "topic_name": topic_name,
+                "article_ids": article_ids,
+                "article_count": len(article_ids),
+                "source_count": len(unique_sources),
+                "stances": stances,
+                "keywords": details.get('keywords', []),
+                "category": details.get('category', 'Unclassified'),
+                "created_at": datetime.utcnow().isoformat()
+            })
+        
+        # Batch insert and Link Articles
+        if db_rows:
+            batch_size = 50
+            for i in range(0, len(db_rows), batch_size):
+                batch = db_rows[i:i+batch_size]
+                response = supabase.table("mvp2_topics").insert(batch).execute()
+                print(f"  Inserted batch {i//batch_size + 1}")
+                
+                # Link articles to the newly created topics
+                if response.data:
+                    for topic in response.data:
+                        topic_id = topic['id']
+                        article_ids = topic['article_ids']
+                        if article_ids:
+                            # Update articles with this topic_id
+                            # We can do this in one query
+                            supabase.table("mvp2_articles") \
+                                .update({"local_topic_id": topic_id}) \
+                                .in_("id", article_ids) \
+                                .execute()
+                    print(f"    🔗 Linked articles for batch {i//batch_size + 1}")
+                
+        print("✅ Saved to DB successfully.")
+        
+    except Exception as e:
+        print(f"❌ Error saving to DB: {e}")
 
 if __name__ == "__main__":
     main()

@@ -1,90 +1,98 @@
 {
-  "Japan to fund supplementary budget with $74bn in new debt": {
+  "홍콩 아파트 화재, 128명 사망자 발생하며 안전 불감증 도마 위": {
     "factual": [
-      "7dc70f2a-1bfb-4ec7-85c8-aaedd32520fb",
-      "4590f18a-53b9-4e97-86c5-e2fb94a3793b",
-      "345ef042-13c2-4c04-a304-779b3669d215",
-      "4745b1dc-6098-4f7a-b2a7-73aed6130ab3",
-      "36e858e1-8c8b-4418-bf27-d8f8c8d95cd5",
-      "099196fc-ce67-4257-9dac-4ade9da1b317",
-      "95e003f3-2aa1-45e4-a446-0600b7b1332c",
-      "123ea01a-d32a-4f8e-8b78-e42913c5e8c3",
-      "fa00b03d-231c-40c9-aa9a-dc48192ffd5a",
-      "52d6a351-1b2b-4d79-a905-aff1cf787c87",
-      "f1b60590-2303-45c8-9f52-de60d5bbb7cc",
-      "cbbf5b3f-905e-444e-8029-5f020bd0fdb3",
-      "f67ee249-670a-4312-86d0-798a9a62a425",
-      "2fa7c168-c360-4e0c-9b13-b81ae30fa3f9"
+      "da207273-e4b5-4a57-8037-695c86e4b4f4",
+      "a263dc74-692a-4949-abe5-7f6238930be1",
+      "ca4d1be6-d605-4930-8958-91fca99a8cbb",
+      "372cf5f6-53b4-495e-97df-9f5a1f03676a",
+      "4f519d4d-465f-4268-95ff-43ebac0e2f83",
+      "944055e4-45aa-447c-a9cb-2fb99c8f4da5",
+      "0940c3f1-ebe3-4b55-ba8a-535c5e26dd62",
+      "295e64d2-10c3-4106-99c6-3a28c8227eae",
+      "f68f7dfc-a150-45bf-a91a-46810f0da684",
+      "99fa7453-18d0-46fa-b325-3dcd5651230e",
+      "7953f091-a1f1-4ee2-8150-f3c3035591da"
     ],
-    "critical": [],
-    "supportive": []
+    "critical": [
+      "5dd148c5-250c-4845-9928-72e28a823ace",
+      "dc4a0cfc-5bae-40c6-b859-afe4c720f102"
+    ],
+    "supportive": [],
+    "keywords": [
+      "홍콩",
+      "아파트 화재",
+      "사망자",
+      "안전 불감증",
+      "부실 관리"
+    ],
+    "category": "World"
   },
-  "Japanese regional airports, Chinese airlines face Taiwan feud fallout": {
+  "글로벌 전기차 시장, 보조금 축소 및 경쟁 심화로 판매 둔화": {
     "factual": [
-      "cf625fd9-8f78-4d4b-ad67-7becfd49aac8",
-      "a53a5a3b-feae-4196-a06a-acfea7195e22",
-      "da196d1c-5d45-422b-a232-64fd622273cc",
-      "5473af58-a02a-4a86-8d41-3916faebdb0d",
-      "e3dd7233-a5b7-4c01-b7e8-756f29eca954",
-      "3f380e4a-f5fd-49fe-bc6c-edc963a40b77",
-      "92d5378e-1d3e-4173-84fc-f7cf9b83eaa7",
-      "526ef103-bbc7-4953-878f-addc6bcaa5aa"
+      "c7ab76e0-0bf2-42b1-bcaa-42dc7f6da6ee",
+      "b6e115be-0770-43b8-b352-6dc3644f2ffa",
+      "df4adfdd-d85a-4348-830d-45bc81321598"
     ],
     "critical": [],
-    "supportive": []
+    "supportive": [],
+    "keywords": [
+      "전기차",
+      "판매 둔화",
+      "보조금 축소",
+      "가격 경쟁",
+      "ASEAN"
+    ],
+    "category": "Economy"
   },
-  "The man who changed Foxconn and graphite ambitions in the US": {
+  "일본, AI 반도체 및 로봇 투자 확대": {
     "factual": [
-      "74213ff7-d15a-47d1-b549-e5b6eb2739da",
-      "09da8716-abc3-40e2-99e3-1a42701de353",
-      "37ffc4fe-8eb7-4a01-9171-886f7f619a05",
-      "dfa332bd-d752-43d3-8324-0f72f28999c8",
-      "dc7a4a92-ce2a-4819-b69a-cbab29406919",
-      "191f1486-3ea0-429d-b1e1-49e41ef35a5c"
+      "8e4a1ee9-f768-475c-ad37-0f8db19839d6",
+      "d354e9ec-c610-4d07-8abb-8002e141f410"
     ],
     "critical": [],
-    "supportive": []
+    "supportive": [
+      "94607965-1a5c-49f4-8e2a-acdaad091c09"
+    ],
+    "keywords": [
+      "AI",
+      "반도체",
+      "로봇",
+      "투자",
+      "일본"
+    ],
+    "category": "Economy"
   },
-  "홍콩 고층 아파트 화재, 128명 사망 확인, 약 200명 연락 두절, 홍콩 정부": {
+  "아키시노노미야 후미히토 친왕 60세 생신": {
     "factual": [
-      "d7ab344a-3ad8-40dc-b11a-319d5eac251d",
-      "2b4b4fc9-2e12-4c1c-81e6-62016e7cc89e",
-      "9ddc8042-3b02-4bd2-bc06-eb9fedf4b858",
-      "01012771-e483-49c4-8706-cab8d24185ce",
-      "195bbf01-ea1b-4ec1-b8c3-0a4c071b4dab"
+      "386f14bc-61c1-449e-9d4e-4f225fb71961",
+      "434f1793-532c-4e87-9bb0-e987bb68c5f3",
+      "3cc3e620-0802-4e8f-82b9-611968e378ab",
+      "8bbc26f3-adde-4d4d-895d-0ee71e0e8def"
     ],
     "critical": [],
-    "supportive": []
+    "supportive": [],
+    "keywords": [
+      "아키시노노미야",
+      "후미히토 친왕",
+      "황실",
+      "연구자"
+    ],
+    "category": "Politics"
   },
-  "VinFast leads EV brands in ASEAN as gas-powered car sales stutter": {
+  "트럼프, 베네수엘라 항공 통제 압박": {
     "factual": [
-      "d8b37511-7e61-4df8-9cc0-a17793d03176",
-      "d959a815-05a2-4369-a9aa-ae04d44d5657",
-      "5c9b277a-cdc8-4050-b4f0-090a1aa96018",
-      "3b5c59fa-6109-4957-8462-643cf92cc172",
-      "946905d5-94dd-40a3-ba7b-e17a4fd8a774"
+      "675850a8-9f1d-47f5-a05a-f0ba845eb9f2",
+      "ec752812-de5a-42a9-b475-354694648b5c",
+      "6fb2322e-5c93-4c26-aa15-a5626b3bb727"
     ],
     "critical": [],
-    "supportive": []
-  },
-  "팀랩, 몰입형 예술로 교토 방문객 유치": {
-    "factual": [
-      "c0c150ea-6cc1-4622-83d6-fd1defe73d8c",
-      "4372d181-4e71-4ef4-894d-677af68fc970",
-      "051073d4-daf8-45d6-88f2-e6e2ab06ba49",
-      "f7925aee-57e8-4f2c-9617-7865be341655"
+    "supportive": [],
+    "keywords": [
+      "트럼프",
+      "베네수엘라",
+      "항공 통제",
+      "마약 단속"
     ],
-    "critical": [],
-    "supportive": []
-  },
-  "아사히, 9월 사이버 공격 피해 규모 마침내 공개; 191만 명 개인정보 유출 가능성": {
-    "factual": [
-      "e4dcc43d-bebf-4154-a520-a317b9d53521",
-      "b7314c25-6592-4e21-a6e1-947ed8c43a63",
-      "032a04dc-cd0b-4467-b6ab-6e874f14c03c",
-      "f84c47df-385f-40a8-8429-423a901f3449"
-    ],
-    "critical": [],
-    "supportive": []
+    "category": "World"
   }
 }

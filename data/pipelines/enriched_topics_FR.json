@@ -1,135 +1,198 @@
 {
-  "프랑스 공항들, 항공세로 인해 130만 명의 승객을 잃을까 우려": {
-    "topic_name_ko": "프랑스 공항들, 항공세로 인해 130만 명의 승객을 잃을까 우려",
+  "앙투안 뒤퐁 복귀, 툴루즈 럭비팀 승리 이끌어": {
+    "topic_name_ko": "앙투안 뒤퐁 복귀, 툴루즈 럭비팀 승리 이끌어",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "앙투안 뒤퐁",
+      "툴루즈",
+      "럭비",
+      "복귀",
+      "승리"
+    ],
+    "category": "Sports",
     "stances": {
       "factual": [
-        "3da499f0-8c5a-4fb9-8d49-276e1d57ab93",
-        "bfe95519-d863-4510-8449-184cbcc83558",
-        "514a85aa-dbea-45c9-a556-73efe446b2ec",
-        "e325be1e-b3e7-46d5-8abd-0874f251c261",
-        "cc2366d8-dad9-49ed-a63e-9d6bb454465b",
-        "4be09e50-209d-4fac-a8c3-aa058ca0df9e",
-        "3f33af19-4b71-48dc-994e-d41431dfc39e",
-        "e07fae67-8f0d-4c69-9ca7-231b5ff6cfdc",
-        "ec10566f-7ae8-4e01-a83f-eac394d05003",
-        "e1a71713-dd9d-4a44-9ffd-03aabfd830ec",
-        "42b7c343-fbc8-46e6-8027-9610bc854d0e",
-        "452bf368-dcf6-4646-a9d6-5692a4b21004"
+        "5156958d-e3bb-47a7-8768-926c6eca3a1a",
+        "62e04470-ab63-4833-b781-805d5c697793",
+        "534a8c73-87d0-4ade-aaeb-488389b23976",
+        "9c0b4433-5da3-49f3-a312-abd0718fad03"
       ],
       "critical": [],
       "supportive": []
     }
   },
-  "유엔, 서안 지구 팔레스타인인 '명백한 즉결 처형' 이스라엘 규탄": {
-    "topic_name_ko": "유엔, 서안 지구 팔레스타인인 '명백한 즉결 처형' 이스라엘 규탄",
+  "에어버스 A320 소프트웨어 결함으로 인한 항공편 차질": {
+    "topic_name_ko": "에어버스 A320 소프트웨어 결함으로 인한 항공편 차질",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "에어버스 A320",
+      "소프트웨어 결함",
+      "항공편 지연",
+      "운항 중단"
+    ],
+    "category": "World",
     "stances": {
       "factual": [
-        "15bbf442-e624-4e9a-9a9b-bc2a2c8de8c0",
-        "16ad055a-c240-4303-9a78-392584fb5f92",
-        "698e6c2b-d4ea-420c-a901-8f0c5dbc3af2",
-        "0833e1a2-c6d1-4b37-99e7-ff5ac92532b4",
-        "f381d898-ac18-45d0-937d-782bd54a390f",
-        "20e84ef2-7448-4c2d-ab79-f9399c0a6036",
-        "b81b8459-f74e-4fd5-a7cd-13cc0eee4b69",
-        "d18d9665-e44f-47b6-8719-4a04b7626ec1"
+        "38ca7ac3-c4aa-4857-b008-fdb839ec952d",
+        "a721d8b5-93e3-49fd-bd2d-c1235e42e91e",
+        "c08c74cb-56d6-47fc-837c-884f1ce4fbf2",
+        "fe5424d2-c871-4498-88d8-c779c1732ee0",
+        "16972544-1458-4c22-98ac-cfb4035505fe",
+        "8cf4f706-d390-40d5-9300-7e353fab896e",
+        "0abca67f-da78-46a9-928b-02740eee1337"
       ],
       "critical": [],
       "supportive": []
     }
   },
-  "“건물이 마약 거래소 광고판 역할”: 마르세유에서 오렌지 직원들, 마약 밀매와 더 이상 공존할 수 없다고 밝혀": {
-    "topic_name_ko": "“건물이 마약 거래소 광고판 역할”: 마르세유에서 오렌지 직원들, 마약 밀매와 더 이상 공존할 수 없다고 밝혀",
+  "우크라이나 전쟁 관련 주요 사건 및 외교 동향": {
+    "topic_name_ko": "우크라이나 전쟁 관련 주요 사건 및 외교 동향",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "우크라이나",
+      "러시아",
+      "키이우",
+      "공격",
+      "외교"
+    ],
+    "category": "World",
     "stances": {
       "factual": [
-        "186a3ac3-f884-4a17-9b05-98446c09fa73",
-        "0977c181-4572-43ab-a557-9bfe6fba4611",
-        "10eb0cc1-a80f-4617-9559-687d642d2166",
-        "d2d0ce93-385b-4246-a406-cae78b6116c1",
-        "51c78402-f883-4a56-925f-2836c1c0c536"
+        "7e1051f6-5100-444b-a10b-86031e234264",
+        "eae56120-1f32-44b8-9121-3c3f92aaa069",
+        "93b1a040-e575-4076-b9ef-c6e6f838dd8e",
+        "a033457a-679d-4d2d-92e6-8f28188c3941",
+        "c983a331-4ebc-4c9e-a85e-ebb0d16f126a",
+        "b8a32d37-910b-4f95-aae9-8e4de14a26d1"
       ],
       "critical": [],
       "supportive": []
     }
   },
-  "Ukraine's Zelensky says his chief of staff Andriy Yermak has resigned after anti-graft raids": {
-    "topic_name_ko": "Ukraine's Zelensky says his chief of staff Andriy Yermak has resigned after anti-graft raids",
+  "홍콩 건물 화재 참사 추모와 분노": {
+    "topic_name_ko": "홍콩 건물 화재 참사 추모와 분노",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "홍콩",
+      "화재",
+      "사망자",
+      "추모",
+      "건물"
+    ],
+    "category": "World",
     "stances": {
       "factual": [
-        "da6f76f8-6617-47f9-8de8-d1aa359f7d07",
-        "2945740d-a3ed-44aa-a292-007157567a56",
-        "00e3b73a-01f6-4ae2-b27f-ce803cecd140",
-        "4ef0dba4-437f-487d-afe1-9665ca995edd"
+        "28eea5cf-da25-4f73-bcec-2817b2081c00",
+        "ab8c54ba-25f7-4454-8175-78b9e54c802f",
+        "526b4a5a-4a0a-40b4-b21d-f99e9c2c5746"
       ],
       "critical": [],
       "supportive": []
     }
   },
-  "레오 교황, 니케아 신경 발원지 튀르키예 유적지에서 일치 기념": {
-    "topic_name_ko": "레오 교황, 니케아 신경 발원지 튀르키예 유적지에서 일치 기념",
+  "가자지구 사망자 7만 명 초과, 수단 화학무기 사용 의혹": {
+    "topic_name_ko": "가자지구 사망자 7만 명 초과, 수단 화학무기 사용 의혹",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "가자지구",
+      "사망자",
+      "수단",
+      "화학무기",
+      "이스라엘"
+    ],
+    "category": "World",
     "stances": {
       "factual": [
-        "04f5f217-4eaa-4e28-b6df-527a950882d7",
-        "4acc551d-e6df-4cd2-8fd4-e4248a3cbf49"
+        "91a2fc7c-c758-4ba5-9448-a29d7743f93d",
+        "9910494a-7080-4066-8726-db8db89266c7"
       ],
-      "critical": [],
+      "critical": [
+        "c4b1a2b2-cb7f-4f17-b805-6c0fdc5de76c"
+      ],
       "supportive": []
     }
   },
-  "홍콩 화재, 분노와 해명 요구 촉발": {
-    "topic_name_ko": "홍콩 화재, 분노와 해명 요구 촉발",
+  "온두라스 대선 앞두고 트럼프 개입 논란": {
+    "topic_name_ko": "온두라스 대선 앞두고 트럼프 개입 논란",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "온두라스",
+      "대선",
+      "트럼프",
+      "개입",
+      "릭시 몬카다"
+    ],
+    "category": "Politics",
     "stances": {
       "factual": [
-        "26ad2d6b-69c7-4af8-a05e-dd6b55640a42",
-        "749f7e3e-6b3e-414f-aae3-eeb80a0b5710",
-        "84fc1c9e-011a-4d0c-8ca6-64f2f5113bb9"
+        "68bffbe9-5ba8-4ea3-9623-69f76d489725",
+        "11e9da32-b2f6-4d88-94b9-bbc6ee99eb2e"
       ],
-      "critical": [],
+      "critical": [
+        "e984b8da-c705-4f92-916c-bf2dcea77a3e"
+      ],
       "supportive": []
     }
   },
-  "덴마크, 트럼프가 잠든 사이 그린란드 점령 못하게 야간 경계 설치": {
-    "topic_name_ko": "덴마크, 트럼프가 잠든 사이 그린란드 점령 못하게 야간 경계 설치",
+  "2026 예산안, 기업 증세 및 사회보장 예산안 놓고 진통": {
+    "topic_name_ko": "2026 예산안, 기업 증세 및 사회보장 예산안 놓고 진통",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "2026 예산안",
+      "기업 증세",
+      "사회보장 예산",
+      "정치적 갈등"
+    ],
+    "category": "Politics",
     "stances": {
       "factual": [
-        "05b69c53-6fa4-43bf-aa93-f2e146b99fc6",
-        "9547df95-1c9c-408f-bb81-2878b80cd9d5",
-        "c31c207e-2720-4ba2-9e92-c243652ddb86"
+        "dba0d252-aa0f-4f2f-92e4-5c8fb80b1a2d",
+        "a760ffb5-a6f5-49a1-a422-3cc1bea90532"
       ],
-      "critical": [],
+      "critical": [
+        "08ff0969-fec7-49d7-b15c-f2c7d7d29684"
+      ],
       "supportive": []
     }
   },
-  "아르콤의 비판에도 국경 없는 기자회, CNews 조사 유지": {
-    "topic_name_ko": "아르콤의 비판에도 국경 없는 기자회, CNews 조사 유지",
+  "사회적 시장 경제와 세금 논쟁": {
+    "topic_name_ko": "사회적 시장 경제와 세금 논쟁",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "사회적 시장 경제",
+      "초가공식품",
+      "농식품 로비",
+      "상속세",
+      "부유층"
+    ],
+    "category": "Economy",
     "stances": {
       "factual": [
-        "eb31a7bd-8652-4ca4-90b5-6c699e5a0b06",
-        "f2d0d21e-3b5f-4d4d-86d2-8d4c44e5796a",
-        "0389ac65-7b84-45d0-a7cd-b37055ccf44d"
+        "5ae97366-bbf5-4fd0-99bf-cd4c1e1152a1"
+      ],
+      "critical": [
+        "c7f369a3-aed9-41a6-982e-9ef2705391f8",
+        "0194c31f-283f-4923-a5b4-2052d872750b"
+      ],
+      "supportive": []
+    }
+  },
+  "트럼프, 베네수엘라 영공 폐쇄 검토 발표...카라카스 '식민주의적 위협' 비난": {
+    "topic_name_ko": "트럼프, 베네수엘라 영공 폐쇄 검토 발표...카라카스 '식민주의적 위협' 비난",
+    "summary_ko": "",
+    "keywords": [
+      "트럼프",
+      "베네수엘라",
+      "영공 폐쇄",
+      "식민주의적 위협",
+      "카라카스"
+    ],
+    "category": "World",
+    "stances": {
+      "factual": [
+        "d7e0f943-3f96-46b0-9d11-1ba5721789df",
+        "e5624760-cf69-446e-a1eb-8470d80cda73",
+        "207a29d8-8912-4969-a3fd-cf7fcff24298"
       ],
       "critical": [],
       "supportive": []

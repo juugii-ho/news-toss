@@ -1,0 +1,3090 @@
+{
+  "한강 수상 활성화 및 도시 개발 논란": {
+    "factual": [
+      "[ab955d89-3159-4c78-8411-dbc3f015eae0]",
+      "[0abe21ea-208f-4884-95c6-80b8a618e26a]"
+    ],
+    "critical": [
+      "[cbbc619e-35ce-43b5-ace8-36ec5cb0e741]"
+    ],
+    "supportive": []
+  },
+  "부동산 관련 범죄 및 갈등": {
+    "factual": [],
+    "critical": [
+      "[6fe5646f-0ef5-4c45-a9d1-c74fc2eeda62]"
+    ],
+    "supportive": []
+  },
+  "스포츠계 소식 및 계약": {
+    "factual": [
+      "[fbc16387-1f59-4274-9c04-2124f0e00dbc]",
+      "[a64a6b01-c266-4bc1-a89b-85e3f4e57db8]",
+      "[c9dfedf8-de85-403e-9d42-ea287f957d6e]",
+      "[3ef9f38c-9bbe-4f8b-828f-ecf5b85fbfa9]",
+      "[395397b6-fca3-44e9-9c43-033e3c861b73]",
+      "[fbe70d4f-9536-4b34-9b0b-da5e5dcbd2ec]"
+    ],
+    "critical": [
+      "[9d2842c0-dc26-4681-a4a2-8815acfd1c24]",
+      "[ad9f997e-3655-4db3-a27f-10bc57549ca2]",
+      "[121c3c72-9a75-46e7-af17-60b01dbce664]"
+    ],
+    "supportive": []
+  },
+  "건강 및 의학 정보": {
+    "factual": [
+      "[a0388281-2a67-4851-9ab8-ec672d9a12e1]",
+      "[025b0ad7-9bf0-422f-8a0c-fcb4b2d6ad2a]",
+      "[c17a9799-ec13-450c-917a-55b04b536558]",
+      "[bcc12cda-1192-43c0-9619-f0c94ba30004]",
+      "[e5458bfc-3e63-4261-93f3-8f73800da1eb]"
+    ],
+    "critical": [
+      "[3d164591-014a-44d5-bfed-23f0cb91e5b4]"
+    ],
+    "supportive": []
+  },
+  "사회적 이슈 및 사건 사고": {
+    "factual": [
+      "[78af7759-c645-4036-8560-b6f8f96310d3]",
+      "[579571bb-fb1d-4cd2-a268-44c059530273]",
+      "[f56c9d53-6818-4b88-b782-e424930eec2c]",
+      "[d61d46f5-532c-44d3-a457-0e559b07df90]",
+      "[125b20e4-4944-401e-b3cf-ef95c08e631e]",
+      "[fce0552f-43c3-4ff1-b9bf-f168edae18ae]",
+      "[5562349f-ef7d-4f4d-842e-2447bdba]",
+      "[56f7c2a0-f7c6-4b92-adaf-df260bac245c]",
+      "[516d9603-53b6-4a90-a49d-ba1a0741a2c7]",
+      "[7d3de25f-5b55-4c75-8a80-7118d5bbe36f]",
+      "[63db682b-fd40-4988-8287-0c415afa93b4]"
+    ],
+    "critical": [
+      "[644f7d01-d376-4935-9f70-5b005da54bed]",
+      "[fdbcc6de-379a-4605-bc3e-078846e6e170]"
+    ],
+    "supportive": [
+      "[089d73d3-6ddf-4ce6-99a6-25f27006089c]"
+    ]
+  },
+  "문화 예술 및 미디어 동향": {
+    "factual": [
+      "[3dd1022d-f9da-4597-b033-1b5934e50c28]",
+      "[dc845c61-703d-4702-ad59-052968fef51b]",
+      "[1cfa854a-4e89-4908-8f73-b0969e4a5604]",
+      "[a31b7495-a7eb-497e-9739-56354cde2b5a]"
+    ],
+    "critical": [
+      "[aa0c4339-6e9f-413a-b04f-869146b64fe2]",
+      "[56f7c2a0-f7c6-4b92-adaf-df260bac245c]"
+    ],
+    "supportive": [
+      "[c3a2f3f3-6d6d-47c6-b945-a18bf753b034]"
+    ]
+  },
+  "정치 및 정책 관련 논쟁": {
+    "factual": [
+      "[d7ddf212-fa48-45aa-b6b3-29dc09f0913f]"
+    ],
+    "critical": [
+      "[b2f9f864-982f-4fd2-a177-74c34f9724a5]"
+    ],
+    "supportive": []
+  },
+  "국제 정세 및 외교": {
+    "factual": [
+      "[edd5e5f7-4fb9-411b-b750-607023cfc668]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "과학 및 탐구": {
+    "factual": [
+      "[5cf95872-1533-42c7-ad80-1278b79c77a3]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "AI 규제 논쟁 및 동향": {
+    "factual": [
+      "42581286-1f54-4fa7-a9a3-43598761680c",
+      "52273b88-ed5b-4cc1-aef6-438669d85808"
+    ],
+    "critical": [
+      "011f2d0e-dd55-4b14-9d2b-ed6a75481107",
+      "54f42501-10c0-4dbb-a252-439d2758efb4"
+    ],
+    "supportive": []
+  },
+  "정치권 내란몰이 및 특검 동향": {
+    "factual": [
+      "0694b310-2701-4135-a041-e466e5bd4f1b",
+      "a4fa1bf4-5fc3-4137-8488-c07990a586f9"
+    ],
+    "critical": [
+      "98efe544-a1d9-4e0e-88d0-373c6d74d9ac",
+      "c9de209c-dd88-4c19-8b7e-8402573af63e"
+    ],
+    "supportive": []
+  },
+  "스포츠 스타 안세영 및 이현중 경기 결과": {
+    "factual": [
+      "3283833b-c8fb-4140-9e98-702386115f03",
+      "bcd87062-5a34-49bb-b4f1-27efdfff8d73"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "연예인 활동 및 개인사": {
+    "factual": [
+      "918ef8b8-367e-46b3-addf-0110376827cb",
+      "b5b5077d-440-4061-b7cd-51e59f1af2a5",
+      "5bb12731-a2a5-4da5-b31c-ba58cd6727ac"
+    ],
+    "critical": [
+      "31f9b91a-ffac-496e-92f0-adcb262b4684",
+      "8e33628e-7a07-4554-9dd1-b49a93323b2f"
+    ],
+    "supportive": []
+  },
+  "문화 행사 및 예술": {
+    "factual": [
+      "535ca6c6-96c3-4cad-9d1b-81081c4eb531",
+      "224021c8-9328-481b-98be-ce91e730a260",
+      "80df9dca-bfc5-4cd0-a864-f09b00231450",
+      "47ec2848-22fe-4203-a9c4-397eed465c46"
+    ],
+    "critical": [],
+    "supportive": [
+      "ec8f5ecb-6049-4a16-8a5b-3b333333c3bd",
+      "f3bd1382-f9c2-4f2b-8828-25cc0d5cf229"
+    ]
+  },
+  "사회적 이슈 및 사건": {
+    "factual": [
+      "4d7f2480-1874-40ce-8f33-f20b4f0f956f",
+      "73d9280c-feed-43d5-b3a1-c8c2a193dd6f",
+      "4ef4a160-6c60-4a60-818c-e91cc6dff706",
+      "b251661c-32c7-41fc-93c0-fff8b062b3ca",
+      "f9789c55-7b6c-4b81-ac02-5c690eae2779",
+      "be0f4d73-bacb-4e75-a909-6b53d9d9e946"
+    ],
+    "critical": [
+      "7b8293da-2559-4dde-a504-c384ffe299fc",
+      "f362f2e2-3d05-4c44-8214-e9b3dfd9928b",
+      "da2d89d5-02e6-4502-8feb-da8203c603d0"
+    ],
+    "supportive": [
+      "2399bb65-7715-4cd4-ac09-5b3b3333c3bd",
+      "cdc245a3-a1a7-4a31-9eb3-b48b3c188cfa",
+      "4efac87b-7f72-42ba-a7db-b1ee998b501f"
+    ]
+  },
+  "경제 및 금융 정책": {
+    "factual": [
+      "a89c4d21-9617-4816-b603-474affdc8b97"
+    ],
+    "critical": [
+      "e23e3a9e-e235-47e8-9b37-1fea5d4950d8"
+    ],
+    "supportive": []
+  },
+  "철학 및 윤리학": {
+    "factual": [
+      "c9b55375-6eda-492c-a012-34d9d5e2bc4f",
+      "cf204390-fc83-4aca-93cb-f6921ec21203"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "역사적 인물 및 사건": {
+    "factual": [
+      "fa95ec7e-200c-47ea-8c1c-75d2828c96da",
+      "2b6ad44e-16e6-4a46-bf67-7bcee13843e9"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "예술가의 삶과 작품": {
+    "factual": [],
+    "critical": [],
+    "supportive": [
+      "f6ad69b8-7dd9-4d2b-9a1a-97422d90103e"
+    ]
+  },
+  "탁구 관련 논평": {
+    "factual": [
+      "70935f9d-4553-437e-b9eb-2ef951e4c5ec"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "국제 외교 및 안보": {
+    "factual": [
+      "fabf2ffa-f757-471b-8cfa-b866e44839dc"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "북한 건설 성과": {
+    "factual": [
+      "b3903276-0da1-4ece-a1f3-824c41b9511e"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "뉴욕 상업용 부동산 공실률 증가": {
+    "factual": [
+      "[c3e20b70-1127-4420-af80-78ccc6d0b867]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "故 이순재 배우의 투병 및 연기 열정": {
+    "factual": [
+      "[5a12e97f-94ae-4985-af1a-7454aa901919]",
+      "[ab9015ac-86ea-43fa-8bc3-4258327bbed3]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "기후변화로 인한 동남아 홍수 및 산사태 피해": {
+    "factual": [
+      "[7ee76810-1042-4d1e-9d6f-c27493cdefe2]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "명품 주얼리 가격 인상 및 연말 선물 동향": {
+    "factual": [
+      "[8c9796a5-b43c-4371-949b-a703a8332477]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "애니메이션 '주토피아2' 흥행 성공": {
+    "factual": [
+      "[d4c6d8d7-72a6-4c8c-92fd-153798109cb5]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "벽지 훼손 원상 복구 노하우": {
+    "factual": [
+      "[d39bbd0a-979b-4424-92ae-61bb5ec45137]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "뉴욕 식당가 '미슐랭 먹튀 미녀' 사건": {
+    "factual": [
+      "[cc43251b-3b4a-438f-9b1b-23dfb148a1a9]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "오현규 선수 유로파 리그 선제골 및 팀 승리": {
+    "factual": [
+      "[284f0669-6577-46a0-a3ce-07c228da3219]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "노인의 경찰관 폭행 사건 및 처벌": {
+    "factual": [
+      "[1daaf91e-95ff-42e1-a65e-eda3b3de7f62]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "11월 '빚투' 반대매매 증가 및 증시 대기 자금 감소": {
+    "factual": [
+      "[4ce2d265-4d9c-472d-9c7c-178b57eba277]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "AI 활용 버섯 중독 사고 주의": {
+    "factual": [
+      "[a7ac4d1f-89ba-4818-8a02-501fdb580a2b]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "'K-딸기' 인도네시아 시장 완판": {
+    "factual": [
+      "[f39b3c5c-fe42-4b3e-9f5a-5f449d8a39c9]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "유튜브 뮤직 제외 멤버십 한국 출시 및 경쟁 분석": {
+    "factual": [
+      "[9407a4f2-f770-4236-aa49-e8ecc27cf659]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "화장품 업계 '막내 고객' 트렌드": {
+    "factual": [
+      "[084439ea-85ab-48d4-9451-9876e80dd129]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "이찬혁 스타일 분석 및 '잘생긴 마인드' 조명": {
+    "factual": [
+      "[26ff6452-68b5-42ed-a07d-26a1db0d85ba]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "김복필 별세 부고": {
+    "factual": [
+      "[397ed689-cebc-4a4f-b08d-cce32e7defe4]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "을지로 '자하도' 사진관 소개": {
+    "factual": [
+      "[041995a6-27ce-48d4-9df1-6ed4d2a6d593]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "폐암 유전자 변이 표적 치료 연구": {
+    "factual": [
+      "[ea0c7776-6b30-448c-8279-62e4ba73ee74]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "한국 소프트볼 대만 전지훈련 및 아시안게임 준비": {
+    "factual": [
+      "[fbbe6a1f-92d6-494c-b949-0471bae66a47]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "홋카이도 여행 시즌별 매력 비교": {
+    "factual": [
+      "[f1755501-9429-4821-854f-5d922fb859ba]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "신민아·김우빈 커플 청첩장 공개 반응": {
+    "factual": [
+      "[bdf91cf7-773d-4c3f-a536-5d4508821b9e]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "가임기 자궁내막암 치료 전략 변화": {
+    "factual": [
+      "[06ceecda-62d0-455f-b7ef-0ace23e09235]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "교황 이스탄불 성령대성당 미사 집전": {
+    "factual": [
+      "[4aa84155-0962-46c5-a620-4ae77afc713c]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "자발적 군복무제 시행 국가": {
+    "factual": [
+      "[e279eeae-f1a8-43eb-8709-cc7bf6171acf]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "주유소 기름값 상승 및 국제 유가 하락": {
+    "factual": [
+      "[ff2ce704-bdd5-44d3-b87f-c2eb244063b2]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "중국산 도금·컬러강판 덤핑 조사 착수": {
+    "factual": [
+      "[2281b73e-eb0e-4954-b322-25804470843c]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "광주 김치 맛집 소개": {
+    "factual": [
+      "[b76eda3d-cb52-490e-8b9c-9b235ead1184]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "트럼프 여성 기자 폭언 논란": {
+    "factual": [
+      "[7232aef1-ef5d-4867-bc39-0e838bee2fb9]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "중국 남성 소개팅 후 전 재산 탕진": {
+    "factual": [
+      "[91f09040-5bc4-4576-860c-6bb9078796ea]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "윤석열 대통령 지지도 및 전두환 비교": {
+    "factual": [
+      "[ce15d30c-3dc3-4e16-9ba2-dc9617f267a0]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "소아 갑상선 항진증 최적 투약 용량 AI 분석": {
+    "factual": [
+      "[edd8f83c-1aa4-43a2-97a4-fb365241445c]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "국민의힘-더불어민주당 설전 (정청래·추경호 영장 협박)": {
+    "factual": [
+      "[dd5faad5-b09c-42ec-9913-23648ff1b9c6]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "바클레이즈, 한은 금통위 금리 동결 전망": {
+    "factual": [
+      "[b95d2131-3359-4957-be75-dd5e0f8caee8]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "A형 혈액형 간 건강 주의": {
+    "factual": [
+      "[298093d5-7253-40de-9020-f5545525be78]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "용과 같이 극3 외전 정보 공개": {
+    "factual": [
+      "[f3fe28ea-e318-49fd-845f-2dc1559f9783]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "쇼트트랙 최민정 4차 월드투어 1,000ｍ 성적": {
+    "factual": [
+      "[22063957-9182-4cf4-a24c-9ee085d6fbd8]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "고양이 눈맞춤 행동 분석": {
+    "factual": [
+      "[08da690d-c0b0-4ca5-ab37-d954fa687f5e]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "윤석열 대통령 평가 및 국민의힘과의 관계": {
+    "factual": [
+      "[52d197ea-2bd7-4df5-b72a-d808e42afd43]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "비비업 신곡 'Super Model' MV 1000만 뷰 돌파": {
+    "factual": [
+      "[21bec09b-a5a5-4e0a-98f1-650714e1ec80]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "이수만, 블루밍 스카이 베트남 복합 단지 조성 참여": {
+    "factual": [
+      "[dc83ba68-5966-48de-ae74-887d14b43e0d]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "이병규 롯데 코치 결혼 및 감사 인사": {
+    "factual": [
+      "[48552ec4-6298-4211-a327-932f1e161e1e]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "홍콩 ‘2025 마마 어워즈’ 엔하이픈·로제 대상 수상": {
+    "factual": [
+      "[1c0102d2-0347-4286-80cf-9daf3c]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "비만약으로 시총 1조 달러 넘은 제약사": {
+    "factual": [
+      "0416354b-c450-46e4-804f-399506209612"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "젊은 교사 줄퇴직 막는 교권 보호": {
+    "factual": [],
+    "critical": [],
+    "supportive": [
+      "15e2385f-8e5a-4573-9610-69c8229ea028"
+    ]
+  },
+  "성병숙 남편 사업 실패와 빚": {
+    "factual": [
+      "b5787c0f-0851-4bef-863a-df4a339b7448"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "나영석 PD와 이광수의 유머": {
+    "factual": [
+      "38f2a593-3b12-4728-92ec-112069375391"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "배당소득 분리과세 최고세율 30% 합의": {
+    "factual": [
+      "81695a6d-e6c9-4641-a809-a38da92b3751"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "메르세데스-AMG GT 신차 출시": {
+    "factual": [
+      "471408bd-971c-4a45-918a-1c88dfaf296f"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "폴크스바겐 골든 스티어링 휠 어워드 수상": {
+    "factual": [
+      "772646a2-9789-42e5-ba96-4984dc6cad15"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "아이브 홍콩 화재 참사 기부": {
+    "factual": [
+      "41c2d34a-ead7-44ab-97c8-504ddceb3214"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "인터넷은행 대출 한도 소진과 대출 절벽": {
+    "factual": [],
+    "critical": [
+      "e39ace1f-36c2-41de-905f-a21cfedfefc3"
+    ],
+    "supportive": []
+  },
+  "홍콩 참사 현장 생존자 발견": {
+    "factual": [
+      "0403497e-d4a8-408f-8efc-0be9e5562e59"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "코르티스 데뷔 앨범 스트리밍 2억 돌파": {
+    "factual": [
+      "aebf0ea6-42ac-47dd-b048-4806336c9d6e"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "민세 사상의 대안적 가치": {
+    "factual": [
+      "85c1162b-088f-4e03-9590-230b9cdd46fb"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "농구 경기 오심 논란": {
+    "factual": [],
+    "critical": [
+      "79c4819e-87d8-4552-a164-5458e7825725"
+    ],
+    "supportive": []
+  },
+  "캄보디아 범죄단지 한국인 대학생 살해 주범 체포": {
+    "factual": [
+      "8bae53fd-1615-4230-a8f6-fe0995be2088",
+      "a0a0ea6a-4322-48ae-a804-6988b9e6f92b"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "이병규 롯데 자이언츠 타격 코치 결혼": {
+    "factual": [
+      "3407dd88-1678-46f3-8d57-c3074a9a956f"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "트레이더 조의 오프라인 생존법": {
+    "factual": [
+      "3c8148a0-50d3-45d7-b828-fcc2506513"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "푸틴의 우크라이나 철수 압박": {
+    "factual": [],
+    "critical": [
+      "02f482e3-e051-4995-8170-6052824d8dd5"
+    ],
+    "supportive": []
+  },
+  "쯔양의 김장과 식사": {
+    "factual": [
+      "59446b3a-d249-4db1-ac1d-5749edde9335"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "오마이걸 승희의 배우 활동": {
+    "factual": [
+      "7c51912b-c716-4b93-9e63-8a09a729223d"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "트럼프 장남 전 약혼녀의 외교 무대 패션": {
+    "factual": [
+      "99622f37-739a-4130-ae84-a1a687982322"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "공정위 1급 인사": {
+    "factual": [
+      "8a639f98-ce33-4450-b00d-f1c81f3b4f05"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "금융위의 스테이블코인 규율 필요성": {
+    "factual": [
+      "c0845de7-bcff-4e09-abd6-ad5583819354"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "군 정찰위성 자세구동기 고장": {
+    "factual": [],
+    "critical": [
+      "169c4497-bd4e-401b-99b2-6575fac134ac"
+    ],
+    "supportive": []
+  },
+  "교황의 이주민·난민 섬김 강조": {
+    "factual": [
+      "b6c94826-be52-45d5-98da-912046aadd43"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "항복하는 사람 잔혹 살해": {
+    "factual": [],
+    "critical": [
+      "852c9864-e65a-464a-9c72-dc7b018788e3"
+    ],
+    "supportive": []
+  },
+  "외국인 관광객의 냉장 카트 '코코' 인기": {
+    "factual": [
+      "2332f42f-580f-4eca-a2f7-801579144d7c"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "홍콩 화재 참사 속 MAMA 시상식과 엔하이픈 수상": {
+    "factual": [
+      "d36135c6-08d6-426f-9563-97badaa29361"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "세계 최강 여성의 트랜스젠더 실격": {
+    "factual": [],
+    "critical": [
+      "dffd9dac-869c-4418-8ea9-742cfcd85ff5"
+    ],
+    "supportive": []
+  },
+  "장동혁 지도부의 '한동훈 당 게시판' 조사 착수": {
+    "factual": [
+      "e03ce41c-3670-4bb4-898d-19b88af96cf2"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "외국인 관광객의 올리브영·다이소 외 인기 장소": {
+    "factual": [
+      "4051b19c-59a6-46b3-9ea3-4483bca2a863"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "스티브 잡스 이전의 스티브 셜리": {
+    "factual": [
+      "de59e03b-1de0-4a4b-a688-877ad0bc3a29"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "박성재의 김건희 '김안방' 저장과 특검 발언": {
+    "factual": [
+      "71f3c541-297a-417b-9087-3ef7bf980226"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "노숙인이었던 화자의 '밥 한 끼' 나눔": {
+    "factual": [
+      "1c576244-389a-4598-91d3-8a38a15e54bd"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "추경호 영장 판사에 대한 압박과 위협": {
+    "factual": [],
+    "critical": [
+      "d42c26e5-36ab-458b-99b6-8ca66d206e32"
+    ],
+    "supportive": []
+  },
+  "블랙프라이데이 쇼핑 심리": {
+    "factual": [
+      "90b34212-6633-4b46-ad4d-4c40bab5e0c8"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "부대찌개 레시피 문신": {
+    "factual": [
+      "186a0a52-f4b6-4e42-808c-bf79434faed6"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "윤석열의 전한길 옥중 편지": {
+    "factual": [
+      "84bbb87a-8821-4bb1-a258-eb09d76b3865"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "오스트리아 스키장 대규모 눈사태": {
+    "factual": [],
+    "critical": [
+      "734ed688-1027-4928-ad5a-2b174b812bdb"
+    ],
+    "supportive": []
+  },
+  "찰리 멍거의 마지막 식사 K-치킨": {
+    "factual": [
+      "85755689-3bb9-4fee-9e33-0126fcabb6f5"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "생성형 AI와 피지컬 AI 경쟁": {
+    "factual": [],
+    "critical": [
+      "285ff9e4-1379-48a4-af85-885ed8ad83bd"
+    ],
+    "supportive": []
+  },
+  "항공업계 인천~옌타이 노선 중단": {
+    "factual": [],
+    "critical": [
+      "52c6f47a-dfc2-4c91-a364-510301d902ba"
+    ],
+    "supportive": []
+  },
+  "고독사 절반이 5060 남성": {
+    "factual": [],
+    "critical": [
+      "c62dae99-db4b-432b-9522-731da0152442"
+    ],
+    "supportive": []
+  },
+  "이화영 진술 회유 의혹 조사": {
+    "factual": [
+      "[976adf38-4377-4458-8f82-67460e3a9d80]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "AI 기술 발전과 대응": {
+    "factual": [
+      "[7487e7aa-b5e2-496f-9d1b-99aec574e695]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "인도네시아 사이클론 피해": {
+    "factual": [
+      "[bafc6fdb-2c8d-4004-91ed-8c57138bcab5]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "홍콩 마마 어워즈 개최": {
+    "factual": [
+      "[bc339796-caf2-4874-93e1-efb50c1e661c]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "민희진 정치 성향 해명": {
+    "factual": [
+      "[fde8d1b0-4a8b-4723-95a7-434192a22abc]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "컴포즈커피 전통차 신제품 출시": {
+    "factual": [
+      "[b4e8cad3-3ea7-4d66-a15c-0dd65189ace1]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "스텔란티스 탄소배출권 이익 환원": {
+    "factual": [
+      "[1f8f6b4b-8d60-4974-ba03-5deca49a52b7]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "위례신도시 특혜 의혹 검찰 구형": {
+    "factual": [
+      "[103dfa7b-d27f-474f-be69-d9a388ef651e]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "실종자 생방송 중 발견": {
+    "factual": [
+      "[a8a967cf-0315-41ba-a2a3-c11d64153218]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "국민의힘 당원게시판 논란 조사": {
+    "factual": [
+      "[8625420c-4621-445e-b9e6-1ee71890a499]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "대원 칸타빌 디 에디션 특화 설계": {
+    "factual": [
+      "[d50c7529-07e7-42ba-8bb3-473767019b64]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "홍콩 ELS 불완전판매 은행 과징금 부과": {
+    "factual": [
+      "[8458a7e2-6d41-4c6c-97ea-437ab672e063]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "캄보디아 한국 대학생 살해 사건 피의자 체포": {
+    "factual": [
+      "[ce1aed91-2505-4943-8210-53fc6b12b4e0]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "아이브 홍콩 화재 참사 기부_5": {
+    "factual": [
+      "[5b6692bf-925d-4ef6-8ffd-145c13fd553f]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "알리익스프레스 오사카 여행 후기": {
+    "factual": [
+      "[d88aa46a-3360-4b18-9463-94ffff5af11e]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "누리호 4차 발사 성공": {
+    "factual": [
+      "[3c78e704-d2cf-405e-804d-22525a21ef94]"
+    ],
+    "critical": [],
+    "supportive": [
+      "[3c78e704-d2cf-405e-804d-22525a21ef94]"
+    ]
+  },
+  "구성환 나혼산 출연": {
+    "factual": [
+      "[7abafebc-a8aa-4685-8b7b-fccc1205d3de]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "한예종 학폭 논란 합격자 처리": {
+    "factual": [
+      "[23b33529-9b77-447d-ba2b-ca88fcaeb811]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "책벌레들의 인생 이야기": {
+    "factual": [
+      "[5abaef9f-cddd-415e-b4e3-e3256dc2dc33]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "양준혁 사업 투자": {
+    "factual": [
+      "[535fcd2d-9214-4d59-a9b1-5dff82a3c80e]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "술병 음주운전·과음 경고 그림 부착": {
+    "factual": [
+      "[793b7c83-0aeb-4f25-aea4-5806ee30e617]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "이시영 둘째 출산 관련 이슈": {
+    "factual": [
+      "[4cd93e14-8561-4643-a253-51c7cf68a813]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "일본 미야기 올레길 여행": {
+    "factual": [
+      "[b79e7acd-e38e-4332-a465-0b981e5277cc]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "손의 언어 칼럼": {
+    "factual": [
+      "[24035e43-99b9-4458-af7f-865d052f12cc]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "식당 사고 보험금 청구 방법": {
+    "factual": [
+      "[59866ddd-c97a-4c55-902e-edfe72d4fc2e]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "폴 크루그먼 비트코인 폭락 원인 분석": {
+    "factual": [
+      "[d18d7fad-78a9-4152-a64c-483f9a5305f8]"
+    ],
+    "critical": [
+      "[d18d7fad-78a9-4152-a64c-483f9a5305f8]"
+    ],
+    "supportive": []
+  },
+  "60세 이상 일자리 지원": {
+    "factual": [
+      "[eb658be4-7cd8-413a-9fef-955e19b5e007]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "겨울 이불 청소 방법": {
+    "factual": [
+      "[af7e1c07-5f85-46f1-9db3-08bfeb396d40]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "코큐텐 건강기능식품 특가 판매": {
+    "factual": [
+      "[534527d5-4755-4efc-a58c-ca6ebb19a943]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "에드먼 발목 수술 후 복귀 의지": {
+    "factual": [
+      "[deb89adb-e377-4af8-96d6-4fc80d39fd50]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "염색 샴푸 특가 판매": {
+    "factual": [
+      "[5a4bca88-3b87-4596-aa30-92629cee5f3c]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "욕실 히터 특가 공구": {
+    "factual": [
+      "[97f149db-1792-4d4d-8ed7-cd5de893c8d2]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "김남신 로드FC 도발": {
+    "factual": [
+      "[1fc893af-ea8e-455d-8e45-5f98a76d8f69]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "암 예방을 위한 과일 습관": {
+    "factual": [
+      "[46457582-f997-48e2-890c-f287ff183211]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "편의점 고가 위스키 판매": {
+    "factual": [
+      "[d726d08c-9db1-4184-8ae2-5e64271a4427]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "오승환 마지막 경기 출전": {
+    "factual": [
+      "[ec3b856a-98a3-4d53-b44f-ef2fbde25cb7]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "최현석 딸 최연수 성형 관련 답변": {
+    "factual": [
+      "[39cdbf37-f06d-4285-ba62-8ec9ff8ba6b9]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "민주당 예산안 처리 비판": {
+    "factual": [
+      "[2c790584-19b3-48d5-a36f-c53310e15ff1]"
+    ],
+    "critical": [
+      "[2c790584-19b3-48d5-a36f-c53310e15ff1]"
+    ],
+    "supportive": []
+  },
+  "추경호 구속영장 심사 판사 배정": {
+    "factual": [
+      "[40e7433f-8933-4c01-b4a8-ae503a06195b]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "건강보험료 대비 혜택 격차": {
+    "factual": [
+      "[4f263c47-6c1b-48bb-8d7a-14af6a25ed3a]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "현대차·기아 배터리 R&D 캠퍼스 건설": {
+    "factual": [
+      "[da38de04-6ffd-44d5-b41e-e3384bb8b56d]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "기니비사우 쿠데타 관련 의혹": {
+    "factual": [
+      "[7da083f4-d18f-44f5-8d08-f4973c215e7a]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "국가 위한 비전 품은 인물 조명": {
+    "factual": [
+      "[fa0129c5-ca37-45e7-b1ae-3223b87f0bcd]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "원하는 것 얻는 삶": {
+    "factual": [
+      "[e9d74298-3b73-434e-9009-eb0baf734341]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "한일 2035 아시안컵 공동 개최 검토": {
+    "factual": [
+      "[84d38c50-42a4-4028-92e0-8548682579a0]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "청년층 고환율 부담 및 달고나 세대": {
+    "factual": [],
+    "critical": [
+      "[fab72544-5301-46b3-a9e0-5d54ef8818e4]"
+    ],
+    "supportive": []
+  },
+  "배당소득 분리과세 및 최고세율 인하 검토": {
+    "factual": [
+      "[e195c93e-f8bb-491c-86d7-3be7d900940a]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "이승엽 인비테이셔널 대회 성황리 개최": {
+    "factual": [
+      "[dd9546f6-668a-41f4-9e9c-14bc5030706e]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "국민의힘 당내 갈등 및 한동훈 조사 착수": {
+    "factual": [],
+    "critical": [
+      "[70331e6b-a923-4e03-ba62-d01785816f28]"
+    ],
+    "supportive": []
+  },
+  "대통령 부정 평가 및 전두환 제치고 1위": {
+    "factual": [],
+    "critical": [
+      "[db5d1dd4-2fe6-448c-95f9-ee22b64cb06d]"
+    ],
+    "supportive": []
+  },
+  "방미통위 위원장 헌법학자 김종철 지명": {
+    "factual": [
+      "[0b347a7f-71eb-4143-be82-d4891ede2cbd]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "케빈 김, 한미 팩트시트 및 인태지역 비전 언급": {
+    "factual": [
+      "[00b12b22-4a9b-4ae7-bd97-0861eeeade9a]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "평창 발왕산 설경": {
+    "factual": [
+      "[4f23d256-4413-482c-843f-d6d91352a3fb]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "미국 1위 마트 성공 비결": {
+    "factual": [
+      "[c6968734-0c6a-419a-8dff-c32e05c2e485]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "기후변화 와인 산업 영향": {
+    "factual": [
+      "[d9af6dc0-6b4a-46f8-9d0b-f340e3c3c7cc]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "한국 기업 경기 부진 체감 및 업종별 양극화": {
+    "factual": [],
+    "critical": [
+      "[91d86006-ff9b-4cb5-9056-31047e3fafbf]"
+    ],
+    "supportive": []
+  },
+  "마약 자금 의심 계좌 선제적 정지 및 가상자산사업자 규제": {
+    "factual": [
+      "[bdb028a5-9390-4638-9732-aa91b44480fd]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "박미선 유방암 투병 일기 공개": {
+    "factual": [],
+    "critical": [
+      "[5e634d8c-b5a2-4f9b-b1de-fd14539a56f8]"
+    ],
+    "supportive": []
+  },
+  "국민의힘 김상욱, 당의 휴대폰 제출 요구 거부": {
+    "factual": [],
+    "critical": [
+      "[c1a647a9-e64b-425b-a55d-c54e1dec0744]"
+    ],
+    "supportive": []
+  },
+  "김유정, 소시오패스 역 연기 소감": {
+    "factual": [
+      "[6b7b7012-a149-4b58-a3ff-03047b993d26]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "유현조 KLPGA 대상 수상 및 신인왕, 상금왕": {
+    "factual": [
+      "[4842fe7e-9752-45c9-96b2-9c5ef7a6a355]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "야당 및 여당의 극단적 대립": {
+    "factual": [],
+    "critical": [
+      "[4d08fc91-6827-4bea-8531-f5ace8063f9a]"
+    ],
+    "supportive": []
+  },
+  "박정민, 15kg 감량 비결 공개": {
+    "factual": [
+      "[e3901f28-af4d-4704-adab-231ea233d3a6]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "더불어민주당 비대위 전환 전망": {
+    "factual": [],
+    "critical": [
+      "[6bd642fa-fa36-43b3-b988-0240ed734348]"
+    ],
+    "supportive": []
+  },
+  "허미미, 아부다비 그랜드슬램 여자 57㎏급 우승": {
+    "factual": [
+      "[2e617b51-7848-4711-a943-97d653d8abde]",
+      "[2e6fb432-2c0a-48bf-b8af-cc34093ef171]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "퇴직연금 투자 현황 및 고수 비법": {
+    "factual": [
+      "[feea3a0a-abed-4576-bd6c-5ddc4535c646]",
+      "[ed8ef00c-8c95-4493-aa2f-e12a469f3afe]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "호텔형 교도소 건설 관련 스캠 의혹": {
+    "factual": [],
+    "critical": [
+      "[3c706309-e3b7-43a3-8f63-23d3ed21029a]"
+    ],
+    "supportive": []
+  },
+  "육군 법무실장, 계엄버스 관련 중징계": {
+    "factual": [],
+    "critical": [
+      "[0712a317-f303-419f-b2d2-89ab50fe7e3a]"
+    ],
+    "supportive": []
+  },
+  "이재용, 아들 임관식 참석 및 경례": {
+    "factual": [
+      "[3e36a9ab-f726-46c8-bf8e-53df989c8a38]",
+      "[40d1db79-da56-42be-b2d0-3b32c3d51fce]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "이서진, 올데프 애니 부모 및 자녀 계획 언급": {
+    "factual": [
+      "[2426df53-950b-4104-8ee4-1b34cb31309b]",
+      "[3cc0187e-a9ee-4521-a753-31c8eb8e967f]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "영양 풍력발전소 화재 발생": {
+    "factual": [
+      "[df7961ef-b1c6-411b-bdd9-b681ea7ad6e1]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "홍준표, 정치 경력 및 운 언급": {
+    "factual": [
+      "[d5e43edc-0c78-4882-b330-de4ca5ded984]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "일교차 큰 날씨 전망": {
+    "factual": [
+      "[f0359fd0-f9fc-413c-af24-ff2732d211ae]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "뱀장어 멸종위기종 지정 무산 및 국가별 반대": {
+    "factual": [
+      "[7810b813-595e-436d-82ee-04a97b5687d8]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "LPGA 스타 코르다 약혼 발표": {
+    "factual": [
+      "[3bd2ad33-5e42-4667-a78f-7983faf1794c]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "김정난, 딸과의 이별 심경 고백": {
+    "factual": [],
+    "critical": [
+      "[6357d59c-2531-4f10-b5d6-815701b24fbe]"
+    ],
+    "supportive": []
+  },
+  "이서진, 신세계 회장 정유경과 친분 언급": {
+    "factual": [
+      "[9652aec2-479b-47b5-88a2-f390bf242b1a]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "디지털 시대 함정": {
+    "factual": [
+      "[7ddd0e22-8c0d-4492-9e09-1bc97da37684]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "김희선, 야경 속 와인 인증샷": {
+    "factual": [
+      "[9f7a5dc2-72cc-4681-ad99-ef1048e38d1b]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "국민연금 최고 수령액 비결": {
+    "factual": [
+      "[170a5d25-3bae-4ed8-b68a-c98842216212]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "트럼프, 총격 당한 주방위군 병사 사망 소식": {
+    "factual": [],
+    "critical": [
+      "[7020de70-f05d-4d42-80d3-f87a3cbf9688]"
+    ],
+    "supportive": []
+  },
+  "유튜버, 백두산 태극기 시위 후 중국 입국 거부": {
+    "factual": [],
+    "critical": [
+      "[96e3e7e2-d06d-426c-a433-2e909712fac0]"
+    ],
+    "supportive": []
+  },
+  "김복필 별세": {
+    "factual": [
+      "[181b28d9-cdbc-4369-a893-7fa5f25f9d23]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "함은정 결혼식 관련 보도": {
+    "factual": [
+      "6c1a2533-1162-49ff-9a08-d95b478f582e"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "메이딘 에스 멤버 사진": {
+    "factual": [
+      "1da677f7-f896-426b-bf28-6a3cbe5eae67",
+      "20e28dd1-446f-48a5-a4fd-a0ff34b1c17a",
+      "28856ff4-b34a-4e3b-8002-d1146a465b8a",
+      "48441d76-7e57-48fb-8c10-b66ceb82798f",
+      "4d926e5a-6756-40ac-93b5-55d0bf318a5d",
+      "5857cc7a-780a-4629-997f-3087cb8f4493",
+      "586e064e-558c-41d9-bba8-58fdda86d1a7",
+      "6daab6f4-1d5f-4ac9-8580-9ce479a08da5",
+      "6e766bc1-fef8-472d-a28f-befa32c6b2cd",
+      "05e48fa9-f9ca-4dfc-8d44-81b467ba9f0b",
+      "776da46f-73f4-455c-ad3c-ad1cc4d17c1e",
+      "82802c69-6ff8-4c28-8c62-6b1c440b64fc",
+      "65dc9b0c-bf2a-49de-b693-105edc06f742",
+      "93170352-ebc0-42ca-9a05-fe7330dc61e2",
+      "a11324d4-de11-44cf-853e-f1d63f1e3cd7"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "검찰의 항소 포기에 대한 비판": {
+    "factual": [],
+    "critical": [
+      "f5acb648-659a-4323-ae93-d733fceeca1d"
+    ],
+    "supportive": []
+  },
+  "이승엽 코치 복귀 관련 인터뷰": {
+    "factual": [
+      "10c28167-d957-4ca5-a4b4-510b64ece7f8"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "정부의 중국산 덤핑 조사 착수": {
+    "factual": [
+      "19e8200d-6738-4e4b-8ed0-38158f118ea2"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "이강인 관련 PSG 팬 반응": {
+    "factual": [],
+    "critical": [],
+    "supportive": [
+      "4228bc7e-c9a0-4b7a-9ac6-cbceb946c773"
+    ]
+  },
+  "이서진 육아 고충 토로": {
+    "factual": [
+      "9d6f6ebe-f4e4-437e-b169-0e4b04312bda"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "미군 마약선 격침 및 생존자 살해 의혹": {
+    "factual": [],
+    "critical": [
+      "571a19c3-2efc-4912-b50e-ed488f708dcb"
+    ],
+    "supportive": []
+  },
+  "여당의 예산안 강행 처리": {
+    "factual": [],
+    "critical": [
+      "86ea322b-09fc-49c6-9555-cf465a7142c0"
+    ],
+    "supportive": []
+  },
+  "김세정 사극 연기 호평": {
+    "factual": [
+      "4ce45099-7d02-40af-9fed-f1070cc9a3ca"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "냉동탑차 전도 사고 사망": {
+    "factual": [
+      "0c5a5ab1-13b9-44d2-8704-19096904ec2d"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "일본 곰 습격과 한국의 차이점": {
+    "factual": [
+      "57255428-9ae7-4739-beef-d36bd6bb47f3"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "노범수 장사 타이틀 획득 및 군 입대": {
+    "factual": [
+      "5a515813-5855-49cd-81cb-37eb1f1fa304"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "산학연 협력 및 과학 전시 사례": {
+    "factual": [
+      "aa340c55-df25-4c56-8072-df8ea13d6c38"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "단간론파 디렉터 방한 및 AGF 출전": {
+    "factual": [
+      "55aa7a41-b087-4269-aa3d-014ff6959bb6"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "포스테코글루 감독 경질 이력 및 리즈 부임": {
+    "factual": [
+      "58f0f5db-0fca-48f2-bde7-018aed4bd967"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "배우 이문수 별세 소식": {
+    "factual": [
+      "6c8c69a5-395c-45c7-adf2-659dd1862a56"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "음주운전으로 인한 커리어 몰락": {
+    "factual": [],
+    "critical": [
+      "6632eac3-f554-4e8e-be51-c827bfe12119"
+    ],
+    "supportive": []
+  },
+  "FA 미계약 선수들의 팬 축제 참석": {
+    "factual": [],
+    "critical": [],
+    "supportive": [
+      "edcb92bc-c32a-4fe0-9379-b0228db836c7"
+    ]
+  },
+  "김민석 총리의 대전 빵집 투어 및 발언": {
+    "factual": [
+      "8658e20b-ad00-40c2-acb9-d8b51b656329"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "인천 서구 리틀야구대회 우승": {
+    "factual": [
+      "5005a624-5be8-48f9-81f4-14f782d83099"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "허미미의 역전승 및 아부다비 우승": {
+    "factual": [
+      "68370778-1215-4a90-af06-0e91b4285c0e"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "지중해식 식단과 노인 건강": {
+    "factual": [
+      "5aa4f261-538a-408b-9df6-8b073141d471"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "별거 아내 협박 및 부동산 관련 범죄": {
+    "factual": [],
+    "critical": [
+      "c8b09649-04d9-45b6-852e-987c445d0f49"
+    ],
+    "supportive": []
+  },
+  "한동훈의 당내 조사 관련 입장": {
+    "factual": [
+      "0bc116ad-beb8-418c-8284-92bf6a79d05f"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "조세호 '억울의 아이콘' 언급": {
+    "factual": [
+      "0ee6287c-affa-4b49-92c0-64743a0cdcea"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "슈퍼팀의 젊은 피 필요성 및 스타 부족": {
+    "factual": [],
+    "critical": [
+      "e3ef5ca1-bd40-4bf3-93d1-257cc05945d2"
+    ],
+    "supportive": []
+  },
+  "정동길 옆 사진관 칼럼": {
+    "factual": [
+      "9e3ddc35-c969-48a9-a55a-83c906217501"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "혼자 놀기와 책 읽기에 대한 고찰": {
+    "factual": [
+      "735a91d3-d983-4d96-9611-52f570b164e3"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "봉전마을 엄마들의 허리 건강": {
+    "factual": [
+      "dc1e5fe5-ec9d-4ab2-981f-1fc10eff03c0"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "홍콩 MAMA 행사, 참사 애도 분위기": {
+    "factual": [
+      "a98b663d-9764-4769-ac0d-243ad85a7175"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "태풍상사 이준호, 이상진 부친 구출 가능성": {
+    "factual": [
+      "6a6492af-da41-4a7d-8f99-768534d53573"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "삼성 라이온즈 외국인 선수 구성 완료": {
+    "factual": [
+      "542883d6-b07f-4350-af25-3fadda04ab67"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "메이딘 에스 멤버 출국 및 활동": {
+    "factual": [
+      "a7d8b8c9-87c8-4c1c-982d-ef087b6e972b",
+      "b76d43d4-ba85-4a55-8dd3-53e000c3be97",
+      "d76e7c3f-9764-4769-ac0d-243ad85a7175",
+      "5de576f1-5a8f-474b-b2f4-56db1c95d201"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "국가 전산망 마비 후폭풍 및 책임자 징계": {
+    "factual": [
+      "dcd246f8-08f2-4d09-95ce-5179c5f734ba"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "베트남 여행 후 마사지샵 관련 사건": {
+    "factual": [
+      "baa13c24-d869-4f6c-a78d-03aab14a3759"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "드라마 '비밀통로' 캐릭터 포스터 공개": {
+    "factual": [
+      "3c3b1fbe-310c-4b8b-b853-1652265f65ac"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "김지영, 유명 CEO 남친과 포르투갈 여행": {
+    "factual": [
+      "485ea06c-343e-4b0f-b22a-7937464d6719"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "국민의힘, 당원게시판 윤석열 부부 비방글 조사": {
+    "factual": [
+      "184a7890-0a2a-4499-9f7e-aa526ddb14f5"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "한동훈, 당원게시판 조사에 대한 입장": {
+    "factual": [
+      "954e9a29-c18f-4046-b9c3-042e13d88ab6"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "에어버스 A320 계열 항공기 대규모 리콜": {
+    "factual": [
+      "88b34333-6e3a-4e81-9ef5-248181509dab",
+      "b5aff2db-ce4c-4588-9ffe-2707218d3e35"
+    ],
+    "critical": [
+      "89ad3263-d75d-42ef-86fc-457242090927"
+    ],
+    "supportive": []
+  },
+  "故 이순재, 영원한 현역으로서의 삶": {
+    "factual": [
+      "40c3b5a5-d3b6-4c10-a0bd-0a52b2109fc6"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "이용대, 윤채경 열애 인정 및 재혼": {
+    "factual": [
+      "e4d6bfd8-f6a1-467c-b43b-6356dca68f16"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "2025 유소년 통합 배구 한마당 개최": {
+    "factual": [
+      "7bb36a96-84a7-4140-a66c-711269ca4043"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "지적장애 친구 살해 및 누명 씌운 사건": {
+    "factual": [
+      "064f6dce-3587-468c-bff4-6a1b2c83e9bc"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "있지 리아, 귀여운 눈웃음": {
+    "factual": [
+      "13993507-fdee-4dc1-8c9b-1478d256a659"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "감독 재계약 관련 캠프 내 공존 의문": {
+    "factual": [
+      "7a24fff1-9e42-48d8-9c7f-3807573ad8ad"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "편도 4차로 무단횡단 보행자 사망 사고, 버스기사 무죄": {
+    "factual": [
+      "44909f48-35ae-4efc-8c12-db7328af32cd"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "정권 따라 뒤집히는 해외 자원 개발 정책": {
+    "factual": [
+      "d32ba469-37c5-4b1a-9f47-64bccaf085c4"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "아홉, '피거싫' 11월 베스트 뮤직 3관왕 달성": {
+    "factual": [
+      "71b74638-042b-4c02-8aef-cf0ad98d983a"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "장동혁, 계엄 책임 통감 및 민주당 의회 폭거 초래 주장": {
+    "factual": [
+      "9b4ee5ab-4c73-4521-926c-55c66103eccb"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "중국 서해 시추 및 한국 대왕고래 사업 올스톱": {
+    "factual": [
+      "d18790a7-66f4-4e97-af65-8d4443cd9693"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "한동훈 관련 감사 착수 및 불순 의도 주장": {
+    "factual": [
+      "b20c5ac6-7c28-4843-806b-ac441015bf98"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "경찰, 장경태 성추행 의혹 당시 영상 확보": {
+    "factual": [
+      "8f5c9319-a3ca-49bf-b6e4-2df496457dfc"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "이이경 하차 논란 '놀면 뭐하니', 허경환 투입": {
+    "factual": [
+      "36d3f3c1-ec60-48f3-96a0-75c709262559"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "계엄버스 탑승 육군 법무실장 중징계": {
+    "factual": [
+      "2f9dcb6e-7b4f-4710-84dd-553a624db932"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "쿠팡 물류센터 잇단 사망사고, 노동장관 현장 점검": {
+    "factual": [
+      "489524e3-d61f-464c-a699-8220a598bd01"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "시일야방성대곡 120주년 기념식 및 언론상 시상": {
+    "factual": [
+      "ec054751-f865-462a-878e-73e4899b31df"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "오세훈, 이준석 연대 의논 및 장동혁 반박": {
+    "factual": [
+      "b5686bdb-183b-400f-8b6e-3193910f0813"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "오늘의 날씨 (2025년 11월 29일)": {
+    "factual": [
+      "62bb1df5-6658-412b-8105-c35754026d86"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "국민의힘, 추경호 구속 기각으로 뭉쳤다": {
+    "factual": [
+      "c3893955-e6af-4909-8675-7678a870c246"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "국민의힘 김민수, 중국 정부 계정 댓글 조작 의혹 제기": {
+    "factual": [
+      "ccafa73f-d6cc-4e8d-ba99-85dea022aee2"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "국민의힘, 신천지 '사이비' 발언 친한계 징계 착수": {
+    "factual": [
+      "e332e7de-099a-48db-b597-f09e893fa2a7"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "국민의힘 김종철, 폴리페서 및 언론 장악 시도 비판": {
+    "factual": [
+      "e3daeb01-9e13-4775-9eab-59c8a7320199"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "장동혁, 12·3 앞두고 민주당 의회 폭거 계엄 초래 주장": {
+    "factual": [
+      "ed1680e5-f347-4e1a-bc6d-f6171122005c"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "한동훈, 당원 게시판 논란 조사에 대한 입장 표명": {
+    "factual": [
+      "ef77f519-a9b6-4230-bf90-069a477efe96"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "장도연X양세찬, 웨딩사진 촬영 및 클라이밍": {
+    "factual": [
+      "11d7e18c-2d33-45bc-aaf8-64936ceeeb68"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "전현무, 이상형 언급 및 결혼 준비 완료": {
+    "factual": [
+      "27225f26-822c-4b8a-a9bd-0b5b373d918b"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "연예인 결혼 및 열애 소식": {
+    "factual": [
+      "a480a77a-3fdb-461c-bc8e-2df658662f6d",
+      "b3ff515e-921c-473e-aef7-abd9f035fff1",
+      "ceb687f6-c865-4934-98bf-13fb597dbff8",
+      "fd610074-bca0-4ea3-94e0-f89255572411"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "연예인 개인사 및 방송 출연": {
+    "factual": [
+      "8470c680-52f3-4af3-9206-4a612d30c1f0",
+      "8f62407d-9add-4f7b-8ea4-e5dcbe31ad72",
+      "b971d473-7dcb-464c-ab24-b1d2edefd761",
+      "ea06fb47-045e-449e-b069-e2c076968c9a",
+      "ef7e26ad-d445-4f39-bf97-f382ced17fdc"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "연예인 가족 관련 소식": {
+    "factual": [
+      "3e92de90-43fe-4cf9-8a06-0a352a85c66b",
+      "4d2f6af6-49dd-4fda-bb5a-2bc277e1d728",
+      "ca2047b8-0b88-4185-9df9-76f1c1c6fe01"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "금융 시장 및 암호화폐 동향": {
+    "factual": [
+      "053e1b52-9498-4f0f-b485-dafc5e6162e9",
+      "1bbd0b92-a200-4571-8ef9-872794ad35e7",
+      "39ebcb26-38b5-4bbd-8ef9-ee01e3e5be31",
+      "6cdb68bb-0828-4304-8379-b20f1d5fdc17",
+      "741e35c5-edf1-4409-ab08-0924849d4681",
+      "b27634f9-43b9-4245-bf95-0764dc56d7a4"
+    ],
+    "critical": [
+      "3acfffa3-374a-4c8b-8597-0a637ca4186f",
+      "5ca4a879-33cd-48fa-b04c-4d6c5307b3ca",
+      "889ba274-9e38-439f-a494-a8c10dd3e989"
+    ],
+    "supportive": []
+  },
+  "귀금속 및 원자재 가격 변동": {
+    "factual": [],
+    "critical": [
+      "1adde842-d113-48bc-b4f2-1689a87bc986",
+      "e0d28431-20cc-47ad-8180-90fffdba7403"
+    ],
+    "supportive": []
+  },
+  "프로야구팀 한화 이글스 선수단 개편": {
+    "factual": [
+      "274a94fb-7ddc-45f7-8689-7f80529040a2",
+      "3027fa7c-efce-49bc-916e-7f44fb8ba652",
+      "dc3b5bbd-adbe-4d14-b296-337aa3896b1c"
+    ],
+    "critical": [
+      "077530f2-dc5d-489f-9b95-3eb403b02d0d",
+      "38145758-aa92-40ad-b519-23cb02bcc2f7",
+      "4c60aef5-3707-44c9-86fe-e2f0b098b021",
+      "da7739e6-758d-4b7b-9e6d-98e0e1bd9cf0"
+    ],
+    "supportive": [
+      "4d232d49-19d4-45bb-9fd2-6289d1847ab9",
+      "7877cdef-709b-4fbf-a640-3fdcddf80ff7"
+    ]
+  },
+  "정치 및 사회 이슈": {
+    "factual": [
+      "b46b61f3-48b0-46d3-9451-6e59aa0e411f",
+      "f3da2603-c274-4584-9298-2bd276ddc0f9",
+      "dc59ebd3-4417-4f05-a640-35f1960f9548",
+      "c0e1cc78-626d-427b-afe6-29c851450c7e"
+    ],
+    "critical": [
+      "1046578b-9576-43a0-98d5-e7fa1e0a7151",
+      "398ebca8-326c-4826-bc4f-25dab5daa629"
+    ],
+    "supportive": [
+      "5e1deb22-bdca-4b02-9c0a-61f9dc1f7ab8",
+      "7cf5bc50-8450-419c-b794-dd4e38b9d3d0"
+    ]
+  },
+  "언론사 관련 법원 판결": {
+    "factual": [],
+    "critical": [
+      "082fef94-884a-4ce2-b670-2609485cb8ce",
+      "0b1d637c-5919-4826-a21f-64fde5674ce3"
+    ],
+    "supportive": []
+  },
+  "YTN 민영화 법원 결정": {
+    "factual": [
+      "19fc335e-1e81-4603-8bae-07b8fb6a11af",
+      "f4f8c0bf-6046-4e64-8ba5-f98f78db0825"
+    ],
+    "critical": [
+      "4b406ba8-1f11-49c2-8346-3407d432b112",
+      "743af75d-2f10-4cf1-80a4-0ed7736ef225",
+      "856b4cb4-8238-4216-b76b-fd7e78c2ac2e",
+      "a4d52197-22fc-4e18-ba9d-1b736b16fc6f",
+      "d784b6a8-eec2-423b-bd8b-76086c51240e"
+    ],
+    "supportive": []
+  },
+  "프로야구 FA 계약 소식": {
+    "factual": [
+      "823a31ac-097f-4aae-ba1b-863a0067aabf"
+    ],
+    "critical": [],
+    "supportive": [
+      "0181c72a-4014-4519-85fc-db3f7fb62701",
+      "2e8be3e6-5c57-4348-b774-8d704a39d6da",
+      "596f85c6-b927-4704-95f5-9c57a7f14e86",
+      "9ce2cac1-645c-42a2-aefe-471b3d69cb2c"
+    ]
+  },
+  "홍콩 아파트 화재 참사": {
+    "factual": [
+      "8899d07d-1269-4dbe-93e9-9ec529531a00"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "중국발 항공편 운항 축소": {
+    "factual": [
+      "676d400b-2dec-4146-b49b-ee599a9e5f91"
+    ],
+    "critical": [
+      "a613f8b9-4343-46a7-86eb-b54ac0a77b36",
+      "e602ee00-ec7f-449f-be0d-4d571e23c2a9",
+      "e6c4c09d-14f4-4fed-8ab4-d938e385dc85"
+    ],
+    "supportive": []
+  },
+  "남자 농구 중국전 승리": {
+    "factual": [
+      "0467baf9-09e6-4c78-b1a8-cd7444b338e8",
+      "c1bd0a9e-dc71-457d-9af7-c50b44813587"
+    ],
+    "critical": [
+      "4ee644a4-9e3d-40b1-8eb0-2afbdbe508ba"
+    ],
+    "supportive": [
+      "330a85d1-6d71-4eb5-b838-dee452d79ab5",
+      "9b62a654-c1bf-463c-88ca-ab04172dfe5d",
+      "c98fd86a-88c6-4a10-87d1-f48d3911994f"
+    ]
+  },
+  "축구 경기 퇴장 및 난투극": {
+    "factual": [
+      "b8f26e7b-265d-43a1-b1ef-41d357cb2929"
+    ],
+    "critical": [
+      "6789920d-9be1-4fe2-9e1d-4b3064bce88e"
+    ],
+    "supportive": []
+  },
+  "고속도로 통행량 및 교통 상황": {
+    "factual": [
+      "3e7c95d0-e6ea-4106-8cd4-1bff09168ca2"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "트럼프 전 대통령 관련 행정명령": {
+    "factual": [
+      "fb86e01c-2d2f-4d30-a96c-4dc69ae8e990"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "교통사고 발생": {
+    "factual": [
+      "dda792bf-9d09-4b4c-8cce-b5b2c3a31aa1"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "방송 프로그램 출연자 변경": {
+    "factual": [
+      "b90f6d73-579f-4ce6-b05e-ecc0ecb24b39"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "어린이 동화책 소개": {
+    "factual": [
+      "3b278ebd-7964-4530-aef4-58fd30b59d2c"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "세대 간 교류 및 자원봉사": {
+    "factual": [
+      "6c63168e-be79-456b-9dcc-06dc11d167fe"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "드라마 속 배우 연기 장면": {
+    "factual": [
+      "35008179-d7f5-42c9-9466-ce3861629829"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "항공 안전 포럼 개최": {
+    "factual": [
+      "e8016d48-503d-42fc-9c66-650ca67d763c"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "교내 CCTV 설치 의무화 법안": {
+    "factual": [
+      "d7b51f7d-62dd-453a-aaba-b7e0fc39d74c"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "3기 신도시 입주 예정지 현장 방문": {
+    "factual": [
+      "cf8fcb3f-bf95-48f1-bd58-850c01bcefb6"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "배당소득세율 절충 논란": {
+    "factual": [
+      "67ca4482-2952-4eed-9162-c8612098dd14"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "손열음 피아노 협주곡 공연": {
+    "factual": [
+      "7afa52d6-5ab0-4af4-9605-ca128faf91c0"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "컨테이너선 수주 소식": {
+    "factual": [
+      "528e3e98-a47a-433e-b178-9691cab9f206"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "북한 배경 학업중단율": {
+    "factual": [
+      "0d1b12c3-417a-4301-87bb-20d6d99a99a9"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "2부 리그 강등 위기 팀": {
+    "factual": [
+      "bff30d81-e527-471d-a2d1-dc6399e6d90e"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "안성기 건강 회복 기원": {
+    "factual": [
+      "5936d09d-63e2-4bcb-aae2-a22c7b3b87d2"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "원로 배우 이문수 별세": {
+    "factual": [
+      "5f680c72-8c6c-4fc6-af39-890e39acce5f"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "여자 농구 BNK 승리": {
+    "factual": [
+      "93241db8-ecb4-4ca3-bd87-5a1262efc4e6"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "서울 건설업 부동산 시장 침체": {
+    "factual": [],
+    "critical": [
+      "7ced53d2-15ab-4c20-a959-a51a5d0d78d9"
+    ],
+    "supportive": []
+  },
+  "현대차·기아 전기차 배터리 기술 내재화": {
+    "factual": [],
+    "critical": [],
+    "supportive": [
+      "4d231d09-869a-40f4-9b1a-3c0b208824cc"
+    ]
+  },
+  "제주 워케이션 오피스 운영": {
+    "factual": [
+      "502f731b-0be0-48ed-ae5b-f7ffb38f7980"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "태연 솔로 데뷔 10주년 기념 활동": {
+    "factual": [
+      "65ad3d24-8833-4844-a6cb-f0ea601fd7f2"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "탈북민 최정옥 마약왕 혐의 재판": {
+    "factual": [],
+    "critical": [
+      "f7e83db4-7b6b-4234-b0fb-3e935971385c"
+    ],
+    "supportive": []
+  },
+  "북한 평양 커피 가격": {
+    "factual": [
+      "0e651a06-7d96-4eb4-a4fc-a8e662e5b4d3"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "한국 여자 축구 웨일스전 평가전": {
+    "factual": [
+      "54505c0f-53a7-4a7d-ab88-600285e0fa50"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "북한 공군 역사 조명": {
+    "factual": [
+      "e776ebfb-0db3-4e14-bc48-fdb4707b4a2f"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "편의점 기물 파손 사건": {
+    "factual": [],
+    "critical": [
+      "dbdd516f-0c70-49c8-8dff-8044ec4a92e0"
+    ],
+    "supportive": []
+  },
+  "패션 업계 겨울 방한화 출시": {
+    "factual": [
+      "247df388-4d2c-992f-12d55e183cb5"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "내란 사건 1년 후 남은 의문": {
+    "factual": [],
+    "critical": [
+      "8e4cfa4b-47b2-411e-8403-c27ed7d67a78"
+    ],
+    "supportive": []
+  },
+  "우크라이나 종전 논의": {
+    "factual": [
+      "177ed27c-e927-497d-a956-7b252364b2bb"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "근육 손실 방지 건강 가이드": {
+    "factual": [
+      "cacc0d3d-7286-4767-99b2-2827c6327ce6"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "학생 자살 급증 법적 공백": {
+    "factual": [],
+    "critical": [
+      "794c7d37-6f6d-4387-952a-426b75d93472"
+    ],
+    "supportive": []
+  },
+  "네이버파이낸셜-두나무 기업결합 심사": {
+    "factual": [
+      "0125118e-2c71-4df1-8705-9d13c82dafff"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "트럼프 전 온두라스 대통령 사면": {
+    "factual": [
+      "004452c8-cc23-467a-8454-3926ca56b0cd"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "워싱턴 총격 사건 아프간 이주민 불안": {
+    "factual": [],
+    "critical": [
+      "4e739329-da44-472b-a7e2-5e18eb45c"
+    ],
+    "supportive": []
+  },
+  "계엄 1년 야당 여당 극단화": {
+    "factual": [],
+    "critical": [
+      "2728657f-be4f-46ec-86b8-3d8128459c76"
+    ],
+    "supportive": []
+  },
+  "미제 사건 발생 원인": {
+    "factual": [
+      "535a6f8e-e7a2-4998-8d5f-62effb175d1f"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "AI 시대 인간의 이야기": {
+    "factual": [
+      "d96383da-7b6b-4234-b0fb-3e935971385c"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "일상 단면 포착 소품": {
+    "factual": [
+      "67f922e6-0472-4d54-874a-efc88af8c155"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "심각한 대유행 경고": {
+    "factual": [],
+    "critical": [
+      "2e6db463-ee98-472e-ad86-18ab86de7e47"
+    ],
+    "supportive": []
+  },
+  "경찰 권력 시녀화 비판": {
+    "factual": [],
+    "critical": [
+      "c6d63468-44e2-4da9-bbdb-48d1a1e2f"
+    ],
+    "supportive": []
+  },
+  "한국 핵잠수함 공식 추진": {
+    "factual": [],
+    "critical": [
+      "34de7e19-44cd-4f47-adc4-51e5e83f7d3b"
+    ],
+    "supportive": []
+  },
+  "국민연금 수급액 현황": {
+    "factual": [
+      "4fb318c3-db19-400b-9fb1-e6b03c32f2"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "C등급 선수 FA 시장 눈치싸움": {
+    "factual": [
+      "a0fabfa0-4a45-4633-aa0d-d7dfa55cf8cc"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "차세대 이차전지 R&D 투자": {
+    "factual": [],
+    "critical": [],
+    "supportive": [
+      "7be14a1c-3ffa-4b5d-a093-8d7e2872707b"
+    ]
+  },
+  "마스크셰프 정체 공개": {
+    "factual": [
+      "f91a8681-215c-4b94-ba32-e76922e0118f"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "두산 최원준 잔류 계약": {
+    "factual": [
+      "62bd0048-8088-4633-a9cf-292c1e7e1f"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "2025 MAMA 홍콩 화재 참사 애도": {
+    "factual": [
+      "c0dbe0b0-36f5-490a-9a70-6f8d247a2d6e"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "성시경 이금희 위로": {
+    "factual": [
+      "ca9ff4fd-2219-4af2-b2eb-256c75acd230"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "인천 전세사기 HUG 셀프 낙찰": {
+    "factual": [],
+    "critical": [
+      "28e1037e-6443-4f2a-9505-600ed347bd35"
+    ],
+    "supportive": []
+  },
+  "안산 모듈러 공공주택 단지 건립": {
+    "factual": [
+      "2dd013f7-c6e6-40d1-8a8f-9dbc736c84d2"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "코리아IT펀드 만기 요구 VC 규약 수정": {
+    "factual": [],
+    "critical": [
+      "edf03117-cfef-43f6-8d46-e3facb28a457"
+    ],
+    "supportive": []
+  },
+  "안세영 신의 승률 중국 감탄": {
+    "factual": [
+      "c9df212e-8bfa-4907-ada3-b06fd5bbfa2f"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "보안기업 S2W IPO 성공 인터뷰": {
+    "factual": [
+      "e5b9a523-3a26-4dbe-b84f-a4e635a0ec6c"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "후시파트너스 탄소 자산화 코스닥 상장 목표": {
+    "factual": [
+      "34695904-577f-4558-b2ca-afe4779435b5"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "루이자도 부르고뉴 와인 추천": {
+    "factual": [
+      "445b1154-fc4d-4065-b233-d4bef6a124d1"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "넷플릭스 침공 극장 변신": {
+    "factual": [
+      "ec86288f-5d5b-4653-867d-29f2df3bded2"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "공정위 규제 황제 여객기": {
+    "factual": [],
+    "critical": [
+      "9570cab9-48f3-4fbb-877b-0d0005660f83"
+    ],
+    "supportive": []
+  },
+  "투수 FA 시장 경쟁": {
+    "factual": [
+      "95a747e2-8746-4c58-a96d-a9e0c21e0f2f"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "아버지 손 데뷔 논란": {
+    "factual": [
+      "bd09fd74-4e46-4aa4-8daf-e4ba43097aec"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "LG 자사주 소각 발표": {
+    "factual": [
+      "dfcf8053-3a45-45e4-bd79-3657b79e135b"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "생성형 AI 미국 중국 의존": {
+    "factual": [],
+    "critical": [
+      "f0483b65-715b-4193-b933-4f8bd1e016"
+    ],
+    "supportive": []
+  },
+  "에어버스 대규모 리콜 사태": {
+    "factual": [],
+    "critical": [
+      "b5bfb157-b71c-479f-9765-c980401b580b",
+      "b8ef9aa4-d6fc-47c2-9b50-3b4602e7265c",
+      "d589c4ba-b8af-4e9b-a10d-ca1b0615158b"
+    ],
+    "supportive": []
+  },
+  "쿠팡 물류센터 사망사고 및 노동장관 점검": {
+    "factual": [
+      "b476a6ff-9a9e-4d60-b010-adf06f492a18"
+    ],
+    "critical": [
+      "4a1f71cb-0803-41a6-bfde-801b2faf1656",
+      "4d2636a5-562f-4c95-bfba-4cee0bfa9c92",
+      "4fc66892-c351-4b7d-abfb-53b41a6a0f9f"
+    ],
+    "supportive": []
+  },
+  "트럼프의 반이민 정책 강화": {
+    "factual": [],
+    "critical": [
+      "bb4fa3a3-0e33-4bf2-a8d9-6a1525c5d78c",
+      "ec9d0c07-2ec1-49f1-b013-e8a1e0a860c5",
+      "f65d7054-74f1-47f6-a284-528d046ce97d"
+    ],
+    "supportive": []
+  },
+  "손흥민 관련 토트넘 감독 및 복귀 가능성": {
+    "factual": [
+      "de80a0c3-cdd0-4d16-aa81-1965d7b66f2e",
+      "ea353a75-8f42-4d0d-8565-f364c140cc63"
+    ],
+    "critical": [
+      "0520f9b7-b4a1-4c37-8afa-061eb2248b0e",
+      "46db43d0-94d9-44f5-9d30-dc5e71f9a5e7",
+      "78998955-b149-40e0-a3ef-b77e9adbfc21"
+    ],
+    "supportive": []
+  },
+  "희귀질환 신약 및 약가 제도 개편": {
+    "factual": [
+      "2fafef74-ff73-4cca-9d04-5d1c59d65558",
+      "ac7b6f90-02fa-4431-a6e7-2b3bb01f7184"
+    ],
+    "critical": [
+      "41633e60-8eb6-47dd-b919-d29a9662998e"
+    ],
+    "supportive": [
+      "b1db8220-018f-4b85-8a44-d9da12b3fed4",
+      "eb873af8-5846-41bc-ac7f-767efd56e7f0"
+    ]
+  },
+  "이 대통령 국정원 방문 및 발언": {
+    "factual": [
+      "171b0d7c-bec0-4059-99e9-a2a5894460f3",
+      "8d82e78a-63fd-42f0-98c4-9493f257d138"
+    ],
+    "critical": [],
+    "supportive": [
+      "2537f031-ea19-4824-9796-fa4e91566b32",
+      "3c80c770-5317-4219-88ff-a2a7d1919781",
+      "fc2b43d5-c5e5-4cdd-bb71-9a769b154055"
+    ]
+  },
+  "젤렌스키 측근 비서실장 사임 및 부패 의혹": {
+    "factual": [
+      "[3c6094b3-730a-486b-8047-ff85fce82d21]",
+      "[6816a1dc-c77a-4f19-a314-b0f2bb182fc8]"
+    ],
+    "critical": [
+      "[637e9cd3-0a38-46a5-a984-ac3e633676a0]"
+    ],
+    "supportive": []
+  },
+  "우크라이나 주권 및 강대국 거래": {
+    "factual": [
+      "[8b456c31-f00c-4dc1-bef2-27377cf8a298]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "서울 아파트 가격 상승 및 부동산 대책": {
+    "factual": [
+      "[27aa7c9a-b7ca-4808-b246-618fe9f321e6]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "코스닥 시장 급등 및 정책 지원": {
+    "factual": [
+      "[40acb869-55ff-4bc2-b03c-1c795c66cae2]",
+      "[89a0f88f-51ee-4a33-941f-2879518ebf54]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "성동구 복지 서비스 '그냥드림' 시행": {
+    "factual": [
+      "[ddfbd26b-14ee-46b0-b512-4a091535750a]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "원화 가치 하락 및 통화 약세": {
+    "factual": [
+      "[1f80911e-b0e8-4ed6-825b-a265e2fd280c]",
+      "[2e4fb7da-c529-44a1-8a96-22aa0bf2a439]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "노인 진료비 증가 및 건강보험 재정": {
+    "factual": [
+      "[e4581714-dfd5-41b1-be3f-b7a90d85e317]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "운동 중 사망 예방 및 건강 관리": {
+    "factual": [
+      "[0fdef0f9-b50b-4e90-9014-375735bfc2b6]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "연예인 다이어트 및 몸매 관리": {
+    "factual": [
+      "[4b951c31-a20d-43a6-adce-955faec32f50]",
+      "[4f42e517-563e-4274-84a3-f7f4795909e6]",
+      "[839a56f0-1505-4ae2-8c11-05626df11e4f]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "쇼트트랙 선수권 대회 성적": {
+    "factual": [
+      "[45bc6fae-5a72-4957-a889-acc168eb0839]",
+      "[f95ab70f-7cbe-45d6-9d51-041876a]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "탁구 유예린 선수 세계청소년선수권 8강 진출": {
+    "factual": [
+      "[7b2af635-6fe9-4903-b524-0bd4754da2a2]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "유현조 KLPGA 대상 수상 및 스타 등극": {
+    "factual": [
+      "[f46757fc-e68e-4aeb-980f-b61c636d2ecd]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "홍콩 MAMA 시상식 화재 애도 및 위로": {
+    "factual": [
+      "[43c1bf32-c3c3-4497-89f6-9e3c90e3bfb5]",
+      "[e065d14a-1714-4ca0-9786-8c10e846b6fa]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "쇼트폼 시대 스낵 소비 트렌드": {
+    "factual": [
+      "[0c9a8d60-ca8f-4132-a045-81ac707d3d16]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "AI 시대 반도체 공부 관련 도서 소개": {
+    "factual": [
+      "[2801edbb-c449-43d8-9427-d6c68df8aae8]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "풍미의 과학 관련 도서 소개": {
+    "factual": [
+      "[458b22c6-8818-4336-80d6-624738253c2c]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "북핵 대응 위한 핵잠수함 건조 참여": {
+    "factual": [
+      "[4599bfcf-1013-48cd-a358-6e5e79c0c815]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "한국 핵잠수함 지형 변수 부상": {
+    "factual": [
+      "[9c381ece-721c-4fd8-a6d4-6dc2aeca305e]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "두나무 해킹 자산 동결 및 회원 피해 보전": {
+    "factual": [
+      "[1c245075-0636-4ebf-837e-9b869fcc3e28]",
+      "[d0688305-799f-400c-8bb9-57e618533482]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "전국 기름값 상승 및 환율 영향": {
+    "factual": [
+      "[25df80c8-cbe8-49cc-a95f-9157af8c]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "고환율 쇼크 및 2030 세대 영향": {
+    "factual": [
+      "[b9034c8f-267b-4fef-9d4d-0dc79f99bf2f]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "홍콩 화재 참사 및 중국 통치 비판": {
+    "factual": [
+      "[07e57bf6-79b7-447d-94c5-9c6e64d192d7]",
+      "[b9891b13-dc7a-4893-a001-2bb361aab89b]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "독립운동가 이하상 애국지사 생일 축하": {
+    "factual": [
+      "[59238c9f-7bf3-412e-9642-b70865963286]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "조태용 계엄 관련 보고 의무 위반 혐의": {
+    "factual": [
+      "[2dde3e07-c54e-4640-ab16-470c155862d2]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "엔하이픈 로제 '아파트' MAMA 대상 수상": {
+    "factual": [
+      "[12834078-d764-49ff-8aa4-e66dc1b3cd64]"
+    ],
+    "critical": [],
+    "supportive": [
+      "[7170a451-93dc-4b35-93b4-84e390a32a77]"
+    ]
+  },
+  "양준혁 사업 투자 및 연매출": {
+    "factual": [
+      "[579cec06-19b7-4e37-963f-e9fc49eb6e40]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "이영택 감독 승리 인사 및 구단주 언급": {
+    "factual": [
+      "[8f7eb046-f6ad-4146-bf83-5e0974807a12]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "사령탑 칭찬 릴레이 및 승리 소감": {
+    "factual": [
+      "[c48d3379-d95a-4bb5-bae8-cf1163be74aa]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "거위털 이불 단독 특가 판매": {
+    "factual": [
+      "[60ef1876-d914-4f93-991b-b3530dbc2978]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "카본 히터 특가 및 난방비 절약": {
+    "factual": [
+      "[753928ae-7d1b-4b70-80ee-0873b7f73a3e]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "방송미디어통신위원장 내정": {
+    "factual": [
+      "[703f770a-554a-4e6c-af30-10145660926a]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "캄보디아 대학생 납치 감금 사망 사건": {
+    "factual": [
+      "[189a62da-9b44-4d06-b00f-cb5077bf959f]",
+      "[e9f0a09f-901d-47f1-955c-2fa156a1ad90]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "이란 월드컵 조추첨 보이콧": {
+    "factual": [
+      "[44f43e68-481c-47b6-9d81-b1acca1a930c]"
+    ],
+    "critical": [
+      "[ce4c2bac-a2c8-4092-8a7b-66b0c23c3106]"
+    ],
+    "supportive": []
+  },
+  "냉각 전력 부지 우주 데이터센터 가능성": {
+    "factual": [
+      "[1f9b2760-0a3e-40db-ac6e-e7bfc91c9feb]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "아마존 외부 AI 쇼핑 서비스 차단": {
+    "factual": [
+      "[9609910a-93bf-4a10-8c6c-924d998a0432]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "국가 전산망 마비 후 행안부 국정자원 수장 대기발령": {
+    "factual": [
+      "[d1dd49c9-f137-4423-b741-1b4e204212f1]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "대장동 50억 클럽 곽상도 징역형 구형": {
+    "factual": [
+      "[67f37e7f-511d-4a5e-a832-ce73de692a9f]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "동남아 역대급 폭우 사망자 급증": {
+    "factual": [
+      "[d88c2bbb-7960-4524-88c9-3cc1fa29453d]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "르세라핌 스포티파이 위클리 톱 송 글로벌 5주 연속 진입": {
+    "factual": [
+      "[49f5f1ef-6f69-4e7a-89af-70a828f28884]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "스트레이 키즈 영국 싱글차트 7번째 진입": {
+    "factual": [
+      "[9b729365-9551-4b5a-a1a1-3548fd18d256]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "다크비 미니 9집 타이틀곡 'Irony' 활동 마무리": {
+    "factual": [
+      "[ec10a77e-d5b8-477a-91c6-a590cd318c4f]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "음주 승객 국도 사망 집행유예": {
+    "factual": [
+      "[84307895-4303-40a8-a8f9-fd18ec4710bc]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "주토피아2 3일 연속 1위 누적 74만": {
+    "factual": [
+      "[c51332e0-9d8e-4a88-a709-7ce2409785b6]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "주토피아2 개봉 4일째 100만 돌파": {
+    "factual": [
+      "[decb8a01-7e05-4a90-8263-cd9458d41d9e]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "세종 베어트리파크 크리스마스 마을 변신": {
+    "factual": [
+      "[7a3fffef-1d1a-47c9-838f-775a21bb4989]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "청남대 야외 웨딩 명소": {
+    "factual": [
+      "[8ba6ed23-96e9-46fb-be44-3c6f4562cfc9]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "여야 배당소득 분리과세 합의 최고세율 30%": {
+    "factual": [
+      "[8f50168a-1659-4101-826e-79395d23f78f]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "김유정 '친애하는 X' 인생캐 연기": {
+    "factual": [
+      "[7a7b889b-5911-40f2-a37a-2d6720f76beb]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "김유미 '친애하는 X' 우아한 독기 연기": {
+    "factual": [
+      "[b1036234-bb55-4e30-8ede-b82aaf502f3d]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "민희진 직원 선거투표 성향 개입 논란": {
+    "factual": [
+      "[35652ff6-6bc9-4c74-ad0c-5b9c37a9fe57]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "민희진 민주당 지지자 발언": {
+    "factual": [
+      "[69889915-296a-427a-b4cb-5a5a43ef4a47]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "지상렬 신보람 16세 차이 공개 열애 결혼": {
+    "factual": [
+      "[1b5c1239-11e6-41df-949d-32dcc4017cda]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "GS건설 도룡자이 라피크 정당계약": {
+    "factual": [
+      "[387adb3f-edca-453b-ac85-34a67dbab6bc]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "서수원 에피트 센트럴마크 분양": {
+    "factual": [
+      "[571b80ca-4c36-4d75-8e54-aa4c85afaf64]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "DL이앤씨 e편한세상 내포 에듀플라츠 분양": {
+    "factual": [
+      "[83585226-5cab-4869-9167-93f1ea79fafd]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "아이브 2025 MAMA 3관왕 홍콩 화재 참사 위로": {
+    "factual": [
+      "[0eef3c2e-d141-4de0-ad48-8edcc8636cbe]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "트럼프 바이든 행정명령 취소": {
+    "factual": [
+      "[1d5ebb43-3c24-460c-b1b4-e86454f04bf9]",
+      "[bcef9914-e261-4399-9c62-029f7fad5c56]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "금감원 홍콩 ELS 판매은행 과징금 사전 통보": {
+    "factual": [
+      "[8734d4dc-b78f-4392-877d-ba8712f0d2bb]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "장혁 김종국 아이 엠 복서": {
+    "factual": [
+      "[2ac9829c-b4d7-48ff-92b5-3b9d5933d24e]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "로드FC 복싱 챔피언 싱어송 파이터 도발": {
+    "factual": [
+      "[e9d23641-b5f6-42c5-88d3-5544407e5d34]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "청주 여성 살해 시신 유기 김모씨 구속 사이코패스 검사": {
+    "factual": [
+      "[08373fd6-fce5-4fb3-8d0f-fc9b4fdb1736]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "청주 여성 살해 미제 될 뻔했던 사건": {
+    "factual": [
+      "[9cc11c17-f184-4486-967d-93ae57fe4eea]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "우범지대 없는 청주 만들기": {
+    "factual": [
+      "[c8a3ed04-b753-41e9-b181-db6eb0c755fa]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "트럼프 온두라스 전 대통령 사면": {
+    "factual": [
+      "[8a698f59-d15b-4037-9db1-bc5d60d356d7]",
+      "[9074ec4e-ecf5-4ed0-a65f-abf9df58220c]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "외교부 인사": {
+    "factual": [
+      "[91ad7d2e-9b9a-48a5-b61b-f054fbe64e14]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "스마트 스타디움 미래 스포츠 경기장 기준": {
+    "factual": [
+      "[c83d45e8-0622-461d-aee2-1cd9b159f395]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "스포츠 예능 단순 오락 넘어 코트 현장 변화": {
+    "factual": [
+      "[f13d8f3c-8601-48bb-b33c-2597fe3cf831]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "국립중앙박물관 힙함": {
+    "factual": [
+      "[6fd48841-1fc3-4db7-957a-93ab0e393d13]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "배당소득 50억 이하 25% 분리과세": {
+    "factual": [
+      "[c077f3e5-6237-46ef-89d3-88c4b5e39d5f]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "4년 9개월 부진 터널 탈출 미래 열어야": {
+    "factual": [
+      "[c7883eb5-6c34-42ff-99cc-85c3b58cfd62]"
+    ],
+    "critical": [],
+    "supportive": []
+  },
+  "감독님 때문에 남았어요 우승 선물 인터뷰": {
+    "factual": [
+      "[ee8c5ab3-4a81-424f-b6a0-37f14d8e058e]"
+    ],
+    "critical": [],
+    "supportive": []
+  }
+}

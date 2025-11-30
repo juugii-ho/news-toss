@@ -1,29 +1,43 @@
 {
-  "제노바 시장 부치, 격분 토로: \"학살 게임, 가만있지 않겠다. 명확성 요구, 검찰과 대화할 준비 돼\"": {
-    "topic_name_ko": "제노바 시장 부치, 격분 토로: \"학살 게임, 가만있지 않겠다. 명확성 요구, 검찰과 대화할 준비 돼\"",
+  "이탈리아 명문고 '성범죄자 명단' 사건 파문": {
+    "topic_name_ko": "이탈리아 명문고 '성범죄자 명단' 사건 파문",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "줄리오 체사레 고등학교",
+      "성범죄자 명단",
+      "여학생 명단",
+      "폭력 반대",
+      "이탈리아"
+    ],
+    "category": "Society",
     "stances": {
       "factual": [
-        "bcd52eca-2986-45db-96a9-1f2c66303afa",
-        "7e272ef7-d160-4cd1-8d89-4cdacfcd739e"
+        "a88ba5d9-303c-4a7a-b1d8-bc69a7f95bfc",
+        "d0cd4696-9249-4f37-8226-bafb6144addd"
       ],
       "critical": [],
       "supportive": []
     }
   },
-  "안젤리나 망고, 유로비전 결승전에서 뛰어난 공연 선보여": {
-    "topic_name_ko": "안젤리나 망고, 유로비전 결승전에서 뛰어난 공연 선보여",
+  "우크라이나 전쟁 장기화 및 국제 사회 입장 변화": {
+    "topic_name_ko": "우크라이나 전쟁 장기화 및 국제 사회 입장 변화",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "우크라이나 전쟁",
+      "러시아",
+      "나토",
+      "헝가리",
+      "무기 지원"
+    ],
+    "category": "World",
     "stances": {
       "factual": [
-        "6238edff-ccca-42f5-ac02-f25a20300fdf",
-        "a5cfe393-d75c-409a-8ad0-5dd9dac2a0a3"
+        "5956acc2-ed08-4d24-b516-af15aae6bd85",
+        "e1ac2bb2-03db-446c-9c1f-d81c944ad7bb"
       ],
-      "critical": [],
+      "critical": [
+        "e814c1b7-0204-4916-9bf5-bb3d740624eb"
+      ],
       "supportive": []
     }
   }

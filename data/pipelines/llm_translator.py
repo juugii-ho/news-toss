@@ -2,6 +2,10 @@
 import os
 import time
 import json
+
+# Fix gRPC DNS resolution issue (caused by sentence-transformers conflict)
+os.environ['GRPC_DNS_RESOLVER'] = 'native'
+
 import google.generativeai as genai
 from dotenv import load_dotenv
 from supabase import create_client, Client
@@ -33,7 +37,7 @@ generation_config = {
 }
 
 model = genai.GenerativeModel(
-    model_name="gemini-1.5-flash",
+    model_name="gemini-2.5-flash-lite",
     generation_config=generation_config,
     safety_settings={
         "HARM_CATEGORY_HARASSMENT": "BLOCK_NONE",
@@ -117,10 +121,15 @@ def main():
     print("Starting LLM Translation (Rate-Limited)...")
     
     try:
-        # Fetch articles needing translation
+        # Calculate 24 hours ago
+        from datetime import datetime, timedelta
+        time_threshold = (datetime.utcnow() - timedelta(hours=24)).isoformat()
+        
+        # Fetch articles needing translation (Last 24h only)
         response = supabase.table("mvp2_articles") \
             .select("*") \
             .or_("title_ko.is.null,title_en.is.null") \
+            .gte("published_at", time_threshold) \
             .execute()
             
         articles = response.data

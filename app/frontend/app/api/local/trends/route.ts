@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase-client";
 import { readLocalList } from "@/lib/mock";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);

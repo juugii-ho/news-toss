@@ -62,6 +62,7 @@ jobs:
     - name: Step 6 - Topic Summaries
       env:
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        GEMINI_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
         NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
       run: python data/pipelines/llm_topic_summary_generator.py
@@ -69,6 +70,7 @@ jobs:
     - name: Step 7 - Editor Comments
       env:
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        GEMINI_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
         NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
       run: python data/pipelines/llm_global_editor_comment_generator.py

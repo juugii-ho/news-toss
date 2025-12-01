@@ -72,58 +72,65 @@ def fetch_article_titles(article_ids):
         return {}
 
 def generate_thumbnail_prompt(topic, article_map):
-    country = topic['country_code']
-    topic_name = topic['topic_name']
-    stances = topic.get('stances', {})
-    
-    # Flatten articles with sentiment
-    articles_list = []
-    for sentiment in ['factual', 'critical', 'supportive']:
-        ids = stances.get(sentiment, [])
-        for aid in ids:
-            title = article_map.get(aid)
-            if title:
-                articles_list.append({'sentiment': sentiment, 'title': title})
-                
-    total_count = len(articles_list)
-    if total_count == 0:
-        return None
+    try:
+        country = topic['country_code']
+        topic_name = topic['topic_name']
+        stances = topic.get('stances', {})
+        
+        # Flatten articles with sentiment
+        articles_list = []
+        for sentiment in ['factual', 'critical', 'supportive']:
+            ids = stances.get(sentiment, [])
+            for aid in ids:
+                title = article_map.get(aid)
+                if title:
+                    articles_list.append({'sentiment': sentiment, 'title': title})
+                    
+        total_count = len(articles_list)
+        if total_count == 0:
+            return None
 
-    # Group by sentiment
-    sentiment_groups = {}
-    for art in articles_list:
-        sent = art['sentiment']
-        if sent not in sentiment_groups:
-            sentiment_groups[sent] = []
-        sentiment_groups[sent].append(art['title'])
+        # Group by sentiment
+        sentiment_groups = {}
+        for art in articles_list:
+            sent = art['sentiment']
+            if sent not in sentiment_groups:
+                sentiment_groups[sent] = []
+            sentiment_groups[sent].append(art['title'])
 
-    selected_titles = []
-    dominant_found = False
+        selected_titles = []
+        dominant_found = False
 
-    # 50% Rule
-    for sentiment, titles in sentiment_groups.items():
-        ratio = len(titles) / total_count
-        if ratio > 0.5:
-            selected_titles = titles[:3]
-            dominant_found = True
-            break
-            
-    if not dominant_found:
+        # 50% Rule
         for sentiment, titles in sentiment_groups.items():
-            if titles:
-                selected_titles.append(titles[0])
+            ratio = len(titles) / total_count
+            if ratio > 0.5:
+                selected_titles = titles[:3]
+                dominant_found = True
+                break
+                
+        if not dominant_found:
+            for sentiment, titles in sentiment_groups.items():
+                if titles:
+                    selected_titles.append(titles[0])
 
-    quoted_titles = [f"'{t}'" for t in selected_titles]
-    sentence = "과 ".join(quoted_titles)
+        quoted_titles = [f"'{t}'" for t in selected_titles]
+        sentence = "과 ".join(quoted_titles)
 
-    # Post-processing replacements (from user snippet)
-    final_prompt = final_prompt.replace('李', '이')
-    final_prompt = final_prompt.replace('이 대통령', '이재명 대통령') # Context-specific, maybe risky to generalize but user had it.
-    # I will keep it as user requested "using my code".
-    final_prompt = f"{country}의 '{topic_name}' 주제로 {sentence} 내용이 담긴 언론사진 느낌의 썸네일. **주의사항** : 1. 글자 사용 금지"
-
-    
-    return final_prompt
+        # Post-processing replacements (from user snippet)
+        # Initialize final_prompt explicitly to avoid UnboundLocalError
+        base_prompt = f"{country}의 '{topic_name}' 주제로 {sentence} 내용이 담긴 언론사진 느낌의 썸네일. **주의사항** : 1. 글자 사용 금지"
+        final_prompt = base_prompt
+        
+        if '李' in final_prompt:
+            final_prompt = final_prompt.replace('李', '이')
+        if '이 대통령' in final_prompt:
+            final_prompt = final_prompt.replace('이 대통령', '이재명 대통령') 
+        
+        return final_prompt
+    except Exception as e:
+        print(f"Error generating prompt: {e}")
+        return None
 
 def generate_and_upload_image(topic_id, prompt):
     print(f"  🎨 Generating image for topic {topic_id}...")
@@ -152,8 +159,9 @@ def generate_and_upload_image(topic_id, prompt):
             return False
 
         # Convert to WebP
+        # Convert to WebP
         try:
-            image = Image.open(io.BytesIO(img_bytes))
+            image = Image.open(io.BytesIO(image_bytes))
             webp_io = io.BytesIO()
             image.save(webp_io, format="WEBP", quality=80)
             webp_bytes = webp_io.getvalue()

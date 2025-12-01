@@ -98,35 +98,60 @@ def generate_topic_label(cluster_articles, centroid_title):
     input_text = "\n".join([f"{i+1}. {a['title_en']}" for i, a in enumerate(cluster_articles)])
     
     prompt = f"""
-Role: Professional News Editor & Data Analyst
-Task: Analyze the following news articles (clustered by similarity) and provide a structured summary.
+    Role: Professional News Editor & Data Analyst
+    Task: Analyze the following news articles (clustered by similarity) and provide a structured summary.
 
-Articles:
-{input_text}
+    Articles:
+    {input_text}
 
-Requirements:
-1. **Topic Name**: Create a concise, neutral, descriptive topic name in KOREAN.
-   - **PROHIBITION**: Do NOT use generic category names like "경제 동향", "사건 사고", "정치 이슈".
-   - **REQUIREMENT**: Use specific event-based names like "비트코인 10만 달러 돌파", "강남역 묻지마 폭행 사건".
-1. **Topic Name**: Create a concise, neutral headline in KOREAN for the DOMINANT topic.
-2. **Keywords**: Extract 3-5 keywords (KOREAN).
-3. **Category**: Classify into one of: Politics, Economy, Society, World, Tech, Culture, Sports.
-4. **Stances**: Classify indices (0-indexed) into Factual, Critical, Supportive based on the DOMINANT topic.
-5. **Outliers**: List indices of articles that do NOT belong to the DOMINANT topic.
+    # Requirements
+    1. **Topic Name**: Create a concise, neutral, descriptive topic name in KOREAN. (e.g., "비트코인 10만 달러 돌파")
+    2. **Keywords**: Extract 3-5 keywords (KOREAN).
+    3. **Category**: Politics, Economy, Society, World, Tech, Culture, Sports, Entertainment.
+    4. **Outliers**: Identify indices of articles irrelevant to the dominant topic.
+    5. **Stances**: Classify indices into Factual, Critical, Supportive using the **Logic & Process** below.
 
-Output JSON:
-{{
-  "topic_name": "Headline",
-  "keywords": ["Key1", "Key2"],
-  "category": "Category",
-  "stances": {{
-    "factual": [0, 1],
-    "critical": [2],
-    "supportive": []
-  }},
-  "outliers": [3, 4]
-}}
-"""
+    # 🧠 Chain of Thought (MANDATORY PROCESS)
+    **You must follow these 4 steps internally before deciding the stance:**
+
+    **Step 1: Entity & Event Separation (Fact Check)**
+    - Identify WHO (Subject) experienced WHAT (Event).
+    - Determine if the event itself is positive (e.g., profit up) or negative (e.g., accident, stock drop).
+    - *Goal:* Separate the "Event" from the "Tone".
+
+    **Step 2: Linguistic Cues & Sentence Endings**
+    - **Modifiers**: Are there emotional adjectives/adverbs?
+        - Positive: "탁월한(Excellent)", "놀라운(Amazing)"
+        - Negative: "충격적(Shocking)", "최악의(Worst)"
+    - **Sentence Ending (Crucial)**:
+        - **Dry/Descriptive**: Ends with "~했다", "~나타났다", "~전망이다", "~기록했다". -> Likely **Factual**.
+        - **Evaluative/Judgmental**: Ends with "~위기", "~논란", "~비상", "~불가피". -> Likely **Critical**.
+
+    **Step 3: Context & Framing (The "Bad Fact" Trap)**
+    - **Distinguish "Bad Fact" vs. "Critical Stance"**:
+        - Case A: "Exchange rate hits 1400 won" (Negative Fact) + "Recorded/Announced" (Dry Tone) → **🔵 Factual**
+        - Case B: "Exchange rate hits 1400 won" (Negative Fact) + "Economy in Emergency" (Alarmist Tone) → **🔴 Critical**
+    - **"Despite" Structure ("A에도 불구하고 B")**:
+        - Focus on **B**. If B is positive (e.g., "Despite recession, profit up"), it is **🟢 Supportive**.
+
+    **Step 4: Final Classification Criteria**
+    - **🔴 Critical**: Focuses on failure, conflict, or anxiety. Keywords: "논란", "비판", "우려", "위기", "급락", "망신".
+    - **🟢 Supportive**: Focuses on success, defense, or hope. Keywords: "성공", "기대", "호평", "돌파", "순항".
+    - **🔵 Factual**: Dry delivery of info/stats without emotional coloring. Keywords: "발표", "개최", "출시", "수치 나열".
+
+    # Output Format (JSON Only)
+    {{
+    "topic_name": "Headline",
+    "keywords": ["Key1", "Key2"],
+    "category": "Category",
+    "stances": {{
+        "factual": [index, ...],
+        "critical": [index, ...],
+        "supportive": [index, ...]
+    }},
+    "outliers": [index, ...]
+    }}
+    """
     retries = 3
     for attempt in range(retries):
         try:

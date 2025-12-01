@@ -71,6 +71,56 @@ def get_global_topic_context(global_topic_id):
         
     return response.data
 
+def run_council_meeting(topic_title, context_str, ai_summary):
+    """
+    Runs a 'Council Meeting' where 3 AI personas analyze the topic from different angles.
+    Returns a dictionary of their insights.
+    """
+    personas = {
+        "skeptic": {
+            "role": "The Skeptic (비판적 분석가)",
+            "prompt": "이 뉴스에 숨겨진 의도나 맹점은 무엇인가? 주류 언론이 놓치고 있는 비판적 시각을 제시하라. 냉소적이고 날카롭게 분석하라."
+        },
+        "historian": {
+            "role": "The Historian (역사학자)",
+            "prompt": "이 사건의 역사적 배경은 무엇인가? 과거의 어떤 사건과 유사한가? 이 뉴스가 왜 중요한지 역사적 맥락에서 설명하라."
+        },
+        "insider": {
+            "role": "The Local Insider (현지 소식통)",
+            "prompt": "제공된 기사들의 헤드라인과 톤을 바탕으로, 현지 사람들의 실제 반응과 감정은 어떠한가? 현지의 분위기를 생생하게 전달하라."
+        }
+    }
+    
+    insights = {}
+    
+    for key, p in personas.items():
+        print(f"  - Consulting {p['role']}...")
+        prompt = f"""
+        당신은 '{p['role']}'입니다.
+        
+        [분석 대상]: {topic_title}
+        [기사 헤드라인]:
+        {context_str}
+        [기존 요약]:
+        {ai_summary}
+        
+        [지시사항]:
+        {p['prompt']}
+        
+        짧고 굵게 핵심만 3~5문장으로 답변하세요.
+        """
+        try:
+            response = client.models.generate_content(
+                model=model_id,
+                contents=prompt
+            )
+            insights[key] = response.text
+        except Exception as e:
+            print(f"⚠️ Failed to consult {key}: {e}")
+            insights[key] = "의견 없음"
+            
+    return insights
+
 def generate_editor_comment(topic_title, articles, ai_summary=""):
     headlines_by_country = {}
     for a in articles:
@@ -84,19 +134,28 @@ def generate_editor_comment(topic_title, articles, ai_summary=""):
     for cc, titles in headlines_by_country.items():
         context_str += f"\n[{cc}]\n" + "\n".join([f"- {t}" for t in titles])
     
+    # 1. Council Meeting
+    print("  🏛️ Convening the News Council...")
+    council_insights = run_council_meeting(topic_title, context_str, ai_summary)
+    
+    council_text = f"""
+    [The Skeptic's Opinion]: {council_insights['skeptic']}
+    [The Historian's Opinion]: {council_insights['historian']}
+    [The Local Insider's Opinion]: {council_insights['insider']}
+    """
+    
+    # 2. Chief Editor Synthesis
+    print("  ✍️ Chief Editor is synthesizing the final note...")
     prompt = f"""
-    당신은 글로벌 뉴스 큐레이션 서비스 '뉴스 스펙트럼'의 메인 에디터입니다.
-    당신의 페르소나는 **'세상 돌아가는 일에 밝고, 위트 있는, 친한 친구'**입니다.
-    더 스키머(The Skimm)나 뉴닉(NEWNEEK)처럼 **쉽고, 재밌고, 쫀득한 문체**를 구사합니다.
+    당신은 글로벌 뉴스 큐레이션 서비스 '뉴스 스펙트럼'의 **수석 에디터(Chief Editor)**입니다.
+    당신은 방금 3명의 자문위원(비판가, 역사학자, 현지 소식통)과 회의를 마쳤습니다.
     
+    이들의 통찰을 종합하여, 독자가 무릎을 탁 칠만한 **고품질의 에디터 노트**를 작성해주세요.
+    
+    [자문위원 의견 (Council Insights)]:
+    {council_text}
 
-    아래 데이터를 분석하여, 독자가 쉽고 재미있게 읽을 수 있는 고품질의 에디터 분석글을 작성해주세요.
-    
     [분석 대상 토픽]: {topic_title}
-    
-    [AI 요약 (참고용)]:
-    {ai_summary}
-
     [관련 기사 헤드라인]:
     {context_str}
 
@@ -116,25 +175,23 @@ def generate_editor_comment(topic_title, articles, ai_summary=""):
        - 문장 중간/끝에 장식용 이모지(😊, 😢) 금지. 텍스트로만 담백하게.
        - (국기, 섹션 아이콘은 허용)
 
-    4. **톤앤매너 차별화:**
-       - 일반 토픽: "그거 들었어?", "~더라고요" (친근한 대화체)
-       - **사건/사고/범죄:** "사상자가 발생했습니다", "논란이 되고 있습니다" (건조하고 차분한 뉴스 톤)
+    4. **톤앤매너:**
+       - **"세상 돌아가는 일에 밝고, 위트 있는, 친한 친구"**
+       - 더 스키머(The Skimm)나 뉴닉(NEWNEEK)처럼 **쉽고, 재밌고, 쫀득한 문체**
+       - 자문위원들의 의견을 그대로 복사하지 말고, 당신의 언어로 **녹여내세요.**
+       - (예: "역사적으로 보면 이게 처음이 아니래요.", "현지 분위기는 생각보다 심각하다네요.")
 
-    5. **인용의 투명성 (Source Attribution):**
-       - 🇷🇺러시아 매체가 🇺🇦우크라이나 소식을 전할 때 등, 매체 국적과 내용의 국적이 다르면 "러시아 언론이 인용한 우크라이나의 입장은~" 처럼 출처 관계를 명확히 밝히세요.
-
-    6. **문단구성:**
+    5. **문단구성:**
        - 한 문단은 3문장이하로 구성해주세요. 문단 간 줄바꿈은 2번 해주세요.
 
     ====================================================
     📝 작성 구조 (Output Structure)
     ====================================================
 
-
     ### 에디터의 시선 🧐
 
     **"여기에 호기심을 자극하는 낚시성 부제 작성"**
-    (이 이슈가 왜 핫한지 배경 설명. 문장 내 이모지 사용 금지)
+    (이 이슈가 왜 핫한지, 자문위원들의 통찰을 녹여서 배경 설명. 문장 내 이모지 사용 금지)
 
 
     **⚡ 결정적 차이** 
@@ -143,7 +200,7 @@ def generate_editor_comment(topic_title, articles, ai_summary=""):
     vs 국가3이모지("짧은 속마음 문장")
 
     (상세 설명: "국가1은 ~라고 걱정하는데, 국가2는 오히려 ~라며 반기는 분위기예요. 그 이유는...", 문장 내 이모지 사용 금지)
-"""
+    """
 
     try:
         response = client.models.generate_content(

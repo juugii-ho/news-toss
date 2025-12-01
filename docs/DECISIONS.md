@@ -116,11 +116,11 @@
 ### 제안 (Proposal)
 - 
 
-### Reviews (다른 Agent 의견)
-- **[G's Review]** YYYY-MM-DD:
-  - ✅ **찬성/반대**: [의견]
-  - ⚠️ **주의/우려**: [내용]
-  - 📝 **추가 제안**: [내용]
+### Council Notes
+- **[C][Pro/Con]**: 
+- **[G][UX/Risk]**: 
+- **[O][Ops/Sec]**: 
+- **[Rapporteur Summary]**: 
 
 ### Final Decision by S
 - 

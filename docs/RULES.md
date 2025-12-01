@@ -56,34 +56,47 @@
 
 ---
 
-## 5. 통합 개발 워크플로우 (Unified Development Workflow)
+## 5. LLM Council 워크플로우 (LLM Council Workflow)
 
-> **목표**: 아이디어 제안부터 작업 완료까지의 과정을 표준화하여, 모든 팀원이 동일한 프로세스를 따르도록 합니다. 이 워크플로우는 `PLANNING_SESSION.md`와 같은 임시 문서를 대체하며, `DECISIONS.md`와 `WORK.md`를 중심으로 작업을 관리합니다.
+> **목표**: 아이디어 제안부터 실행까지의 의사결정 과정을 `llm-council` 방식으로 구조화하여, 신속하고 추적 가능한 합의를 도출합니다. 이 워크플로우는 기존의 '통합 개발 워크플로우'를 대체하고 고도화합니다.
 
-### 1단계: 제안 (Proposal)
+### Council 구성
+- **패널 (Panelists)**: `C` (기술), `G` (UX/데이터), `O` (인프라)
+- **심판 (Judge)**: `S` (PO)
+- **발제자 (Initiator)**: 안건(DT)을 제안하는 모든 에이전트
+- **라포터 (Rapporteur)**: 각 안건마다 지정되며, 논의를 종합하고 합의 후보안을 도출하는 역할 (주로 G가 담당)
+
+### 프로토콜 (Protocol)
+
+#### 1단계: 제안 (DT 생성)
 - **문서**: `docs/DECISIONS.md`
 - **프로세스**:
-  1. 새로운 기능, 아키텍처 변경, 주요 정책 제안 등 모든 아이디어는 `docs/DECISIONS.md`에 **신규 '의사결정 토큰(DT-XXX)'**으로 작성하여 제안합니다.
-  2. 제안자는 '문제(Problem)'와 '제안(Proposal)' 섹션을 구체적으로 작성합니다.
+  1. 발제자는 `docs/DECISIONS.md`에 새로운 **'의사결정 토큰(DT-XXX)'**을 생성합니다.
+  2. DT에는 `문제`, `제안`, 그리고 구현 시 지켜야 할 `필수 제약` 조건 등을 명확히 기술합니다.
 
-### 2단계: 논의 (Discussion)
+#### 2단계: 발언 수집 (Statement Collection)
 - **문서**: `docs/INBOX.md` → `docs/DECISIONS.md`
 - **프로세스**:
-  1. 제안자는 `docs/INBOX.md`의 `@ALL` 채널에 **새로운 DT가 등록되었음을 알리고, 팀의 검토를 요청**합니다. (`[G][DT-004][Proposal] 신규 기능 제안 검토 요청`)
-  2. 모든 팀원(C, G, O)은 해당 DT를 읽고, 기술적 검토 의견이나 피드백을 DT의 `Reviews` 섹션에 직접 기록합니다.
+  1. 발제자는 `INBOX`의 `@ALL` 채널에 **"Council 발언 요청"**이라는 태그와 함께 새 DT를 공지하고, 피드백 **마감 시간(예: 2시간)**을 설정합니다.
+  2. 모든 패널(C, G, O)은 해당 DT의 `Council Notes` 섹션에 자신의 역할에 맞는 **핵심 의견(찬성/반대, 리스크, 대안 등)을 1~2개의 짧은 bullet point**로 간결하게 기록합니다. (장황한 설명 금지)
+     - **형식**: `[Agent][관점] 내용` (예: `[C][Pro] 기술적으로 실현 가능함.`)
 
-### 3단계: 결정 (Decision)
-- **문서**: `docs/DECISIONS.md` → `docs/WORK.md`
+#### 3단계: 의견 종합 (Rapporteur Summary)
+- **문서**: `docs/DECISIONS.md`
 - **프로세스**:
-  1. S(PO)는 제안 내용과 모든 팀원의 검토 의견을 바탕으로 `Final Decision by S` 섹션에 **최종 결정을 내립니다. (승인/보류/반려)**
-  2. **승인된 경우**, 제안자 또는 S는 `docs/WORK.md`에 해당 DT를 이행하기 위한 **신규 '태스크(TASK-XXX)'를 생성**합니다.
-  3. 생성된 태스크에는 근거가 되는 의사결정을 명시하기 위해 `Related Decision: DT-XXX` 필드를 반드시 포함합니다.
+  1. 마감 시간이 되면, 지정된 '라포터(Rapporteur)'는 `Council Notes`에 취합된 모든 발언을 종합합니다.
+  2. 논의의 핵심과 찬반 근거를 요약하고, S님이 결정하기 쉽도록 **1~3개의 명확한 '합의 후보안(Options)'**을 제시합니다. 이 내용을 `Rapporteur Summary` 필드에 기록합니다.
 
-### 4단계: 실행 (Execution)
-- **문서**: `docs/WORK.md` & `docs/INBOX.md`
+#### 4단계: 최종 결정 (Final Decision)
+- **문서**: `docs/DECISIONS.md`
 - **프로세스**:
-  1. 태스크 담당자는 `WORK.md`에서 자신의 태스크 상태를 `Todo` → `Doing`으로 변경하고, 모든 진행 상황을 `Work Log`에 상세히 기록합니다.
-  2. 작업 중 다른 팀원의 도움이 필요할 경우, `TASK-ID`를 명시하여 `INBOX.md`를 통해 소통합니다.
-  3. 작업이 완료되면, 상태를 `Review` 또는 `Done`으로 변경하고 `STATUS.md`를 업데이트합니다.
+  1. S(PO)님은 라포터가 정리한 '합의 후보안'을 보고, `Final Decision by S` 섹션에 **최종 결정을 내립니다.**
+  2. 결정에는 선택된 합의안 번호와 그 이유가 간략하게 포함됩니다.
+
+#### 5단계: 실행 (Task Creation)
+- **문서**: `docs/WORK.md`
+- **프로세스**:
+  1. '승인'된 DT는 `WORK.md`에 공식 **'태스크(TASK-XXX)'**로 생성됩니다.
+  2. 태스크에는 `Related Decision: DT-XXX (Council 합의안 #N)`과 같이, 어떤 논의를 통해 결정된 작업인지 명확히 명시하여 실행의 일관성을 확보합니다.
 
 *(기존 Hat System 및 기타 규칙은 이 아래에 유지됩니다.)*

@@ -45,6 +45,7 @@ export type Perspective = {
 
 export type VsCard = {
   id: string;
+  topic_name?: string;
   title_ko: string;
   intro_ko: string;
   description_ko?: string;

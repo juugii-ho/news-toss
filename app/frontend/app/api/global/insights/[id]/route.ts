@@ -236,7 +236,8 @@ export async function GET(_req: Request, { params }: Params) {
 
     const result = {
       topic_id: data.id,
-      title: data.title_ko ?? data.topic_name ?? "",
+      topic_name: data.topic_name ?? data.name ?? "",
+      title_ko: data.headline ?? data.title_ko ?? data.topic_name ?? "",
       title_en: data.title_en ?? "",
       intro_ko: data.intro_ko ?? "",
       intro_en: data.intro_en ?? "",

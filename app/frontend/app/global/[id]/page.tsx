@@ -101,6 +101,11 @@ export default async function GlobalDetailPage({ params }: Props) {
             </div>
           ) : <div />}
         </div>
+        {(data as any).topic_name && (
+          <span style={{ fontSize: 14, fontWeight: 600, color: "var(--color-neutral-500)", display: "block", marginBottom: "4px" }}>
+            {(data as any).topic_name}
+          </span>
+        )}
         <h1 style={{ margin: 0, fontSize: 24, fontWeight: 800, letterSpacing: "-0.02em", lineHeight: 1.3 }}>
           {data.title_ko}
         </h1>
@@ -354,65 +359,59 @@ export default async function GlobalDetailPage({ params }: Props) {
             )}
 
             <div className="stack gap-12">
-              {stances.map((stance: any, idx: number) => {
-                let bubbleClass = "bubble-neutral";
-                const sText = (stance.stance as string) || "";
-                if (["우려", "반대", "비판", "경고", "부정", "규탄"].some(k => sText.includes(k)) || sText === "NEGATIVE" || sText === "CRITICAL" || sText === "CON") bubbleClass = "bubble-negative";
-                else if (["환영", "기대", "지지", "긍정", "성장", "우호"].some(k => sText.includes(k)) || sText === "POSITIVE" || sText === "SUPPORTIVE" || sText === "PRO") bubbleClass = "bubble-positive";
+              {Object.entries(stances.reduce((acc: any, s: any) => {
+                const cc = s.country_code || "Unknown";
+                if (!acc[cc]) acc[cc] = [];
+                acc[cc].push(s);
+                return acc;
+              }, {})).map(([code, countryStances]: any) => (
+                <div key={code} className="stack gap-8" style={{ marginBottom: "16px" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "6px", padding: "0 4px" }}>
+                    <span style={{ fontSize: "18px" }}>{countryStances[0].flag_emoji || "🏳️"}</span>
+                    <h4 style={{ margin: 0, fontSize: "15px", fontWeight: 700, color: "#334155" }}>
+                      {code === "KR" ? "대한민국" : code === "US" ? "미국" : code === "JP" ? "일본" : code === "CN" ? "중국" : code === "Unknown" ? "기타" : code}
+                    </h4>
+                  </div>
 
-                // Calculate country stats for this article
-                const cc = stance.country_code || "Unknown";
-                // We need to re-calculate or access the stats. Since we didn't save the map to a variable in the previous render, we'll re-calculate quickly or just use the logic inline if efficient.
-                // Actually, let's just re-use the logic we used for the grid.
-                // To avoid re-calculating inside the map, we should have stored it. 
-                // But for now, let's assume we can filter the stances array for this country.
-                const countryStances = stances.filter((s: any) => (s.country_code || "Unknown") === cc);
-                const total = countryStances.length;
-                let sup = 0, fac = 0, cri = 0;
-                countryStances.forEach((s: any) => {
-                  const v = (s.stance || "").toUpperCase();
-                  const raw = s.stance || "";
-                  if (v === "POSITIVE" || v === "SUPPORTIVE" || v === "PRO" || ["긍정", "지지", "환영", "기대", "성장", "우호"].some(k => raw.includes(k))) sup++;
-                  else if (v === "NEGATIVE" || v === "CRITICAL" || v === "CON" || ["부정", "비판", "반대", "우려", "경고", "규탄"].some(k => raw.includes(k))) cri++;
-                  else fac++;
-                });
+                  {countryStances.map((stance: any, idx: number) => {
+                    let bubbleClass = "bubble-neutral";
+                    const sText = (stance.stance as string) || "";
+                    if (["우려", "반대", "비판", "경고", "부정", "규탄"].some(k => sText.includes(k)) || sText === "NEGATIVE" || sText === "CRITICAL" || sText === "CON") bubbleClass = "bubble-negative";
+                    else if (["환영", "기대", "지지", "긍정", "성장", "우호"].some(k => sText.includes(k)) || sText === "POSITIVE" || sText === "SUPPORTIVE" || sText === "PRO") bubbleClass = "bubble-positive";
 
-                return (
-                  <Link
-                    key={stance.country_code || idx}
-                    href={stance.source_link || "#"}
-                    target="_blank"
-                    className={`bubble ${bubbleClass}`}
-                    style={{
-                      background: "var(--bg-secondary)",
-                      border: "1px solid var(--border-color)",
-                      color: "var(--text-primary)",
-                      textDecoration: "none",
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "flex-start",
-                      gap: "var(--space-3)"
-                    }}
-                  >
-                    {stance.flag_emoji && (
-                      <span style={{ fontSize: "1.2em", lineHeight: 1, marginTop: "2px" }}>
-                        {stance.flag_emoji}
-                      </span>
-                    )}
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "4px" }}>
-                        <span style={{ fontWeight: 700, fontSize: "13px" }}>
-                          {stance.source_name || stance.country_name || stance.country_code || "언론사"}
-                        </span>
-                        {stance.stance && <span className="bubble-stance-badge">{stance.stance}</span>}
-                      </div>
-                      <p className="bubble-line" style={{ margin: 0 }}>
-                        {stance.one_liner_ko || "제목 없음"}
-                      </p>
-                    </div>
-                  </Link>
-                );
-              })}
+                    return (
+                      <Link
+                        key={stance.source_link || idx}
+                        href={stance.source_link || "#"}
+                        target="_blank"
+                        className={`bubble ${bubbleClass}`}
+                        style={{
+                          background: "var(--bg-secondary)",
+                          border: "1px solid var(--border-color)",
+                          color: "var(--text-primary)",
+                          textDecoration: "none",
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "flex-start",
+                          gap: "var(--space-3)"
+                        }}
+                      >
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "4px" }}>
+                            <span style={{ fontWeight: 700, fontSize: "13px" }}>
+                              {stance.source_name || stance.country_name || "언론사"}
+                            </span>
+                            {stance.stance && <span className="bubble-stance-badge">{stance.stance}</span>}
+                          </div>
+                          <p className="bubble-line" style={{ margin: 0 }}>
+                            {stance.one_liner_ko || "제목 없음"}
+                          </p>
+                        </div>
+                      </Link>
+                    );
+                  })}
+                </div>
+              ))}
             </div>
           </>
         )}

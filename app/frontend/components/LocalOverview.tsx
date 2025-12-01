@@ -81,8 +81,8 @@ function CountrySection({ code, label, viewMode }: { code: string; label: string
                 </div>
             </div>
             <div className={viewMode === "grid" ? "mosaic" : "stack gap-12"}>
-                {topItems.map(item => (
-                    <LocalTile key={item.topic_id} item={item} viewMode={viewMode} />
+                {topItems.map((item, index) => (
+                    <LocalTile key={item.topic_id} item={item} viewMode={viewMode} priority={index < 4} />
                 ))}
             </div>
         </section>

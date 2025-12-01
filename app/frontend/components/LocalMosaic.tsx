@@ -72,6 +72,7 @@ export function LocalMosaic({ initial, country, className, style, viewMode = "li
               item={item}
               viewMode={viewMode}
               sentinelRef={idx === sentinelIndex ? sentinelRef : undefined}
+              priority={idx < 2}
             />
           ))}
         </div>

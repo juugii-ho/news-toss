@@ -9,6 +9,7 @@ type Props = {
     item: LocalItem; // Added back as it's essential for the component
     viewMode?: "grid" | "list";
     sentinelRef?: React.RefObject<HTMLDivElement>;
+    priority?: boolean;
 };
 
 function formatRelativeTime(dateStr?: string) {
@@ -45,7 +46,7 @@ function getCategoryIcon(category?: string) {
     return "/assets/news_toss_3d_icon.png";
 }
 
-export function LocalTile({ item, sentinelRef, viewMode = "list" }: Props) {
+export function LocalTile({ item, sentinelRef, viewMode = "list", priority = false }: Props) {
     const sizeClass =
         item.display_level === 1
             ? "tile tile-lg"
@@ -70,6 +71,7 @@ export function LocalTile({ item, sentinelRef, viewMode = "list" }: Props) {
                             src={item.media_url}
                             alt={item.title}
                             style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                            loading={priority ? "eager" : "lazy"}
                         />
                     ) : item.media_type === "VIDEO" && item.media_url ? (
                         <video
@@ -154,6 +156,7 @@ export function LocalTile({ item, sentinelRef, viewMode = "list" }: Props) {
                         src={item.media_url}
                         alt={item.title}
                         style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                        loading={priority ? "eager" : "lazy"}
                     />
                 ) : item.media_type === "VIDEO" && item.media_url ? (
                     <video

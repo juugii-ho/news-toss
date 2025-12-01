@@ -158,10 +158,13 @@ def generate_and_upload_image(topic_id, prompt):
             print("    ❌ No image generated.")
             return False
 
-        # Convert to WebP
-        # Convert to WebP
+        # Convert to WebP and Resize
         try:
             image = Image.open(io.BytesIO(image_bytes))
+            
+            # Resize to 1280x720 (YouTube Standard)
+            image = image.resize((1280, 720), Image.Resampling.LANCZOS)
+            
             webp_io = io.BytesIO()
             image.save(webp_io, format="WEBP", quality=80)
             webp_bytes = webp_io.getvalue()

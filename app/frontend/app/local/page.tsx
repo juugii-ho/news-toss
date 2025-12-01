@@ -2,8 +2,9 @@ import { getLocalList } from "@/lib/api";
 import { readLocalList } from "@/lib/mock";
 import { LocalPageClient } from "@/components/LocalPageClient";
 
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+import { Suspense } from "react";
+
+export const revalidate = 3600;
 
 type Props = {
   searchParams: { country?: string };
@@ -17,7 +18,9 @@ export default async function LocalPage({ searchParams }: Props) {
 
   return (
     <main className="page">
-      <LocalPageClient country={country} data={safeLocal} />
+      <Suspense fallback={null}>
+        <LocalPageClient country={country} data={safeLocal} />
+      </Suspense>
     </main>
   );
 }

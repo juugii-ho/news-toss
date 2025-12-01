@@ -4,8 +4,7 @@ import { getLocalTopic } from "@/lib/api";
 import { readLocalList } from "@/lib/mock";
 import { getCategoryIcon } from "@/lib/categories";
 
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+export const revalidate = 3600;
 
 type LocalStance = {
   country_code?: string;

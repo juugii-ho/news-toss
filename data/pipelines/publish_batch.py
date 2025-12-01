@@ -29,7 +29,7 @@ def publish_latest_24h():
     
     try:
         # 1. Calculate time threshold (24 hours ago)
-        time_threshold = (datetime.utcnow() - timedelta(hours=24)).isoformat()
+        time_threshold = (datetime.utcnow() - timedelta(hours=12)).isoformat()
         print(f"  Time Threshold: {time_threshold}")
 
         # 2. Unpublish EVERYTHING first (Clean slate)

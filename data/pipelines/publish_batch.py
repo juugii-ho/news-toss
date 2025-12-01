@@ -28,44 +28,32 @@ def publish_latest_24h():
     print(f"🚀 Starting Force Publish (Last 24h) - Batch ID: {new_batch_id}")
     
     try:
-        # 1. Calculate time threshold (24 hours ago)
-        time_threshold = (datetime.utcnow() - timedelta(hours=12)).isoformat()
-        print(f"  Time Threshold: {time_threshold}")
+        window_hours = int(os.getenv("PUBLISH_WINDOW_HOURS", "12"))
+        time_threshold_dt = datetime.utcnow() - timedelta(hours=window_hours)
+        time_threshold = time_threshold_dt.isoformat()
+        print(f"  Time Threshold: {time_threshold} (last {window_hours}h)")
+        chunk_size = 500
 
-        # 2. Unpublish EVERYTHING first (Clean slate)
-        print("  Unpublishing old batches...")
-        supabase.table("mvp2_topics").update({"is_published": False}).eq("is_published", True).execute()
-        supabase.table("mvp2_megatopics").update({"is_published": False}).eq("is_published", True).execute()
-        
-        # 3. Fetch Candidates & Deduplicate (Topics)
+        # 2. Fetch Candidates & Deduplicate (Topics) without unpublishing existing live data
         print(f"  Fetching candidate topics created after {time_threshold}...")
         
-        # Fetch all candidates
-        # Note: We need to fetch enough fields to identify duplicates (topic_name, country_code)
         all_topics = supabase.table("mvp2_topics")\
             .select("id, topic_name, country_code, created_at")\
             .gte("created_at", time_threshold)\
             .execute()
             
         if not all_topics.data:
-            print("  ⚠️ No topics found in the last 24h.")
+            print(f"  ⚠️ No topics found in the last {window_hours}h.")
         else:
-            # Group by (country_code, topic_name) and find latest
             topic_groups = {}
             for t in all_topics.data:
                 key = (t['country_code'], t['topic_name'])
-                if key not in topic_groups:
+                if key not in topic_groups or t['created_at'] > topic_groups[key]['created_at']:
                     topic_groups[key] = t
-                else:
-                    # Keep the one with later created_at
-                    if t['created_at'] > topic_groups[key]['created_at']:
-                        topic_groups[key] = t
             
             unique_topic_ids = [t['id'] for t in topic_groups.values()]
             print(f"  Found {len(all_topics.data)} candidates -> Deduplicated to {len(unique_topic_ids)} unique topics.")
             
-            # Batch Update (Supabase limits 'in_' filter size, so chunk it if needed)
-            # Assuming < 1000 topics, one go is usually fine, but let's be safe with 500
             chunk_size = 500
             for i in range(0, len(unique_topic_ids), chunk_size):
                 chunk = unique_topic_ids[i:i+chunk_size]
@@ -80,9 +68,6 @@ def publish_latest_24h():
             print("  🔗 Updating article linkage...")
             total_linked = 0
             
-            # We need to fetch article_ids for the published topics to link them
-            # Re-fetch or use what we have? We only have IDs in unique_topic_ids.
-            # Let's fetch article_ids for the published ones.
             published_topics_data = supabase.table("mvp2_topics")\
                 .select("id, article_ids")\
                 .in_("id", unique_topic_ids)\
@@ -93,7 +78,6 @@ def publish_latest_24h():
                 article_ids = topic.get('article_ids', [])
                 if article_ids:
                     try:
-                        # Link articles to this topic
                         result = supabase.table("mvp2_articles")\
                             .update({"local_topic_id": topic_id})\
                             .in_("id", article_ids)\
@@ -113,22 +97,17 @@ def publish_latest_24h():
             .execute()
             
         if not all_megas.data:
-            print("  ⚠️ No megatopics found in the last 24h.")
+            print(f"  ⚠️ No megatopics found in the last {window_hours}h.")
         else:
-            # Group by name and find latest
             mega_groups = {}
             for m in all_megas.data:
                 key = m['name']
-                if key not in mega_groups:
+                if key not in mega_groups or m['created_at'] > mega_groups[key]['created_at']:
                     mega_groups[key] = m
-                else:
-                    if m['created_at'] > mega_groups[key]['created_at']:
-                        mega_groups[key] = m
             
             unique_mega_ids = [m['id'] for m in mega_groups.values()]
             print(f"  Found {len(all_megas.data)} candidates -> Deduplicated to {len(unique_mega_ids)} unique megatopics.")
             
-            # Batch Update
             for i in range(0, len(unique_mega_ids), chunk_size):
                 chunk = unique_mega_ids[i:i+chunk_size]
                 supabase.table("mvp2_megatopics").update({

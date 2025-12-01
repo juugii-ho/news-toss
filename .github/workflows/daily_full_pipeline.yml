@@ -2,8 +2,8 @@ name: Daily Full Pipeline (15:00 KST)
 
 on:
   schedule:
-    # 15:00 KST = 06:00 UTC
-    - cron: '0 6 * * *'
+    # Twice daily: 07:00 & 19:00 KST (22:00 & 10:00 UTC)
+    - cron: '0 10,22 * * *'
   workflow_dispatch:
 
 jobs:

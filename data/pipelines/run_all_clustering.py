@@ -3,7 +3,7 @@ import time
 import sys
 import os
 
-COUNTRIES = ['AU', 'BE', 'CA', 'CN', 'DE', 'FR', 'UK', 'IT', 'JP', 'KR', 'NL', 'RU', 'US']
+COUNTRIES = ['AU', 'BE', 'CA', 'CN', 'DE', 'FR', 'GB', 'IT', 'JP', 'KR', 'NL', 'RU', 'US']
 
 MAX_CONCURRENT = 3
 

@@ -1,588 +1,104 @@
 {
-  "리브스, 예산 변경에 대한 우려에도 불구하고 연금 수급자가 세금을 납부하지 않을 것이라고 맹세": {
-    "topic_name_ko": "리브스, 예산 변경에 대한 우려에도 불구하고 연금 수급자가 세금을 납부하지 않을 것이라고 맹세",
+  "레이첼 리브스 예산안 비판 및 정치권 논란": {
+    "topic_name_ko": "레이첼 리브스 예산안 비판 및 정치권 논란",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "레이첼 리브스",
+      "예산안",
+      "노동당",
+      "정치"
+    ],
+    "category": "Politics",
     "stances": {
       "factual": [
-        "1bf44449-5b2d-461c-91d1-3de5f93f5f6b",
-        "68af199b-36d5-4236-8581-fc775274e4cd",
-        "08cb61ad-d45f-4dc7-9cac-a4c48e16d519",
-        "c08498f7-f90e-4ccd-9846-2ddc77da8da5",
-        "7f2ff13b-bc58-4086-951b-f91872265e54",
-        "fccafdff-8205-4098-b295-7ad5d4878608",
-        "346a2039-4f57-4421-8040-28b39753c2f9",
-        "77550ec2-0efe-4c99-9961-e019cd76efc0",
-        "da1d2bb1-f0c5-4227-9b46-d90b47d75796",
-        "2bebe5e3-f3b1-415a-bbb0-68e1621859d4",
-        "9fe3707c-aa6d-4d48-a5aa-6b72dda66d8a",
-        "01763adc-0bdc-490c-a709-15595442a03e",
-        "85213a1c-0904-40e4-aa00-068b0efb7e43",
-        "8aa10f98-ff52-48c9-9b23-c26a44a421d6",
-        "a05eade0-85cb-4cae-954e-dce9c3daff34",
-        "22a5da03-a7cb-48fe-86bd-49b1cbb5d7c1",
-        "b58ffef1-40cf-4d5f-844f-8e0c91a10ec1",
-        "62542c24-64d3-47b9-896a-85607af58e9a",
-        "1a44448f-d6a1-45e2-b5f5-f705c68b3a09",
-        "b9b959bc-ff60-4c66-a88b-5db734fdf038",
-        "4edc6d6d-1ae2-4b25-86c4-0f8a39b9fe98",
-        "8d24a45e-4685-4b06-9ced-5e48e81d0707",
-        "2dd39392-1328-447c-84f7-c9fc25ea02ca",
-        "d3570fbf-bea6-42ba-a0c1-bb739f5bbaf2",
-        "c6712891-0e2e-4510-98a7-27b72989f04e",
-        "7e933e1c-f5ec-448e-a1e3-976f5bc87c6a",
-        "fb6a4084-0c47-4432-b693-fb3a334a21e3",
-        "8f1b755c-f65d-4339-bfaf-4f89ed08dcfa",
-        "f6e87839-d29b-4464-9202-765fba758089"
+        "9d3ddc6b-8e13-4b3f-9259-2604c6fc9bb8",
+        "3d4ce193-500e-493e-9302-2e1903613f07",
+        "8ff79665-608f-42c8-a427-ee9170ee5f88",
+        "83eced1b-7e91-44f9-b1eb-d0c0e605db7c",
+        "0ce79367-0e8f-4beb-803e-248c84ff9d1c",
+        "02d9b7e5-cdf3-4dc8-a657-3905be589495",
+        "808f02fe-f2b3-47f0-801d-f395a8270bef",
+        "bfdaff0b-fd90-4aa8-89ab-f9d28a34260f",
+        "8511c2e6-ecf6-42d7-a5f7-fadf5d0fbb34",
+        "9f53a1d3-8021-4c57-b178-528df04b083e",
+        "60a730ea-9c9a-4bbd-8a63-4530e3b152af",
+        "65485a4d-ca0d-4b24-8810-dda699403a82",
+        "9c2dc55b-9898-4418-8151-974d113827cd",
+        "5fb7b0e0-12b8-4ff7-95c4-46ae3e80f367"
+      ],
+      "critical": [
+        "08951a5b-dd52-45cd-a5ef-d1c405888f46",
+        "6c0fe87b-b4fd-4dd6-9763-0544957b8154",
+        "c653c4e2-5517-44eb-ad8e-b35fd630bf74",
+        "7aab025f-be22-406c-88bd-426c09075aed",
+        "7bbc0d37-8775-491e-8680-7de98119d72b"
+      ],
+      "supportive": [
+        "c3b14acb-4e94-470d-b177-f4c0a4d6d92b"
+      ]
+    }
+  },
+  "영국 망명 신청자 택시 이용 제한": {
+    "topic_name_ko": "영국 망명 신청자 택시 이용 제한",
+    "summary_ko": "",
+    "keywords": [
+      "망명 신청자",
+      "택시",
+      "의료 지원",
+      "영국"
+    ],
+    "category": "Society",
+    "stances": {
+      "factual": [
+        "24ba9d23-0276-4b95-ad25-1f6a5041ab98",
+        "11b914ed-a32b-41f5-a0d7-11dfa8d05361",
+        "7689b748-809b-4e8f-af76-e08c58926200",
+        "959f4c54-76cc-4a18-b662-531e0ad651c9"
       ],
       "critical": [],
       "supportive": []
     }
   },
-  "스타머, 노동자 권리 정책 번복 후 노동당 하원 의원들로부터 '완전한 배신' 비난받아": {
-    "topic_name_ko": "스타머, 노동자 권리 정책 번복 후 노동당 하원 의원들로부터 '완전한 배신' 비난받아",
+  "에어버스 A320 항공기 소프트웨어 결함으로 인한 운항 차질": {
+    "topic_name_ko": "에어버스 A320 항공기 소프트웨어 결함으로 인한 운항 차질",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "에어버스",
+      "A320",
+      "소프트웨어 결함",
+      "운항 차질",
+      "태양 방사선"
+    ],
+    "category": "World",
     "stances": {
       "factual": [
-        "472637a4-8fb5-4a8c-a3c0-f754a612c1ea",
-        "2abaca10-ccdc-48ce-9e5e-06617b57e063",
-        "7bd048ca-4fc2-4f45-82bf-2f4690ede88a",
-        "4598e32e-d40a-4725-97d5-c33a41dffadf",
-        "e1470f1a-a8fc-49ef-a67c-b0ca952b99b9",
-        "f10c9616-d388-4bfd-ba2c-251c2f5aac0c"
+        "072ede28-b1df-4808-b160-fdb4c9915084",
+        "ac762530-7055-40c8-8c4d-413d1708b26f",
+        "6f6b391f-24d5-4abb-885d-3bc63e1d4234"
       ],
-      "critical": [],
+      "critical": [
+        "e4020adf-3d57-4987-9e72-bdb77fc182a1",
+        "b8d9ac1b-bccb-42c7-b6eb-251803ef5b9b"
+      ],
       "supportive": []
     }
   },
-  "‘어떤 답변도 얻을 수 없습니다’: 홍콩 고층 건물 화재 참사 후 슬픔과 분노": {
-    "topic_name_ko": "‘어떤 답변도 얻을 수 없습니다’: 홍콩 고층 건물 화재 참사 후 슬픔과 분노",
+  "인도네시아 및 동남아시아 홍수·산사태 피해": {
+    "topic_name_ko": "인도네시아 및 동남아시아 홍수·산사태 피해",
     "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
+    "keywords": [
+      "홍수",
+      "산사태",
+      "인명 피해",
+      "인도네시아",
+      "동남아시아"
+    ],
+    "category": "World",
     "stances": {
       "factual": [
-        "cc71fbac-0531-42d1-a9a3-083b194d0545",
-        "d3807be3-d00c-4eb9-8ccf-e20e72596a90",
-        "f8f5f282-61fb-42fb-ae51-e516e8b2479b",
-        "e4ae0cd9-3c3b-40ac-b77c-c3c44117a850",
-        "6f3b0f50-787a-421e-9556-400bb41cb979",
-        "ac08c566-c40e-46a2-a0ef-73774f5221d8",
-        "459cc4c7-ae7e-4020-90a8-10bec75f27d3",
-        "bd55fddb-c6c5-4b5d-a552-f12f6d4cf156"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "하룻밤의 만남은 줄고 AI 연인은 늘고: Z세대의 성생활 데이터 분석": {
-    "topic_name_ko": "하룻밤의 만남은 줄고 AI 연인은 늘고: Z세대의 성생활 데이터 분석",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "8345d4d9-aacc-46fc-b8ea-31466efcb587",
-        "61d1db50-a20f-47d7-91df-422c65ba4c62",
-        "2234e507-184a-45c9-a636-dfc978d30429",
-        "ea4905cf-c057-4ffb-b273-b762a8723b7a",
-        "43956414-1201-46e7-be12-33385b9c413e",
-        "fb66cf39-dae0-4b5f-a1fc-1821aed7941c",
-        "d0cbfdc7-bfc6-4cd7-9f83-ebf17a8505f5"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "코티지 파이 훔치려 연금 생활자 폭행 사망케 한 강도, 종신형 선고받아": {
-    "topic_name_ko": "코티지 파이 훔치려 연금 생활자 폭행 사망케 한 강도, 종신형 선고받아",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "7d334971-e8b1-45bc-89f0-890e2f900843",
-        "902c7f82-5802-4827-b91b-5e857c4caab4",
-        "c73e56c8-f797-475a-b5a5-55401a1bd5ae",
-        "cea69271-ed2a-4d39-bc68-23a7491c8a86",
-        "d2e3b6d8-e933-4c80-97e1-2b8addbb13b4",
-        "6c7bf10a-8a20-40fe-988b-f6e8da18e545",
-        "98f6c571-3af6-4b1d-8ff0-855500490371"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "에어버스, A320 항공기 소프트웨어 수정 경고...항공 여행 차질 예상": {
-    "topic_name_ko": "에어버스, A320 항공기 소프트웨어 수정 경고...항공 여행 차질 예상",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "6d8bd89c-0a00-4bdd-8f5f-fd245b107e53",
-        "db8a1f7c-96fe-42c5-af0c-9d50d1b453a1",
-        "dc4c41c3-dc6a-451f-b56e-a3fbe3616fcd",
-        "088dbbea-8f43-4e26-9655-1a38d6bce16a",
-        "c7b325ad-b5ad-409a-b54c-e815d3075552",
-        "71d71cd4-cf9d-44e4-980d-e0634fb9733a",
-        "0209368a-7b06-425a-a005-0cdb744fe01d"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "젤렌스키 최고 보좌관, 자택 반부패 수색 후 사임": {
-    "topic_name_ko": "젤렌스키 최고 보좌관, 자택 반부패 수색 후 사임",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "1f236e7b-1f59-4033-adc9-d0caf4ebb1a6",
-        "ea8d4ea1-0962-446f-980b-8c837d019e0f",
-        "19aa99db-16f5-4b1a-9392-f140c30d47ab",
-        "1f376153-6d26-41b4-96bc-b2783d274534",
-        "ea855ecb-55a7-4a34-8017-5f9ba88bbc23",
-        "72b32ce1-51b2-4a3a-bc13-ea017e525a93"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  " Ballymena 폭동을 촉발한 강간 혐의 십대들의 혐의 취하": {
-    "topic_name_ko": " Ballymena 폭동을 촉발한 강간 혐의 십대들의 혐의 취하",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "0ee44ae0-b9b4-4ed1-930a-a449f05b7d78",
-        "d0f71d2f-5193-486b-9a54-a48265e8671f",
-        "b1e21f82-c8df-4840-996a-6f048edab349",
-        "8a05c288-46d1-429e-bd87-329333d1087c",
-        "e7c9f923-6a61-424b-aed6-7b002c9fd1f2",
-        "bcb45153-d66b-4770-b42b-2a39896abef8"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "영국 최고의 블랙 프라이데이 TV 딜 – 그리고 나쁜 딜을 피하는 방법": {
-    "topic_name_ko": "영국 최고의 블랙 프라이데이 TV 딜 – 그리고 나쁜 딜을 피하는 방법",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "01a4ed02-10be-426c-add4-e7ae68001c1e",
-        "0d69216a-251f-4045-8845-9f8cd89c245a",
-        "a953a083-d3d3-4a69-82f8-c2fc926db55e"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "프리미어리그 소식: 팔머 첼시 복귀 예정; 게예 항소 실패에 '이유 없다'": {
-    "topic_name_ko": "프리미어리그 소식: 팔머 첼시 복귀 예정; 게예 항소 실패에 '이유 없다'",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "e22e4360-8f59-430f-9ba0-21eccc78713a",
-        "f6d72928-5eb8-40f8-96d6-a6204f69a248",
-        "ebf6a11c-00c1-4d66-b8f0-744f7fbbaade",
-        "9e9acf8a-f83d-4a43-beb9-8926899f5f8a"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "대부분의 영국 남성에게 전립선암 검진을 제공해서는 안 된다고 전문가들이 말하다": {
-    "topic_name_ko": "대부분의 영국 남성에게 전립선암 검진을 제공해서는 안 된다고 전문가들이 말하다",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "9b02807b-38b5-4da0-b7dd-7cc437dcd5b5",
-        "9d1b826c-e45a-48fb-9c22-ab10cd647e07",
-        "287a4baf-2980-467d-96d5-89beed5004c7",
-        "3487cccd-c323-4c9e-9794-4a81a3803be3",
-        "3c98136c-11d9-4b69-9ef6-dbc00ebeca02",
-        "11623573-52ae-4b72-b6c1-95e6ecb07387"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "이스라엘군, 항복한 팔레스타인인 사살 순간 포착 - 영상 보도": {
-    "topic_name_ko": "이스라엘군, 항복한 팔레스타인인 사살 순간 포착 - 영상 보도",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "e85e8e29-f04e-4c1f-8a5e-5a2825e92b46",
-        "db7cccae-b960-4f8a-8b4e-767055ad584e",
-        "ad2302a9-a275-4c9e-ba48-eae8704d1600",
-        "727bc90e-f0cd-4e31-87bd-087da03c5d1a",
-        "f0e8210a-6f9e-4d42-8c68-747a8895c216"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "트럼프, 마약 밀매 혐의로 미국에서 복역 중인 전 온두라스 대통령 사면 발표": {
-    "topic_name_ko": "트럼프, 마약 밀매 혐의로 미국에서 복역 중인 전 온두라스 대통령 사면 발표",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "243253c7-cf07-4c0e-89d3-8802e35bd8eb",
-        "68c21f6a-ba1c-4f03-9106-20cfb6a69567",
-        "d7a6a1bc-a7c3-4d9a-9b8a-7786210a66f1",
-        "9a6faafb-2fa1-4832-bd5e-dcd02e757571",
-        "1ec3a7f4-cbe2-48b8-b43b-443daf40797e"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "낯선 사람이 실종 아동이었던 나를 극단적 선택에서 막아준 순간": {
-    "topic_name_ko": "낯선 사람이 실종 아동이었던 나를 극단적 선택에서 막아준 순간",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "a88b265c-27ea-4442-8665-914d8827aa68",
-        "2f538943-9f0c-4f3e-b018-b8dc64c81830",
-        "c9ac31c0-d634-43f1-b031-c8597a48b6a1",
-        "4f402c47-51db-43a4-89c2-14f05c9f7490",
-        "3a29330b-3f73-4be4-9c9c-7335177e2bb4"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "영국, 2035년 여자 월드컵 유치 경쟁 돌입… 15개 도시 및 22개 경기장 후보 거론": {
-    "topic_name_ko": "영국, 2035년 여자 월드컵 유치 경쟁 돌입… 15개 도시 및 22개 경기장 후보 거론",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "85270908-25cd-40e6-8d92-eae6f6ff14ca",
-        "b528e59c-780e-47b0-979a-30876883645f",
-        "024a166c-6d81-4bc7-be47-c0fd0e6a2c10",
-        "97eb690e-b865-435c-a83a-649f1e48c220"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "가디언, 우크라이나 평화 협상에 대한 논평: 푸틴, 트럼프를 또다시 크렘린 회전목마에 태우다 | 사설": {
-    "topic_name_ko": "가디언, 우크라이나 평화 협상에 대한 논평: 푸틴, 트럼프를 또다시 크렘린 회전목마에 태우다 | 사설",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "88b75487-1af0-47e3-9fb3-bf35b50bf963",
-        "4c354449-656b-4413-bb96-f3d52473d827",
-        "06275180-c603-41eb-83c1-b78f6f33653f",
-        "a63758ce-ee12-45f5-87a1-6bbbeb5572ed",
-        "98cbe506-d9ed-437e-8051-8396e3436f77"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "사랑을 담아 버려진 자들에게, 메건: 홀리데이 축하 – 이번 주 스트리밍할 최고의 쇼 7선": {
-    "topic_name_ko": "사랑을 담아 버려진 자들에게, 메건: 홀리데이 축하 – 이번 주 스트리밍할 최고의 쇼 7선",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "852f763f-72f7-43fc-b474-7c996da1da4c",
-        "dc14777c-6aa6-41ca-80b6-67a70491e6ab"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "날씨 지도: 기상청 경고 후 이번 주말 런던, 잉글랜드 및 웨일스에 폭우가 쏟아질 곳": {
-    "topic_name_ko": "날씨 지도: 기상청 경고 후 이번 주말 런던, 잉글랜드 및 웨일스에 폭우가 쏟아질 곳",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "a7a7cd5e-876a-41ea-9a5a-9a8ba35e6d31",
-        "7e7477e6-4b1a-42a4-85f7-4aa110e10ee2",
-        "f62ad032-e59f-4c80-9e26-d23bc47aa8f2",
-        "db6a84e1-9758-4336-bcec-aa2d63f82368"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "테네리페 해안서 유람선 추락 영국인 남성 수색 진행 중": {
-    "topic_name_ko": "테네리페 해안서 유람선 추락 영국인 남성 수색 진행 중",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "d58d76d5-677f-41e1-b3b3-18ccc2f1cc3b",
-        "256a5610-1f40-4e0d-a959-4adc0daa138b",
-        "ed740783-d572-4344-9809-202b3445f245",
-        "9d7294cc-9ca3-48d9-8f31-78f7614ecc74"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "아니요, 당신이 좋아하는 인플루언서가 도베르만 개를 12마리나 키우는 것은 아닙니다. 그것은 단지 AI입니다.": {
-    "topic_name_ko": "아니요, 당신이 좋아하는 인플루언서가 도베르만 개를 12마리나 키우는 것은 아닙니다. 그것은 단지 AI입니다.",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "8514280f-86d3-4095-bcc2-b0aa369c79ad",
-        "9e1d9f92-eb26-4a1e-9e17-680858477078",
-        "c58c6c8e-9a8b-467c-9e1a-e1e3157369d1",
-        "a8cf9f15-785d-4529-adb2-77880265cd87"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "브라질, '타코' 무역에서 승리하는 교훈을 제공하다": {
-    "topic_name_ko": "브라질, '타코' 무역에서 승리하는 교훈을 제공하다",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "42a794af-077a-4080-96b2-012a947d4980",
-        "efa5a355-9c45-4622-87ee-df34ca3e2451",
-        "7a1ca699-3dc3-46f5-b85d-380a509f5a6a"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "버섯 랜턴과 오로라: 오늘의 사진 – 금요일": {
-    "topic_name_ko": "버섯 랜턴과 오로라: 오늘의 사진 – 금요일",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "46b39a53-e207-4b7f-a543-8d4bdc2b5a69",
-        "074f0975-a007-48a4-a14f-53d2b2ee40cb",
-        "fec804d2-9531-434d-b5c9-b22fa6492661",
-        "e722598c-f460-43fc-b5f1-9c914409f37e"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "당신들의 당인가 우리의 당인가: '당신들의 당'이 수개월의 우유부단 끝에 새로운 당명 후보 공개": {
-    "topic_name_ko": "당신들의 당인가 우리의 당인가: '당신들의 당'이 수개월의 우유부단 끝에 새로운 당명 후보 공개",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "2461850f-5fec-48af-9926-cc077a916f49",
-        "85e50c04-ad90-4fef-8562-bd47ed8de5c3",
-        "dbcca191-bce9-4df3-b3fc-2ee6f8a31466",
-        "a932ba2d-4f61-42f7-8670-a85c7225a466"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "국가 방위군 사살 용의자, 1급 살인 혐의 직면": {
-    "topic_name_ko": "국가 방위군 사살 용의자, 1급 살인 혐의 직면",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "9dd78bcc-9093-4cbf-8d92-ec0f8eb6ec3a",
-        "6ed6ac52-46f0-4752-82a3-cf988f8eee82",
-        "5d3848c1-bb2f-4406-af2c-5d9860d0d69c"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "트럼프, '자동 서명펜으로 서명된' 바이든 행정명령 모두 취소할 것 밝혀": {
-    "topic_name_ko": "트럼프, '자동 서명펜으로 서명된' 바이든 행정명령 모두 취소할 것 밝혀",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "8f617c1c-93ba-4ec5-95bc-e87fbbf8b14e",
-        "61538ba4-db06-4702-9bf1-65272c3adf53",
-        "0d606d1b-9f0c-4796-8813-60eb497149d5"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "10대 시절 파라지 반유대주의 의혹, 그의 이후 행적을 보라 | 조너선 프리들랜드": {
-    "topic_name_ko": "10대 시절 파라지 반유대주의 의혹, 그의 이후 행적을 보라 | 조너선 프리들랜드",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "0378bc8d-236c-44b9-97b4-5ba9951622ff",
-        "623799d3-cf20-4284-8c44-91e02ef0732d"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "가디언의 터너와 컨스터블에 대한 견해: 각기 다른 방식으로 급진적이었던 두 거장": {
-    "topic_name_ko": "가디언의 터너와 컨스터블에 대한 견해: 각기 다른 방식으로 급진적이었던 두 거장",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "ef0c1977-519b-4b6f-acc9-779682ad5886",
-        "8a9f04a5-e6dc-413b-9e0e-6f3f3a61f854"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "카뮈의 '이방인' 새 영화 각색, 오래된 식민지 상처를 건드리다": {
-    "topic_name_ko": "카뮈의 '이방인' 새 영화 각색, 오래된 식민지 상처를 건드리다",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "7578c747-294b-4346-baa0-e801de6ee557",
-        "6d245195-2ac1-4326-90e6-1263c3f783e9"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "획기적인 기후 승리 후, 변호사는 원주민 권리 보호를 위한 '새로운 법 질서'를 희망하다": {
-    "topic_name_ko": "획기적인 기후 승리 후, 변호사는 원주민 권리 보호를 위한 '새로운 법 질서'를 희망하다",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "3eee9891-0d10-44a7-a8c7-a78fc6c0f485",
-        "2f3c5df3-dc1a-40e4-a872-7cd10cfbcf9c",
-        "0af30416-490b-4a47-b50a-c9f47767055a"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "국경일 총격 사건 이후 미국, 모든 망명 결정 중단": {
-    "topic_name_ko": "국경일 총격 사건 이후 미국, 모든 망명 결정 중단",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "496336ea-289f-49cc-90c7-d87b74240ba4",
-        "89a27517-58f5-4f25-a60e-455f96b53609",
-        "f7c7329f-6b2a-4c67-bcc7-58bffea00b8f"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "레이첼 리브스 의원의 여동생을 괴롭힌 여성 징역형 선고": {
-    "topic_name_ko": "레이첼 리브스 의원의 여동생을 괴롭힌 여성 징역형 선고",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "1258ac16-3ca9-4897-a50a-85b225713556",
-        "b943a273-5ffd-4a3e-ac17-d32252742ab4",
-        "bc2bb5f4-538e-4180-89e1-6dde8229be0e"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "독일, EU에 휘발유·경유차 판매 금지 완화 촉구": {
-    "topic_name_ko": "독일, EU에 휘발유·경유차 판매 금지 완화 촉구",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "9f0ff85d-3d38-4f70-b602-10f001c5ce05",
-        "fd2d1543-74a4-4e5d-8898-df84ae482407"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "미국 규제 당국, 엡스타인에 대한 은행가들의 지원 의혹 '심각하게 받아들여'": {
-    "topic_name_ko": "미국 규제 당국, 엡스타인에 대한 은행가들의 지원 의혹 '심각하게 받아들여'",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "b2915a85-3e17-4801-aba4-1f2b047faea6",
-        "a1466228-7c00-4429-9726-cf5ef6c699c5",
-        "599593ae-295b-4744-b429-df6c48108b5d"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "노리스 3위, 타이틀 경쟁자 피아스트리 카타르 스프린트 폴 포지션 차지": {
-    "topic_name_ko": "노리스 3위, 타이틀 경쟁자 피아스트리 카타르 스프린트 폴 포지션 차지",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "fec23ec5-474c-48dc-a30b-1a94f117d5a9",
-        "d066ca9e-c45b-49d1-9568-0d70e68a4ff9",
-        "9ba10a1a-86e1-41a6-ab63-58516dde7d1c"
-      ],
-      "critical": [],
-      "supportive": []
-    }
-  },
-  "한여름 밤의 꿈 리뷰 – 악몽 같은 연출이 잔혹한 이면을 표면으로 끌어올리다": {
-    "topic_name_ko": "한여름 밤의 꿈 리뷰 – 악몽 같은 연출이 잔혹한 이면을 표면으로 끌어올리다",
-    "summary_ko": "",
-    "keywords": [],
-    "category": "Unclassified",
-    "stances": {
-      "factual": [
-        "f6a1b4de-5d20-4ce6-828c-5781b48c17c0",
-        "5aac27d1-1000-4728-bc70-cc0b6dbce1e5"
+        "d23316cb-6b40-4d75-94be-ddbbbab1c9f9",
+        "1567caf9-dca9-4f95-a347-081f00c9762c",
+        "fc615cd0-06de-4796-be3a-d9f253ff9238"
       ],
       "critical": [],
       "supportive": []

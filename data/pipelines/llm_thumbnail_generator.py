@@ -24,6 +24,9 @@ def find_similar_thumbnail(target_topic, existing_topics):
     best_url = None
     
     for et in existing_topics:
+        # Require same country to avoid cross-country reuse
+        if et.get('country_code') and et.get('country_code') != target_topic.get('country_code'):
+            continue
         # Skip self (though unlikely as we filter by null thumbnail)
         if et['id'] == target_topic['id']:
             continue
@@ -119,7 +122,7 @@ def generate_thumbnail_prompt(topic, article_map):
 
         # Post-processing replacements (from user snippet)
         # Initialize final_prompt explicitly to avoid UnboundLocalError
-        base_prompt = f"{country}의 '{topic_name}' 주제로 {sentence} 내용이 담긴 언론사진 느낌의 썸네일. **주의사항** : 1. 글자 사용 금지"
+        base_prompt = f"{country}의 '{topic_name}' 주제로 {sentence} 내용이 담긴 {country}의 언론사진 느낌의 썸네일. **주의사항** : 1. 글자 사용 금지"
         final_prompt = base_prompt
         
         if '李' in final_prompt:
@@ -205,13 +208,14 @@ def generate_and_upload_image(topic_id, prompt):
 def main():
     print("🚀 Starting Thumbnail Generator...")
     
-    # Fetch recent topics without thumbnail
+    # Fetch published topics without thumbnail (last 7 days)
     time_threshold = (datetime.utcnow() - timedelta(days=7)).isoformat()  # Last 7 days
     
     try:
         response = supabase.table("mvp2_topics") \
             .select("*") \
             .is_("thumbnail_url", "null") \
+            .eq("is_published", True) \
             .gte("created_at", time_threshold) \
             .order("article_count", desc=True) \
             .execute()  # Process all topics
@@ -221,8 +225,10 @@ def main():
         
         # Fetch topics WITH thumbnails for comparison
         res_existing = supabase.table("mvp2_topics") \
-            .select("id, topic_name, thumbnail_url") \
+            .select("id, topic_name, thumbnail_url, country_code, created_at") \
+            .eq("is_published", True) \
             .not_.is_("thumbnail_url", "null") \
+            .gte("created_at", time_threshold) \
             .execute()
         topics_with_thumbnails = res_existing.data
         print(f"Found {len(topics_with_thumbnails)} existing thumbnails for reuse check.")

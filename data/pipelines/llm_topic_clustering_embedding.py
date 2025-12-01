@@ -460,15 +460,43 @@ def main():
                     existing = find_similar_topic(topic_name, COUNTRY, supabase)
                     
                     if existing:
-                        # Update existing topic
+                        # Merge with existing topic instead of overwriting older articles
                         print(f"  🔄 Updating: {topic_name}")
+                        existing_ids = existing.get("article_ids", []) or []
+                        existing_stances = existing.get("stances", {}) or {}
+                        
+                        def merged_list(old, new):
+                            seen = set()
+                            merged = []
+                            for v in old + new:
+                                if v not in seen:
+                                    merged.append(v)
+                                    seen.add(v)
+                            return merged
+                        
+                        merged_stances = {}
+                        for sentiment in ["factual", "critical", "supportive"]:
+                            merged_stances[sentiment] = merged_list(
+                                existing_stances.get(sentiment, []),
+                                stances.get(sentiment, [])
+                            )
+                        merged_stances["keywords"] = stances.get("keywords", existing_stances.get("keywords", []))
+                        merged_stances["category"] = stances.get("category", existing_stances.get("category", "Unclassified"))
+
+                        merged_article_ids = merged_list(existing_ids, article_ids)
+                        
+                        unique_sources = set()
+                        for aid in merged_article_ids:
+                            if aid in article_source_map:
+                                unique_sources.add(article_source_map[aid])
+                        
                         supabase.table("mvp2_topics").update({
-                            "article_ids": article_ids,
-                            "article_count": len(article_ids),
+                            "article_ids": merged_article_ids,
+                            "article_count": len(merged_article_ids),
                             "source_count": len(unique_sources),
-                            "stances": stances,
-                            "keywords": stances.get('keywords', []),
-                            "category": stances.get('category', 'Unclassified'),
+                            "stances": merged_stances,
+                            "keywords": merged_stances.get('keywords', []),
+                            "category": merged_stances.get('category', 'Unclassified'),
                             "last_updated_at": datetime.utcnow().isoformat()
                         }).eq("id", existing['id']).execute()
                         updated_count += 1

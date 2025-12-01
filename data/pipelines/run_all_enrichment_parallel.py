@@ -1,43 +1,48 @@
 import subprocess
-import time
 import sys
 import os
+import uuid
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 COUNTRIES = ['AU', 'BE', 'CA', 'CN', 'DE', 'FR', 'GB', 'IT', 'JP', 'KR', 'NL', 'RU', 'US']
-MAX_CONCURRENT = 10
+MAX_WORKERS = 10
+
+def run_enrichment(country, batch_id):
+    """Run enrichment for a single country"""
+    print(f"  ✨ Starting {country}...")
+    try:
+        # Pass batch_id as argument
+        result = subprocess.run(
+            [sys.executable, "data/pipelines/llm_topic_enrichment.py", country, f"--batch_id={batch_id}"],
+            capture_output=True,
+            text=True
+        )
+        if result.returncode == 0:
+            print(f"  ✅ {country} Completed.")
+            return True
+        else:
+            print(f"  ❌ {country} Failed: {result.stderr}")
+            return False
+    except Exception as e:
+        print(f"  ❌ {country} Error: {e}")
+        return False
 
 def main():
-    print(f"🚀 Starting Parallel Enrichment for {len(COUNTRIES)} countries (Max {MAX_CONCURRENT} concurrent)...")
+    # Generate a shared batch_id for this entire run
+    SHARED_BATCH_ID = str(uuid.uuid4())
+    print(f"🚀 Starting Parallel Enrichment for {len(COUNTRIES)} countries (Max {MAX_WORKERS} concurrent)...")
+    print(f"🔖 Shared Batch ID: {SHARED_BATCH_ID}")
     
-    processes = []
-    queue = COUNTRIES[:]
-    
-    while queue or processes:
-        # Start new processes if slots available
-        while len(processes) < MAX_CONCURRENT and queue:
-            country = queue.pop(0)
-            print(f"  ✨ Starting {country}...")
-            # Use absolute path to ensure it works from any directory
-            script_dir = os.path.dirname(os.path.abspath(__file__))
-            enrichment_script = os.path.join(script_dir, "llm_topic_enrichment.py")
-            
-            cmd = [sys.executable, enrichment_script, country]
-            p = subprocess.Popen(cmd)
-            processes.append((country, p))
-            
-        # Check for completed processes
-        active_processes = []
-        for country, p in processes:
-            if p.poll() is not None: # Process finished
-                if p.returncode == 0:
-                    print(f"  ✅ {country} Completed.")
-                else:
-                    print(f"  ❌ {country} Failed with code {p.returncode}.")
-            else:
-                active_processes.append((country, p))
-                
-        processes = active_processes
-        time.sleep(1) # Check every second
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        # Submit all tasks with shared batch_id
+        future_to_country = {executor.submit(run_enrichment, country, SHARED_BATCH_ID): country for country in COUNTRIES}
+        
+        for future in as_completed(future_to_country):
+            country = future_to_country[future]
+            try:
+                success = future.result()
+            except Exception as exc:
+                print(f"  ❌ {country} generated an exception: {exc}")
 
     print("\n🎉 All countries enriched.")
 

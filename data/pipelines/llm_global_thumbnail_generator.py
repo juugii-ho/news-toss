@@ -127,13 +127,14 @@ def generate_and_upload_image(topic_id, prompt):
 def main():
     print("🚀 Starting Global Thumbnail Generator...")
     
-    # Fetch recent global topics without thumbnail
+    # Fetch recent PUBLISHED global topics without thumbnail
     time_threshold = (datetime.utcnow() - timedelta(days=7)).isoformat()
     
     try:
         response = supabase.table("mvp2_megatopics") \
             .select("*") \
             .is_("thumbnail_url", "null") \
+            .eq("is_published", True) \
             .gte("created_at", time_threshold) \
             .order("country_count", desc=True) \
             .execute()

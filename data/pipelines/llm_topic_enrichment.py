@@ -207,14 +207,26 @@ def main():
     # Save to DB
     print("Saving enriched topics to Supabase DB (mvp2_topics)...")
     try:
-        # Generate batch_id for this country's topics
+        # Generate batch_id for this country's topics OR use provided one
         import uuid
-        batch_id = str(uuid.uuid4())
-        print(f"  🔖 Generated batch_id: {batch_id}")
+        import argparse
+        
+        # Parse arguments manually since we are inside main() and sys.argv is used
+        batch_id = None
+        if len(sys.argv) > 2 and sys.argv[2].startswith("--batch_id="):
+            batch_id = sys.argv[2].split("=")[1]
+            
+        if not batch_id:
+            batch_id = str(uuid.uuid4())
+            
+        print(f"  🔖 Using batch_id: {batch_id}")
         
         # 1. Clear only UNPUBLISHED topics for this country (preserve published ones)
-        print(f"  🧹 Clearing unpublished topics for {COUNTRY}...")
-        supabase.table("mvp2_topics").delete().eq("country_code", COUNTRY).eq("is_published", False).execute()
+        # UPDATE: We do NOT clear unpublished topics anymore to preserve history.
+        # Step 9 (Publish) will handle unpublishing old batches, and they will remain as history.
+        # Step 4 (Enrichment) simply adds new candidate topics.
+        print(f"  ℹ️  Preserving history: Skipping deletion of unpublished topics for {COUNTRY}...")
+        
         # Note: Article linkage will be updated in Step 9 when publishing
         
         db_rows = []

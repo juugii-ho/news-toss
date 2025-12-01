@@ -2,7 +2,7 @@ import os
 import time
 import feedparser
 import signal
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from dateutil import parser as date_parser
 from dotenv import load_dotenv
 from supabase import create_client, Client
@@ -50,14 +50,18 @@ def parse_rss_feed(url, timeout=30):
         return {"success": False, "error": f"{type(e).__name__}: {str(e)}"}
 
 def parse_date(date_str):
-    """Parse date string to ISO format"""
+    """Parse date string to UTC datetime. Return None on failure."""
     if not date_str:
-        return datetime.now().isoformat()
+        return None
     try:
         dt = date_parser.parse(date_str)
-        return dt.isoformat()
-    except:
-        return datetime.now().isoformat()
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        else:
+            dt = dt.astimezone(timezone.utc)
+        return dt
+    except Exception:
+        return None
 
 def get_summary(entry):
     """Extract summary from entry"""
@@ -102,10 +106,14 @@ def main():
             if not hasattr(entry, 'link') or not hasattr(entry, 'title'):
                 continue
                 
-            published_at = parse_date(entry.get('published', entry.get('updated')))
+            published_dt = parse_date(entry.get('published', entry.get('updated')))
+            if not published_dt:
+                # Drop entries with unusable dates to avoid misclassifying stale content as fresh
+                continue
             
-            # Skip old articles (e.g., older than 24 hours) - Optional, but good for performance
-            # For MVP, maybe we keep everything for now or limit to 48h
+            # Hard cutoff to avoid pulling stale items when feeds resend old content
+            if published_dt < (datetime.now(timezone.utc) - timedelta(hours=48)):
+                continue
             
             raw_summary = get_summary(entry)
             clean_summary = None
@@ -125,7 +133,7 @@ def main():
                 "country_code": source['country_code'],
                 "source_id": source['id'],
                 "source_name": source['name'],
-                "published_at": published_at,
+                "published_at": published_dt.isoformat(),
                 "collected_at": datetime.now().isoformat()
             }
             source_articles.append(article)

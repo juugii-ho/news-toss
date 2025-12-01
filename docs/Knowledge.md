@@ -117,3 +117,7 @@
 2025-11-30 [G][TASK-THUMBNAIL][data/pipelines/llm_global_thumbnail_generator.py] Created global thumbnail generator script using same prompt approach as local topics.
 2025-11-30 [G][TASK-THUMBNAIL][Global Topics] Successfully generated AI thumbnails for 10 global topics and uploaded to Supabase Storage.
 2025-11-30 [G][TASK-THUMBNAIL][Prompt] Updated thumbnail generation prompt to "글자 사용 금지" for cleaner images without text.
+2025-12-02 [O][TASK-PIPELINE-HARDEN][data/pipelines] Hardened ingestion/publish: cut off stale RSS dates, GB country code alignment, no blanket unpublish (publish window env), merge topics instead of overwrite, restrict thumbnail reuse by country/recent window.
+2025-12-02 [O][TASK-PIPELINE-HARDEN][infra/.github/workflows/data/pipelines] Set publish window default 12h, doubled schedule (06/18 UTC), thumbnails now published-only; GB country alignment already done.
+2025-12-02 [O][TASK-THUMBNAIL-GLOBAL][data/pipelines/llm_global_thumbnail_generator.py] Restrict global thumbnail generation to published megatopics from last 7 days (align with local policy).
+2025-12-02 [O][TASK-SCHEDULE][.github/workflows/daily_full_pipeline.yml] Updated cron to 07:00/19:00 KST (22:00/10:00 UTC) for twice-daily runs.

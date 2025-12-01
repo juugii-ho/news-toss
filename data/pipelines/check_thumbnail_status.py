@@ -1,36 +1,30 @@
+
 import os
 from dotenv import load_dotenv
-from supabase import create_client, Client
+from supabase import create_client
 
-load_dotenv("backend/.env")
-load_dotenv(".env.local")
-load_dotenv(".env")
+load_dotenv('backend/.env')
 
 url = os.getenv("NEXT_PUBLIC_SUPABASE_URL")
 key = os.getenv("NEXT_PUBLIC_SUPABASE_ANON_KEY")
 
-if not url or not key:
-    print("Error: Supabase credentials not found.")
-    exit(1)
+supabase = create_client(url, key)
 
-supabase: Client = create_client(url, key)
+print("--- 🔍 Checking Thumbnails for Published Topics ---")
+res = supabase.table("mvp2_topics")\
+    .select("id, topic_name, thumbnail_url, created_at")\
+    .eq("is_published", True)\
+    .execute()
 
-def check_status():
-    # Count total topics
-    res_total = supabase.from_("mvp2_topics").select("id", count="exact").execute()
-    total_count = res_total.count
+total = len(res.data)
+missing = [t for t in res.data if not t['thumbnail_url']]
 
-    # Count topics with thumbnails
-    res_done = supabase.from_("mvp2_topics").select("id", count="exact").not_.is_("thumbnail_url", "null").execute()
-    done_count = res_done.count
+print(f"Total Published Topics: {total}")
+print(f"Missing Thumbnails: {len(missing)}")
 
-    # Count topics needing thumbnails
-    res_pending = supabase.from_("mvp2_topics").select("id", count="exact").is_("thumbnail_url", "null").execute()
-    pending_count = res_pending.count
-
-    print(f"Total Topics: {total_count}")
-    print(f"Thumbnails Created: {done_count}")
-    print(f"Thumbnails Needed: {pending_count}")
-
-if __name__ == "__main__":
-    check_status()
+if missing:
+    print("\nSample topics missing thumbnails:")
+    for t in missing[:5]:
+        print(f"  - {t['topic_name']} (Created: {t['created_at']})")
+else:
+    print("\n✅ All published topics have thumbnails.")

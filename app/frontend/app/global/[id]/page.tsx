@@ -101,11 +101,6 @@ export default async function GlobalDetailPage({ params }: Props) {
             </div>
           ) : <div />}
         </div>
-        {(data as any).topic_name && (
-          <span style={{ fontSize: 14, fontWeight: 600, color: "var(--color-neutral-500)", display: "block", marginBottom: "4px" }}>
-            {(data as any).topic_name}
-          </span>
-        )}
         <h1 style={{ margin: 0, fontSize: 24, fontWeight: 800, letterSpacing: "-0.02em", lineHeight: 1.3 }}>
           {data.title_ko}
         </h1>

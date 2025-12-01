@@ -4,6 +4,8 @@ This script is called after Step 8 (thumbnails) completes.
 """
 import os
 import sys
+import uuid
+from datetime import datetime, timedelta
 from dotenv import load_dotenv
 from supabase import create_client
 
@@ -15,41 +17,44 @@ SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY") or os.getenv("NEXT_PUBLIC_
 
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-def publish_batch(batch_id):
+def publish_latest_24h():
     """
-    Atomically publish a batch:
-    1. Unpublish old batches
-    2. Publish new batch (both local topics and global megatopics)
-    3. Update article linkage for newly published topics
-    4. Clean up old unpublished batches
+    Atomically publish ALL topics created in the last 24 hours.
+    This is a "catch-all" strategy to ensure nothing is missed.
     """
-    print(f"Publishing batch: {batch_id}")
+    # Generate new batch_id
+    new_batch_id = str(uuid.uuid4())
+    print(f"🚀 Starting Force Publish (Last 24h) - Batch ID: {new_batch_id}")
     
     try:
-        # 1. Unpublish all old batches (both local and global)
+        # 1. Calculate time threshold (24 hours ago)
+        time_threshold = (datetime.utcnow() - timedelta(hours=24)).isoformat()
+        print(f"  Time Threshold: {time_threshold}")
+
+        # 2. Unpublish EVERYTHING first (Clean slate)
         print("  Unpublishing old batches...")
-        supabase.table("mvp2_topics").update({
-            "is_published": False
-        }).eq("is_published", True).execute()
+        supabase.table("mvp2_topics").update({"is_published": False}).eq("is_published", True).execute()
+        supabase.table("mvp2_megatopics").update({"is_published": False}).eq("is_published", True).execute()
         
-        supabase.table("mvp2_megatopics").update({
-            "is_published": False
-        }).eq("is_published", True).execute()
+        # 3. Publish NEW topics (Created >= 24h ago)
+        print(f"  Publishing topics created after {time_threshold}...")
         
-        # 2. Publish new batch (both local and global)
-        print(f"  Publishing new batch {batch_id}...")
+        # Update Topics
         topics_result = supabase.table("mvp2_topics").update({
-            "is_published": True
-        }).eq("batch_id", batch_id).execute()
+            "is_published": True,
+            "batch_id": new_batch_id
+        }).gte("created_at", time_threshold).execute()
         
+        # Update Megatopics
         megatopics_result = supabase.table("mvp2_megatopics").update({
-            "is_published": True
-        }).eq("batch_id", batch_id).execute()
+            "is_published": True,
+            "batch_id": new_batch_id
+        }).gte("created_at", time_threshold).execute()
         
         print(f"  ✅ Published {len(topics_result.data)} local topics")
         print(f"  ✅ Published {len(megatopics_result.data)} global megatopics")
         
-        # 3. Update article linkage for newly published topics
+        # 4. Update article linkage for newly published topics
         print("  🔗 Updating article linkage...")
         total_linked = 0
         for topic in topics_result.data:
@@ -57,6 +62,7 @@ def publish_batch(batch_id):
             article_ids = topic.get('article_ids', [])
             if article_ids:
                 try:
+                    # Link articles to this topic
                     result = supabase.table("mvp2_articles")\
                         .update({"local_topic_id": topic_id})\
                         .in_("id", article_ids)\
@@ -68,28 +74,28 @@ def publish_batch(batch_id):
         
         print(f"  ✅ Linked {total_linked} articles to local topics")
         
-        # 4. Clean up old unpublished batches (older than 48 hours)
-        # 4. Clean up old unpublished batches (older than 48 hours)
-        # UPDATE: We now KEEP history for time-series analysis.
-        # print("  🧹 Cleaning up old unpublished batches...")
-        # from datetime import datetime, timedelta
-        # cutoff = (datetime.utcnow() - timedelta(hours=48)).isoformat()
-        
-        # old_topics = supabase.table("mvp2_topics").delete()\
-        #     .eq("is_published", False)\
-        #     .lt("created_at", cutoff)\
-        #     .execute()
-            
-        # old_megatopics = supabase.table("mvp2_megatopics").delete()\
-        #     .eq("is_published", False)\
-        #     .lt("created_at", cutoff)\
-        #     .execute()
-        
-        # old_count = len(old_topics.data) + len(old_megatopics.data)
-        # if old_count > 0:
-        #     print(f"  ✅ Cleaned up {old_count} old unpublished records")
-        print("  ℹ️  Skipping cleanup to preserve history (Time-series analysis)")
-        
+        # 5. Link articles to megatopics
+        print("  🔗 Updating megatopic linkage...")
+        total_mega_linked = 0
+        for mega in megatopics_result.data:
+            mega_id = mega['id']
+            local_topic_ids = mega.get('topic_ids', [])
+            if local_topic_ids:
+                try:
+                    # Link articles that belong to these local topics
+                    # We can't do a join update easily, so we iterate
+                    for local_id in local_topic_ids:
+                         result = supabase.from_("mvp2_articles")\
+                            .update({"global_topic_id": mega_id})\
+                            .eq("local_topic_id", local_id)\
+                            .execute()
+                         if result.data:
+                            total_mega_linked += len(result.data)
+                except Exception as e:
+                    print(f"    ⚠️ Error linking articles for megatopic {mega_id}: {e}")
+
+        print(f"  ✅ Linked {total_mega_linked} articles to megatopics")
+
         return True
         
     except Exception as e:
@@ -98,55 +104,6 @@ def publish_batch(batch_id):
 
 
 if __name__ == "__main__":
-    batch_id = None
-    if len(sys.argv) >= 2:
-        batch_id = sys.argv[1]
-    
-    if not batch_id:
-        print("No batch_id provided, checking for pending topics...")
-        
-        # Check if there are any unpublished topics without batch_id
-        # or just take all unpublished topics and assign a new batch_id
-        
-        # Generate new batch_id (UUID)
-        import uuid
-        new_batch_id = str(uuid.uuid4())
-        
-        print(f"  Generating new batch_id: {new_batch_id}")
-        
-        # Assign batch_id to ALL pending items (both topics and megatopics)
-        res_topics = supabase.table("mvp2_topics").update({"batch_id": new_batch_id})\
-            .is_("is_published", "null").execute()
-        res_topics_false = supabase.table("mvp2_topics").update({"batch_id": new_batch_id})\
-            .eq("is_published", False)\
-            .is_("batch_id", "null")\
-            .execute()
-        
-        count_topics = len(res_topics.data) + len(res_topics_false.data)
-        
-        res_mega = supabase.table("mvp2_megatopics").update({"batch_id": new_batch_id})\
-            .is_("is_published", "null").execute()
-        res_mega_false = supabase.table("mvp2_megatopics").update({"batch_id": new_batch_id})\
-            .eq("is_published", False)\
-            .is_("batch_id", "null")\
-            .execute()
-        
-        count_mega = len(res_mega.data) + len(res_mega_false.data)
-        
-        if count_topics > 0 or count_mega > 0:
-            print(f"  ✅ Assigned {new_batch_id} to {count_topics} topics and {count_mega} megatopics")
-            batch_id = new_batch_id
-            
-        else:
-            # Try to find latest existing if no pending
-            res = supabase.table("mvp2_topics").select("batch_id").order("created_at", desc=True).limit(1).execute()
-            if res.data and res.data[0].get('batch_id'):
-                batch_id = res.data[0]['batch_id']
-                print(f"  ⚠️ No pending topics found. Using latest existing batch_id: {batch_id}")
-            else:
-                print("❌ Could not find any batch_id in database and no pending topics to assign.")
-                sys.exit(1)
-
-            
-    success = publish_batch(batch_id)
+    # Ignore arguments, just force publish last 24h
+    success = publish_latest_24h()
     sys.exit(0 if success else 1)

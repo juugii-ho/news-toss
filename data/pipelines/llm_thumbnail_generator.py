@@ -215,7 +215,6 @@ def main():
         response = supabase.table("mvp2_topics") \
             .select("*") \
             .is_("thumbnail_url", "null") \
-            .eq("is_published", True) \
             .gte("created_at", time_threshold) \
             .order("article_count", desc=True) \
             .execute()  # Process all topics

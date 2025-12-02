@@ -52,7 +52,7 @@ def fetch_article_details(article_ids):
         chunk = article_ids[i:i+chunk_size]
         try:
             response = supabase.table("mvp2_articles") \
-                .select("id, title_ko, title_en, source_name, published_at") \
+                .select("id, title_ko, title_en, source_name, published_at, local_topic_id") \
                 .in_("id", chunk) \
                 .execute()
             all_articles.extend(response.data)
@@ -189,20 +189,49 @@ def main():
         if not has_articles:
             continue
             
-        # 2. Save without LLM Generation
-        # Use existing topic key (centroid title) and filtered article list
-        enriched_data[topic_key] = {
-            "topic_name_ko": topic_key, # Keep original title
-            "summary_ko": "", # Empty
-            "keywords": data.get('keywords', []),
-            "category": data.get('category', 'Unclassified'),
-            "stances": stances_result
-        }
+    # 2. Batch Process for LLM Generation
+    print(f"  🧠 Generating metadata for {len(enriched_data)} topics (Batch size: 5)...")
+    
+    topic_items = list(enriched_data.items())
+    batch_size = 5
+    
+    for i in range(0, len(topic_items), batch_size):
+        batch = topic_items[i:i+batch_size]
+        batch_input = []
         
+        for key, data in batch:
+            # Gather articles for context
+            stances = data['stances']
+            all_ids = stances['factual'] + stances['critical'] + stances['supportive']
+            articles = [article_map.get(aid) for aid in all_ids if article_map.get(aid)]
+            batch_input.append((key, articles))
+            
+        # Call LLM
+        print(f"    Processing batch {i//batch_size + 1}...")
+        results = generate_metadata_batch(batch_input)
+        
+        if results:
+            for res in results:
+                original_key = res.get('original_topic_key')
+                if original_key in enriched_data:
+                    # Merge LLM data
+                    enriched_data[original_key].update({
+                        "topic_name_ko": res.get('topic_name_ko') or original_key,
+                        "summary_ko": res.get('summary_ko') or "",
+                        "keywords": res.get('keywords') or [],
+                        "category": res.get('category') or "Unclassified",
+                        # Optional: Merge stances if LLM provides better classification
+                        # "stances": res.get('stances') or enriched_data[original_key]['stances']
+                    })
+        else:
+            print(f"    ⚠️ Batch {i//batch_size + 1} failed or returned empty. Keeping defaults.")
+            
+        time.sleep(1) # Rate limit
+
     # Final Save
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(enriched_data, f, ensure_ascii=False, indent=2)
-    print(f"✅ Deduplication Complete. Saved {len(enriched_data)} topics to {output_file}")
+    print(f"✅ Enrichment Complete. Saved {len(enriched_data)} topics to {output_file}")
 
     # Save to DB
     print("Saving enriched topics to Supabase DB (mvp2_topics)...")
@@ -229,7 +258,7 @@ def main():
         
         # Note: Article linkage will be updated in Step 9 when publishing
         
-        db_rows = []
+        # db_rows = [] # Removed list accumulation
         # Create a lookup for article sources
         article_source_map = {a['id']: a.get('source_name', 'Unknown') for a in article_map.values()}
         
@@ -244,41 +273,80 @@ def main():
                 if aid in article_source_map:
                     unique_sources.add(article_source_map[aid])
             
-            db_rows.append({
-                "country_code": COUNTRY,
-                "topic_name": topic_name,
-                "article_ids": article_ids,
-                "article_count": len(article_ids),
-                "source_count": len(unique_sources),
-                "stances": stances,
-                "keywords": details.get('keywords', []),
-                "category": details.get('category', 'Unclassified'),
-                "batch_id": batch_id,
-                "is_published": False,
-                "created_at": datetime.utcnow().isoformat()
-            })
-        
-        # Batch insert and Link Articles
-        if db_rows:
-            batch_size = 50
-            for i in range(0, len(db_rows), batch_size):
-                batch = db_rows[i:i+batch_size]
-                response = supabase.table("mvp2_topics").insert(batch).execute()
-                print(f"  Inserted batch {i//batch_size + 1}")
+                # Check if topic exists (deduplication via Article Overlap)
+                # Strategy: If articles in this new cluster are already assigned to a topic created < 24h ago, reuse it.
+                existing_topic_id = None
                 
-                # Link articles to the newly created topics
-                if response.data:
-                    for topic in response.data:
-                        topic_id = topic['id']
-                        article_ids = topic['article_ids']
-                        if article_ids:
-                            # Update articles with this topic_id
-                            # We can do this in one query
-                            supabase.table("mvp2_articles") \
-                                .update({"local_topic_id": topic_id}) \
-                                .in_("id", article_ids) \
-                                .execute()
-                    print(f"    🔗 Linked articles for batch {i//batch_size + 1}")
+                # 1. Collect local_topic_ids from articles
+                linked_topic_ids = []
+                for aid in article_ids:
+                    art = article_map.get(aid)
+                    if art and art.get('local_topic_id'):
+                        linked_topic_ids.append(art['local_topic_id'])
+                
+                # 2. Find majority vote
+                if linked_topic_ids:
+                    most_common = Counter(linked_topic_ids).most_common(1)
+                    candidate_id = most_common[0][0]
+                    
+                    # 3. Verify candidate topic is recent (< 24h)
+                    # We don't want to revive very old topics
+                    try:
+                        time_threshold = (datetime.utcnow() - timedelta(hours=24)).isoformat()
+                        res = supabase.table("mvp2_topics") \
+                            .select("id") \
+                            .eq("id", candidate_id) \
+                            .gte("created_at", time_threshold) \
+                            .execute()
+                        if res.data:
+                            existing_topic_id = candidate_id
+                    except Exception as e:
+                        print(f"    ⚠️ Error verifying candidate topic {candidate_id}: {e}")
+
+                if existing_topic_id:
+                    # Update existing
+                    topic_id = existing_topic_id
+                    print(f"    🔄 Updating existing topic (Overlap): {topic_name} ({topic_id})")
+                    supabase.table("mvp2_topics").update({
+                        "topic_name": topic_name, # Update name to latest LLM version
+                        "article_ids": article_ids,
+                        "article_count": len(article_ids),
+                        "source_count": len(unique_sources),
+                        "stances": stances,
+                        "keywords": details.get('keywords', []),
+                        "category": details.get('category', 'Unclassified'),
+                        "summary": details.get('summary_ko', ''),
+                        # "ai_summary": details.get('summary_ko', ''), # Reverted
+                        "batch_id": batch_id,
+                        "updated_at": datetime.utcnow().isoformat()
+                    }).eq("id", topic_id).execute()
+                else:
+                    # Insert new
+                    response = supabase.table("mvp2_topics").insert({
+                        "country_code": COUNTRY,
+                        "topic_name": topic_name,
+                        "article_ids": article_ids,
+                        "article_count": len(article_ids),
+                        "source_count": len(unique_sources),
+                        "stances": stances,
+                        "keywords": details.get('keywords', []),
+                        "category": details.get('category', 'Unclassified'),
+                        "summary": details.get('summary_ko', ''),
+                        # "ai_summary": details.get('summary_ko', ''), # Reverted
+                        "batch_id": batch_id,
+                        "is_published": False,
+                        "created_at": datetime.utcnow().isoformat()
+                    }).execute()
+                    
+                    if response.data:
+                        topic_id = response.data[0]['id']
+
+                # Link articles (for both insert and update)
+                if topic_id:
+                     supabase.table("mvp2_articles") \
+                        .update({"local_topic_id": topic_id}) \
+                        .in_("id", article_ids) \
+                        .execute()
                 
         print("✅ Saved to DB successfully.")
         

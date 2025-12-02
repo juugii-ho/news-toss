@@ -438,91 +438,14 @@ def main():
                 json.dump(final_output, f, ensure_ascii=False, indent=2)
             print(f"\n✅ Clustering Complete. Saved {len(final_output)} topics to {output_file}")
             
-            # Save to DB
-            print("Saving topics to Supabase DB (mvp2_topics)...")
-            try:
-                # Create a lookup for article sources
-                article_source_map = {a['id']: a.get('source_name', 'Unknown') for a in articles}
-                
-                updated_count = 0
-                inserted_count = 0
-                
-                for topic_name, stances in final_output.items():
-                    article_ids = stances['factual'] + stances['critical'] + stances['supportive']
-                    
-                    # Calculate unique source count
-                    unique_sources = set()
-                    for aid in article_ids:
-                        if aid in article_source_map:
-                            unique_sources.add(article_source_map[aid])
-                    
-                    # Check if similar topic exists
-                    existing = find_similar_topic(topic_name, COUNTRY, supabase)
-                    
-                    if existing:
-                        # Merge with existing topic instead of overwriting older articles
-                        print(f"  🔄 Updating: {topic_name}")
-                        existing_ids = existing.get("article_ids", []) or []
-                        existing_stances = existing.get("stances", {}) or {}
-                        
-                        def merged_list(old, new):
-                            seen = set()
-                            merged = []
-                            for v in old + new:
-                                if v not in seen:
-                                    merged.append(v)
-                                    seen.add(v)
-                            return merged
-                        
-                        merged_stances = {}
-                        for sentiment in ["factual", "critical", "supportive"]:
-                            merged_stances[sentiment] = merged_list(
-                                existing_stances.get(sentiment, []),
-                                stances.get(sentiment, [])
-                            )
-                        merged_stances["keywords"] = stances.get("keywords", existing_stances.get("keywords", []))
-                        merged_stances["category"] = stances.get("category", existing_stances.get("category", "Unclassified"))
-
-                        merged_article_ids = merged_list(existing_ids, article_ids)
-                        
-                        unique_sources = set()
-                        for aid in merged_article_ids:
-                            if aid in article_source_map:
-                                unique_sources.add(article_source_map[aid])
-                        
-                        supabase.table("mvp2_topics").update({
-                            "article_ids": merged_article_ids,
-                            "article_count": len(merged_article_ids),
-                            "source_count": len(unique_sources),
-                            "stances": merged_stances,
-                            "keywords": merged_stances.get('keywords', []),
-                            "category": merged_stances.get('category', 'Unclassified'),
-                            "last_updated_at": datetime.utcnow().isoformat()
-                        }).eq("id", existing['id']).execute()
-                        updated_count += 1
-                    else:
-                        # Insert new topic
-                        print(f"  ✨ Creating: {topic_name}")
-                        supabase.table("mvp2_topics").insert({
-                            "country_code": COUNTRY,
-                            "topic_name": topic_name,
-                            "article_ids": article_ids,
-                            "article_count": len(article_ids),
-                            "source_count": len(unique_sources),
-                            "stances": stances,
-                            "keywords": stances.get('keywords', []),
-                            "category": stances.get('category', 'Unclassified'),
-                            "first_seen_at": datetime.utcnow().isoformat(),
-                            "last_updated_at": datetime.utcnow().isoformat()
-                        }).execute()
-                        inserted_count += 1
-                
-                print(f"  📊 Updated: {updated_count}, Inserted: {inserted_count}")
-                        
-                print("✅ Saved to DB successfully.")
-                
-            except Exception as e:
-                print(f"❌ Error saving to DB: {e}")
+            # Save to DB - DISABLED to prevent duplicates. 
+            # Enrichment script (llm_topic_enrichment.py) handles DB insertion/updates.
+            # print("Saving topics to Supabase DB (mvp2_topics)...")
+            # try:
+            #     # ... (Code commented out) ...
+            #     pass
+            # except Exception as e:
+            #     print(f"❌ Error saving to DB: {e}")
 
     print(f"Total Topics: {len(final_output)}")
     

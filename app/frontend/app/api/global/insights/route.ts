@@ -13,8 +13,8 @@ export async function GET() {
   }
 
   try {
-    // Relax time filter to 7 days to avoid timezone issues
-    const timeThreshold = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
+    // Filter for last 24 hours
+    const timeThreshold = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
 
     const { data, error } = await supabase
       .from("mvp2_megatopics")

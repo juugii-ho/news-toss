@@ -23,6 +23,7 @@ export async function GET(request: NextRequest) {
       .select("*", { count: "exact" })
       .eq("country_code", country)
       .eq("is_published", true)
+      .gte("created_at", new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString())
       .order("article_count", { ascending: false })
       .order("created_at", { ascending: false })
       .range(from, to);

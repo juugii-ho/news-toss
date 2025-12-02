@@ -15,6 +15,7 @@ export const SupabaseNewsService = {
                 .from("mvp2_megatopics")
                 .select("*")
                 .gte("created_at", timeThreshold) // Filter for freshness
+                .eq("is_published", true)
                 .order("article_count", { ascending: false })
                 .limit(50); // Fetch more to allow client-side sorting/filtering
 
@@ -26,6 +27,7 @@ export const SupabaseNewsService = {
                 const { data: latest, error: latestError } = await supabase
                     .from("mvp2_megatopics")
                     .select("*")
+                    .eq("is_published", true)
                     .order("created_at", { ascending: false })
                     .order("article_count", { ascending: false })
                     .limit(50);
@@ -90,6 +92,7 @@ export const SupabaseNewsService = {
                 .from("mvp2_topics")
                 .select("*")
                 .eq("country_code", countryCode)
+                .eq("is_published", true)
                 .gte("created_at", timeThreshold) // Filter for freshness
                 .gt("source_count", 1) // Strict Filter: Must have at least 2 sources
                 .order("source_count", { ascending: false })

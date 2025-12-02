@@ -57,6 +57,14 @@ def main():
     
     # 5. Global Megatopic Analysis
     run_step("llm_megatopic_analysis.py", "Generating Global Megatopics and Saving to DB")
+
+    # 6. AI Summary Generation (Google Search)
+    # Runs for local topics with null ai_summary
+    run_step("llm_topic_summary_generator.py", "Generating AI Summaries (Google Search) for Local Topics")
+
+    # 7. Thumbnail Generation
+    # Runs for topics without thumbnails
+    run_step("llm_thumbnail_generator.py", "Generating Thumbnails for Topics")
     
     print(f"\n{'='*60}")
     print("🎉 PIPELINE COMPLETED SUCCESSFULLY! 🎉")

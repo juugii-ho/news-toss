@@ -28,7 +28,7 @@ def publish_latest_24h():
     print(f"🚀 Starting Force Publish (Last 24h) - Batch ID: {new_batch_id}")
     
     try:
-        window_hours = int(os.getenv("PUBLISH_WINDOW_HOURS", "12"))
+        window_hours = int(os.getenv("PUBLISH_WINDOW_HOURS", "24"))
         time_threshold_dt = datetime.utcnow() - timedelta(hours=window_hours)
         time_threshold = time_threshold_dt.isoformat()
         print(f"  Time Threshold: {time_threshold} (last {window_hours}h)")

@@ -50,112 +50,60 @@ def get_embeddings(texts, batch_size=100):
 def main():
     print("🚀 Starting Megatopic Analysis...")
     
-    # 1. Load all enriched topic files
-    # Prefer enriched topics (post-deduplication), fallback to raw clusters if needed
-    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # 1. Fetch Topics from DB (Stateless for GitHub Actions)
+    print("Fetching recent topics from Supabase DB...")
     
-    # Try to find enriched topics first
-    search_pattern = os.path.join(script_dir, "enriched_topics_*.json")
-    cluster_files = glob.glob(search_pattern)
-    
-    if not cluster_files:
-        print("⚠️ No enriched topics found. Falling back to raw clusters...")
-        search_pattern = os.path.join(script_dir, "clusters_*_hdbscan.json")
-        cluster_files = glob.glob(search_pattern)
-    
-    all_topics = []
-    
-    print(f"Loading enriched topics from {len(cluster_files)} files...")
-    for fpath in cluster_files:
-        # data/pipelines/clusters_RU_hdbscan.json -> RU
-        try:
-            filename = os.path.basename(fpath) # clusters_RU_hdbscan.json OR enriched_topics_RU.json
-            if "enriched_topics_" in filename:
-                country_code = filename.replace("enriched_topics_", "").replace(".json", "")
-            else:
-                country_code = filename.split('_')[1] # RU from clusters_RU_hdbscan.json
-            
-            country = country_code
-        except Exception:
-            print(f"Skipping malformed filename: {fpath}")
-            continue
-            
-        with open(fpath, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            # data is { "Topic Name": { ...data... } }
-            
-            for topic_name, details in data.items():
-                # In enriched format, topic_name is the key, but we also have "topic_name_ko" inside
-                # We prefer "topic_name_ko" if available, as it's the polished title
-                display_name = details.get("topic_name_ko", topic_name)
-                
-                # Calculate size correctly (keys are direct, not nested in 'stances')
-                # Calculate size correctly
-                stances = details.get('stances', details) # Fallback to details if stances not present (old format)
-                size = len(stances.get('factual', [])) + \
-                       len(stances.get('critical', [])) + \
-                       len(stances.get('supportive', []))
-                       
-                # Try to get topic_id from details, or lookup later
-                topic_id = details.get('topic_id')
-                
-                # We need a flat list of topics with country info
-                all_topics.append({
-                    "name": display_name,
-                    "country": country,
-                    "size": size,
-                    "id": topic_id, 
-                    "keywords": details.get('keywords', []),
-                    "category": details.get('category', 'Unclassified')
-                })
-
-    # 1.5 Lookup missing topic IDs from DB
-    print("Looking up missing topic IDs from DB...")
-    
-    # Initialize Supabase client early for lookup
     url = os.getenv("NEXT_PUBLIC_SUPABASE_URL")
     key = os.getenv("NEXT_PUBLIC_SUPABASE_ANON_KEY")
-    supabase_lookup = create_client(url, key)
+    supabase_client = create_client(url, key)
     
-    # Get all topic names that need ID
-    names_to_lookup = [t['name'] for t in all_topics if not t['id']]
-    print(f"DEBUG: Found {len(names_to_lookup)} topics needing ID lookup.")
-    if len(names_to_lookup) > 0:
-        print(f"DEBUG: First 3 names: {names_to_lookup[:3]}")
+    # Use a 24h window to match publish_batch.py
+    window_hours = int(os.getenv("PUBLISH_WINDOW_HOURS", "24"))
+    time_threshold = (datetime.utcnow() - timedelta(hours=window_hours)).isoformat()
     
-    if names_to_lookup:
-        # Fetch in batches
-        batch_size = 50
-        name_to_id_map = {}
+    print(f"  Time Threshold: {time_threshold} (last {window_hours}h)")
+    
+    try:
+        # Fetch all topics created in the last 24h
+        # We fetch ALL candidates, regardless of publish status, to ensure we cluster everything relevant.
+        # (Deduplication happens naturally via clustering if names are similar, or we can filter duplicates later)
+        response = supabase_client.table("mvp2_topics")\
+            .select("id, topic_name, country_code, article_count, keywords, category, stances")\
+            .gte("created_at", time_threshold)\
+            .execute()
+            
+        db_topics = response.data
+        print(f"  Found {len(db_topics)} topics in DB.")
         
-        for i in range(0, len(names_to_lookup), batch_size):
-            batch = names_to_lookup[i:i+batch_size]
-            try:
-                # Assuming 'topic_name' or 'title' column in mvp2_topics matches 'name'
-                # Check schema: mvp2_topics has 'topic_name' (or 'title'?)
-                # Let's try 'topic_name' first, if fails we might need to check schema.
-                # Based on previous context, it might be 'topic_name'.
-                response = supabase_lookup.table("mvp2_topics").select("id, topic_name").in_("topic_name", batch).execute()
-                print(f"DEBUG: Batch {i} lookup result count: {len(response.data)}")
-                for row in response.data:
-                    name_to_id_map[row['topic_name']] = row['id']
-            except Exception as e:
-                print(f"  ⚠️ Lookup failed for batch {i}: {e}")
-                
-        # Apply IDs back to all_topics
-        for t in all_topics:
-            if not t['id'] and t['name'] in name_to_id_map:
-                t['id'] = name_to_id_map[t['name']]
-                
-    count_with_id = sum(1 for t in all_topics if t.get('id'))
-    print(f"DEBUG: {count_with_id} / {len(all_topics)} topics have IDs after lookup.")
-                
-    print(f"Total Local Topics Found: {len(all_topics)}")
-                
-    print(f"Total Local Topics Found: {len(all_topics)}")
+        all_topics = []
+        for t in db_topics:
+            # Calculate size from stances if possible, else use article_count
+            size = t.get('article_count', 0)
+            stances = t.get('stances')
+            if stances and isinstance(stances, dict):
+                calc_size = len(stances.get('factual', [])) + \
+                           len(stances.get('critical', [])) + \
+                           len(stances.get('supportive', []))
+                if calc_size > 0:
+                    size = calc_size
+            
+            all_topics.append({
+                "name": t['topic_name'],
+                "country": t['country_code'],
+                "size": size,
+                "id": t['id'],
+                "keywords": t.get('keywords', []),
+                "category": t.get('category', 'Unclassified')
+            })
+            
+    except Exception as e:
+        print(f"❌ Error fetching topics from DB: {e}")
+        return
+
+    print(f"Total Local Topics Loaded: {len(all_topics)}")
     
     if not all_topics:
-        print("No topics found. Run clustering first.")
+        print("No topics found in the last 24h. Skipping megatopic analysis.")
         return
 
     # 2. Embed Topic Names

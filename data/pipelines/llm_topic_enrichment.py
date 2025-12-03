@@ -187,7 +187,16 @@ def main():
                 has_articles = True
         
         if not has_articles:
+            print(f"    ⚠️ Cluster {topic_key} skipped: No articles after filtering.")
             continue
+        
+        enriched_data[topic_key] = {
+            "stances": stances_result,
+            # Placeholder metadata, will be updated by LLM
+            "topic_name_ko": topic_key, 
+            "keywords": [],
+            "category": "Unclassified"
+        }
             
     # 2. Batch Process for LLM Generation
     print(f"  🧠 Generating metadata for {len(enriched_data)} topics (Batch size: 5)...")

@@ -210,11 +210,11 @@ Output JSON:
         default_name = items[0]['name']
         
         # Pre-filter: Check if this cluster is worth asking LLM (Optimization)
-        # Rule: Must have at least 2 countries OR > 10 articles if single country
+        # Rule: Must have at least 2 countries OR > 5 articles if single country
         temp_countries = list(set([t['country'] for t in items]))
         temp_total_articles = sum([t['size'] for t in items])
         
-        if len(temp_countries) < 2 and temp_total_articles < 10:
+        if len(temp_countries) < 2 and temp_total_articles < 5:
             print(f"    Skipping small local megatopic (Pre-filter): {default_name} ({len(temp_countries)} countries, {temp_total_articles} articles)")
             continue
         
@@ -261,8 +261,8 @@ Output JSON:
         total_articles = sum([t['size'] for t in filtered_items])
         
         # Filter by Minimum Countries
-        # Rule: Must have at least 3 countries to be considered a true "global" megatopic
-        if len(countries) < 3:
+        # Rule: Must have at least 2 countries to be considered a true "global" megatopic
+        if len(countries) < 2:
             print(f"    Skipping small local megatopic (Pre-filter): {megatopic_name} ({len(countries)} countries, {total_articles} articles)")
             continue
         

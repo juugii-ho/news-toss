@@ -136,7 +136,15 @@ Output JSON List:
 """
     try:
         response = model.generate_content(prompt)
-        return json.loads(response.text)
+        text = response.text
+        
+        # Clean markdown code blocks if present
+        if "```json" in text:
+            text = text.split("```json")[1].split("```")[0].strip()
+        elif "```" in text:
+            text = text.split("```")[1].split("```")[0].strip()
+            
+        return json.loads(text)
     except Exception as e:
         print(f"    ⚠️ Batch Generation failed: {e}")
         return None
